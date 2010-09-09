@@ -7,4 +7,4 @@ require 'app.rb'
 set :environment, :production
 set :run, false
 
-run Sinatra::Applicationt
+run Sinatra::Application

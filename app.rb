@@ -1,6 +1,3 @@
-require 'rubygems'
-require 'sinatra'
-
 set :app_file, __FILE__
 set :root, File.dirname(__FILE__)
 
