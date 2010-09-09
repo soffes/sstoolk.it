@@ -1,6 +1,11 @@
 GEM
   remote: http://rubygems.org/
   specs:
+    daemons (1.0.10)
+    gem_plugin (0.2.3)
+    mongrel (1.2.0.pre2)
+      daemons (~> 1.0.10)
+      gem_plugin (~> 0.2.3)
     rack (1.2.1)
     shotgun (0.8)
       rack (>= 1.0)
@@ -11,5 +16,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  shotgun
-  sinatra
+  mongrel (= 1.2.0.pre2)
+  shotgun (= 0.8)
+  sinatra (= 1.0)
