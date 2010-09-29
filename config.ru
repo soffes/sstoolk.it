@@ -2,9 +2,6 @@ require 'rubygems'
 require 'bundler/setup'
 
 require 'sinatra'
-require 'app.rb'
+require 'sstoolkit'
 
-set :environment, :production
-set :run, false
-
-run Sinatra::Application
+run SSToolkit
