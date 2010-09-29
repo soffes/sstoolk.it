@@ -4,11 +4,12 @@ This is the website for [SSToolkit](http://github.com/samsoffes/sstoolkit). Some
 
 ## Running Locally
 
-You will need [Bundler](http://gembundler.com). You can install it by running:
+You will need to install [Bundler](http://gembundler.com) (if you haven't already) and all the necessary gems. You can install it by running the following:
 
     $ gem install bundler --version '>= 1.0.0'
+    $ bundle install
 
-Then simply run `bundle install` to install all necessary gems. Now the following command to start the server and you're good to go.
+Now the following command to start the server and you're good to go.
 
     $ rake server
 
