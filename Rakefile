@@ -19,3 +19,10 @@ desc 'Start local server'
 task :server do
   system 'bundle exec shotgun config.ru'
 end
+
+desc 'Import docs. Requires docs repo at ../sstoolkit-docs'
+task :'docs:import' => [:compass] do
+  system 'rm -rf public/documentation'
+  system 'cp -R ../sstoolkit-doc/Documentation/html public/documentation'
+  puts 'Imported.'
+end
