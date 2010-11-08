@@ -49,20 +49,49 @@
 <option value="overview">Overview</option>
 <option value="tasks">Tasks</option>
 <option value="properties">Properties</option>
+<option value="loadingPage">    loadingPage</option>
+<option value="scrollEnabled">    scrollEnabled</option>
+<option value="bounces">    bounces</option>
+<option value="shadowsHidden">    shadowsHidden</option>
+<option value="consoleEnabled">    consoleEnabled</option>
+<option value="lastRequest">    lastRequest</option>
 <option value="delegate">    delegate</option>
 <option value="loading">    loading</option>
 <option value="canGoBack">    canGoBack</option>
 <option value="canGoForward">    canGoForward</option>
 <option value="request">    request</option>
 <option value="scalesPageToFit">    scalesPageToFit</option>
-<option value="dataDetectorTypes">    dataDetectorTypes</option></select></li>
+<option value="dataDetectorTypes">    dataDetectorTypes</option>
+<option value="instanceMethods">Instance Methods</option>
+<option value="dismissKeyboard">    - dismissKeyboard</option>
+<option value="reset">    - reset</option>
+<option value="loadHTMLString:">    - loadHTMLString:</option>
+<option value="loadURL:">    - loadURL:</option>
+<option value="loadURLString:">    - loadURLString:</option>
+<option value="goBack">    - goBack</option>
+<option value="goForward">    - goForward</option>
+<option value="loadData:MIMEType:textEncodingName:baseURL:">    - loadData:MIMEType:textEncodingName:baseURL:</option>
+<option value="loadHTMLString:baseURL:">    - loadHTMLString:baseURL:</option>
+<option value="loadRequest:">    - loadRequest:</option>
+<option value="reload">    - reload</option>
+<option value="stopLoading">    - stopLoading</option>
+<option value="stringByEvaluatingJavaScriptFromString:">    - stringByEvaluatingJavaScriptFromString:</option></select></li>
 </ul></nav><nav id="tableOfContents" style="display: none;"><ul>
 <li><a href="#overview">Overview</a></li>
 <li class="expandable" id="tocTasks" onclick="toggleTOCItem()">
-<a href="#tasks">Tasks</a><ul style="display: none;"><li><a href="#Other">Other</a></li></ul>
+<a href="#tasks">Tasks</a><ul style="display: none;">
+<li><a href="#Other">Other</a></li>
+<li><a href="#Other">Other</a></li>
+</ul>
 </li>
 <li class="expandable" id="tocProperties" onclick="toggleTOCItem()">
 <a href="#properties">Properties</a><ul style="display: none;">
+<li><a href="#loadingPage">loadingPage</a></li>
+<li><a href="#scrollEnabled">scrollEnabled</a></li>
+<li><a href="#bounces">bounces</a></li>
+<li><a href="#shadowsHidden">shadowsHidden</a></li>
+<li><a href="#consoleEnabled">consoleEnabled</a></li>
+<li><a href="#lastRequest">lastRequest</a></li>
 <li><a href="#delegate">delegate</a></li>
 <li><a href="#loading">loading</a></li>
 <li><a href="#canGoBack">canGoBack</a></li>
@@ -70,6 +99,23 @@
 <li><a href="#request">request</a></li>
 <li><a href="#scalesPageToFit">scalesPageToFit</a></li>
 <li><a href="#dataDetectorTypes">dataDetectorTypes</a></li>
+</ul>
+</li>
+<li class="expandable" id="tocInstanceMethods" onclick="toggleTOCItem()">
+<a href="#instanceMethods">Instance Methods</a><ul style="display: none;">
+<li><a href="#dismissKeyboard">dismissKeyboard</a></li>
+<li><a href="#reset">reset</a></li>
+<li><a href="#loadHTMLString:">loadHTMLString:</a></li>
+<li><a href="#loadURL:">loadURL:</a></li>
+<li><a href="#loadURLString:">loadURLString:</a></li>
+<li><a href="#goBack">goBack</a></li>
+<li><a href="#goForward">goForward</a></li>
+<li><a href="#loadData:MIMEType:textEncodingName:baseURL:">loadData:MIMEType:textEncodingName:baseURL:</a></li>
+<li><a href="#loadHTMLString:baseURL:">loadHTMLString:baseURL:</a></li>
+<li><a href="#loadRequest:">loadRequest:</a></li>
+<li><a href="#reload">reload</a></li>
+<li><a href="#stopLoading">stopLoading</a></li>
+<li><a href="#stringByEvaluatingJavaScriptFromString:">stringByEvaluatingJavaScriptFromString:</a></li>
 </ul>
 </li>
 </ul></nav><div id="contents">
@@ -83,9 +129,28 @@
 <p>Note that this class doesn't actually inherit from UIWebView, but instead forwards all of UIWebView's public methods to an internal instance. It has been designed to be a drop in replacement for <code><a href="http://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIWebView_Class/index.html">UIWebView</a></code>.</p>
 <p>Things of interest are the <code>SSWebView</code> properties and the extra delegate methods. </p>
 <h2 id="tasks">Tasks</h2>
-<ul id="tasksList"><li id="Other">
+<ul id="tasksList">
+<li id="Other">
 <h3>Other</h3>
 <ul class="methods">
+<li>
+<span class="tooltipRegion"><code><a href="#loadingPage">loadingPage</a></code> <span class="specialType">property</span></span><span class="tooltip">Returns whether the web view is loading a page. (read-only). </span>
+</li>
+<li>
+<span class="tooltipRegion"><code><a href="#scrollEnabled">scrollEnabled</a></code> <span class="specialType">property</span></span><span class="tooltip">A Boolean value that determines whether scrolling is enabled. </span>
+</li>
+<li>
+<span class="tooltipRegion"><code><a href="#bounces">bounces</a></code> <span class="specialType">property</span></span><span class="tooltip">A Boolean value that controls whether the web view bounces past the edge of content and back again. </span>
+</li>
+<li>
+<span class="tooltipRegion"><code><a href="#shadowsHidden">shadowsHidden</a></code> <span class="specialType">property</span></span><span class="tooltip">A Boolean value that controls whether the web view draws shadows around the outside of its content. </span>
+</li>
+<li>
+<span class="tooltipRegion"><code><a href="#consoleEnabled">consoleEnabled</a></code> <span class="specialType">property</span></span><span class="tooltip">A Boolean value that controls whether console.log messages are intercepted. </span>
+</li>
+<li>
+<span class="tooltipRegion"><code><a href="#lastRequest">lastRequest</a></code> <span class="specialType">property</span></span><span class="tooltip">The last NSURLRequest that the web view loaded. </span>
+</li>
 <li>
 <span class="tooltipRegion"><code><a href="#delegate">delegate</a></code> <span class="specialType">property</span></span><span class="tooltip">The receiver's delegate. </span>
 </li>
@@ -108,9 +173,86 @@
 <span class="tooltipRegion"><code><a href="#dataDetectorTypes">dataDetectorTypes</a></code> <span class="specialType">property</span></span><span class="tooltip">The types of data converted to clickable URLs in the web view’s content. </span>
 </li>
 </ul>
-</li></ul>
+</li>
+<li id="Other">
+<h3>Other</h3>
+<ul class="methods">
+<li>
+<span class="tooltipRegion"><code><a href="#dismissKeyboard">- dismissKeyboard</a></code></span><span class="tooltip">Uses JavaScript to remove focus from the active element. </span>
+</li>
+<li>
+<span class="tooltipRegion"><code><a href="#reset">- reset</a></code></span><span class="tooltip">Destroys the internal UIWebView and recreates. </span>
+</li>
+<li>
+<span class="tooltipRegion"><code><a href="#loadHTMLString:">- loadHTMLString:</a></code></span><span class="tooltip">Sets the main page content. </span>
+</li>
+<li>
+<span class="tooltipRegion"><code><a href="#loadURL:">- loadURL:</a></code></span><span class="tooltip">Connects to a given URL by initiating an asynchronous client request. </span>
+</li>
+<li>
+<span class="tooltipRegion"><code><a href="#loadURLString:">- loadURLString:</a></code></span><span class="tooltip">Connects to a given URL by initiating an asynchronous client request. </span>
+</li>
+<li>
+<span class="tooltipRegion"><code><a href="#goBack">- goBack</a></code></span><span class="tooltip">Loads the previous location in the back-forward list. </span>
+</li>
+<li>
+<span class="tooltipRegion"><code><a href="#goForward">- goForward</a></code></span><span class="tooltip">Loads the next location in the back-forward list. </span>
+</li>
+<li>
+<span class="tooltipRegion"><code><a href="#loadData:MIMEType:textEncodingName:baseURL:">- loadData:MIMEType:textEncodingName:baseURL:</a></code></span><span class="tooltip">Sets the main page contents, MIME type, content encoding, and base URL. </span>
+</li>
+<li>
+<span class="tooltipRegion"><code><a href="#loadHTMLString:baseURL:">- loadHTMLString:baseURL:</a></code></span><span class="tooltip">Sets the main page content and base URL. </span>
+</li>
+<li>
+<span class="tooltipRegion"><code><a href="#loadRequest:">- loadRequest:</a></code></span><span class="tooltip">Connects to a given URL by initiating an asynchronous client request. </span>
+</li>
+<li>
+<span class="tooltipRegion"><code><a href="#reload">- reload</a></code></span><span class="tooltip">Reloads the current page. </span>
+</li>
+<li>
+<span class="tooltipRegion"><code><a href="#stopLoading">- stopLoading</a></code></span><span class="tooltip">Stops the loading of any web content managed by the receiver. </span>
+</li>
+<li>
+<span class="tooltipRegion"><code><a href="#stringByEvaluatingJavaScriptFromString:">- stringByEvaluatingJavaScriptFromString:</a></code></span><span class="tooltip">Returns the result of running a script. </span>
+</li>
+</ul>
+</li>
+</ul>
 <section id="properties"><h2>Properties</h2>
-<section class="definition" id="delegate"><h3>delegate</h3>
+<section class="definition" id="loadingPage"><h3>loadingPage</h3>
+<p>Returns whether the web view is loading a page. (read-only). </p>
+<code class="methodDeclaration">@property BOOL loadingPage</code><h5>Discussion</h5>
+<p>This will return <code>YES</code> when the first <code><a href="http://developer.apple.com/iphone/library/documentation/Cocoa/Reference/Foundation/Classes/NSURLRequest_Class/index.html">NSURLRequest</a></code> starts and <code>NO</code> when there are no more requests loading.</p>
+<p>Note: Setting this isn't 100% reliable since it is very hacky underneath. </p>
+<h5>Declared In</h5>
+<code><code>SSWebView</code>.h</code></section><section class="definition" id="scrollEnabled"><h3>scrollEnabled</h3>
+<p>A Boolean value that determines whether scrolling is enabled. </p>
+<code class="methodDeclaration">@property BOOL scrollEnabled</code><h5>Discussion</h5>
+<p>If the value of this property is <code>YES</code>, scrolling is enabled, and if it is <code>NO</code>, scrolling is disabled. The default is <code>YES</code>.</p>
+<p>Note: Setting this isn't 100% reliable since it is very hacky underneath. </p>
+<h5>Declared In</h5>
+<code><code>SSWebView</code>.h</code></section><section class="definition" id="bounces"><h3>bounces</h3>
+<p>A Boolean value that controls whether the web view bounces past the edge of content and back again. </p>
+<code class="methodDeclaration">@property BOOL bounces</code><h5>Discussion</h5>
+<p>If the value of this property is <code>YES</code>, the web view bounces when it encounters a boundary of the content. Bouncing visually indicates that scrolling has reached an edge of the content. If the value is <code>NO</code>, scrolling stops immediately at the content boundary without bouncing. The default value is <code>YES</code>. </p>
+<h5>Declared In</h5>
+<code><code>SSWebView</code>.h</code></section><section class="definition" id="shadowsHidden"><h3>shadowsHidden</h3>
+<p>A Boolean value that controls whether the web view draws shadows around the outside of its content. </p>
+<code class="methodDeclaration">@property BOOL shadowsHidden</code><h5>Discussion</h5>
+<p>If the value of this property is <code>YES</code>, the web view will the shadows around the outside of its content. If the value is <code>NO</code>, shadows will be displayed like normal. The default value is <code>NO</code>.</p>
+<p>Note: This isn't 100% reliable since it is very hacky underneath. </p>
+<h5>Declared In</h5>
+<code><code>SSWebView</code>.h</code></section><section class="definition" id="consoleEnabled"><h3>consoleEnabled</h3>
+<p>A Boolean value that controls whether <code>console.log</code> messages are intercepted. </p>
+<code class="methodDeclaration">@property BOOL consoleEnabled</code><h5>Discussion</h5>
+<p>If the value of this property is <code>YES</code>, the web view will inject some JavaScript after the DOM has loaded that replaces <code>console.log</code> with a custom implementation that will NSLog the <code>console.log</code> messages.</p>
+<p>Note: This isn't 100% reliable since it is very hacky underneath. </p>
+<h5>Declared In</h5>
+<code><code>SSWebView</code>.h</code></section><section class="definition" id="lastRequest"><h3>lastRequest</h3>
+<p>The last <code><a href="http://developer.apple.com/iphone/library/documentation/Cocoa/Reference/Foundation/Classes/NSURLRequest_Class/index.html">NSURLRequest</a></code> that the web view loaded. </p>
+<code class="methodDeclaration">@property <a href="http://developer.apple.com/iphone/library/documentation/Cocoa/Reference/Foundation/Classes/NSURLRequest_Class/index.html">NSURLRequest</a> *lastRequest</code><h5>Declared In</h5>
+<code><code>SSWebView</code>.h</code></section><section class="definition" id="delegate"><h3>delegate</h3>
 <p>The receiver's delegate. </p>
 <code class="methodDeclaration">@property id&lt;SSWebViewDelegate&gt; delegate</code><h5>Discussion</h5>
 <p>The delegate is sent messages when content is loading. </p>
@@ -118,17 +260,17 @@
 <code><code>SSWebView</code>.h</code></section><section class="definition" id="loading"><h3>loading</h3>
 <p>A Boolean value indicating whether the receiver is done loading content. (read-only). </p>
 <code class="methodDeclaration">@property BOOL loading</code><h5>Discussion</h5>
-<p>If YES, the receiver is still loading content; otherwise, NO. </p>
+<p>If <code>YES</code>, the receiver is still loading content; otherwise, <code>NO</code>. </p>
 <h5>Declared In</h5>
 <code><code>SSWebView</code>.h</code></section><section class="definition" id="canGoBack"><h3>canGoBack</h3>
 <p>A Boolean value indicating whether the receiver can move backward. (read-only). </p>
 <code class="methodDeclaration">@property BOOL canGoBack</code><h5>Discussion</h5>
-<p>If YES, able to move backward; otherwise, NO. </p>
+<p>If <code>YES</code>, able to move backward; otherwise, <code>NO</code>. </p>
 <h5>Declared In</h5>
 <code><code>SSWebView</code>.h</code></section><section class="definition" id="canGoForward"><h3>canGoForward</h3>
 <p>A Boolean value indicating whether the receiver can move forward. (read-only). </p>
 <code class="methodDeclaration">@property BOOL canGoForward</code><h5>Discussion</h5>
-<p>If YES, able to move forward; otherwise, NO. </p>
+<p>If <code>YES</code>, able to move forward; otherwise, <code>NO</code>. </p>
 <h5>Declared In</h5>
 <code><code>SSWebView</code>.h</code></section><section class="definition" id="request"><h3>request</h3>
 <p>The URL request identifying the location of the content to load. (read-only). </p>
@@ -136,12 +278,157 @@
 <code><code>SSWebView</code>.h</code></section><section class="definition" id="scalesPageToFit"><h3>scalesPageToFit</h3>
 <p>A Boolean value determining whether the webpage scales to fit the view and the user can change the scale. </p>
 <code class="methodDeclaration">@property BOOL scalesPageToFit</code><h5>Discussion</h5>
-<p>If YES, the webpage is scaled to fit and the user can zoom in and zoom out. If NO, user zooming is disabled. The default value is NO. </p>
+<p>If <code>YES</code>, the webpage is scaled to fit and the user can zoom in and zoom out. If <code>NO</code>, user zooming is disabled. The default value is <code>NO</code>. </p>
 <h5>Declared In</h5>
 <code><code>SSWebView</code>.h</code></section><section class="definition" id="dataDetectorTypes"><h3>dataDetectorTypes</h3>
 <p>The types of data converted to clickable URLs in the web view’s content. </p>
 <code class="methodDeclaration">@property UIDataDetectorTypes dataDetectorTypes</code><h5>Discussion</h5>
 <p>You can use this property to specify the types of data (phone numbers, http links, email address, and so on) that should be automatically converted to clickable URLs in the web view. When clicked, the web view opens the application responsible for handling the URL type and passes it the URL. </p>
+<h5>Declared In</h5>
+<code><code>SSWebView</code>.h</code></section></section><section id="instanceMethods"><h2>Instance Methods</h2>
+<section class="definition" id="dismissKeyboard"><h3>dismissKeyboard</h3>
+<p>Uses JavaScript to remove focus from the active element. </p>
+<code class="methodDeclaration">- (void)dismissKeyboard</code><h5>Discussion</h5>
+<p>If the receiver is in a modal <code><a href="http://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIViewController_Class/index.html">UIViewController</a></code> with the modalPresentationStyle UIModalPresentationFormSheet, it will not dismiss the keyboard due to how UIModalPresentationFormSheet works. </p>
+<h5>Declared In</h5>
+<code><code>SSWebView</code>.h</code></section><section class="definition" id="reset"><h3>reset</h3>
+<p>Destroys the internal <code><a href="http://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIWebView_Class/index.html">UIWebView</a></code> and recreates. </p>
+<code class="methodDeclaration">- (void)reset</code><h5>Discussion</h5>
+<p>All of the properties are maintained across the reset. </p>
+<h5>Declared In</h5>
+<code><code>SSWebView</code>.h</code></section><section class="definition" id="loadHTMLString:"><h3>loadHTMLString:</h3>
+<p>Sets the main page content. </p>
+<code class="methodDeclaration">- (void)loadHTMLString:(<a href="http://developer.apple.com/iphone/library/documentation/Cocoa/Reference/Foundation/Classes/NSString_Class/index.html">NSString</a> *)<span class="parameter">string</span> </code><h5>Parameters</h5>
+<dl class="parameterList">
+<dt>string</dt>
+<dd><p>The content for the main page.</p></dd>
+</dl>
+<h5>Discussion</h5>
+<p>
+The baseURL is set to <code>http://localhost</code></p>
+<p></p>
+<h5>See Also</h5>
+<ul class="seeAlso"><li><code><a href="#loadHTMLString:baseURL:">- loadHTMLString:baseURL:</a></code></li></ul>
+<h5>Declared In</h5>
+<code><code>SSWebView</code>.h</code></section><section class="definition" id="loadURL:"><h3>loadURL:</h3>
+<p>Connects to a given URL by initiating an asynchronous client request. </p>
+<code class="methodDeclaration">- (void)loadURL:(<a href="http://developer.apple.com/iphone/library/documentation/Cocoa/Reference/Foundation/Classes/NSURL_Class/index.html">NSURL</a> *)<span class="parameter">aURL</span> </code><h5>Parameters</h5>
+<dl class="parameterList">
+<dt>aURL</dt>
+<dd><p>A URL identifying the location of the content to load.</p></dd>
+</dl>
+<h5>Discussion</h5>
+<p>
+To stop this load, use the stopLoading method. To see whether the receiver is done loading the content, use the loading property.</p>
+<p></p>
+<h5>See Also</h5>
+<ul class="seeAlso">
+<li><code><a href="#loadURLString:">- loadURLString:</a></code></li>
+<li><code><a href="#loadRequest:">- loadRequest:</a></code></li>
+<li><code><a href="#request">request</a></code></li>
+<li><code><a href="#stopLoading">- stopLoading</a></code></li>
+<li><code><a href="#loading">loading</a></code></li>
+<li><code><a href="#reload">- reload</a></code></li>
+</ul>
+<h5>Declared In</h5>
+<code><code>SSWebView</code>.h</code></section><section class="definition" id="loadURLString:"><h3>loadURLString:</h3>
+<p>Connects to a given URL by initiating an asynchronous client request. </p>
+<code class="methodDeclaration">- (void)loadURLString:(<a href="http://developer.apple.com/iphone/library/documentation/Cocoa/Reference/Foundation/Classes/NSString_Class/index.html">NSString</a> *)<span class="parameter">string</span> </code><h5>Parameters</h5>
+<dl class="parameterList">
+<dt>string</dt>
+<dd><p>A string containing a URL identifying the location of the content to load.</p></dd>
+</dl>
+<h5>Discussion</h5>
+<p>
+To stop this load, use the stopLoading method. To see whether the receiver is done loading the content, use the loading property.</p>
+<p></p>
+<h5>See Also</h5>
+<ul class="seeAlso">
+<li><code><a href="#loadURL:">- loadURL:</a></code></li>
+<li><code><a href="#loadRequest:">- loadRequest:</a></code></li>
+<li><code><a href="#request">request</a></code></li>
+<li><code><a href="#stopLoading">- stopLoading</a></code></li>
+<li><code><a href="#loading">loading</a></code></li>
+<li><code><a href="#reload">- reload</a></code></li>
+</ul>
+<h5>Declared In</h5>
+<code><code>SSWebView</code>.h</code></section><section class="definition" id="goBack"><h3>goBack</h3>
+<p>Loads the previous location in the back-forward list. </p>
+<code class="methodDeclaration">- (void)goBack</code><h5>Declared In</h5>
+<code><code>SSWebView</code>.h</code></section><section class="definition" id="goForward"><h3>goForward</h3>
+<p>Loads the next location in the back-forward list. </p>
+<code class="methodDeclaration">- (void)goForward</code><h5>Declared In</h5>
+<code><code>SSWebView</code>.h</code></section><section class="definition" id="loadData:MIMEType:textEncodingName:baseURL:"><h3>loadData:MIMEType:textEncodingName:baseURL:</h3>
+<p>Sets the main page contents, MIME type, content encoding, and base URL. </p>
+<code class="methodDeclaration">- (void)loadData:(<a href="http://developer.apple.com/iphone/library/documentation/Cocoa/Reference/Foundation/Classes/NSData_Class/index.html">NSData</a> *)<span class="parameter">data</span> MIMEType:(<a href="http://developer.apple.com/iphone/library/documentation/Cocoa/Reference/Foundation/Classes/NSString_Class/index.html">NSString</a> *)<span class="parameter">MIMEType</span> textEncodingName:(<a href="http://developer.apple.com/iphone/library/documentation/Cocoa/Reference/Foundation/Classes/NSString_Class/index.html">NSString</a> *)<span class="parameter">encodingName</span> baseURL:(<a href="http://developer.apple.com/iphone/library/documentation/Cocoa/Reference/Foundation/Classes/NSURL_Class/index.html">NSURL</a> *)<span class="parameter">baseURL</span> </code><h5>Parameters</h5>
+<dl class="parameterList">
+<dt>data</dt>
+<dd><p>The content for the main page.</p></dd>
+<dt>MIMEType</dt>
+<dd><p>The MIME type of the content.</p></dd>
+<dt>encodingName</dt>
+<dd><p>The IANA encoding name as in utf-8 or utf-16.</p></dd>
+<dt>baseURL</dt>
+<dd><p>The base URL for the content. </p></dd>
+</dl>
+<h5>Declared In</h5>
+<code><code>SSWebView</code>.h</code></section><section class="definition" id="loadHTMLString:baseURL:"><h3>loadHTMLString:baseURL:</h3>
+<p>Sets the main page content and base URL. </p>
+<code class="methodDeclaration">- (void)loadHTMLString:(<a href="http://developer.apple.com/iphone/library/documentation/Cocoa/Reference/Foundation/Classes/NSString_Class/index.html">NSString</a> *)<span class="parameter">string</span> baseURL:(<a href="http://developer.apple.com/iphone/library/documentation/Cocoa/Reference/Foundation/Classes/NSURL_Class/index.html">NSURL</a> *)<span class="parameter">baseURL</span> </code><h5>Parameters</h5>
+<dl class="parameterList">
+<dt>string</dt>
+<dd><p>The content for the main page.</p></dd>
+<dt>baseURL</dt>
+<dd><p>The base URL for the content. </p></dd>
+</dl>
+<h5>Declared In</h5>
+<code><code>SSWebView</code>.h</code></section><section class="definition" id="loadRequest:"><h3>loadRequest:</h3>
+<p>Connects to a given URL by initiating an asynchronous client request. </p>
+<code class="methodDeclaration">- (void)loadRequest:(<a href="http://developer.apple.com/iphone/library/documentation/Cocoa/Reference/Foundation/Classes/NSURLRequest_Class/index.html">NSURLRequest</a> *)<span class="parameter">aRequest</span> </code><h5>Parameters</h5>
+<dl class="parameterList">
+<dt>request</dt>
+<dd><p>A URL request identifying the location of the content to load.</p></dd>
+</dl>
+<h5>Discussion</h5>
+<p>
+To stop this load, use the stopLoading method. To see whether the receiver is done loading the content, use the loading property.</p>
+<p></p>
+<h5>See Also</h5>
+<ul class="seeAlso">
+<li><code><a href="#request">request</a></code></li>
+<li><code><a href="#stopLoading">- stopLoading</a></code></li>
+<li><code><a href="#loading">loading</a></code></li>
+<li><code><a href="#reload">- reload</a></code></li>
+</ul>
+<h5>Declared In</h5>
+<code><code>SSWebView</code>.h</code></section><section class="definition" id="reload"><h3>reload</h3>
+<p>Reloads the current page. </p>
+<code class="methodDeclaration">- (void)reload</code><h5>See Also</h5>
+<ul class="seeAlso">
+<li><code><a href="#request">request</a></code></li>
+<li><code><a href="#loading">loading</a></code></li>
+<li><code><a href="#loadRequest:">- loadRequest:</a></code></li>
+<li><code><a href="#stopLoading">- stopLoading</a></code></li>
+</ul>
+<h5>Declared In</h5>
+<code><code>SSWebView</code>.h</code></section><section class="definition" id="stopLoading"><h3>stopLoading</h3>
+<p>Stops the loading of any web content managed by the receiver. </p>
+<code class="methodDeclaration">- (void)stopLoading</code><h5>Discussion</h5>
+<p>Stops any content in the process of being loaded by the main frame or any of its children frames. Does nothing if no content is being loaded. </p>
+<h5>Declared In</h5>
+<code><code>SSWebView</code>.h</code></section><section class="definition" id="stringByEvaluatingJavaScriptFromString:"><h3>stringByEvaluatingJavaScriptFromString:</h3>
+<p>Returns the result of running a script. </p>
+<code class="methodDeclaration">- (NSString *)stringByEvaluatingJavaScriptFromString:(<a href="http://developer.apple.com/iphone/library/documentation/Cocoa/Reference/Foundation/Classes/NSString_Class/index.html">NSString</a> *)<span class="parameter">script</span> </code><h5>Parameters</h5>
+<dl class="parameterList">
+<dt>script</dt>
+<dd><p>The script to run.</p></dd>
+</dl>
+<h5>Return Value</h5>
+<p>The result of running script or nil if it fails.</p>
+<h5>Discussion</h5>
+<p>
+JavaScript execution time is limited to 10 seconds for each top-level entry point. If your script executes for more than 10 seconds, the web view stops executing the script. This is likely to occur at a random place in your code, so unintended consequences may result. This limit is imposed because JavaScript execution may cause the main thread to block, so when scripts are running, the user is not able to interact with the webpage.</p>
+<p>JavaScript allocations are also limited to 10 MB. The web view raises an exception if you exceed this limit on the total memory allocation for JavaScript. </p>
 <h5>Declared In</h5>
 <code><code>SSWebView</code>.h</code></section></section><hr>
 <p id="lastUpdated">Last updated: 2010-11-7</p>

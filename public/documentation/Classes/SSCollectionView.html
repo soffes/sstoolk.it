@@ -199,24 +199,34 @@
 <code class="methodDeclaration">- (SSCollectionViewItem *)dequeueReusableItemWithIdentifier:(<a href="http://developer.apple.com/iphone/library/documentation/Cocoa/Reference/Foundation/Classes/NSString_Class/index.html">NSString</a> *)<span class="parameter">identifier</span> </code><h5>Parameters</h5>
 <dl class="parameterList">
 <dt>identifier</dt>
-<dd><p>A string identifying the cell object to be reused. </p></dd>
+<dd><p>A string identifying the cell object to be reused.</p></dd>
 </dl>
+<h5>Return Value</h5>
+<p>A <code><a href="../Classes/SSCollectionViewItem.html">SSCollectionViewItem</a></code> object with the associated identifier or nil if no such object exists in the reusable-item queue. </p>
 <h5>Declared In</h5>
 <code><code>SSCollectionView</code>.h</code></section><section class="definition" id="itemPathForIndex:"><h3>itemPathForIndex:</h3>
 <p>Returns the collection view item at the specified index path. </p>
 <code class="methodDeclaration">- (SSCollectionViewItem *)itemPathForIndex:(<a href="http://developer.apple.com/iphone/library/documentation/Cocoa/Reference/Foundation/Classes/NSIndexPath_Class/index.html">NSIndexPath</a> *)<span class="parameter">indexPath</span> </code><h5>Parameters</h5>
 <dl class="parameterList">
 <dt>indexPath</dt>
-<dd><p>The index path locating the item in the receiver. </p></dd>
+<dd><p>The index path locating the item in the receiver.</p></dd>
 </dl>
+<h5>Return Value</h5>
+<p>An object representing a cell of the table or nil if the cell is not visible or indexPath is out of range.</p>
+<h5>See Also</h5>
+<ul class="seeAlso"><li><code><a href="#indexPathForItem:">- indexPathForItem:</a></code></li></ul>
 <h5>Declared In</h5>
 <code><code>SSCollectionView</code>.h</code></section><section class="definition" id="indexPathForItem:"><h3>indexPathForItem:</h3>
 <p>Returns an index path representing the row (index) and section of a given collection view item. </p>
 <code class="methodDeclaration">- (NSIndexPath *)indexPathForItem:(<a href="../Classes/SSCollectionViewItem.html">SSCollectionViewItem</a> *)<span class="parameter">item</span> </code><h5>Parameters</h5>
 <dl class="parameterList">
 <dt>item</dt>
-<dd><p>An item object of the collection view. </p></dd>
+<dd><p>An item object of the collection view.</p></dd>
 </dl>
+<h5>Return Value</h5>
+<p>An index path representing the row and section of the cell or nil if the index path is invalid.</p>
+<h5>See Also</h5>
+<ul class="seeAlso"><li><code><a href="#itemPathForIndex:">- itemPathForIndex:</a></code></li></ul>
 <h5>Declared In</h5>
 <code><code>SSCollectionView</code>.h</code></section><section class="definition" id="deselectItemAtIndexPath:animated:"><h3>deselectItemAtIndexPath:animated:</h3>
 <p>Deselects a given item identified by index path, with an option to animate the deselection. </p>
