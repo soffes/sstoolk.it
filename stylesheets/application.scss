@@ -17,6 +17,7 @@ body * {
 
 a {
   color: $linkColor;
+  -webkit-transition: all 0.1s linear;
 }
 
 body > header {
