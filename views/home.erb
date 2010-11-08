@@ -1,53 +1,57 @@
-<h1><a href="/">SSToolkit</a></h1>
-    <p>SSToolkit is a collection of well-documented iOS classes for making life easier.</p>
+<header>
+  <h1><a href="http://sstoolk.it/" rel="home">SSToolkit</a></h1>
+  <h2>SSToolkit is a collection of well-documented iOS classes for making life easier.</h2>
+  
+  <nav>
+    <ul>
+      <li><a href="/documentation/">Documentation</a></li>
+      <li><a href="http://github.com/samsoffes/sstoolkit" rel="external nofollow">Source Code</a></li>
+      <li><a href="#" rel="external nofollow">Sample Code</a></li>
+    </ul>
+  </nav>
+</header>
 
-<h2>I am interested in</h2>
+<section>
+  <h2>Getting Started</h2>
 
-<ul>
-  <li><a href="/documentation/">Documentation</a></li>
-  <li><a href="http://github.com/samsoffes/sstoolkit/issues">Reporting a bug</a></li>
-</ul>
+  <p>SSToolkit aims to be as easy to use as possible. There are some limitations on distributing iOS libraries, so this is the simplest way to get started with SSToolkit. It's painless after this, promise.</p>
 
+  <h3>Adding SSToolkit to your project</h3>
 
-<h2>Getting Started</h2>
-
-<p>SSToolkit aims to be as easy to use as possible. There are some limitations on distributing iOS libraries, so this is the simplest way to get started with SSToolkit. It's painless after this, promise.</p>
-
-<h3>Adding SSToolkit to your project</h3>
-
-<ol>
-<li><p>Run the following command to add the submodule. Be sure you have are you in the root of your git repository.</p>
-
-<pre><code> $ git submodule add git://github.com/samsoffes/sstoolkit.git Frameworks/SSToolkit
-</code></pre></li>
-<li><p>In Finder, navigate to the <code>Frameworks/SSToolkit</code> folder and drag the <code>xcodeproj</code> file into the <code>Frameworks</code> folder in your Xcode project.</p></li>
-<li><p>In Finder, drag <code>SSToolkit.bundle</code> located in <code>Frameworks/SSToolkit/Resources</code> into the <code>Resources</code> folder in your Xcode project.</p></li>
-<li><p>Select the SSToolkit Xcode project from the sidebar in Xcode. In the file browser on the right in Xcode, click the checkbox next to <code>libSSToolkit.a</code>. (If you don't see the file browser, hit Command-Shift-E to toggle it on.)</p></li>
-<li><p>Select your target from the sidebar and open Get Info (Command-I).</p></li>
-<li><p>Choose the <em>General</em> tab from the top.</p></li>
-<li><p>Under the <em>Direct Dependencies</em> area, click the plus button, select <em>SSToolkit</em> from the menu, and choose <em>Add Target</em>.</p></li>
-<li><p>Choose the build tab from the top of the window. Make sure the configuration dropdown at the top is set to <em>All Configurations</em>.</p></li>
-<li><p>Add <code>Frameworks/SSToolkit</code> to <em>Header Search Path</em> (do not click the <em>Recursive</em> checkbox).</p></li>
-<li><p>Add <code>-all_load -ObjC</code> to <em>Other Linker Flags</em>.</p></li>
-</ol>
+  <ol>
+    <li>
+      <p>Run the following command to add the submodule. Be sure you have are you in the root of your git repository.</p>
+      <pre class="console"><code> $ git submodule add git://github.com/samsoffes/sstoolkit.git Frameworks/SSToolkit</code></pre>
+    </li>
+    <li><p>In Finder, navigate to the <code>Frameworks/SSToolkit</code> folder and drag the <code>xcodeproj</code> file into the <code>Frameworks</code> folder in your Xcode project.</p></li>
+    <li><p>In Finder, drag <code>SSToolkit.bundle</code> located in <code>Frameworks/SSToolkit/Resources</code> into the <code>Resources</code> folder in your Xcode project.</p></li>
+    <li><p>Select the SSToolkit Xcode project from the sidebar in Xcode. In the file browser on the right in Xcode, click the checkbox next to <code>libSSToolkit.a</code>. (If you don't see the file browser, hit Command-Shift-E to toggle it on.)</p></li>
+    <li><p>Select your target from the sidebar and open Get Info (Command-I).</p></li>
+    <li><p>Choose the <em>General</em> tab from the top.</p></li>
+    <li><p>Under the <em>Direct Dependencies</em> area, click the plus button, select <em>SSToolkit</em> from the menu, and choose <em>Add Target</em>.</p></li>
+    <li><p>Choose the build tab from the top of the window. Make sure the configuration dropdown at the top is set to <em>All Configurations</em>.</p></li>
+    <li><p>Add <code>Frameworks/SSToolkit</code> to <em>Header Search Path</em> (do not click the <em>Recursive</em> checkbox).</p></li>
+    <li><p>Add <code>-all_load -ObjC</code> to <em>Other Linker Flags</em>.</p></li>
+  </ol>
 
 
-<h3>Usage</h3>
+  <h3>Usage</h3>
 
-<p>To use SSToolkit, simply add the following line to your source file.</p>
+  <p>To use SSToolkit, simply add the following line to your source file.</p>
 
-<pre><code>#import &lt;SSToolkit/SSToolkit.h&gt;</code></pre>
+  <pre><code>#import &lt;SSToolkit/SSToolkit.h&gt;</code></pre>
 
-<p>You can add this to your prefix to make things easy if you want. You can also import individual files instead of the whole framework (for faster compile times) by doing something like:</p>
+  <p>You can add this to your prefix to make things easy if you want. You can also import individual files instead of the whole framework (for faster compile times) by doing something like:</p>
 
-<pre><code>#import &lt;SSToolkit/SSLoadingView.h&gt;</code></pre>
+  <pre><code>#import &lt;SSToolkit/SSLoadingView.h&gt;</code></pre>
 
-<p>If you are going to use SSToolkit's categories, you will need to import then separately (since some people might not want to use them). You import then like this:</p>
+  <p>If you are going to use SSToolkit's categories, you will need to import then separately (since some people might not want to use them). You import then like this:</p>
 
-<pre><code>#import &lt;SSToolkit/SSCategories.h&gt;</code></pre>
+  <pre><code>#import &lt;SSToolkit/SSCategories.h&gt;</code></pre>
 
-<h2>Thanks</h2>
+  <h2>Thanks</h2>
 
-<p>Huge thanks to <a href="http://github.com/samsoffes/sstoolkit/contributors">our contributors</a>!</p>
+  <p>Huge thanks to <a href="http://github.com/samsoffes/sstoolkit/contributors">our contributors</a>!</p>
 
-<p>If you're using this in your project, I'd love to hear about it! <a href="mailto:sam@samsoff.es">Send me an email</a> and let me know which pieces you're using and such.</p>
+  <p>If you're using this in your project, I'd love to hear about it! <a href="mailto:sam@samsoff.es">Send me an email</a> and let me know which pieces you're using and such.</p>
+</section>

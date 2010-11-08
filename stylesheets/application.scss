@@ -1,0 +1,147 @@
+@import "compass/reset";
+
+$linkColor: #16459d;
+
+body {
+  background: #edf1f8 image_url("background.gif");
+  color: #333;
+  font-family: HelveticaNeue, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  margin: 40px auto;
+  width: 640px;
+}
+
+body * {
+  line-height: 1.6em;
+}
+
+a {
+  color: $linkColor;
+}
+
+body > header {
+  h1 a {
+    display: block;
+    width: 361px;
+    height: 145px;
+    margin: 0 auto 40px;
+    background: image_url("logo.gif");
+    text-indent: -9009em;
+  }
+
+  h2 {
+    display: block;
+    width: 520px;
+    height: 47px;
+    margin: 0 auto 40px;
+    background: image_url("headline.gif");
+    text-indent: -9009em;
+  }
+  
+  ul {
+    overflow: hidden;
+    height: 62px;
+    margin-bottom: 40px;
+  }
+  
+  li {
+    width: 170px;
+    height: 60px;
+    float: left;
+    
+    a {
+      background: rgba(22, 69, 157, 0.06);
+      display: block;
+      width: 170px;
+      height: 60px;
+      line-height: 60px;
+      text-align: center;
+      font-size: 18px;
+      font-weight: bold;
+      border: 1px solid #89acef;
+      text-decoration: none;
+      border-radius: 8px;
+      -moz-border-radius: 8px;
+    }
+    
+    a:hover {
+      background: rgba(22, 69, 157, 0.1);
+      border: 1px solid $linkColor;
+    }
+  }
+}
+
+body > footer {
+  font-size: 13px;
+  text-align: center;
+  color: #888;
+  margin-top: 10px;
+  
+  p {
+    margin: 0;
+  }
+  
+  a {
+    color: #888;
+  }
+  
+  a:hover {
+    color: $linkColor;
+  }
+}
+
+h2 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 0.5em;
+}
+
+pre {
+  background-color: #f8f8ff;
+  border: 1px solid #dedede;
+  color: #444;
+  font-family: "Bitstream Vera Sans Mono", Courier, monospace;
+  font-size: 0.8em;
+  line-height: 1.5em;
+  margin: 0 0 2em;
+  overflow: auto;
+  padding: 0.5em;
+  
+  code {
+    background-color: #f8f8ff;
+    border: medium none;
+    font-size: 1em;
+    padding: 0;
+  }
+}
+
+code {
+  background-color: #f8f8ff;
+  border: 1px solid #dedede;
+  color: #444;
+  padding: 0 0.2em;
+  font-family: "Bitstream Vera Sans Mono", Courier, monospace;
+  font-size: 0.8em;
+}
+
+h3 {
+  color: #666;
+  font-weight: bold;
+  margin-bottom: 0.5em;
+}
+
+p, ul, ol {
+  margin-bottom: 1.5em;
+}
+
+ul li, ol li {
+  margin: 0 0 0.5em 2em;
+  
+  p, pre {
+    margin-bottom: 0.5em;
+  }
+}
+
+ol li {
+  list-style: decimal;
+}
