@@ -1,0 +1,238 @@
+<!DOCTYPE html><html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<title>SSGradientView Class Reference</title>
+<meta id="Generator" name="Generator" content="Doxyclean">
+<meta id="GeneratorVersion" name="GeneratorVersion" content="2.2">
+<link rel="stylesheet" type="text/css" href="../css/common.css">
+<link rel="stylesheet" type="text/css" media="screen" href="../css/screen.css">
+<link rel="stylesheet" type="text/css" media="print" href="../css/print.css">
+<script type="text/javascript">
+				function toggleTOC() {
+					var toc = document.getElementById('tableOfContents');
+					var tocButton = document.getElementById('toc_button');
+					var contents = document.getElementById('contents');
+					if (toc.style.display == 'block') {
+						toc.style.display = 'none';
+						contents.className = '';
+						tocButton.className = '';
+					} else {
+						toc.style.display = 'block';
+						contents.className = 'tableOfContentsOpen';
+						tocButton.className = 'open';
+					}
+				}
+				
+				function toggleTOCItem() {
+					var listItem = event.srcElement;
+					var sublist = listItem.getElementsByTagName('ul')[0];
+					if (sublist.style.display == 'block') {
+						sublist.style.display = 'none';
+						listItem.className = 'expandable';
+					} else {
+						sublist.style.display = 'block';
+						listItem.className = 'expandable expanded';
+					}
+				}
+				
+				function jumpTo() {
+					selectedItem = event.srcElement.options[event.srcElement.selectedIndex].value;
+					window.location = "#" + selectedItem;
+				}
+			</script>
+</head>
+<body>
+<header id="projectHeader"><h1><a href="../index.html">SSToolkit Reference Library</a></h1></header><header id="fileHeader"><h1><a href="#classTitle">SSGradientView Class Reference</a></h1></header><nav id="buttons"><ul>
+<li id="toc_button"><button id="table_of_contents" onclick="toggleTOC()">Table of Contents</button></li>
+<li id="jumpto_button"><select id="jumpto" onchange="jumpTo()"><option value="classTitle">Jump To...</option>
+<option value="overview">Overview</option>
+<option value="tasks">Tasks</option>
+<option value="properties">Properties</option>
+<option value="topColor">    topColor</option>
+<option value="bottomColor">    bottomColor</option>
+<option value="topBorderColor">    topBorderColor</option>
+<option value="bottomBorderColor">    bottomBorderColor</option>
+<option value="topInsetAlpha">    topInsetAlpha</option>
+<option value="bottomInsetAlpha">    bottomInsetAlpha</option>
+<option value="hasTopBorder">    hasTopBorder</option>
+<option value="hasBottomBorder">    hasBottomBorder</option>
+<option value="showsInsets">    showsInsets</option>
+<option value="classMethods">Class Methods</option>
+<option value="defaultTopColor">    + defaultTopColor</option>
+<option value="defaultBottomColor">    + defaultBottomColor</option>
+<option value="defaultTopBorderColor">    + defaultTopBorderColor</option>
+<option value="defaultBottomBorderColor">    + defaultBottomBorderColor</option>
+<option value="defaultTopInsetAlpha">    + defaultTopInsetAlpha</option>
+<option value="defaultBottomInsetAlpha">    + defaultBottomInsetAlpha</option></select></li>
+</ul></nav><nav id="tableOfContents" style="display: none;"><ul>
+<li><a href="#overview">Overview</a></li>
+<li class="expandable" id="tocTasks" onclick="toggleTOCItem()">
+<a href="#tasks">Tasks</a><ul style="display: none;">
+<li><a href="#Other">Other</a></li>
+<li><a href="#Other">Other</a></li>
+</ul>
+</li>
+<li class="expandable" id="tocProperties" onclick="toggleTOCItem()">
+<a href="#properties">Properties</a><ul style="display: none;">
+<li><a href="#topColor">topColor</a></li>
+<li><a href="#bottomColor">bottomColor</a></li>
+<li><a href="#topBorderColor">topBorderColor</a></li>
+<li><a href="#bottomBorderColor">bottomBorderColor</a></li>
+<li><a href="#topInsetAlpha">topInsetAlpha</a></li>
+<li><a href="#bottomInsetAlpha">bottomInsetAlpha</a></li>
+<li><a href="#hasTopBorder">hasTopBorder</a></li>
+<li><a href="#hasBottomBorder">hasBottomBorder</a></li>
+<li><a href="#showsInsets">showsInsets</a></li>
+</ul>
+</li>
+<li class="expandable" id="tocClassMethods" onclick="toggleTOCItem()">
+<a href="#classMethods">Class Methods</a><ul style="display: none;">
+<li><a href="#defaultTopColor">defaultTopColor</a></li>
+<li><a href="#defaultBottomColor">defaultBottomColor</a></li>
+<li><a href="#defaultTopBorderColor">defaultTopBorderColor</a></li>
+<li><a href="#defaultBottomBorderColor">defaultBottomBorderColor</a></li>
+<li><a href="#defaultTopInsetAlpha">defaultTopInsetAlpha</a></li>
+<li><a href="#defaultBottomInsetAlpha">defaultBottomInsetAlpha</a></li>
+</ul>
+</li>
+</ul></nav><div id="contents">
+<h1 id="classTitle">SSGradientView Class Reference</h1>
+<table id="metadata"><tr class="alt">
+<th>Declared in</th>
+<td>SSGradientView.h</td>
+</tr></table>
+<h2 id="overview">Overview</h2>
+<p>Simple <code><a href="http://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIView_Class/index.html">UIView</a></code> wrapper for CGGradient. </p>Known bugs<p><ul><li><p>startColor and endColor must be in the same colorspace. The colorspace of the first color is used to draw the gradient. If you did a gradient from white to blue, it would look like a gradient from white to black because the first color, white, is in the gray color space, not the RGB color space. If you did it from blue to white, it would look like blue to black because white in the gray colorspace isn't a valid color in the RGB colorspace (because there are only 2 components in the gray colorspace and 4 in the RGB colorspace). Automatic colorspace conversions are planned for the future. </p></li></ul></p>
+<h2 id="tasks">Tasks</h2>
+<ul id="tasksList">
+<li id="Other">
+<h3>Other</h3>
+<ul class="methods">
+<li>
+<span class="tooltipRegion"><code><a href="#topColor">topColor</a></code> <span class="specialType">property</span></span><span class="tooltip">The top gradient color. </span>
+</li>
+<li>
+<span class="tooltipRegion"><code><a href="#bottomColor">bottomColor</a></code> <span class="specialType">property</span></span><span class="tooltip">The bottom gradient color. </span>
+</li>
+<li>
+<span class="tooltipRegion"><code><a href="#topBorderColor">topBorderColor</a></code> <span class="specialType">property</span></span><span class="tooltip">The top border color. </span>
+</li>
+<li>
+<span class="tooltipRegion"><code><a href="#bottomBorderColor">bottomBorderColor</a></code> <span class="specialType">property</span></span><span class="tooltip">The bottom border color. </span>
+</li>
+<li>
+<span class="tooltipRegion"><code><a href="#topInsetAlpha">topInsetAlpha</a></code> <span class="specialType">property</span></span><span class="tooltip">The top border inset alpha. </span>
+</li>
+<li>
+<span class="tooltipRegion"><code><a href="#bottomInsetAlpha">bottomInsetAlpha</a></code> <span class="specialType">property</span></span><span class="tooltip">The bottom border inset alpha. </span>
+</li>
+<li>
+<span class="tooltipRegion"><code><a href="#hasTopBorder">hasTopBorder</a></code> <span class="specialType">property</span></span><span class="tooltip">A Boolean value that determines whether showing the top border is enabled. </span>
+</li>
+<li>
+<span class="tooltipRegion"><code><a href="#hasBottomBorder">hasBottomBorder</a></code> <span class="specialType">property</span></span><span class="tooltip">A Boolean value that determines whether showing the bottom border is enabled. </span>
+</li>
+<li>
+<span class="tooltipRegion"><code><a href="#showsInsets">showsInsets</a></code> <span class="specialType">property</span></span><span class="tooltip">A Boolean value that determines whether the border insets are enabled. </span>
+</li>
+</ul>
+</li>
+<li id="Other">
+<h3>Other</h3>
+<ul class="methods">
+<li>
+<span class="tooltipRegion"><code><a href="#defaultTopColor">+ defaultTopColor</a></code></span><span class="tooltip">The default top gradient color. </span>
+</li>
+<li>
+<span class="tooltipRegion"><code><a href="#defaultBottomColor">+ defaultBottomColor</a></code></span><span class="tooltip">The default bottom gradient color. </span>
+</li>
+<li>
+<span class="tooltipRegion"><code><a href="#defaultTopBorderColor">+ defaultTopBorderColor</a></code></span><span class="tooltip">The default top border color. </span>
+</li>
+<li>
+<span class="tooltipRegion"><code><a href="#defaultBottomBorderColor">+ defaultBottomBorderColor</a></code></span><span class="tooltip">The default bottom border color. </span>
+</li>
+<li>
+<span class="tooltipRegion"><code><a href="#defaultTopInsetAlpha">+ defaultTopInsetAlpha</a></code></span><span class="tooltip">The default top inset alpha. </span>
+</li>
+<li>
+<span class="tooltipRegion"><code><a href="#defaultBottomInsetAlpha">+ defaultBottomInsetAlpha</a></code></span><span class="tooltip">The default bottom inset alpha. </span>
+</li>
+</ul>
+</li>
+</ul>
+<section id="properties"><h2>Properties</h2>
+<section class="definition" id="topColor"><h3>topColor</h3>
+<p>The top gradient color. </p>
+<code class="methodDeclaration">@property <a href="http://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIColor_Class/index.html">UIColor</a> *topColor</code><h5>See Also</h5>
+<ul class="seeAlso"><li><code><a href="#defaultTopColor">+ defaultTopColor</a></code></li></ul>
+<h5>Declared In</h5>
+<code><code>SSGradientView</code>.h</code></section><section class="definition" id="bottomColor"><h3>bottomColor</h3>
+<p>The bottom gradient color. </p>
+<code class="methodDeclaration">@property <a href="http://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIColor_Class/index.html">UIColor</a> *bottomColor</code><h5>See Also</h5>
+<ul class="seeAlso"><li><code><a href="#defaultBottomColor">+ defaultBottomColor</a></code></li></ul>
+<h5>Declared In</h5>
+<code><code>SSGradientView</code>.h</code></section><section class="definition" id="topBorderColor"><h3>topBorderColor</h3>
+<p>The top border color. </p>
+<code class="methodDeclaration">@property <a href="http://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIColor_Class/index.html">UIColor</a> *topBorderColor</code><h5>See Also</h5>
+<ul class="seeAlso"><li><code><a href="#defaultTopBorderColor">+ defaultTopBorderColor</a></code></li></ul>
+<h5>Declared In</h5>
+<code><code>SSGradientView</code>.h</code></section><section class="definition" id="bottomBorderColor"><h3>bottomBorderColor</h3>
+<p>The bottom border color. </p>
+<code class="methodDeclaration">@property <a href="http://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIColor_Class/index.html">UIColor</a> *bottomBorderColor</code><h5>See Also</h5>
+<ul class="seeAlso"><li><code><a href="#defaultBottomColor">+ defaultBottomColor</a></code></li></ul>
+<h5>Declared In</h5>
+<code><code>SSGradientView</code>.h</code></section><section class="definition" id="topInsetAlpha"><h3>topInsetAlpha</h3>
+<p>The top border inset alpha. </p>
+<code class="methodDeclaration">@property CGFloat topInsetAlpha</code><h5>Discussion</h5>
+<p>If the value is less than or equal to 0.0, it will not be drawn. The default 0.3.</p>
+<p></p>
+<h5>See Also</h5>
+<ul class="seeAlso"><li><code><a href="#defaultTopInsetAlpha">+ defaultTopInsetAlpha</a></code></li></ul>
+<h5>Declared In</h5>
+<code><code>SSGradientView</code>.h</code></section><section class="definition" id="bottomInsetAlpha"><h3>bottomInsetAlpha</h3>
+<p>The bottom border inset alpha. </p>
+<code class="methodDeclaration">@property CGFloat bottomInsetAlpha</code><h5>Discussion</h5>
+<p>If the value is less than or equal to 0.0, it will not be drawn. The default 0.0.</p>
+<p></p>
+<h5>See Also</h5>
+<ul class="seeAlso"><li><code><a href="#defaultBottomInsetAlpha">+ defaultBottomInsetAlpha</a></code></li></ul>
+<h5>Declared In</h5>
+<code><code>SSGradientView</code>.h</code></section><section class="definition" id="hasTopBorder"><h3>hasTopBorder</h3>
+<p>A Boolean value that determines whether showing the top border is enabled. </p>
+<code class="methodDeclaration">@property BOOL hasTopBorder</code><h5>Declared In</h5>
+<code><code>SSGradientView</code>.h</code></section><section class="definition" id="hasBottomBorder"><h3>hasBottomBorder</h3>
+<p>A Boolean value that determines whether showing the bottom border is enabled. </p>
+<code class="methodDeclaration">@property BOOL hasBottomBorder</code><h5>Declared In</h5>
+<code><code>SSGradientView</code>.h</code></section><section class="definition" id="showsInsets"><h3>showsInsets</h3>
+<p>A Boolean value that determines whether the border insets are enabled. </p>
+<code class="methodDeclaration">@property BOOL showsInsets</code><h5>Declared In</h5>
+<code><code>SSGradientView</code>.h</code></section></section><section id="classMethods"><h2>Class Methods</h2>
+<section class="definition" id="defaultTopColor"><h3>defaultTopColor</h3>
+<p>The default top gradient color. </p>
+<code class="methodDeclaration">+ (<a href="http://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIColor_Class/index.html">UIColor</a> *)defaultTopColor</code><h5>Declared In</h5>
+<code><code>SSGradientView</code>.h</code></section><section class="definition" id="defaultBottomColor"><h3>defaultBottomColor</h3>
+<p>The default bottom gradient color. </p>
+<code class="methodDeclaration">+ (<a href="http://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIColor_Class/index.html">UIColor</a> *)defaultBottomColor</code><h5>Declared In</h5>
+<code><code>SSGradientView</code>.h</code></section><section class="definition" id="defaultTopBorderColor"><h3>defaultTopBorderColor</h3>
+<p>The default top border color. </p>
+<code class="methodDeclaration">+ (<a href="http://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIColor_Class/index.html">UIColor</a> *)defaultTopBorderColor</code><h5>Declared In</h5>
+<code><code>SSGradientView</code>.h</code></section><section class="definition" id="defaultBottomBorderColor"><h3>defaultBottomBorderColor</h3>
+<p>The default bottom border color. </p>
+<code class="methodDeclaration">+ (<a href="http://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIColor_Class/index.html">UIColor</a> *)defaultBottomBorderColor</code><h5>Declared In</h5>
+<code><code>SSGradientView</code>.h</code></section><section class="definition" id="defaultTopInsetAlpha"><h3>defaultTopInsetAlpha</h3>
+<p>The default top inset alpha. </p>
+<code class="methodDeclaration">+ (CGFloat)defaultTopInsetAlpha</code><h5>Declared In</h5>
+<code><code>SSGradientView</code>.h</code></section><section class="definition" id="defaultBottomInsetAlpha"><h3>defaultBottomInsetAlpha</h3>
+<p>The default bottom inset alpha. </p>
+<code class="methodDeclaration">+ (CGFloat)defaultBottomInsetAlpha</code><h5>Declared In</h5>
+<code><code>SSGradientView</code>.h</code></section></section><hr>
+<p id="lastUpdated">Last updated: 2010-11-7</p>
+</div>
+<footer id="breadcrumbs"><ul>
+<li><a href="../index.html">SSToolkit</a></li>
+<li><a href="#classTitle">SSGradientView Class Reference</a></li>
+</ul></footer>
+</body>
+</html>

@@ -1,0 +1,242 @@
+<!DOCTYPE html><html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<title>SSCollectionView Class Reference</title>
+<meta id="Generator" name="Generator" content="Doxyclean">
+<meta id="GeneratorVersion" name="GeneratorVersion" content="2.2">
+<link rel="stylesheet" type="text/css" href="../css/common.css">
+<link rel="stylesheet" type="text/css" media="screen" href="../css/screen.css">
+<link rel="stylesheet" type="text/css" media="print" href="../css/print.css">
+<script type="text/javascript">
+				function toggleTOC() {
+					var toc = document.getElementById('tableOfContents');
+					var tocButton = document.getElementById('toc_button');
+					var contents = document.getElementById('contents');
+					if (toc.style.display == 'block') {
+						toc.style.display = 'none';
+						contents.className = '';
+						tocButton.className = '';
+					} else {
+						toc.style.display = 'block';
+						contents.className = 'tableOfContentsOpen';
+						tocButton.className = 'open';
+					}
+				}
+				
+				function toggleTOCItem() {
+					var listItem = event.srcElement;
+					var sublist = listItem.getElementsByTagName('ul')[0];
+					if (sublist.style.display == 'block') {
+						sublist.style.display = 'none';
+						listItem.className = 'expandable';
+					} else {
+						sublist.style.display = 'block';
+						listItem.className = 'expandable expanded';
+					}
+				}
+				
+				function jumpTo() {
+					selectedItem = event.srcElement.options[event.srcElement.selectedIndex].value;
+					window.location = "#" + selectedItem;
+				}
+			</script>
+</head>
+<body>
+<header id="projectHeader"><h1><a href="../index.html">SSToolkit Reference Library</a></h1></header><header id="fileHeader"><h1><a href="#classTitle">SSCollectionView Class Reference</a></h1></header><nav id="buttons"><ul>
+<li id="toc_button"><button id="table_of_contents" onclick="toggleTOC()">Table of Contents</button></li>
+<li id="jumpto_button"><select id="jumpto" onchange="jumpTo()"><option value="classTitle">Jump To...</option>
+<option value="overview">Overview</option>
+<option value="tasks">Tasks</option>
+<option value="properties">Properties</option>
+<option value="dataSource">    dataSource</option>
+<option value="delegate">    delegate</option>
+<option value="rowHeight">    rowHeight</option>
+<option value="rowSpacing">    rowSpacing</option>
+<option value="columnWidth">    columnWidth</option>
+<option value="columnSpacing">    columnSpacing</option>
+<option value="backgroundView">    backgroundView</option>
+<option value="allowsSelection">    allowsSelection</option>
+<option value="instanceMethods">Instance Methods</option>
+<option value="reloadData">    - reloadData</option>
+<option value="dequeueReusableItemWithIdentifier:">    - dequeueReusableItemWithIdentifier:</option>
+<option value="itemPathForIndex:">    - itemPathForIndex:</option>
+<option value="indexPathForItem:">    - indexPathForItem:</option>
+<option value="deselectItemAtIndexPath:animated:">    - deselectItemAtIndexPath:animated:</option></select></li>
+</ul></nav><nav id="tableOfContents" style="display: none;"><ul>
+<li><a href="#overview">Overview</a></li>
+<li class="expandable" id="tocTasks" onclick="toggleTOCItem()">
+<a href="#tasks">Tasks</a><ul style="display: none;">
+<li><a href="#Other">Other</a></li>
+<li><a href="#Other">Other</a></li>
+</ul>
+</li>
+<li class="expandable" id="tocProperties" onclick="toggleTOCItem()">
+<a href="#properties">Properties</a><ul style="display: none;">
+<li><a href="#dataSource">dataSource</a></li>
+<li><a href="#delegate">delegate</a></li>
+<li><a href="#rowHeight">rowHeight</a></li>
+<li><a href="#rowSpacing">rowSpacing</a></li>
+<li><a href="#columnWidth">columnWidth</a></li>
+<li><a href="#columnSpacing">columnSpacing</a></li>
+<li><a href="#backgroundView">backgroundView</a></li>
+<li><a href="#allowsSelection">allowsSelection</a></li>
+</ul>
+</li>
+<li class="expandable" id="tocInstanceMethods" onclick="toggleTOCItem()">
+<a href="#instanceMethods">Instance Methods</a><ul style="display: none;">
+<li><a href="#reloadData">reloadData</a></li>
+<li><a href="#dequeueReusableItemWithIdentifier:">dequeueReusableItemWithIdentifier:</a></li>
+<li><a href="#itemPathForIndex:">itemPathForIndex:</a></li>
+<li><a href="#indexPathForItem:">indexPathForItem:</a></li>
+<li><a href="#deselectItemAtIndexPath:animated:">deselectItemAtIndexPath:animated:</a></li>
+</ul>
+</li>
+</ul></nav><div id="contents">
+<h1 id="classTitle">SSCollectionView Class Reference</h1>
+<table id="metadata"><tr class="alt">
+<th>Declared in</th>
+<td>SSCollectionView.h</td>
+</tr></table>
+<h2 id="overview">Overview</h2>
+<p>Simple collection view. </p>
+<p>This is very alphay. My goals are to be similar to <code><a href="http://developer.apple.com/iphone/library/documentation/UIKit/Reference/UITableView_Class/index.html">UITableView</a></code> and NSCollectionView when possible. Currently it's pretty inefficient and doesn't reuse items and all items have to be the same size. Only scrolling vertically is currently supported.</p>
+<p>Multiple sections are not supported.</p>
+<p>Editing and performance will be my next focus. Then animating changes when data changes and an option to disable that. </p>
+<h2 id="tasks">Tasks</h2>
+<ul id="tasksList">
+<li id="Other">
+<h3>Other</h3>
+<ul class="methods">
+<li>
+<span class="tooltipRegion"><code><a href="#dataSource">dataSource</a></code> <span class="specialType">property</span></span><span class="tooltip">The object that acts as the data source of the receiving collection view. </span>
+</li>
+<li>
+<span class="tooltipRegion"><code><a href="#delegate">delegate</a></code> <span class="specialType">property</span></span><span class="tooltip">The object that acts as the delegate of the receiving collection view. </span>
+</li>
+<li>
+<span class="tooltipRegion"><code><a href="#rowHeight">rowHeight</a></code> <span class="specialType">property</span></span><span class="tooltip">The height of each row in the receiver. </span>
+</li>
+<li>
+<span class="tooltipRegion"><code><a href="#rowSpacing">rowSpacing</a></code> <span class="specialType">property</span></span><span class="tooltip">The spacing between each row in the receiver. This does not add space above the first row or below the last. </span>
+</li>
+<li>
+<span class="tooltipRegion"><code><a href="#columnWidth">columnWidth</a></code> <span class="specialType">property</span></span><span class="tooltip">The width of each column in the receiver. </span>
+</li>
+<li>
+<span class="tooltipRegion"><code><a href="#columnSpacing">columnSpacing</a></code> <span class="specialType">property</span></span><span class="tooltip">The spacing between each column in the receiver. This does not add space to the left of the first column or the right of the last column. </span>
+</li>
+<li>
+<span class="tooltipRegion"><code><a href="#backgroundView">backgroundView</a></code> <span class="specialType">property</span></span><span class="tooltip">The background view of the collection view. </span>
+</li>
+<li>
+<span class="tooltipRegion"><code><a href="#allowsSelection">allowsSelection</a></code> <span class="specialType">property</span></span><span class="tooltip">A Boolean value that determines whether selecting items is enabled. </span>
+</li>
+</ul>
+</li>
+<li id="Other">
+<h3>Other</h3>
+<ul class="methods">
+<li>
+<span class="tooltipRegion"><code><a href="#reloadData">- reloadData</a></code></span><span class="tooltip">Reloads the items and sections of the receiver. </span>
+</li>
+<li>
+<span class="tooltipRegion"><code><a href="#dequeueReusableItemWithIdentifier:">- dequeueReusableItemWithIdentifier:</a></code></span><span class="tooltip">Returns a reusable collection view item object located by its identifier. </span>
+</li>
+<li>
+<span class="tooltipRegion"><code><a href="#itemPathForIndex:">- itemPathForIndex:</a></code></span><span class="tooltip">Returns the collection view item at the specified index path. </span>
+</li>
+<li>
+<span class="tooltipRegion"><code><a href="#indexPathForItem:">- indexPathForItem:</a></code></span><span class="tooltip">Returns an index path representing the row (index) and section of a given collection view item. </span>
+</li>
+<li>
+<span class="tooltipRegion"><code><a href="#deselectItemAtIndexPath:animated:">- deselectItemAtIndexPath:animated:</a></code></span><span class="tooltip">Deselects a given item identified by index path, with an option to animate the deselection. </span>
+</li>
+</ul>
+</li>
+</ul>
+<section id="properties"><h2>Properties</h2>
+<section class="definition" id="dataSource"><h3>dataSource</h3>
+<p>The object that acts as the data source of the receiving collection view. </p>
+<code class="methodDeclaration">@property id&lt;SSCollectionViewDataSource&gt; dataSource</code><h5>Declared In</h5>
+<code><code>SSCollectionView</code>.h</code></section><section class="definition" id="delegate"><h3>delegate</h3>
+<p>The object that acts as the delegate of the receiving collection view. </p>
+<code class="methodDeclaration">@property id&lt;SSCollectionViewDelegate&gt; delegate</code><h5>Declared In</h5>
+<code><code>SSCollectionView</code>.h</code></section><section class="definition" id="rowHeight"><h3>rowHeight</h3>
+<p>The height of each row in the receiver. </p>
+<code class="methodDeclaration">@property CGFloat rowHeight</code><h5>Discussion</h5>
+<p>The row height is in points. The default is 80. </p>
+<h5>Declared In</h5>
+<code><code>SSCollectionView</code>.h</code></section><section class="definition" id="rowSpacing"><h3>rowSpacing</h3>
+<p>The spacing between each row in the receiver. This does not add space above the first row or below the last. </p>
+<code class="methodDeclaration">@property CGFloat rowSpacing</code><h5>Discussion</h5>
+<p>The row spacing is in points. The default is 20. </p>
+<h5>Declared In</h5>
+<code><code>SSCollectionView</code>.h</code></section><section class="definition" id="columnWidth"><h3>columnWidth</h3>
+<p>The width of each column in the receiver. </p>
+<code class="methodDeclaration">@property CGFloat columnWidth</code><h5>Discussion</h5>
+<p>The column width is in points. The default is 80. </p>
+<h5>Declared In</h5>
+<code><code>SSCollectionView</code>.h</code></section><section class="definition" id="columnSpacing"><h3>columnSpacing</h3>
+<p>The spacing between each column in the receiver. This does not add space to the left of the first column or the right of the last column. </p>
+<code class="methodDeclaration">@property CGFloat columnSpacing</code><h5>Discussion</h5>
+<p>The column spacing is in points. The default is 20. </p>
+<h5>Declared In</h5>
+<code><code>SSCollectionView</code>.h</code></section><section class="definition" id="backgroundView"><h3>backgroundView</h3>
+<p>The background view of the collection view. </p>
+<code class="methodDeclaration">@property <a href="http://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIView_Class/index.html">UIView</a> *backgroundView</code><h5>Declared In</h5>
+<code><code>SSCollectionView</code>.h</code></section><section class="definition" id="allowsSelection"><h3>allowsSelection</h3>
+<p>A Boolean value that determines whether selecting items is enabled. </p>
+<code class="methodDeclaration">@property BOOL allowsSelection</code><h5>Discussion</h5>
+<p>If the value of this property is YES, selecting is enabled, and if it is NO, selecting is disabled. The default is YES. </p>
+<h5>Declared In</h5>
+<code><code>SSCollectionView</code>.h</code></section></section><section id="instanceMethods"><h2>Instance Methods</h2>
+<section class="definition" id="reloadData"><h3>reloadData</h3>
+<p>Reloads the items and sections of the receiver. </p>
+<code class="methodDeclaration">- (void)reloadData</code><h5>Declared In</h5>
+<code><code>SSCollectionView</code>.h</code></section><section class="definition" id="dequeueReusableItemWithIdentifier:"><h3>dequeueReusableItemWithIdentifier:</h3>
+<p>Returns a reusable collection view item object located by its identifier. </p>
+<code class="methodDeclaration">- (SSCollectionViewItem *)dequeueReusableItemWithIdentifier:(<a href="http://developer.apple.com/iphone/library/documentation/Cocoa/Reference/Foundation/Classes/NSString_Class/index.html">NSString</a> *)<span class="parameter">identifier</span> </code><h5>Parameters</h5>
+<dl class="parameterList">
+<dt>identifier</dt>
+<dd><p>A string identifying the cell object to be reused. </p></dd>
+</dl>
+<h5>Declared In</h5>
+<code><code>SSCollectionView</code>.h</code></section><section class="definition" id="itemPathForIndex:"><h3>itemPathForIndex:</h3>
+<p>Returns the collection view item at the specified index path. </p>
+<code class="methodDeclaration">- (SSCollectionViewItem *)itemPathForIndex:(<a href="http://developer.apple.com/iphone/library/documentation/Cocoa/Reference/Foundation/Classes/NSIndexPath_Class/index.html">NSIndexPath</a> *)<span class="parameter">indexPath</span> </code><h5>Parameters</h5>
+<dl class="parameterList">
+<dt>indexPath</dt>
+<dd><p>The index path locating the item in the receiver. </p></dd>
+</dl>
+<h5>Declared In</h5>
+<code><code>SSCollectionView</code>.h</code></section><section class="definition" id="indexPathForItem:"><h3>indexPathForItem:</h3>
+<p>Returns an index path representing the row (index) and section of a given collection view item. </p>
+<code class="methodDeclaration">- (NSIndexPath *)indexPathForItem:(<a href="../Classes/SSCollectionViewItem.html">SSCollectionViewItem</a> *)<span class="parameter">item</span> </code><h5>Parameters</h5>
+<dl class="parameterList">
+<dt>item</dt>
+<dd><p>An item object of the collection view. </p></dd>
+</dl>
+<h5>Declared In</h5>
+<code><code>SSCollectionView</code>.h</code></section><section class="definition" id="deselectItemAtIndexPath:animated:"><h3>deselectItemAtIndexPath:animated:</h3>
+<p>Deselects a given item identified by index path, with an option to animate the deselection. </p>
+<code class="methodDeclaration">- (void)deselectItemAtIndexPath:(<a href="http://developer.apple.com/iphone/library/documentation/Cocoa/Reference/Foundation/Classes/NSIndexPath_Class/index.html">NSIndexPath</a> *)<span class="parameter">indexPath</span> animated:(BOOL)<span class="parameter">animated</span> </code><h5>Parameters</h5>
+<dl class="parameterList">
+<dt>indexPath</dt>
+<dd><p>An index path identifying an item in the receiver. </p></dd>
+<dt>animated</dt>
+<dd><p>YES if you want to animate the deselection and NO if the change should be immediate. </p></dd>
+</dl>
+<h5>Discussion</h5>
+<p>Currently not implemented.</p>
+<p></p>
+<h5>Declared In</h5>
+<code><code>SSCollectionView</code>.h</code></section></section><hr>
+<p id="lastUpdated">Last updated: 2010-11-7</p>
+</div>
+<footer id="breadcrumbs"><ul>
+<li><a href="../index.html">SSToolkit</a></li>
+<li><a href="#classTitle">SSCollectionView Class Reference</a></li>
+</ul></footer>
+</body>
+</html>

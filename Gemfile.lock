@@ -1,35 +1,21 @@
 GEM
   remote: http://rubygems.org/
   specs:
-    classifier (1.3.3)
-      fast-stemmer (>= 1.0.0)
-    compass (0.10.5)
+    compass (0.10.6)
       haml (>= 3.0.4)
-    directory_watcher (1.3.2)
-    fast-stemmer (1.0.0)
-    haml (3.0.18)
-    jekyll (0.7.0)
-      classifier (>= 1.3.1)
-      directory_watcher (>= 1.1.1)
-      liquid (>= 1.9.0)
-      maruku (>= 0.5.9)
-    liquid (2.2.2)
-    maruku (0.6.0)
-      syntax (>= 1.0.0)
+    haml (3.0.23)
     rack (1.2.1)
-    rdiscount (1.6.5)
     shotgun (0.8)
       rack (>= 1.0)
-    sinatra (1.0)
-      rack (>= 1.0)
-    syntax (1.0.0)
+    sinatra (1.1.0)
+      rack (~> 1.1)
+      tilt (~> 1.1)
+    tilt (1.1)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
-  compass (= 0.10.5)
-  jekyll (= 0.7.0)
-  rdiscount (= 1.6.5)
+  compass (= 0.10.6)
   shotgun (= 0.8)
-  sinatra (= 1.0)
+  sinatra (= 1.1.0)

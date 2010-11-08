@@ -1,16 +1,9 @@
-set :app_file, __FILE__
-set :root, File.dirname(__FILE__)
-
-JEKYLL_ROOT = 'jekyll/_site'
-
-get '/?' do
-  # Just redirect to GitHub for now
-  redirect 'http://github.com/samsoffes/sstoolkit'
-end
-
-
 class SSToolkit < Sinatra::Application
-  set :public, JEKYLL_ROOT
+  PUBLIC_PATH = File.expand_path('../public', __FILE__)
+  
+  set :app_file, __FILE__
+  set :root, File.dirname(__FILE__)
+  set :public, PUBLIC_PATH
  
   # This before filter ensures that your pages are only ever served 
   # once (per deploy) by Sinatra, and then by Varnish after that
@@ -19,21 +12,35 @@ class SSToolkit < Sinatra::Application
   end
 
   not_found do
-    File.read("#{JEKYLL_ROOT}/four-oh-four.html")
+    erb :four_oh_four
   end
 
   get '/' do
-    File.read("#{JEKYLL_ROOT}/index.html")
+    erb :home
   end
-
-  # TODO: This doesn't work because they are in public
-  get %r{/([a-zA-Z\-_\/]+).html/?} do
-    redirect("/#{params[:captures].first}")
+  
+  get '/documentation' do
+    redirect '/documentation/'
   end
 
   get %r{/([a-zA-Z\-_\/]+)/?} do
-    path = "#{JEKYLL_ROOT}/#{params[:captures].first}.html"
-    File.exist?(path) or not_found
-    File.read(path)
+    paths = [
+      ".html",
+      "/index.html",
+      ".css"
+    ]
+    
+    output = nil
+    paths.each do |path|
+      path = "#{PUBLIC_PATH}/#{params[:captures].first}#{path}"
+      if File.exist?(path)
+        output = File.read(path)
+        break
+      end
+    end
+    
+    not_found unless output
+    output
   end
+
 end
