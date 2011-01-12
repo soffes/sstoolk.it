@@ -14,3 +14,12 @@ Now the following command to start the server and you're good to go.
     $ rake server
 
 Enjoy.
+
+## Documentation
+
+To import the documentation from SSToolkit run the following commands:
+
+    $ git clone http://github.com/samsoffes/sstoolkit.git ../sstoolkit
+    $ rake docs:import
+
+Done

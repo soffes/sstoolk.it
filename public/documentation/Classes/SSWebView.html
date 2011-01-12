@@ -64,6 +64,7 @@
 <option value="dataDetectorTypes">    dataDetectorTypes</option>
 <option value="instanceMethods">Instance Methods</option>
 <option value="dismissKeyboard">    - dismissKeyboard</option>
+<option value="removeTextSelection">    - removeTextSelection</option>
 <option value="reset">    - reset</option>
 <option value="loadHTMLString:">    - loadHTMLString:</option>
 <option value="loadURL:">    - loadURL:</option>
@@ -104,6 +105,7 @@
 <li class="expandable" id="tocInstanceMethods" onclick="toggleTOCItem()">
 <a href="#instanceMethods">Instance Methods</a><ul style="display: none;">
 <li><a href="#dismissKeyboard">dismissKeyboard</a></li>
+<li><a href="#removeTextSelection">removeTextSelection</a></li>
 <li><a href="#reset">reset</a></li>
 <li><a href="#loadHTMLString:">loadHTMLString:</a></li>
 <li><a href="#loadURL:">loadURL:</a></li>
@@ -134,7 +136,7 @@
 <h3>Other</h3>
 <ul class="methods">
 <li>
-<span class="tooltipRegion"><code><a href="#loadingPage">loadingPage</a></code> <span class="specialType">property</span></span><span class="tooltip">Returns whether the web view is loading a page. (read-only). </span>
+<span class="tooltipRegion"><code><a href="#loadingPage">loadingPage</a></code> <span class="specialType">property</span></span><span class="tooltip">Returns whether the web view is loading a page. (read-only) </span>
 </li>
 <li>
 <span class="tooltipRegion"><code><a href="#scrollEnabled">scrollEnabled</a></code> <span class="specialType">property</span></span><span class="tooltip">A Boolean value that determines whether scrolling is enabled. </span>
@@ -155,16 +157,16 @@
 <span class="tooltipRegion"><code><a href="#delegate">delegate</a></code> <span class="specialType">property</span></span><span class="tooltip">The receiver's delegate. </span>
 </li>
 <li>
-<span class="tooltipRegion"><code><a href="#loading">loading</a></code> <span class="specialType">property</span></span><span class="tooltip">A Boolean value indicating whether the receiver is done loading content. (read-only). </span>
+<span class="tooltipRegion"><code><a href="#loading">loading</a></code> <span class="specialType">property</span></span><span class="tooltip">A Boolean value indicating whether the receiver is done loading content. (read-only) </span>
 </li>
 <li>
-<span class="tooltipRegion"><code><a href="#canGoBack">canGoBack</a></code> <span class="specialType">property</span></span><span class="tooltip">A Boolean value indicating whether the receiver can move backward. (read-only). </span>
+<span class="tooltipRegion"><code><a href="#canGoBack">canGoBack</a></code> <span class="specialType">property</span></span><span class="tooltip">A Boolean value indicating whether the receiver can move backward. (read-only) </span>
 </li>
 <li>
-<span class="tooltipRegion"><code><a href="#canGoForward">canGoForward</a></code> <span class="specialType">property</span></span><span class="tooltip">A Boolean value indicating whether the receiver can move forward. (read-only). </span>
+<span class="tooltipRegion"><code><a href="#canGoForward">canGoForward</a></code> <span class="specialType">property</span></span><span class="tooltip">A Boolean value indicating whether the receiver can move forward. (read-only) </span>
 </li>
 <li>
-<span class="tooltipRegion"><code><a href="#request">request</a></code> <span class="specialType">property</span></span><span class="tooltip">The URL request identifying the location of the content to load. (read-only). </span>
+<span class="tooltipRegion"><code><a href="#request">request</a></code> <span class="specialType">property</span></span><span class="tooltip">The URL request identifying the location of the content to load. (read-only) </span>
 </li>
 <li>
 <span class="tooltipRegion"><code><a href="#scalesPageToFit">scalesPageToFit</a></code> <span class="specialType">property</span></span><span class="tooltip">A Boolean value determining whether the webpage scales to fit the view and the user can change the scale. </span>
@@ -179,6 +181,9 @@
 <ul class="methods">
 <li>
 <span class="tooltipRegion"><code><a href="#dismissKeyboard">- dismissKeyboard</a></code></span><span class="tooltip">Uses JavaScript to remove focus from the active element. </span>
+</li>
+<li>
+<span class="tooltipRegion"><code><a href="#removeTextSelection">- removeTextSelection</a></code></span><span class="tooltip">Removes the text selection in the web view. </span>
 </li>
 <li>
 <span class="tooltipRegion"><code><a href="#reset">- reset</a></code></span><span class="tooltip">Destroys the internal UIWebView and recreates. </span>
@@ -221,7 +226,7 @@
 </ul>
 <section id="properties"><h2>Properties</h2>
 <section class="definition" id="loadingPage"><h3>loadingPage</h3>
-<p>Returns whether the web view is loading a page. (read-only). </p>
+<p>Returns whether the web view is loading a page. (read-only) </p>
 <code class="methodDeclaration">@property BOOL loadingPage</code><h5>Discussion</h5>
 <p>This will return <code>YES</code> when the first <code><a href="http://developer.apple.com/iphone/library/documentation/Cocoa/Reference/Foundation/Classes/NSURLRequest_Class/index.html">NSURLRequest</a></code> starts and <code>NO</code> when there are no more requests loading.</p>
 <p>Note: Setting this isn't 100% reliable since it is very hacky underneath. </p>
@@ -258,22 +263,22 @@
 <p>The delegate is sent messages when content is loading. </p>
 <h5>Declared In</h5>
 <code><code>SSWebView</code>.h</code></section><section class="definition" id="loading"><h3>loading</h3>
-<p>A Boolean value indicating whether the receiver is done loading content. (read-only). </p>
+<p>A Boolean value indicating whether the receiver is done loading content. (read-only) </p>
 <code class="methodDeclaration">@property BOOL loading</code><h5>Discussion</h5>
 <p>If <code>YES</code>, the receiver is still loading content; otherwise, <code>NO</code>. </p>
 <h5>Declared In</h5>
 <code><code>SSWebView</code>.h</code></section><section class="definition" id="canGoBack"><h3>canGoBack</h3>
-<p>A Boolean value indicating whether the receiver can move backward. (read-only). </p>
+<p>A Boolean value indicating whether the receiver can move backward. (read-only) </p>
 <code class="methodDeclaration">@property BOOL canGoBack</code><h5>Discussion</h5>
 <p>If <code>YES</code>, able to move backward; otherwise, <code>NO</code>. </p>
 <h5>Declared In</h5>
 <code><code>SSWebView</code>.h</code></section><section class="definition" id="canGoForward"><h3>canGoForward</h3>
-<p>A Boolean value indicating whether the receiver can move forward. (read-only). </p>
+<p>A Boolean value indicating whether the receiver can move forward. (read-only) </p>
 <code class="methodDeclaration">@property BOOL canGoForward</code><h5>Discussion</h5>
 <p>If <code>YES</code>, able to move forward; otherwise, <code>NO</code>. </p>
 <h5>Declared In</h5>
 <code><code>SSWebView</code>.h</code></section><section class="definition" id="request"><h3>request</h3>
-<p>The URL request identifying the location of the content to load. (read-only). </p>
+<p>The URL request identifying the location of the content to load. (read-only) </p>
 <code class="methodDeclaration">@property <a href="http://developer.apple.com/iphone/library/documentation/Cocoa/Reference/Foundation/Classes/NSURLRequest_Class/index.html">NSURLRequest</a> *request</code><h5>Declared In</h5>
 <code><code>SSWebView</code>.h</code></section><section class="definition" id="scalesPageToFit"><h3>scalesPageToFit</h3>
 <p>A Boolean value determining whether the webpage scales to fit the view and the user can change the scale. </p>
@@ -290,6 +295,11 @@
 <p>Uses JavaScript to remove focus from the active element. </p>
 <code class="methodDeclaration">- (void)dismissKeyboard</code><h5>Discussion</h5>
 <p>If the receiver is in a modal <code><a href="http://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIViewController_Class/index.html">UIViewController</a></code> with the modalPresentationStyle UIModalPresentationFormSheet, it will not dismiss the keyboard due to how UIModalPresentationFormSheet works. </p>
+<h5>Declared In</h5>
+<code><code>SSWebView</code>.h</code></section><section class="definition" id="removeTextSelection"><h3>removeTextSelection</h3>
+<p>Removes the text selection in the web view. </p>
+<code class="methodDeclaration">- (void)removeTextSelection</code><h5>Discussion</h5>
+<p>Using Javascript to this doesn't always work as expected. This method will correctly remove the text selection. </p>
 <h5>Declared In</h5>
 <code><code>SSWebView</code>.h</code></section><section class="definition" id="reset"><h3>reset</h3>
 <p>Destroys the internal <code><a href="http://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIWebView_Class/index.html">UIWebView</a></code> and recreates. </p>
@@ -431,7 +441,7 @@ JavaScript execution time is limited to 10 seconds for each top-level entry poin
 <p>JavaScript allocations are also limited to 10 MB. The web view raises an exception if you exceed this limit on the total memory allocation for JavaScript. </p>
 <h5>Declared In</h5>
 <code><code>SSWebView</code>.h</code></section></section><hr>
-<p id="lastUpdated">Last updated: 2010-11-8</p>
+<p id="lastUpdated">Last updated: 2011-1-12</p>
 </div>
 <footer id="breadcrumbs"><ul>
 <li><a href="../index.html">SSToolkit</a></li>

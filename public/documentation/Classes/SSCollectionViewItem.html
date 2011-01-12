@@ -104,13 +104,13 @@
 <h3>Other</h3>
 <ul class="methods">
 <li>
-<span class="tooltipRegion"><code><a href="#imageView">imageView</a></code> <span class="specialType">property</span></span><span class="tooltip">Returns the image view of the collection view item. (read-only). </span>
+<span class="tooltipRegion"><code><a href="#imageView">imageView</a></code> <span class="specialType">property</span></span><span class="tooltip">Returns the image view of the collection view item. (read-only) </span>
 </li>
 <li>
-<span class="tooltipRegion"><code><a href="#textLabel">textLabel</a></code> <span class="specialType">property</span></span><span class="tooltip">Returns the label used for the main textual content of the table cell. (read-only). </span>
+<span class="tooltipRegion"><code><a href="#textLabel">textLabel</a></code> <span class="specialType">property</span></span><span class="tooltip">Returns the label used for the main textual content of the table cell. (read-only) </span>
 </li>
 <li>
-<span class="tooltipRegion"><code><a href="#detailTextLabel">detailTextLabel</a></code> <span class="specialType">property</span></span><span class="tooltip">Returns the secondary label of the collection view item. (read-only). </span>
+<span class="tooltipRegion"><code><a href="#detailTextLabel">detailTextLabel</a></code> <span class="specialType">property</span></span><span class="tooltip">Returns the secondary label of the collection view item. (read-only) </span>
 </li>
 <li>
 <span class="tooltipRegion"><code><a href="#backgroundView">backgroundView</a></code> <span class="specialType">property</span></span><span class="tooltip">The view used as the background of the item. </span>
@@ -119,7 +119,7 @@
 <span class="tooltipRegion"><code><a href="#selectedBackgroundView">selectedBackgroundView</a></code> <span class="specialType">property</span></span><span class="tooltip">The view used as the background of the item when it is selected. </span>
 </li>
 <li>
-<span class="tooltipRegion"><code><a href="#reuseIdentifier">reuseIdentifier</a></code> <span class="specialType">property</span></span><span class="tooltip">A string used to identify an item that is reusable. (read-only). </span>
+<span class="tooltipRegion"><code><a href="#reuseIdentifier">reuseIdentifier</a></code> <span class="specialType">property</span></span><span class="tooltip">A string used to identify an item that is reusable. (read-only) </span>
 </li>
 <li>
 <span class="tooltipRegion"><code><a href="#selected">selected</a></code> <span class="specialType">property</span></span><span class="tooltip">A Boolean value that indicates whether the cell is selected. </span>
@@ -149,17 +149,17 @@
 </ul>
 <section id="properties"><h2>Properties</h2>
 <section class="definition" id="imageView"><h3>imageView</h3>
-<p>Returns the image view of the collection view item. (read-only). </p>
+<p>Returns the image view of the collection view item. (read-only) </p>
 <code class="methodDeclaration">@property <a href="http://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIImageView_Class/index.html">UIImageView</a> *imageView</code><h5>Discussion</h5>
 <p>Returns the image view (UIImageView object) of the collection view item, which initially has no image set. <code>SSCollectionViewItem</code> creates the image view object when you create the item. </p>
 <h5>Declared In</h5>
 <code><code>SSCollectionViewItem</code>.h</code></section><section class="definition" id="textLabel"><h3>textLabel</h3>
-<p>Returns the label used for the main textual content of the table cell. (read-only). </p>
+<p>Returns the label used for the main textual content of the table cell. (read-only) </p>
 <code class="methodDeclaration">@property <a href="../Classes/SSLabel.html">SSLabel</a> *textLabel</code><h5>Discussion</h5>
 <p>Holds the main label of the item. <code>SSCollectionViewItem</code> adds an appropriate label when you create the cell in a given item style. </p>
 <h5>Declared In</h5>
 <code><code>SSCollectionViewItem</code>.h</code></section><section class="definition" id="detailTextLabel"><h3>detailTextLabel</h3>
-<p>Returns the secondary label of the collection view item. (read-only). </p>
+<p>Returns the secondary label of the collection view item. (read-only) </p>
 <code class="methodDeclaration">@property <a href="../Classes/SSLabel.html">SSLabel</a> *detailTextLabel</code><h5>Discussion</h5>
 <p>Holds the secondary label of the item. <code>SSCollectionViewItem</code> adds an appropriate label when you create the cell in a given item style. </p>
 <h5>Declared In</h5>
@@ -174,7 +174,7 @@
 <p>The default is nil. <code>SSCollectionViewItem</code> adds the value of this property as a subview only when the cell is selected. It adds the selected background view as a subview directly above the background view (backgroundView) if it is not nil, or behind all other views. Calling setSelected:animated: causes the selected background view to animate in and out with an alpha fade. </p>
 <h5>Declared In</h5>
 <code><code>SSCollectionViewItem</code>.h</code></section><section class="definition" id="reuseIdentifier"><h3>reuseIdentifier</h3>
-<p>A string used to identify an item that is reusable. (read-only). </p>
+<p>A string used to identify an item that is reusable. (read-only) </p>
 <code class="methodDeclaration">@property <a href="http://developer.apple.com/iphone/library/documentation/Cocoa/Reference/Foundation/Classes/NSString_Class/index.html">NSString</a> *reuseIdentifier</code><h5>Discussion</h5>
 <p>The reuse identifier is associated with a SSCollectionViewItem object that the collection view's delegate creates with the intent to reuse it as the basis (for performance reasons) for multiple items of a collection view. It is assigned to the item object in initWithFrame:reuseIdentifier: and cannot be changed thereafter. A <code><a href="../Classes/SSCollectionView.html">SSCollectionView</a></code> object maintains a queue (or list) of the currently reusable items, each with its own reuse identifier, and makes them available to the delegate in the dequeueReusableCellWithIdentifier: method. </p>
 <h5>Declared In</h5>
@@ -240,7 +240,7 @@ Highlights or unhighlights the item, animating the transition between regular an
 <p>A custom table item may override this method to make any transitory appearance changes. </p>
 <h5>Declared In</h5>
 <code><code>SSCollectionViewItem</code>.h</code></section></section><hr>
-<p id="lastUpdated">Last updated: 2010-11-8</p>
+<p id="lastUpdated">Last updated: 2011-1-12</p>
 </div>
 <footer id="breadcrumbs"><ul>
 <li><a href="../index.html">SSToolkit</a></li>

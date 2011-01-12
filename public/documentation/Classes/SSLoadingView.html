@@ -49,7 +49,7 @@
 <option value="overview">Overview</option>
 <option value="tasks">Tasks</option>
 <option value="properties">Properties</option>
-<option value="activityIndicator">    activityIndicator</option>
+<option value="activityIndicatorView">    activityIndicatorView</option>
 <option value="text">    text</option>
 <option value="font">    font</option>
 <option value="textColor">    textColor</option>
@@ -62,7 +62,7 @@
 </li>
 <li class="expandable" id="tocProperties" onclick="toggleTOCItem()">
 <a href="#properties">Properties</a><ul style="display: none;">
-<li><a href="#activityIndicator">activityIndicator</a></li>
+<li><a href="#activityIndicatorView">activityIndicatorView</a></li>
 <li><a href="#text">text</a></li>
 <li><a href="#font">font</a></li>
 <li><a href="#textColor">textColor</a></li>
@@ -84,7 +84,7 @@
 <h3>Other</h3>
 <ul class="methods">
 <li>
-<span class="tooltipRegion"><code><a href="#activityIndicator">activityIndicator</a></code> <span class="specialType">property</span></span><span class="tooltip">A view that indicates loading activity to the user. (read-only). </span>
+<span class="tooltipRegion"><code><a href="#activityIndicatorView">activityIndicatorView</a></code> <span class="specialType">property</span></span><span class="tooltip">A view that indicates loading activity to the user. (read-only) </span>
 </li>
 <li>
 <span class="tooltipRegion"><code><a href="#text">text</a></code> <span class="specialType">property</span></span><span class="tooltip">The text that is displayed to the user. </span>
@@ -104,9 +104,9 @@
 </ul>
 </li></ul>
 <section id="properties"><h2>Properties</h2>
-<section class="definition" id="activityIndicator"><h3>activityIndicator</h3>
-<p>A view that indicates loading activity to the user. (read-only). </p>
-<code class="methodDeclaration">@property <a href="http://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIActivityIndicatorView_Class/index.html">UIActivityIndicatorView</a> *activityIndicator</code><h5>Declared In</h5>
+<section class="definition" id="activityIndicatorView"><h3>activityIndicatorView</h3>
+<p>A view that indicates loading activity to the user. (read-only) </p>
+<code class="methodDeclaration">@property <a href="http://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIActivityIndicatorView_Class/index.html">UIActivityIndicatorView</a> *activityIndicatorView</code><h5>Declared In</h5>
 <code><code>SSLoadingView</code>.h</code></section><section class="definition" id="text"><h3>text</h3>
 <p>The text that is displayed to the user. </p>
 <code class="methodDeclaration">@property <a href="http://developer.apple.com/iphone/library/documentation/Cocoa/Reference/Foundation/Classes/NSString_Class/index.html">NSString</a> *text</code><h5>Discussion</h5>
@@ -117,11 +117,13 @@
 <code class="methodDeclaration">@property <a href="http://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIFont_Class/index.html">UIFont</a> *font</code><h5>Declared In</h5>
 <code><code>SSLoadingView</code>.h</code></section><section class="definition" id="textColor"><h3>textColor</h3>
 <p>The color of the text. </p>
-<code class="methodDeclaration">@property <a href="http://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIColor_Class/index.html">UIColor</a> *textColor</code><h5>Declared In</h5>
+<code class="methodDeclaration">@property <a href="http://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIColor_Class/index.html">UIColor</a> *textColor</code><h5>Discussion</h5>
+<p>The default value is <code>[<code><a href="http://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIColor_Class/index.html">UIColor</a></code> darkGrayColor]</code>. </p>
+<h5>Declared In</h5>
 <code><code>SSLoadingView</code>.h</code></section><section class="definition" id="shadowColor"><h3>shadowColor</h3>
 <p>The color of the text shadow. </p>
 <code class="methodDeclaration">@property <a href="http://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIColor_Class/index.html">UIColor</a> *shadowColor</code><h5>Discussion</h5>
-<p>Set to nil to disable drawing the shadow. </p>
+<p>Set to nil to disable drawing the shadow. The default value is <code>[<code><a href="http://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIColor_Class/index.html">UIColor</a></code> whiteColor]</code>. </p>
 <h5>Declared In</h5>
 <code><code>SSLoadingView</code>.h</code></section><section class="definition" id="shadowOffset"><h3>shadowOffset</h3>
 <p>The shadow offset (measured in points) for the text. </p>
@@ -129,7 +131,7 @@
 <p>The shadowColor must be non-nil for this property to have any effect. The default offset size is (0, 1), which indicates a shadow one point below the text. Text shadows are drawn with the specified offset and color and no blurring. </p>
 <h5>Declared In</h5>
 <code><code>SSLoadingView</code>.h</code></section></section><hr>
-<p id="lastUpdated">Last updated: 2010-11-8</p>
+<p id="lastUpdated">Last updated: 2011-1-12</p>
 </div>
 <footer id="breadcrumbs"><ul>
 <li><a href="../index.html">SSToolkit</a></li>
