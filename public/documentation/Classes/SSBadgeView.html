@@ -1,0 +1,179 @@
+<!DOCTYPE html><html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<title>SSBadgeView Class Reference</title>
+<meta id="Generator" name="Generator" content="Doxyclean">
+<meta id="GeneratorVersion" name="GeneratorVersion" content="2.2">
+<link rel="stylesheet" type="text/css" href="../css/common.css">
+<link rel="stylesheet" type="text/css" media="screen" href="../css/screen.css">
+<link rel="stylesheet" type="text/css" media="print" href="../css/print.css">
+<script type="text/javascript">
+				function toggleTOC() {
+					var toc = document.getElementById('tableOfContents');
+					var tocButton = document.getElementById('toc_button');
+					var contents = document.getElementById('contents');
+					if (toc.style.display == 'block') {
+						toc.style.display = 'none';
+						contents.className = '';
+						tocButton.className = '';
+					} else {
+						toc.style.display = 'block';
+						contents.className = 'tableOfContentsOpen';
+						tocButton.className = 'open';
+					}
+				}
+				
+				function toggleTOCItem() {
+					var listItem = event.srcElement;
+					var sublist = listItem.getElementsByTagName('ul')[0];
+					if (sublist.style.display == 'block') {
+						sublist.style.display = 'none';
+						listItem.className = 'expandable';
+					} else {
+						sublist.style.display = 'block';
+						listItem.className = 'expandable expanded';
+					}
+				}
+				
+				function jumpTo() {
+					selectedItem = event.srcElement.options[event.srcElement.selectedIndex].value;
+					window.location = "#" + selectedItem;
+				}
+			</script>
+</head>
+<body>
+<header id="projectHeader"><h1><a href="../index.html">SSToolkit Reference Library</a></h1></header><header id="fileHeader"><h1><a href="#classTitle">SSBadgeView Class Reference</a></h1></header><nav id="buttons"><ul>
+<li id="toc_button"><button id="table_of_contents" onclick="toggleTOC()">Table of Contents</button></li>
+<li id="jumpto_button"><select id="jumpto" onchange="jumpTo()"><option value="classTitle">Jump To...</option>
+<option value="overview">Overview</option>
+<option value="tasks">Tasks</option>
+<option value="properties">Properties</option>
+<option value="text">    text</option>
+<option value="textColor">    textColor</option>
+<option value="highlightedTextColor">    highlightedTextColor</option>
+<option value="font">    font</option>
+<option value="badgeColor">    badgeColor</option>
+<option value="highlightedBadgeColor">    highlightedBadgeColor</option>
+<option value="cornerRadius">    cornerRadius</option>
+<option value="badgeAlignment">    badgeAlignment</option>
+<option value="highlighted">    highlighted</option></select></li>
+</ul></nav><nav id="tableOfContents" style="display: none;"><ul>
+<li><a href="#overview">Overview</a></li>
+<li class="expandable" id="tocTasks" onclick="toggleTOCItem()">
+<a href="#tasks">Tasks</a><ul style="display: none;"><li><a href="#Other">Other</a></li></ul>
+</li>
+<li class="expandable" id="tocProperties" onclick="toggleTOCItem()">
+<a href="#properties">Properties</a><ul style="display: none;">
+<li><a href="#text">text</a></li>
+<li><a href="#textColor">textColor</a></li>
+<li><a href="#highlightedTextColor">highlightedTextColor</a></li>
+<li><a href="#font">font</a></li>
+<li><a href="#badgeColor">badgeColor</a></li>
+<li><a href="#highlightedBadgeColor">highlightedBadgeColor</a></li>
+<li><a href="#cornerRadius">cornerRadius</a></li>
+<li><a href="#badgeAlignment">badgeAlignment</a></li>
+<li><a href="#highlighted">highlighted</a></li>
+</ul>
+</li>
+</ul></nav><div id="contents">
+<h1 id="classTitle">SSBadgeView Class Reference</h1>
+<table id="metadata"><tr class="alt">
+<th>Declared in</th>
+<td>SSBadgeView.h</td>
+</tr></table>
+<h2 id="overview">Overview</h2>
+<p>Badge view. </p>
+<p>Provides the accesory view for a SSBadgeTableViewCell, available through the <code>badgeView</code> property.</p>
+<p>Acts very much like the badges in Mail.app, with the key difference being that Apple uses images and <code>SSBadgeView</code> is rendered with CoreGraphics for improved scrolling performance.</p>
+<p>Not limited to numbers, strings should still be short enough to fit within the accesoryView bounds. </p>
+<h2 id="tasks">Tasks</h2>
+<ul id="tasksList"><li id="Other">
+<h3>Other</h3>
+<ul class="methods">
+<li>
+<span class="tooltipRegion"><code><a href="#text">text</a></code> <span class="specialType">property</span></span><span class="tooltip">Display value. </span>
+</li>
+<li>
+<span class="tooltipRegion"><code><a href="#textColor">textColor</a></code> <span class="specialType">property</span></span><span class="tooltip">The color of the badge display value. </span>
+</li>
+<li>
+<span class="tooltipRegion"><code><a href="#highlightedTextColor">highlightedTextColor</a></code> <span class="specialType">property</span></span><span class="tooltip">The color of the badge display value while its cell is highlighted. </span>
+</li>
+<li>
+<span class="tooltipRegion"><code><a href="#font">font</a></code> <span class="specialType">property</span></span><span class="tooltip">The font of the text. </span>
+</li>
+<li>
+<span class="tooltipRegion"><code><a href="#badgeColor">badgeColor</a></code> <span class="specialType">property</span></span><span class="tooltip">The badge's background color. </span>
+</li>
+<li>
+<span class="tooltipRegion"><code><a href="#highlightedBadgeColor">highlightedBadgeColor</a></code> <span class="specialType">property</span></span><span class="tooltip">The badge's background color while its cell is highlighted. </span>
+</li>
+<li>
+<span class="tooltipRegion"><code><a href="#cornerRadius">cornerRadius</a></code> <span class="specialType">property</span></span><span class="tooltip">The corner radius used when rendering the badge's outline. </span>
+</li>
+<li>
+<span class="tooltipRegion"><code><a href="#badgeAlignment">badgeAlignment</a></code> <span class="specialType">property</span></span><span class="tooltip">The badge's horizontal alignment within the accesoryView frame. </span>
+</li>
+<li>
+<span class="tooltipRegion"><code><a href="#highlighted">highlighted</a></code> <span class="specialType">property</span></span><span class="tooltip">A Boolean value indicating whether the receiver should be drawn with a highlight. </span>
+</li>
+</ul>
+</li></ul>
+<section id="properties"><h2>Properties</h2>
+<section class="definition" id="text"><h3>text</h3>
+<p>Display value. </p>
+<code class="methodDeclaration">@property <a href="http://developer.apple.com/iphone/library/documentation/Cocoa/Reference/Foundation/Classes/NSString_Class/index.html">NSString</a> *text</code><h5>Discussion</h5>
+<p>The default value of this property is "0". </p>
+<h5>Declared In</h5>
+<code><code>SSBadgeView</code>.h</code></section><section class="definition" id="textColor"><h3>textColor</h3>
+<p>The color of the badge display value. </p>
+<code class="methodDeclaration">@property <a href="http://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIColor_Class/index.html">UIColor</a> *textColor</code><h5>Discussion</h5>
+<p>The default value of this property is white. </p>
+<h5>Declared In</h5>
+<code><code>SSBadgeView</code>.h</code></section><section class="definition" id="highlightedTextColor"><h3>highlightedTextColor</h3>
+<p>The color of the badge display value while its cell is highlighted. </p>
+<code class="methodDeclaration">@property <a href="http://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIColor_Class/index.html">UIColor</a> *highlightedTextColor</code><h5>Discussion</h5>
+<p>The default value of this property is dark blue (that <code><a href="http://developer.apple.com/iphone/library/documentation/UIKit/Reference/UITableViewCell_Class/index.html">UITableViewCell</a></code>'s default highlighted background color). </p>
+<h5>Declared In</h5>
+<code><code>SSBadgeView</code>.h</code></section><section class="definition" id="font"><h3>font</h3>
+<p>The font of the text. </p>
+<code class="methodDeclaration">@property <a href="http://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIFont_Class/index.html">UIFont</a> *font</code><h5>Discussion</h5>
+<p>The default value of this property is bold system font at size 16. </p>
+<h5>Declared In</h5>
+<code><code>SSBadgeView</code>.h</code></section><section class="definition" id="badgeColor"><h3>badgeColor</h3>
+<p>The badge's background color. </p>
+<code class="methodDeclaration">@property <a href="http://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIColor_Class/index.html">UIColor</a> *badgeColor</code><h5>Discussion</h5>
+<p>The default value of this property is grayish blue (that matches Mail.app). </p>
+<h5>Declared In</h5>
+<code><code>SSBadgeView</code>.h</code></section><section class="definition" id="highlightedBadgeColor"><h3>highlightedBadgeColor</h3>
+<p>The badge's background color while its cell is highlighted. </p>
+<code class="methodDeclaration">@property <a href="http://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIColor_Class/index.html">UIColor</a> *highlightedBadgeColor</code><h5>Discussion</h5>
+<p>The default value of this property is white. </p>
+<h5>Declared In</h5>
+<code><code>SSBadgeView</code>.h</code></section><section class="definition" id="cornerRadius"><h3>cornerRadius</h3>
+<p>The corner radius used when rendering the badge's outline. </p>
+<code class="methodDeclaration">@property CGFloat cornerRadius</code><h5>Discussion</h5>
+<p>The default value of this property is 10. </p>
+<h5>Declared In</h5>
+<code><code>SSBadgeView</code>.h</code></section><section class="definition" id="badgeAlignment"><h3>badgeAlignment</h3>
+<p>The badge's horizontal alignment within the accesoryView frame. </p>
+<code class="methodDeclaration">@property SSBadgeViewAlignment badgeAlignment</code><h5>Discussion</h5>
+<p>This will position the badge in the view's bounds accordinly.</p>
+<p>The default value of this property is <code><code>SSBadgeView</code>AlignmentCenter</code>. </p>
+<h5>Declared In</h5>
+<code><code>SSBadgeView</code>.h</code></section><section class="definition" id="highlighted"><h3>highlighted</h3>
+<p>A Boolean value indicating whether the receiver should be drawn with a highlight. </p>
+<code class="methodDeclaration">@property BOOL highlighted</code><h5>Discussion</h5>
+<p>Setting this property causes the receiver to redraw with the appropriate highlight state.</p>
+<p>The default value of this property is <code>NO</code>. </p>
+<h5>Declared In</h5>
+<code><code>SSBadgeView</code>.h</code></section></section><hr>
+<p id="lastUpdated">Last updated: 2011-1-31</p>
+</div>
+<footer id="breadcrumbs"><ul>
+<li><a href="../index.html">SSToolkit</a></li>
+<li><a href="#classTitle">SSBadgeView Class Reference</a></li>
+</ul></footer>
+</body>
+</html>

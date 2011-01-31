@@ -62,7 +62,9 @@
 <option value="dequeueReusableItemWithIdentifier:">    - dequeueReusableItemWithIdentifier:</option>
 <option value="itemPathForIndex:">    - itemPathForIndex:</option>
 <option value="indexPathForItem:">    - indexPathForItem:</option>
-<option value="deselectItemAtIndexPath:animated:">    - deselectItemAtIndexPath:animated:</option></select></li>
+<option value="deselectItemAtIndexPath:animated:">    - deselectItemAtIndexPath:animated:</option>
+<option value="scrollToItemAtIndexPath:animated:">    - scrollToItemAtIndexPath:animated:</option>
+<option value="reloadItemAtIndexPaths:">    - reloadItemAtIndexPaths:</option></select></li>
 </ul></nav><nav id="tableOfContents" style="display: none;"><ul>
 <li><a href="#overview">Overview</a></li>
 <li class="expandable" id="tocTasks" onclick="toggleTOCItem()">
@@ -90,6 +92,8 @@
 <li><a href="#itemPathForIndex:">itemPathForIndex:</a></li>
 <li><a href="#indexPathForItem:">indexPathForItem:</a></li>
 <li><a href="#deselectItemAtIndexPath:animated:">deselectItemAtIndexPath:animated:</a></li>
+<li><a href="#scrollToItemAtIndexPath:animated:">scrollToItemAtIndexPath:animated:</a></li>
+<li><a href="#reloadItemAtIndexPaths:">reloadItemAtIndexPaths:</a></li>
 </ul>
 </li>
 </ul></nav><div id="contents">
@@ -151,6 +155,12 @@
 </li>
 <li>
 <span class="tooltipRegion"><code><a href="#deselectItemAtIndexPath:animated:">- deselectItemAtIndexPath:animated:</a></code></span><span class="tooltip">Deselects a given item identified by index path, with an option to animate the deselection. </span>
+</li>
+<li>
+<span class="tooltipRegion"><code><a href="#scrollToItemAtIndexPath:animated:">- scrollToItemAtIndexPath:animated:</a></code></span><span class="tooltip">Scrolls the receiver until a row identified by index path is at a particular location on the screen. </span>
+</li>
+<li>
+<span class="tooltipRegion"><code><a href="#reloadItemAtIndexPaths:">- reloadItemAtIndexPaths:</a></code></span><span class="tooltip">Reloads the specified item. </span>
 </li>
 </ul>
 </li>
@@ -241,8 +251,26 @@
 <p>Currently not implemented.</p>
 <p></p>
 <h5>Declared In</h5>
+<code><code>SSCollectionView</code>.h</code></section><section class="definition" id="scrollToItemAtIndexPath:animated:"><h3>scrollToItemAtIndexPath:animated:</h3>
+<p>Scrolls the receiver until a row identified by index path is at a particular location on the screen. </p>
+<code class="methodDeclaration">- (void)scrollToItemAtIndexPath:(<a href="http://developer.apple.com/iphone/library/documentation/Cocoa/Reference/Foundation/Classes/NSIndexPath_Class/index.html">NSIndexPath</a> *)<span class="parameter">indexPath</span> animated:(BOOL)<span class="parameter">animated</span> </code><h5>Parameters</h5>
+<dl class="parameterList">
+<dt>indexPath</dt>
+<dd><p>An index path that identifies an item in the collection view by its row index and its section index. </p></dd>
+<dt>animated</dt>
+<dd><p><code>YES</code> if you want to animate the deselection and <code>NO</code> if the change should be immediate. </p></dd>
+</dl>
+<h5>Declared In</h5>
+<code><code>SSCollectionView</code>.h</code></section><section class="definition" id="reloadItemAtIndexPaths:"><h3>reloadItemAtIndexPaths:</h3>
+<p>Reloads the specified item. </p>
+<code class="methodDeclaration">- (void)reloadItemAtIndexPaths:(<a href="http://developer.apple.com/iphone/library/documentation/Cocoa/Reference/Foundation/Classes/NSIndexPath_Class/index.html">NSIndexPath</a> *)<span class="parameter">indexPaths</span> </code><h5>Parameters</h5>
+<dl class="parameterList">
+<dt>indexPath</dt>
+<dd><p>An index path that identifies an item in the collection view by its row index and its section index. </p></dd>
+</dl>
+<h5>Declared In</h5>
 <code><code>SSCollectionView</code>.h</code></section></section><hr>
-<p id="lastUpdated">Last updated: 2011-1-12</p>
+<p id="lastUpdated">Last updated: 2011-1-31</p>
 </div>
 <footer id="breadcrumbs"><ul>
 <li><a href="../index.html">SSToolkit</a></li>
