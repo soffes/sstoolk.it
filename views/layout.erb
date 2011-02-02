@@ -7,9 +7,11 @@
     <script>var_gaq=_gaq||[];_gaq.push(['_setAccount','UA-5609322-10']);_gaq.push(['_trackPageview']);(function(){var ga=document.createElement('script');ga.type='text/javascript';ga.async=true;ga.src=('https:'==document.location.protocol?'https://ssl':'http://www')+'.google-analytics.com/ga.js';var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(ga, s);})();</script>
   </head>
   <body>
-    <%= yield %>
-    <footer>
-      	<p>&copy; 2010 <a href="http://samsoff.es" rel="external nofollow">Sam Soffes</a>. <a href="http://github.com/samsoffes/sstoolk.it" rel="external nofollow">View source on GitHub</a>.</p>
-      </footer>
+    <div id="boat"></div>
+    <div id="ocean">
+      <section>
+        <%= yield %>
+      </section>
+    </div>
   </body>
 </html>
