@@ -1,3 +1,5 @@
+// All of this was adapted from Cloud App. Thanks Max!
+
 // Buttons
 a.button:link, a.button:visited, button, input[type='submit'] {
   @include border-radius($buttonRadius);
