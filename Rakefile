@@ -38,3 +38,15 @@ namespace :docs do
     puts 'Imported.'
   end
 end
+
+desc 'Deploy to Heroku'
+task :deploy do
+  unless `git status -s`.length == 0
+    puts "WARNING: There are uncommitted changes"
+    puts "Commit any changes before deploying."
+    exit
+  end
+  
+  `git push heroku master`
+  `git push origin master`
+end
