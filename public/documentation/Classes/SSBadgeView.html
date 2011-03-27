@@ -57,11 +57,16 @@
 <option value="highlightedBadgeColor">    highlightedBadgeColor</option>
 <option value="cornerRadius">    cornerRadius</option>
 <option value="badgeAlignment">    badgeAlignment</option>
-<option value="highlighted">    highlighted</option></select></li>
+<option value="highlighted">    highlighted</option>
+<option value="classMethods">Class Methods</option>
+<option value="defaultBadgeColor">    + defaultBadgeColor</option></select></li>
 </ul></nav><nav id="tableOfContents" style="display: none;"><ul>
 <li><a href="#overview">Overview</a></li>
 <li class="expandable" id="tocTasks" onclick="toggleTOCItem()">
-<a href="#tasks">Tasks</a><ul style="display: none;"><li><a href="#Other">Other</a></li></ul>
+<a href="#tasks">Tasks</a><ul style="display: none;">
+<li><a href="#Other">Other</a></li>
+<li><a href="#Other">Other</a></li>
+</ul>
 </li>
 <li class="expandable" id="tocProperties" onclick="toggleTOCItem()">
 <a href="#properties">Properties</a><ul style="display: none;">
@@ -76,6 +81,9 @@
 <li><a href="#highlighted">highlighted</a></li>
 </ul>
 </li>
+<li class="expandable" id="tocClassMethods" onclick="toggleTOCItem()">
+<a href="#classMethods">Class Methods</a><ul style="display: none;"><li><a href="#defaultBadgeColor">defaultBadgeColor</a></li></ul>
+</li>
 </ul></nav><div id="contents">
 <h1 id="classTitle">SSBadgeView Class Reference</h1>
 <table id="metadata"><tr class="alt">
@@ -88,7 +96,8 @@
 <p>Acts very much like the badges in Mail.app, with the key difference being that Apple uses images and <code>SSBadgeView</code> is rendered with CoreGraphics for improved scrolling performance. This also allows for more flexible resizing.</p>
 <p>Not limited to numbers, strings should still be short enough to fit within the accesoryView bounds. </p>
 <h2 id="tasks">Tasks</h2>
-<ul id="tasksList"><li id="Other">
+<ul id="tasksList">
+<li id="Other">
 <h3>Other</h3>
 <ul class="methods">
 <li>
@@ -119,12 +128,19 @@
 <span class="tooltipRegion"><code><a href="#highlighted">highlighted</a></code> <span class="specialType">property</span></span><span class="tooltip">A Boolean value indicating whether the receiver should be drawn with a highlight. </span>
 </li>
 </ul>
+</li>
+<li id="Other">
+<h3>Other</h3>
+<ul class="methods"><li>
+<span class="tooltipRegion"><code><a href="#defaultBadgeColor">+ defaultBadgeColor</a></code></span><span class="tooltip">The default badge color. </span>
 </li></ul>
+</li>
+</ul>
 <section id="properties"><h2>Properties</h2>
 <section class="definition" id="text"><h3>text</h3>
 <p>Display value. </p>
 <code class="methodDeclaration">@property <a href="http://developer.apple.com/iphone/library/documentation/Cocoa/Reference/Foundation/Classes/NSString_Class/index.html">NSString</a> *text</code><h5>Discussion</h5>
-<p>The default value of this property is "0". </p>
+<p>The default value of this property is "0". If this property is set to <code>nil</code> or an empty string, the receiver will automatically hide itself. </p>
 <h5>Declared In</h5>
 <code><code>SSBadgeView</code>.h</code></section><section class="definition" id="textColor"><h3>textColor</h3>
 <p>The color of the badge display value. </p>
@@ -168,8 +184,14 @@
 <p>Setting this property causes the receiver to redraw with the appropriate highlight state.</p>
 <p>The default value of this property is <code>NO</code>. </p>
 <h5>Declared In</h5>
+<code><code>SSBadgeView</code>.h</code></section></section><section id="classMethods"><h2>Class Methods</h2>
+<section class="definition" id="defaultBadgeColor"><h3>defaultBadgeColor</h3>
+<p>The default badge color. </p>
+<code class="methodDeclaration">+ (<a href="http://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIColor_Class/index.html">UIColor</a> *)defaultBadgeColor</code><h5>Return Value</h5>
+<p>A color with its value set to the default badge color. </p>
+<h5>Declared In</h5>
 <code><code>SSBadgeView</code>.h</code></section></section><hr>
-<p id="lastUpdated">Last updated: 2011-1-31</p>
+<p id="lastUpdated">Last updated: 2011-3-26</p>
 </div>
 <footer id="breadcrumbs"><ul>
 <li><a href="../index.html">SSToolkit</a></li>

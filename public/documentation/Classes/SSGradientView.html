@@ -55,6 +55,7 @@
 <option value="bottomBorderColor">    bottomBorderColor</option>
 <option value="topInsetAlpha">    topInsetAlpha</option>
 <option value="bottomInsetAlpha">    bottomInsetAlpha</option>
+<option value="gradientScale">    gradientScale</option>
 <option value="hasTopBorder">    hasTopBorder</option>
 <option value="hasBottomBorder">    hasBottomBorder</option>
 <option value="showsInsets">    showsInsets</option>
@@ -64,7 +65,8 @@
 <option value="defaultTopBorderColor">    + defaultTopBorderColor</option>
 <option value="defaultBottomBorderColor">    + defaultBottomBorderColor</option>
 <option value="defaultTopInsetAlpha">    + defaultTopInsetAlpha</option>
-<option value="defaultBottomInsetAlpha">    + defaultBottomInsetAlpha</option></select></li>
+<option value="defaultBottomInsetAlpha">    + defaultBottomInsetAlpha</option>
+<option value="defaultGradientScale">    + defaultGradientScale</option></select></li>
 </ul></nav><nav id="tableOfContents" style="display: none;"><ul>
 <li><a href="#overview">Overview</a></li>
 <li class="expandable" id="tocTasks" onclick="toggleTOCItem()">
@@ -81,6 +83,7 @@
 <li><a href="#bottomBorderColor">bottomBorderColor</a></li>
 <li><a href="#topInsetAlpha">topInsetAlpha</a></li>
 <li><a href="#bottomInsetAlpha">bottomInsetAlpha</a></li>
+<li><a href="#gradientScale">gradientScale</a></li>
 <li><a href="#hasTopBorder">hasTopBorder</a></li>
 <li><a href="#hasBottomBorder">hasBottomBorder</a></li>
 <li><a href="#showsInsets">showsInsets</a></li>
@@ -94,6 +97,7 @@
 <li><a href="#defaultBottomBorderColor">defaultBottomBorderColor</a></li>
 <li><a href="#defaultTopInsetAlpha">defaultTopInsetAlpha</a></li>
 <li><a href="#defaultBottomInsetAlpha">defaultBottomInsetAlpha</a></li>
+<li><a href="#defaultGradientScale">defaultGradientScale</a></li>
 </ul>
 </li>
 </ul></nav><div id="contents">
@@ -103,7 +107,7 @@
 <td>SSGradientView.h</td>
 </tr></table>
 <h2 id="overview">Overview</h2>
-<p>Simple <code><a href="http://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIView_Class/index.html">UIView</a></code> wrapper for CGGradient. </p>Known bugs<p><ul><li><p>startColor and endColor must be in the same colorspace. The colorspace of the first color is used to draw the gradient. If you did a gradient from white to blue, it would look like a gradient from white to black because the first color, white, is in the gray color space, not the RGB color space. If you did it from blue to white, it would look like blue to black because white in the gray colorspace isn't a valid color in the RGB colorspace (because there are only 2 components in the gray colorspace and 4 in the RGB colorspace). Automatic colorspace conversions are planned for the future. </p></li></ul></p>
+<p>Simple <code><a href="http://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIView_Class/index.html">UIView</a></code> wrapper for CGGradient. </p>Known bugs<p><ul><li><p><code>startColor</code> and <code>endColor</code> must be in the same colorspace. The colorspace of the first color is used to draw the gradient. If you did a gradient from white to blue, it would look like a gradient from white to black because the first color, white, is in the gray color space, not the RGB color space. If you did it from blue to white, it would look like blue to black because white in the gray colorspace isn't a valid color in the RGB colorspace (because there are only 2 components in the gray colorspace and 4 in the RGB colorspace). Automatic colorspace conversions are planned for the future. </p></li></ul></p>
 <h2 id="tasks">Tasks</h2>
 <ul id="tasksList">
 <li id="Other">
@@ -128,13 +132,16 @@
 <span class="tooltipRegion"><code><a href="#bottomInsetAlpha">bottomInsetAlpha</a></code> <span class="specialType">property</span></span><span class="tooltip">The bottom border inset alpha. </span>
 </li>
 <li>
-<span class="tooltipRegion"><code><a href="#hasTopBorder">hasTopBorder</a></code> <span class="specialType">property</span></span><span class="tooltip">A Boolean value that determines whether showing the top border is enabled. </span>
+<span class="tooltipRegion"><code><a href="#gradientScale">gradientScale</a></code> <span class="specialType">property</span></span><span class="tooltip">The scale of the gradient. </span>
 </li>
 <li>
-<span class="tooltipRegion"><code><a href="#hasBottomBorder">hasBottomBorder</a></code> <span class="specialType">property</span></span><span class="tooltip">A Boolean value that determines whether showing the bottom border is enabled. </span>
+<span class="tooltipRegion"><code><a href="#hasTopBorder">hasTopBorder</a></code> <span class="specialType">property</span></span><span class="tooltip">A Boolean value that determines whether showing the top border is enabled. The default is YES. </span>
 </li>
 <li>
-<span class="tooltipRegion"><code><a href="#showsInsets">showsInsets</a></code> <span class="specialType">property</span></span><span class="tooltip">A Boolean value that determines whether the border insets are enabled. </span>
+<span class="tooltipRegion"><code><a href="#hasBottomBorder">hasBottomBorder</a></code> <span class="specialType">property</span></span><span class="tooltip">A Boolean value that determines whether showing the bottom border is enabled. The default is YES</span>
+</li>
+<li>
+<span class="tooltipRegion"><code><a href="#showsInsets">showsInsets</a></code> <span class="specialType">property</span></span><span class="tooltip">A Boolean value that determines whether the border insets are enabled. The default is YES. </span>
 </li>
 </ul>
 </li>
@@ -158,6 +165,9 @@
 </li>
 <li>
 <span class="tooltipRegion"><code><a href="#defaultBottomInsetAlpha">+ defaultBottomInsetAlpha</a></code></span><span class="tooltip">The default bottom inset alpha. </span>
+</li>
+<li>
+<span class="tooltipRegion"><code><a href="#defaultGradientScale">+ defaultGradientScale</a></code></span><span class="tooltip">The default gradient scale. </span>
 </li>
 </ul>
 </li>
@@ -186,7 +196,7 @@
 <code><code>SSGradientView</code>.h</code></section><section class="definition" id="topInsetAlpha"><h3>topInsetAlpha</h3>
 <p>The top border inset alpha. </p>
 <code class="methodDeclaration">@property CGFloat topInsetAlpha</code><h5>Discussion</h5>
-<p>If the value is less than or equal to 0.0, it will not be drawn. The default 0.3.</p>
+<p>If the value is less than or equal to <code>0.0</code>, it will not be drawn. The default is <code>0.3</code>.</p>
 <p></p>
 <h5>See Also</h5>
 <ul class="seeAlso"><li><code><a href="#defaultTopInsetAlpha">+ defaultTopInsetAlpha</a></code></li></ul>
@@ -194,19 +204,27 @@
 <code><code>SSGradientView</code>.h</code></section><section class="definition" id="bottomInsetAlpha"><h3>bottomInsetAlpha</h3>
 <p>The bottom border inset alpha. </p>
 <code class="methodDeclaration">@property CGFloat bottomInsetAlpha</code><h5>Discussion</h5>
-<p>If the value is less than or equal to 0.0, it will not be drawn. The default 0.0.</p>
+<p>If the value is less than or equal to <code>0.0</code>, it will not be drawn. The default is <code>0.0</code>.</p>
 <p></p>
 <h5>See Also</h5>
 <ul class="seeAlso"><li><code><a href="#defaultBottomInsetAlpha">+ defaultBottomInsetAlpha</a></code></li></ul>
 <h5>Declared In</h5>
+<code><code>SSGradientView</code>.h</code></section><section class="definition" id="gradientScale"><h3>gradientScale</h3>
+<p>The scale of the gradient. </p>
+<code class="methodDeclaration">@property CGFloat gradientScale</code><h5>Discussion</h5>
+<p>The default is <code>1.0</code>.</p>
+<p></p>
+<h5>See Also</h5>
+<ul class="seeAlso"><li><code><a href="#defaultGradientScale">+ defaultGradientScale</a></code></li></ul>
+<h5>Declared In</h5>
 <code><code>SSGradientView</code>.h</code></section><section class="definition" id="hasTopBorder"><h3>hasTopBorder</h3>
-<p>A Boolean value that determines whether showing the top border is enabled. </p>
+<p>A Boolean value that determines whether showing the top border is enabled. The default is <code>YES</code>. </p>
 <code class="methodDeclaration">@property BOOL hasTopBorder</code><h5>Declared In</h5>
 <code><code>SSGradientView</code>.h</code></section><section class="definition" id="hasBottomBorder"><h3>hasBottomBorder</h3>
-<p>A Boolean value that determines whether showing the bottom border is enabled. </p>
+<p>A Boolean value that determines whether showing the bottom border is enabled. The default is <code>YES</code></p>
 <code class="methodDeclaration">@property BOOL hasBottomBorder</code><h5>Declared In</h5>
 <code><code>SSGradientView</code>.h</code></section><section class="definition" id="showsInsets"><h3>showsInsets</h3>
-<p>A Boolean value that determines whether the border insets are enabled. </p>
+<p>A Boolean value that determines whether the border insets are enabled. The default is <code>YES</code>. </p>
 <code class="methodDeclaration">@property BOOL showsInsets</code><h5>Declared In</h5>
 <code><code>SSGradientView</code>.h</code></section></section><section id="classMethods"><h2>Class Methods</h2>
 <section class="definition" id="defaultTopColor"><h3>defaultTopColor</h3>
@@ -239,8 +257,13 @@
 <code class="methodDeclaration">+ (CGFloat)defaultBottomInsetAlpha</code><h5>Return Value</h5>
 <p>The default bottom inset alpha. </p>
 <h5>Declared In</h5>
+<code><code>SSGradientView</code>.h</code></section><section class="definition" id="defaultGradientScale"><h3>defaultGradientScale</h3>
+<p>The default gradient scale. </p>
+<code class="methodDeclaration">+ (CGFloat)defaultGradientScale</code><h5>Return Value</h5>
+<p>The default gradient scale. </p>
+<h5>Declared In</h5>
 <code><code>SSGradientView</code>.h</code></section></section><hr>
-<p id="lastUpdated">Last updated: 2011-1-31</p>
+<p id="lastUpdated">Last updated: 2011-3-26</p>
 </div>
 <footer id="breadcrumbs"><ul>
 <li><a href="../index.html">SSToolkit</a></li>

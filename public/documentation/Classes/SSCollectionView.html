@@ -51,10 +51,7 @@
 <option value="properties">Properties</option>
 <option value="dataSource">    dataSource</option>
 <option value="delegate">    delegate</option>
-<option value="rowHeight">    rowHeight</option>
 <option value="rowSpacing">    rowSpacing</option>
-<option value="columnWidth">    columnWidth</option>
-<option value="columnSpacing">    columnSpacing</option>
 <option value="backgroundView">    backgroundView</option>
 <option value="allowsSelection">    allowsSelection</option>
 <option value="instanceMethods">Instance Methods</option>
@@ -63,8 +60,7 @@
 <option value="itemPathForIndex:">    - itemPathForIndex:</option>
 <option value="indexPathForItem:">    - indexPathForItem:</option>
 <option value="deselectItemAtIndexPath:animated:">    - deselectItemAtIndexPath:animated:</option>
-<option value="scrollToItemAtIndexPath:animated:">    - scrollToItemAtIndexPath:animated:</option>
-<option value="reloadItemAtIndexPaths:">    - reloadItemAtIndexPaths:</option></select></li>
+<option value="reloadItemsAtIndexPaths:">    - reloadItemsAtIndexPaths:</option></select></li>
 </ul></nav><nav id="tableOfContents" style="display: none;"><ul>
 <li><a href="#overview">Overview</a></li>
 <li class="expandable" id="tocTasks" onclick="toggleTOCItem()">
@@ -77,10 +73,7 @@
 <a href="#properties">Properties</a><ul style="display: none;">
 <li><a href="#dataSource">dataSource</a></li>
 <li><a href="#delegate">delegate</a></li>
-<li><a href="#rowHeight">rowHeight</a></li>
 <li><a href="#rowSpacing">rowSpacing</a></li>
-<li><a href="#columnWidth">columnWidth</a></li>
-<li><a href="#columnSpacing">columnSpacing</a></li>
 <li><a href="#backgroundView">backgroundView</a></li>
 <li><a href="#allowsSelection">allowsSelection</a></li>
 </ul>
@@ -92,8 +85,7 @@
 <li><a href="#itemPathForIndex:">itemPathForIndex:</a></li>
 <li><a href="#indexPathForItem:">indexPathForItem:</a></li>
 <li><a href="#deselectItemAtIndexPath:animated:">deselectItemAtIndexPath:animated:</a></li>
-<li><a href="#scrollToItemAtIndexPath:animated:">scrollToItemAtIndexPath:animated:</a></li>
-<li><a href="#reloadItemAtIndexPaths:">reloadItemAtIndexPaths:</a></li>
+<li><a href="#reloadItemsAtIndexPaths:">reloadItemsAtIndexPaths:</a></li>
 </ul>
 </li>
 </ul></nav><div id="contents">
@@ -104,9 +96,8 @@
 </tr></table>
 <h2 id="overview">Overview</h2>
 <p>Simple collection view. </p>
-<p>This is very alphay. My goals are to be similar to <code><a href="http://developer.apple.com/iphone/library/documentation/UIKit/Reference/UITableView_Class/index.html">UITableView</a></code> and NSCollectionView when possible. Currently it's pretty inefficient and doesn't reuse items and all items have to be the same size. Only scrolling vertically is currently supported.</p>
-<p>Multiple sections are not supported.</p>
-<p>Editing and performance will be my next focus. Then animating changes when data changes and an option to disable that. </p>
+<p>My goals are to be similar to <code><a href="http://developer.apple.com/iphone/library/documentation/UIKit/Reference/UITableView_Class/index.html">UITableView</a></code> and NSCollectionView when possible. Only scrolling vertically is currently supported.</p>
+<p>Editing will be my next focus. Then animating changes when data changes and an option to disable that. </p>
 <h2 id="tasks">Tasks</h2>
 <ul id="tasksList">
 <li id="Other">
@@ -119,16 +110,7 @@
 <span class="tooltipRegion"><code><a href="#delegate">delegate</a></code> <span class="specialType">property</span></span><span class="tooltip">The object that acts as the delegate of the receiving collection view. </span>
 </li>
 <li>
-<span class="tooltipRegion"><code><a href="#rowHeight">rowHeight</a></code> <span class="specialType">property</span></span><span class="tooltip">The height of each row in the receiver. </span>
-</li>
-<li>
 <span class="tooltipRegion"><code><a href="#rowSpacing">rowSpacing</a></code> <span class="specialType">property</span></span><span class="tooltip">The spacing between each row in the receiver. This does not add space above the first row or below the last. </span>
-</li>
-<li>
-<span class="tooltipRegion"><code><a href="#columnWidth">columnWidth</a></code> <span class="specialType">property</span></span><span class="tooltip">The width of each column in the receiver. </span>
-</li>
-<li>
-<span class="tooltipRegion"><code><a href="#columnSpacing">columnSpacing</a></code> <span class="specialType">property</span></span><span class="tooltip">The spacing between each column in the receiver. This does not add space to the left of the first column or the right of the last column. </span>
 </li>
 <li>
 <span class="tooltipRegion"><code><a href="#backgroundView">backgroundView</a></code> <span class="specialType">property</span></span><span class="tooltip">The background view of the collection view. </span>
@@ -157,10 +139,7 @@
 <span class="tooltipRegion"><code><a href="#deselectItemAtIndexPath:animated:">- deselectItemAtIndexPath:animated:</a></code></span><span class="tooltip">Deselects a given item identified by index path, with an option to animate the deselection. </span>
 </li>
 <li>
-<span class="tooltipRegion"><code><a href="#scrollToItemAtIndexPath:animated:">- scrollToItemAtIndexPath:animated:</a></code></span><span class="tooltip">Scrolls the receiver until a row identified by index path is at a particular location on the screen. </span>
-</li>
-<li>
-<span class="tooltipRegion"><code><a href="#reloadItemAtIndexPaths:">- reloadItemAtIndexPaths:</a></code></span><span class="tooltip">Reloads the specified item. </span>
+<span class="tooltipRegion"><code><a href="#reloadItemsAtIndexPaths:">- reloadItemsAtIndexPaths:</a></code></span><span class="tooltip">Reloads the specified item. </span>
 </li>
 </ul>
 </li>
@@ -171,26 +150,11 @@
 <code class="methodDeclaration">@property id&lt;SSCollectionViewDataSource&gt; dataSource</code><h5>Declared In</h5>
 <code><code>SSCollectionView</code>.h</code></section><section class="definition" id="delegate"><h3>delegate</h3>
 <p>The object that acts as the delegate of the receiving collection view. </p>
-<code class="methodDeclaration">@property id&lt;SSCollectionViewDelegate, <a href="http://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIScrollViewDelegate_Protocol/index.html">UIScrollViewDelegate</a>&gt; delegate</code><h5>Declared In</h5>
-<code><code>SSCollectionView</code>.h</code></section><section class="definition" id="rowHeight"><h3>rowHeight</h3>
-<p>The height of each row in the receiver. </p>
-<code class="methodDeclaration">@property CGFloat rowHeight</code><h5>Discussion</h5>
-<p>The row height is in points. The default is 80. </p>
-<h5>Declared In</h5>
+<code class="methodDeclaration">@property id&lt;SSCollectionViewDelegate&gt; delegate</code><h5>Declared In</h5>
 <code><code>SSCollectionView</code>.h</code></section><section class="definition" id="rowSpacing"><h3>rowSpacing</h3>
 <p>The spacing between each row in the receiver. This does not add space above the first row or below the last. </p>
 <code class="methodDeclaration">@property CGFloat rowSpacing</code><h5>Discussion</h5>
 <p>The row spacing is in points. The default is 20. </p>
-<h5>Declared In</h5>
-<code><code>SSCollectionView</code>.h</code></section><section class="definition" id="columnWidth"><h3>columnWidth</h3>
-<p>The width of each column in the receiver. </p>
-<code class="methodDeclaration">@property CGFloat columnWidth</code><h5>Discussion</h5>
-<p>The column width is in points. The default is 80. </p>
-<h5>Declared In</h5>
-<code><code>SSCollectionView</code>.h</code></section><section class="definition" id="columnSpacing"><h3>columnSpacing</h3>
-<p>The spacing between each column in the receiver. This does not add space to the left of the first column or the right of the last column. </p>
-<code class="methodDeclaration">@property CGFloat columnSpacing</code><h5>Discussion</h5>
-<p>The column spacing is in points. The default is 20. </p>
 <h5>Declared In</h5>
 <code><code>SSCollectionView</code>.h</code></section><section class="definition" id="backgroundView"><h3>backgroundView</h3>
 <p>The background view of the collection view. </p>
@@ -247,30 +211,17 @@
 <dt>animated</dt>
 <dd><p><code>YES</code> if you want to animate the deselection and <code>NO</code> if the change should be immediate. </p></dd>
 </dl>
-<h5>Discussion</h5>
-<p>Currently not implemented.</p>
-<p></p>
 <h5>Declared In</h5>
-<code><code>SSCollectionView</code>.h</code></section><section class="definition" id="scrollToItemAtIndexPath:animated:"><h3>scrollToItemAtIndexPath:animated:</h3>
-<p>Scrolls the receiver until a row identified by index path is at a particular location on the screen. </p>
-<code class="methodDeclaration">- (void)scrollToItemAtIndexPath:(<a href="http://developer.apple.com/iphone/library/documentation/Cocoa/Reference/Foundation/Classes/NSIndexPath_Class/index.html">NSIndexPath</a> *)<span class="parameter">indexPath</span> animated:(BOOL)<span class="parameter">animated</span> </code><h5>Parameters</h5>
-<dl class="parameterList">
-<dt>indexPath</dt>
-<dd><p>An index path that identifies an item in the collection view by its row index and its section index. </p></dd>
-<dt>animated</dt>
-<dd><p><code>YES</code> if you want to animate the deselection and <code>NO</code> if the change should be immediate. </p></dd>
-</dl>
-<h5>Declared In</h5>
-<code><code>SSCollectionView</code>.h</code></section><section class="definition" id="reloadItemAtIndexPaths:"><h3>reloadItemAtIndexPaths:</h3>
+<code><code>SSCollectionView</code>.h</code></section><section class="definition" id="reloadItemsAtIndexPaths:"><h3>reloadItemsAtIndexPaths:</h3>
 <p>Reloads the specified item. </p>
-<code class="methodDeclaration">- (void)reloadItemAtIndexPaths:(<a href="http://developer.apple.com/iphone/library/documentation/Cocoa/Reference/Foundation/Classes/NSIndexPath_Class/index.html">NSIndexPath</a> *)<span class="parameter">indexPaths</span> </code><h5>Parameters</h5>
+<code class="methodDeclaration">- (void)reloadItemsAtIndexPaths:(<a href="http://developer.apple.com/iphone/library/documentation/Cocoa/Reference/Foundation/Classes/NSArray_Class/index.html">NSArray</a> *)<span class="parameter">indexPaths</span> </code><h5>Parameters</h5>
 <dl class="parameterList">
 <dt>indexPath</dt>
 <dd><p>An index path that identifies an item in the collection view by its row index and its section index. </p></dd>
 </dl>
 <h5>Declared In</h5>
 <code><code>SSCollectionView</code>.h</code></section></section><hr>
-<p id="lastUpdated">Last updated: 2011-1-31</p>
+<p id="lastUpdated">Last updated: 2011-3-26</p>
 </div>
 <footer id="breadcrumbs"><ul>
 <li><a href="../index.html">SSToolkit</a></li>
