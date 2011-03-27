@@ -205,6 +205,7 @@ pre {
   
   code {
     color: #444;
+    padding: 0;
     @include single-text-shadow(none);
   }
 }
