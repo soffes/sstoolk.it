@@ -61,21 +61,30 @@
   }
 }
 
+body, input, button, pre, code {
+  -webkit-font-smoothing: antialiased;
+}
+
 body {
-  background: $backgroundColor;
+  background: $waterColor;
   color: #fff;
   font-family: HelveticaNeueLight, "Helvetica Neue Light", Helvetica, Arial, sans-serif;
   font-weight: 300;
   font-size: 18px;
   @include single-text-shadow($shadowColor, 0, 1px, 0);
-  line-height: 1.6em;
+  line-height: 1.4em;
+}
+
+div#top {
+  background: $topBackgroundColor;
+  padding: 60px 0;
 }
 
 div#boat {
   background: image-url('boat.png') no-repeat;
   width: 526px;
   height: 398px;
-  margin: 60px auto;
+  margin: 0 auto;
 }
 
 div#ocean {
@@ -83,7 +92,7 @@ div#ocean {
   padding-top: 40px;
 }
 
-div > section {
+div#ocean > section {
   width: 640px;
   margin: 0 auto;
 }
@@ -140,24 +149,64 @@ h2 {
   @include single-text-shadow($shadowColor, 0, 2px, 0);
 }
 
-code {
-  background-color: #f7f7f7;
-  color: #444;
-  padding: 0px 0.2em;
-  font-family: monospace;
-  @include single-text-shadow(none);
+h3 {
+  font-weight: bold;
 }
 
-pre {
+strong, b {
+  font-weight: bold;
+}
+
+em, i {
+  font-style: italic;
+}
+
+code {
+  @include single-text-shadow(none);
+  padding: 0px 0.2em;
+  font-family: monospace;
+  
+  span.red {
+    color: $codeRedColor;
+  }
+  
+  span.brown {
+    color: $codeBrownColor;
+  }
+}
+
+pre, div.section {
   @include single-box-shadow(rgba(0, 0, 0, 0.5), 0, 1px, 2px);
   @include border-radius(5px);
+  @include single-text-shadow(none);
   background-color: #f7f7f7;
   border: 1px solid #f7f7f7;
   color: #444;
-  line-height: 1.5em;
-  margin: 1em 0px;
+  margin: 0 0 1em;
+  padding: 10px;
+  
+  a {
+    color: $waterColor;
+  }
+  
+  a:hover {
+    color: $shadowColor;
+  }
+}
+
+div.section {
+  p:last-child, ul:last-child {
+    margin-bottom: 0;
+  }
+}
+
+pre {
   overflow: auto;
-  padding: 5px;
+  
+  code {
+    color: #444;
+    @include single-text-shadow(none);
+  }
 }
 
 p, ul, ol {
@@ -175,3 +224,7 @@ ul li, ol li {
 ol li {
   list-style: decimal;
 }
+
+// Imports
+@import "home";
+@import "components";

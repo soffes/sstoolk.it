@@ -1,0 +1,25 @@
+section#code-instruction-submodule, section#install-instruction-xcode3 {
+  display: none;
+}
+
+div.instructions {
+  section > header {
+    h3 {
+      float: left;
+      padding-top: 4px;
+    }
+    
+    ul.segmented {
+      float: right;
+      margin-bottom: 0.5em;
+      
+      li {
+        margin-bottom: 0;
+      }
+    }
+  }
+  
+  section > header:after {
+    @include clearfix;
+  }
+}

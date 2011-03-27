@@ -1,42 +1,89 @@
 <h1><a href="http://sstoolk.it/" rel="home">S.S. Toolkit</a></h1>
 
 <h2>What is S.S. Toolkit?</h2>
-<p>SSToolkit is a collection of <a href="/documentation">well-documented</a> iOS classes for making life easier.</h2>
+<p>SSToolkit is a collection of <a href="/documentation">well-documented</a> iOS classes for making life easier by solving common problems all iOS developers face. Some really handy classes are <a href="/documentation/Classes/SSCollectionView">SSCollectionView</a>, <a href="/documentation/Classes/SSGradientView">SSGradientView</a>, <a href="/documentation/Classes/SSSwitch">SSSwitch</a>, and <a href="/documentation">any many more</a>.</p>
 
 <h2>Getting Started</h2>
 <p>SSToolkit aims to be as easy to use as possible. There are some limitations on distributing iOS libraries, so this is the simplest way to get started with SSToolkit. It's painless after this, promise.</p>
 
-<h2>Adding SSToolkit to your project</h2>
+<h2>Adding SSToolkit to Your Project</h2>
+<div class="section">
+  <div id="code-instructions" class="instructions">
+    <section id="code-instruction-download">
+      <header>
+        <h3>Get the Source Code</h3>
+        <ul class="segmented">
+          <li><button class="active">Download</button></li>
+          <li><button>Git Submodule</button></li>
+        </ul>
+      </header>
+      <p>Run the following commands to download the source code:</p>
+      <pre class="console"><code>$ mkdir -p Vendor/SSToolkit
+$ curl -L http://github.com/samsoffes/sstoolkit/tarball/master | tar xz --strip 1 -C Vendor/SSToolkit</code></pre>
+      <p>If you prefer, you can just download the code <a href="https://github.com/samsoffes/sstoolkit">from Github</a> and put in <code>Vendor/SSToolkit</code> (relative to your project root).</p>
+    </section>
+    <section id="code-instruction-submodule">
+      <header>
+        <h3>Get the Source Code</h3>
+        <ul class="segmented">
+          <li><button>Download</button></li>
+          <li><button class="active">Git Submodule</button></li>
+        </ul>
+      </header>
+      <p>Run the following command to add the submodule. Be sure you have are you in the root of your git repository.</p>
+      <pre class="console"><code>$ git submodule add git://github.com/samsoffes/sstoolkit.git Vendor/SSToolkit</code></pre>
+    </section>
+  </div>
+</div>
 
-<ol>
-  <li>
-    <p>Run the following command to add the submodule. Be sure you have are you in the root of your git repository.</p>
-    <pre class="console"><code> $ git submodule add git://github.com/samsoffes/sstoolkit.git Frameworks/SSToolkit</code></pre>
-  </li>
-  <li><p>In Finder, navigate to the <code>Frameworks/SSToolkit</code> folder and drag the <code>xcodeproj</code> file into the <code>Frameworks</code> folder in your Xcode project.</p></li>
-  <li><p>In Finder, drag <code>SSToolkit.bundle</code> located in <code>Frameworks/SSToolkit/Resources</code> into the <code>Resources</code> folder in your Xcode project.</p></li>
-  <li><p>Select the SSToolkit Xcode project from the sidebar in Xcode. In the file browser on the right in Xcode, click the checkbox next to <code>libSSToolkit.a</code>. (If you don't see the file browser, hit Command-Shift-E to toggle it on.)</p></li>
-  <li><p>Select your target from the sidebar and open Get Info (Command-I).</p></li>
-  <li><p>Choose the <em>General</em> tab from the top.</p></li>
-  <li><p>Under the <em>Direct Dependencies</em> area, click the plus button, select <em>SSToolkit</em> from the menu, and choose <em>Add Target</em>.</p></li>
-  <li><p>Choose the build tab from the top of the window. Make sure the configuration dropdown at the top is set to <em>All Configurations</em>.</p></li>
-  <li><p>Add <code>Frameworks/SSToolkit</code> to <em>Header Search Path</em> (do not click the <em>Recursive</em> checkbox).</p></li>
-  <li><p>Add <code>-all_load -ObjC</code> to <em>Other Linker Flags</em>.</p></li>
-</ol>
-
+<div class="section">
+  <div id="install-instructions" class="instructions">
+    <section id="install-instruction-xcode4">
+      <header>
+        <h3>Adding to Your Project</h3>
+        <ul class="segmented">
+          <li><button class="active">Xcode 4</button></li>
+          <li><button>Xcode 3</button></li>
+        </ul>
+      </header>
+      <p>Xcode 4</p>
+    </section>
+    <section id="install-instruction-xcode3">
+      <header>
+        <h3>Adding to Your Project</h3>
+        <ul class="segmented">
+          <li><button>Xcode 4</button></li>
+          <li><button class="active">Xcode 3</button></li>
+        </ul>
+      </header>
+      <ol>
+        <li><p>In Finder, navigate to the <code>Vendor/SSToolkit</code> folder and drag the <code>xcodeproj</code> file into the <code>Vendor</code> folder in your Xcode project.</p></li>
+        <li><p>In Finder, drag <code>SSToolkit.bundle</code> located in <code>Vendor/SSToolkit/Resources</code> into the <code>Resources</code> folder in your Xcode project.</p></li>
+        <li><p>Select the SSToolkit Xcode project from the sidebar in Xcode. In the file browser on the right in Xcode, click the checkbox next to <code>libSSToolkit.a</code>. (If you don't see the file browser, hit Command-Shift-E to toggle it on.)</p></li>
+        <li><p>Select your target from the sidebar and open Get Info (Command-I).</p></li>
+        <li><p>Choose the <em>General</em> tab from the top.</p></li>
+        <li><p>Under the <em>Direct Dependencies</em> area, click the plus button, select <em>SSToolkit</em> from the menu, and choose <em>Add Target</em>.</p></li>
+        <li><p>Choose the build tab from the top of the window. Make sure the configuration dropdown at the top is set to <em>All Configurations</em>.</p></li>
+        <li><p>Add <code>Vendor/SSToolkit</code> to <em>Header Search Path</em> (do not click the <em>Recursive</em> checkbox).</p></li>
+        <li><p>Add <code>-all_load -ObjC</code> to <em>Other Linker Flags</em>.</p></li>
+      </ol>
+      <p>That's it. The annoying part is over. Now to the fun part.</p>
+    </section>
+  </div>
+</div>
 
 <h2>Usage</h2>
 <p>To use SSToolkit, simply add the following line to your source file.</p>
 
-<pre><code>#import &lt;SSToolkit/SSToolkit.h&gt;</code></pre>
+<pre><code><span class="brown">#import</span> <span class="red">&lt;SSToolkit/SSToolkit.h&gt;</span></code></pre>
 
 <p>You can add this to your prefix to make things easy if you want. You can also import individual files instead of the whole framework (for faster compile times) by doing something like:</p>
 
-<pre><code>#import &lt;SSToolkit/SSLoadingView.h&gt;</code></pre>
+<pre><code><span class="brown">#import</span> <span class="red">&lt;SSToolkit/SSLoadingView.h&gt;</span></code></pre>
 
 <p>If you are going to use SSToolkit's categories, you will need to import then separately (since some people might not want to use them). You import then like this:</p>
 
-<pre><code>#import &lt;SSToolkit/SSCategories.h&gt;</code></pre>
+<pre><code><span class="brown">#import</span> <span class="red">&lt;SSToolkit/SSCategories.h&gt;</span></code></pre>
 
 <h2 id="sample_code">Sample Code</h2>
 <p><a href="http://github.com/samsoffes/sstoolkit/tree/master/SSCatalog" rel="external nofollow">SSCatalog</a> is included with SSToolkit. There is an iPhone application target and an universal iPad/iPhone application target to demonstrate the various features of SSToolkit.</p>

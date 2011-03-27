@@ -1,0 +1,85 @@
+// Buttons
+a.button:link, a.button:visited, button, input[type='submit'] {
+  @include border-radius($buttonRadius);
+  @include single-text-shadow(rgba(255, 255, 255, 0.5), 0, 1px, 1px);
+  @include box-shadow(0 1px 2px rgba(0, 0, 0, .1), 0 1px 1px rgba(255, 255, 255, .8) inset);
+  background: #eaeaea;
+  background: -moz-linear-gradient(top, #efefef, #d8d8d8) #d8d8d8;
+  background: -webkit-gradient(linear, left top, left bottom, from(#efefef), to(#d8d8d8)) #d8d8d8;
+  background: linear-gradient(top, #efefef, #d8d8d8) #d8d8d8;
+  border: 1px solid #ababab;
+  color: #707070;
+  font-family: 'Helvetica Neue', Helvetica, Arial, Geneva, sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  margin: 0;
+  outline: none;
+  padding: 5px 10px;
+  text-align: center;
+}
+
+a.button:hover, button:hover, input[type='submit']:hover {
+  background: #f1f1f1;
+  background: -moz-linear-gradient(top, #f6f6f6, #e3e3e3) #e3e3e3;
+  background: -webkit-gradient(linear, left top, left bottom, from(#f6f6f6), to(#e3e3e3)) #e3e3e3;
+  background: linear-gradient(top, #f6f6f6, #e3e3e3) #e3e3e3;
+  cursor: pointer;
+}
+
+a.button:focus, button:focus, input[type='submit']:focus {
+  @include box-shadow(0 0 3px #80bfff, 0 1px 1px rgba(255, 255, 255, .8) inset);
+  background: -moz-linear-gradient(top, #f6f6f6, #e3e3e3) #e3e3e3;
+  background: -webkit-gradient(linear, left top, left bottom, from(#f6f6f6), to(#e3e3e3)) #e3e3e3;
+  background: linear-gradient(top, #f6f6f6, #e3e3e3) #e3e3e3;
+  border: 1px solid #80bfff;
+}
+
+a.button:active, a.button.active, button:active, button.active, input[type='submit']:active, input[type='submit'].active {
+  @include box-shadow(none);
+  background: #e3e3e3;
+  background: -moz-linear-gradient(top, #e3e3e3, #f6f6f6) #1b468f;
+  background: -webkit-gradient(linear, left top, left bottom, from(#e3e3e3), to(#f6f6f6)) #1b468f;
+  background: linear-gradient(top, #e3e3e3, #f6f6f6) #1b468f;
+}
+
+a.button.disabled, button:disabled, input[type='submit']:disabled {
+  @include box-shadow(none !important);
+  @include single-text-shadow(0 1px 1px #fff !important);
+  background: #efefef !important;
+  border: 1px solid #d1d1d1 !important;
+  color: #aaa !important;
+  cursor: default;
+}
+
+// Segmented
+.segmented:after {
+  clear: both;
+  content: ".";
+  display: block;
+  height: 0;
+  visibility: hidden;
+}
+
+.segmented {
+  li {
+    float: left;
+    margin: 0;
+    padding: 0;
+    
+    a.button:link, a.button:visited, button, input[type='submit'] {
+      border-right: none;
+      @include border-radius(0);
+    }
+  }
+  
+  li:first-child a.button:link, li:first-child a.button:visited, li:first-child button, li:first-child input[type='submit'] {
+    @include border-bottom-left-radius($buttonRadius);
+    @include border-top-left-radius($buttonRadius);
+}
+  
+  li:last-child a.button:link, li:last-child a.button:visited, li:last-child button, li:last-child input[type='submit'] {
+    @include border-bottom-right-radius($buttonRadius);
+    @include border-top-right-radius($buttonRadius);
+    border-right: 1px solid #ababab;
+  }
+}
