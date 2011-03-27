@@ -22,6 +22,10 @@ class SSToolkit < Sinatra::Application
   get '/documentation' do
     redirect '/documentation/'
   end
+  
+  get '/sample-?code' do
+    redirect 'http://github.com/samsoffes/sstoolkit/'
+  end
 
   get %r{/([a-zA-Z\-_\/]+)/?} do
     paths = [

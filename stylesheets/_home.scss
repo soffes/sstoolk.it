@@ -23,3 +23,8 @@ div.instructions {
     @include clearfix;
   }
 }
+
+a#sample-code-sim {
+  float:left;
+  margin: -5px 10px 0 -10px;
+}
