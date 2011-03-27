@@ -1,6 +1,6 @@
 # sstoolk.it
 
-This is the website for [SSToolkit](http://github.com/samsoffes/sstoolkit). Some fun toys include [Jekyll](http://github.com/mojombo/jekyll), [Compass](http://github.com/chriseppstein/compass), and [Sinatra](http://github.com/sinatra/sinatra).
+This is the website for [SSToolkit](http://github.com/samsoffes/sstoolkit). Built with [Sinatra](http://github.com/sinatra/sinatra), [Compass](http://github.com/chriseppstein/compass), and other stuff. Deployed to [Heroku](http://heroku.com) with Ruby 1.9.2.
 
 ## Running Locally
 
@@ -21,5 +21,3 @@ To import the documentation from SSToolkit run the following commands:
 
     $ git clone http://github.com/samsoffes/sstoolkit.git ../sstoolkit
     $ rake docs:import
-
-Done
