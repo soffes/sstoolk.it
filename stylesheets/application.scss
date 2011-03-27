@@ -68,8 +68,7 @@ body, input, button, pre, code {
 body {
   background: $waterColor;
   color: #fff;
-  font-family: HelveticaNeueLight, "Helvetica Neue Light", Helvetica, Arial, sans-serif;
-  font-weight: 300;
+  font-family: HelveticaNeue, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 18px;
   @include single-text-shadow($shadowColor, 0, 1px, 0);
   line-height: 1.4em;
@@ -105,6 +104,7 @@ a {
 
 a:hover {
   color: $linkHoverColor;
+//  @include single-text-shadow(rgba(255, 255, 255, 0.5), 0, 1px, 0);
 }
 
 h1 {
@@ -214,7 +214,7 @@ p, ul, ol {
 }
 
 ul li, ol li {
-  margin: 0 0 0.5em 2em;
+  margin: 0 0 0.5em 1.5em;
   
   p, pre {
     margin-bottom: 0.5em;
@@ -223,6 +223,10 @@ ul li, ol li {
 
 ol li {
   list-style: decimal;
+}
+
+ul li {
+  list-style: disc;
 }
 
 // Imports

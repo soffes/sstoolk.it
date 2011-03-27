@@ -67,6 +67,7 @@ a.button.disabled, button:disabled, input[type='submit']:disabled {
     float: left;
     margin: 0;
     padding: 0;
+    list-style: none;
     
     a.button:link, a.button:visited, button, input[type='submit'] {
       border-right: none;
