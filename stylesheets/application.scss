@@ -1,17 +1,64 @@
+@import "base";
 @import "compass/reset";
-
-$linkColor: #16459d;
-$shadowColor: #1457b3;
-$backgroundColor: #eef8fe;
-$waterColor: #4b89d0;
-$footerColor: #ddd;
+@import "compass/css3";
 
 @font-face {
-	font-family: 'ClumsyRegular';
-	src: url('/fonts/clumsy-webfont.eot');
-	src: local('☺'), url('/fonts/clumsy-webfont.woff') format('woff'), url('/fonts/clumsy-webfont.ttf') format('truetype'), url('/fonts/clumsy-webfont.svg#webfontKGJ2JUnY') format('svg');
-	font-weight: normal;
-	font-style: normal;
+  font-family: 'ClumsyRegular';
+  src: url('/fonts/clumsy-webfont.eot');
+  src: local('☺'), url('/fonts/clumsy-webfont.woff') format('woff'), url('/fonts/clumsy-webfont.ttf') format('truetype'), url('/fonts/clumsy-webfont.svg#webfontKGJ2JUnY') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {  
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-button:start:decrement {
+    display: block;
+    width: 5px;
+    height: 5px;
+    background-color: transparent;
+  }
+
+  ::-webkit-scrollbar-button:end:increment {
+    display: block;
+    width: 5px;
+    height: 5px;
+    background-color: transparent;
+  }
+
+  ::-webkit-scrollbar-track:enabled {
+    background-color: transparent;
+  }
+
+  ::-webkit-scrollbar-track-piece:vertical {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    -webkit-border-radius: 5px;
+    margin: 10px 0;
+  }
+
+  ::-webkit-scrollbar-thumb:vertical {
+    height: 50px;
+    background-color: rgba(226, 219, 254, 0.5);
+    -webkit-border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+
+  }
+
+  ::-webkit-scrollbar-track:vertical {
+  }
+
+  ::-webkit-scrollbar-thumb:horizontal {
+    width: 50px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0.05);
+    padding-bottom: 5px;
+    -webkit-border-radius: 5px;
+  }
 }
 
 body {
@@ -20,7 +67,7 @@ body {
   font-family: HelveticaNeueLight, "Helvetica Neue Light", Helvetica, Arial, sans-serif;
   font-weight: 300;
   font-size: 18px;
-  text-shadow: $shadowColor 0 1px 0;
+  @include single-text-shadow($shadowColor, 0, 1px, 0);
   line-height: 1.6em;
 }
 
@@ -42,8 +89,13 @@ div > section {
 }
 
 a {
-  color: $linkColor;
   -webkit-transition: all 0.1s linear;
+  color: $linkColor;
+  text-decoration: none;
+}
+
+a:hover {
+  color: $linkHoverColor;
 }
 
 h1 {
@@ -55,26 +107,23 @@ h1 {
     font-family: 'ClumsyRegular';
     font-size: 55px;
     color: #fff;
-    text-shadow: $shadowColor 0 3px 0;
-    text-decoration: none;
+    @include single-text-shadow($shadowColor, 0, 3px, 0);
     text-transform: uppercase;
     border: 0;
   }
 }
 
-footer {
+div#ocean > footer {
   font-size: 13px;
   text-align: center;
-  color: $footerColor;
   padding-bottom: 1em;
-  text-shadow: none;
   
   p {
     margin: 0;
   }
   
   a {
-    color: $footerColor;
+    color: #fff;
   }
   
   a:hover {
@@ -88,35 +137,27 @@ h2 {
   font-family: 'ClumsyRegular';
   font-size: 24px;
   color: #fff;
-  text-shadow: $shadowColor 0 2px 0;
-}
-
-pre {
-  background-color: #f8f8ff;
-  border: 1px solid #dedede;
-  color: #444;
-  font-family: "Bitstream Vera Sans Mono", Courier, monospace;
-  font-size: 0.8em;
-  line-height: 1.5em;
-  margin: 0 0 2em;
-  overflow: auto;
-  padding: 0.5em;
-  
-  code {
-    background-color: #f8f8ff;
-    border: medium none;
-    font-size: 1em;
-    padding: 0;
-  }
+  @include single-text-shadow($shadowColor, 0, 2px, 0);
 }
 
 code {
-  background-color: #f8f8ff;
-  border: 1px solid #dedede;
+  background-color: #f7f7f7;
   color: #444;
-  padding: 0 0.2em;
-  font-family: "Bitstream Vera Sans Mono", Courier, monospace;
-  font-size: 0.8em;
+  padding: 0px 0.2em;
+  font-family: monospace;
+  @include single-text-shadow(none);
+}
+
+pre {
+  @include single-box-shadow(rgba(0, 0, 0, 0.5), 0, 1px, 2px);
+  @include border-radius(5px);
+  background-color: #f7f7f7;
+  border: 1px solid #f7f7f7;
+  color: #444;
+  line-height: 1.5em;
+  margin: 1em 0px;
+  overflow: auto;
+  padding: 5px;
 }
 
 p, ul, ol {
