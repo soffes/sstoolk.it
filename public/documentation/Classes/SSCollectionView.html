@@ -51,16 +51,25 @@
 <option value="properties">Properties</option>
 <option value="dataSource">    dataSource</option>
 <option value="delegate">    delegate</option>
+<option value="minimumColumnSpacing">    minimumColumnSpacing</option>
 <option value="rowSpacing">    rowSpacing</option>
 <option value="backgroundView">    backgroundView</option>
 <option value="allowsSelection">    allowsSelection</option>
+<option value="scrollView">    scrollView</option>
+<option value="numberOfSections">    numberOfSections</option>
 <option value="instanceMethods">Instance Methods</option>
 <option value="reloadData">    - reloadData</option>
 <option value="dequeueReusableItemWithIdentifier:">    - dequeueReusableItemWithIdentifier:</option>
 <option value="itemPathForIndex:">    - itemPathForIndex:</option>
 <option value="indexPathForItem:">    - indexPathForItem:</option>
+<option value="selectItemAtIndexPath:animated:scrollPosition:">    - selectItemAtIndexPath:animated:scrollPosition:</option>
 <option value="deselectItemAtIndexPath:animated:">    - deselectItemAtIndexPath:animated:</option>
-<option value="reloadItemsAtIndexPaths:">    - reloadItemsAtIndexPaths:</option></select></li>
+<option value="scrollToItemAtIndexPath:atScrollPosition:animated:">    - scrollToItemAtIndexPath:atScrollPosition:animated:</option>
+<option value="reloadItemsAtIndexPaths:">    - reloadItemsAtIndexPaths:</option>
+<option value="numberOfItemsInSection:">    - numberOfItemsInSection:</option>
+<option value="rectForSection:">    - rectForSection:</option>
+<option value="rectForHeaderInSection:">    - rectForHeaderInSection:</option>
+<option value="rectForFooterInSection:">    - rectForFooterInSection:</option></select></li>
 </ul></nav><nav id="tableOfContents" style="display: none;"><ul>
 <li><a href="#overview">Overview</a></li>
 <li class="expandable" id="tocTasks" onclick="toggleTOCItem()">
@@ -73,9 +82,12 @@
 <a href="#properties">Properties</a><ul style="display: none;">
 <li><a href="#dataSource">dataSource</a></li>
 <li><a href="#delegate">delegate</a></li>
+<li><a href="#minimumColumnSpacing">minimumColumnSpacing</a></li>
 <li><a href="#rowSpacing">rowSpacing</a></li>
 <li><a href="#backgroundView">backgroundView</a></li>
 <li><a href="#allowsSelection">allowsSelection</a></li>
+<li><a href="#scrollView">scrollView</a></li>
+<li><a href="#numberOfSections">numberOfSections</a></li>
 </ul>
 </li>
 <li class="expandable" id="tocInstanceMethods" onclick="toggleTOCItem()">
@@ -84,8 +96,14 @@
 <li><a href="#dequeueReusableItemWithIdentifier:">dequeueReusableItemWithIdentifier:</a></li>
 <li><a href="#itemPathForIndex:">itemPathForIndex:</a></li>
 <li><a href="#indexPathForItem:">indexPathForItem:</a></li>
+<li><a href="#selectItemAtIndexPath:animated:scrollPosition:">selectItemAtIndexPath:animated:scrollPosition:</a></li>
 <li><a href="#deselectItemAtIndexPath:animated:">deselectItemAtIndexPath:animated:</a></li>
+<li><a href="#scrollToItemAtIndexPath:atScrollPosition:animated:">scrollToItemAtIndexPath:atScrollPosition:animated:</a></li>
 <li><a href="#reloadItemsAtIndexPaths:">reloadItemsAtIndexPaths:</a></li>
+<li><a href="#numberOfItemsInSection:">numberOfItemsInSection:</a></li>
+<li><a href="#rectForSection:">rectForSection:</a></li>
+<li><a href="#rectForHeaderInSection:">rectForHeaderInSection:</a></li>
+<li><a href="#rectForFooterInSection:">rectForFooterInSection:</a></li>
 </ul>
 </li>
 </ul></nav><div id="contents">
@@ -97,7 +115,8 @@
 <h2 id="overview">Overview</h2>
 <p>Simple collection view. </p>
 <p>My goals are to be similar to <code><a href="http://developer.apple.com/iphone/library/documentation/UIKit/Reference/UITableView_Class/index.html">UITableView</a></code> and NSCollectionView when possible. Only scrolling vertically is currently supported.</p>
-<p>Editing will be my next focus. Then animating changes when data changes and an option to disable that. </p>
+<p>Editing will be my next focus. Then animating changes when data changes and an option to disable that.</p>
+<p>Note: NSIndexPath is uses the same way <code><a href="http://developer.apple.com/iphone/library/documentation/UIKit/Reference/UITableView_Class/index.html">UITableView</a></code> uses it. The <code>row</code> property is used to specify the item instead of row. This is done to make working with other classes that use NSIndexPath (like <code><a href="http://developer.apple.com/iphone/library/documentation/Cocoa/Reference/NSFetchedResultsController_Class/index.html">NSFetchedResultsController</a></code>) easier. </p>
 <h2 id="tasks">Tasks</h2>
 <ul id="tasksList">
 <li id="Other">
@@ -110,6 +129,9 @@
 <span class="tooltipRegion"><code><a href="#delegate">delegate</a></code> <span class="specialType">property</span></span><span class="tooltip">The object that acts as the delegate of the receiving collection view. </span>
 </li>
 <li>
+<span class="tooltipRegion"><code><a href="#minimumColumnSpacing">minimumColumnSpacing</a></code> <span class="specialType">property</span></span><span class="tooltip">The minimum column spacing. </span>
+</li>
+<li>
 <span class="tooltipRegion"><code><a href="#rowSpacing">rowSpacing</a></code> <span class="specialType">property</span></span><span class="tooltip">The spacing between each row in the receiver. This does not add space above the first row or below the last. </span>
 </li>
 <li>
@@ -117,6 +139,12 @@
 </li>
 <li>
 <span class="tooltipRegion"><code><a href="#allowsSelection">allowsSelection</a></code> <span class="specialType">property</span></span><span class="tooltip">A Boolean value that determines whether selecting items is enabled. </span>
+</li>
+<li>
+<span class="tooltipRegion"><code><a href="#scrollView">scrollView</a></code> <span class="specialType">property</span></span><span class="tooltip">The internal scroll view of the collection view. The delegate must not be overridden. </span>
+</li>
+<li>
+<span class="tooltipRegion"><code><a href="#numberOfSections">numberOfSections</a></code> <span class="specialType">property</span></span><span class="tooltip">The number of sections in the collection view. </span>
 </li>
 </ul>
 </li>
@@ -136,10 +164,28 @@
 <span class="tooltipRegion"><code><a href="#indexPathForItem:">- indexPathForItem:</a></code></span><span class="tooltip">Returns an index path representing the row (index) and section of a given collection view item. </span>
 </li>
 <li>
+<span class="tooltipRegion"><code><a href="#selectItemAtIndexPath:animated:scrollPosition:">- selectItemAtIndexPath:animated:scrollPosition:</a></code></span><span class="tooltip">Selects an item in the receiver identified by index path, optionally scrolling the item to a location in the receiver. </span>
+</li>
+<li>
 <span class="tooltipRegion"><code><a href="#deselectItemAtIndexPath:animated:">- deselectItemAtIndexPath:animated:</a></code></span><span class="tooltip">Deselects a given item identified by index path, with an option to animate the deselection. </span>
 </li>
 <li>
+<span class="tooltipRegion"><code><a href="#scrollToItemAtIndexPath:atScrollPosition:animated:">- scrollToItemAtIndexPath:atScrollPosition:animated:</a></code></span><span class="tooltip">Scrolls the receiver until an item identified by index path is at a particular location on the screen. </span>
+</li>
+<li>
 <span class="tooltipRegion"><code><a href="#reloadItemsAtIndexPaths:">- reloadItemsAtIndexPaths:</a></code></span><span class="tooltip">Reloads the specified item. </span>
+</li>
+<li>
+<span class="tooltipRegion"><code><a href="#numberOfItemsInSection:">- numberOfItemsInSection:</a></code></span><span class="tooltip">Returns the number of item (collection view items) in a specified section. </span>
+</li>
+<li>
+<span class="tooltipRegion"><code><a href="#rectForSection:">- rectForSection:</a></code></span><span class="tooltip">Returns the drawing area for a specified section of the receiver. </span>
+</li>
+<li>
+<span class="tooltipRegion"><code><a href="#rectForHeaderInSection:">- rectForHeaderInSection:</a></code></span><span class="tooltip">Returns the drawing area for the header of the specified section. </span>
+</li>
+<li>
+<span class="tooltipRegion"><code><a href="#rectForFooterInSection:">- rectForFooterInSection:</a></code></span><span class="tooltip">Returns the drawing area for the footer of the specified section. </span>
 </li>
 </ul>
 </li>
@@ -151,6 +197,11 @@
 <code><code>SSCollectionView</code>.h</code></section><section class="definition" id="delegate"><h3>delegate</h3>
 <p>The object that acts as the delegate of the receiving collection view. </p>
 <code class="methodDeclaration">@property id&lt;SSCollectionViewDelegate&gt; delegate</code><h5>Declared In</h5>
+<code><code>SSCollectionView</code>.h</code></section><section class="definition" id="minimumColumnSpacing"><h3>minimumColumnSpacing</h3>
+<p>The minimum column spacing. </p>
+<code class="methodDeclaration">@property CGFloat minimumColumnSpacing</code><h5>Discussion</h5>
+<p>The default is 0. </p>
+<h5>Declared In</h5>
 <code><code>SSCollectionView</code>.h</code></section><section class="definition" id="rowSpacing"><h3>rowSpacing</h3>
 <p>The spacing between each row in the receiver. This does not add space above the first row or below the last. </p>
 <code class="methodDeclaration">@property CGFloat rowSpacing</code><h5>Discussion</h5>
@@ -164,6 +215,14 @@
 <code class="methodDeclaration">@property BOOL allowsSelection</code><h5>Discussion</h5>
 <p>If the value of this property is <code>YES</code>, selecting is enabled, and if it is <code>NO</code>, selecting is disabled. The default is <code>YES</code>. </p>
 <h5>Declared In</h5>
+<code><code>SSCollectionView</code>.h</code></section><section class="definition" id="scrollView"><h3>scrollView</h3>
+<p>The internal scroll view of the collection view. The delegate must not be overridden. </p>
+<code class="methodDeclaration">@property <a href="http://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIScrollView_Class/index.html">UIScrollView</a> *scrollView</code><h5>Declared In</h5>
+<code><code>SSCollectionView</code>.h</code></section><section class="definition" id="numberOfSections"><h3>numberOfSections</h3>
+<p>The number of sections in the collection view. </p>
+<code class="methodDeclaration">@property NSInteger numberOfSections</code><h5>Discussion</h5>
+<p><code><code>SSCollectionView</code></code> gets the value returned by this method from its data source and caches it. </p>
+<h5>Declared In</h5>
 <code><code>SSCollectionView</code>.h</code></section></section><section id="instanceMethods"><h2>Instance Methods</h2>
 <section class="definition" id="reloadData"><h3>reloadData</h3>
 <p>Reloads the items and sections of the receiver. </p>
@@ -176,7 +235,7 @@
 <dd><p>A string identifying the cell object to be reused.</p></dd>
 </dl>
 <h5>Return Value</h5>
-<p>A <code><a href="../Classes/SSCollectionViewItem.html">SSCollectionViewItem</a></code> object with the associated identifier or nil if no such object exists in the reusable-item queue. </p>
+<p>A <code><code><a href="../Classes/SSCollectionViewItem.html">SSCollectionViewItem</a></code>&lt;/code&lt; object with the associated identifier or nil if no such object exists in the reusable-item queue. </code></p>
 <h5>Declared In</h5>
 <code><code>SSCollectionView</code>.h</code></section><section class="definition" id="itemPathForIndex:"><h3>itemPathForIndex:</h3>
 <p>Returns the collection view item at the specified index path. </p>
@@ -202,6 +261,21 @@
 <h5>See Also</h5>
 <ul class="seeAlso"><li><code><a href="#itemPathForIndex:">- itemPathForIndex:</a></code></li></ul>
 <h5>Declared In</h5>
+<code><code>SSCollectionView</code>.h</code></section><section class="definition" id="selectItemAtIndexPath:animated:scrollPosition:"><h3>selectItemAtIndexPath:animated:scrollPosition:</h3>
+<p>Selects an item in the receiver identified by index path, optionally scrolling the item to a location in the receiver. </p>
+<code class="methodDeclaration">- (void)selectItemAtIndexPath:(<a href="http://developer.apple.com/iphone/library/documentation/Cocoa/Reference/Foundation/Classes/NSIndexPath_Class/index.html">NSIndexPath</a> *)<span class="parameter">indexPath</span> animated:(BOOL)<span class="parameter">animated</span> scrollPosition:(SSCollectionViewScrollPosition)<span class="parameter">scrollPosition</span> </code><h5>Parameters</h5>
+<dl class="parameterList">
+<dt>indexPath</dt>
+<dd><p>An index path identifying an item in the receiver. </p></dd>
+<dt>animated</dt>
+<dd><p><code>YES</code> if you want to animate the selection and any change in position, <code>NO</code> if the change should be immediate. </p></dd>
+<dt>scrollPosition</dt>
+<dd><p>A constant that identifies a relative position in the receiving collection view (top, middle, bottom) for the row when scrolling concludes.</p></dd>
+</dl>
+<h5>Discussion</h5>
+<p>
+Calling this method does cause the delegate to receive a <code>collectionView:willSelectRowAtIndexPath:</code> and <code>collectionView:didSelectRowAtIndexPath:</code> message, which differs from <code><code><a href="http://developer.apple.com/iphone/library/documentation/UIKit/Reference/UITableView_Class/index.html">UITableView</a></code></code>. </p>
+<h5>Declared In</h5>
 <code><code>SSCollectionView</code>.h</code></section><section class="definition" id="deselectItemAtIndexPath:animated:"><h3>deselectItemAtIndexPath:animated:</h3>
 <p>Deselects a given item identified by index path, with an option to animate the deselection. </p>
 <code class="methodDeclaration">- (void)deselectItemAtIndexPath:(<a href="http://developer.apple.com/iphone/library/documentation/Cocoa/Reference/Foundation/Classes/NSIndexPath_Class/index.html">NSIndexPath</a> *)<span class="parameter">indexPath</span> animated:(BOOL)<span class="parameter">animated</span> </code><h5>Parameters</h5>
@@ -212,6 +286,18 @@
 <dd><p><code>YES</code> if you want to animate the deselection and <code>NO</code> if the change should be immediate. </p></dd>
 </dl>
 <h5>Declared In</h5>
+<code><code>SSCollectionView</code>.h</code></section><section class="definition" id="scrollToItemAtIndexPath:atScrollPosition:animated:"><h3>scrollToItemAtIndexPath:atScrollPosition:animated:</h3>
+<p>Scrolls the receiver until an item identified by index path is at a particular location on the screen. </p>
+<code class="methodDeclaration">- (void)scrollToItemAtIndexPath:(<a href="http://developer.apple.com/iphone/library/documentation/Cocoa/Reference/Foundation/Classes/NSIndexPath_Class/index.html">NSIndexPath</a> *)<span class="parameter">indexPath</span> atScrollPosition:(SSCollectionViewScrollPosition)<span class="parameter">scrollPosition</span> animated:(BOOL)<span class="parameter">animated</span> </code><h5>Parameters</h5>
+<dl class="parameterList">
+<dt>indexPath</dt>
+<dd><p>An index path that identifies an item in the table view by its row index and its section index. </p></dd>
+<dt>scrollPosition</dt>
+<dd><p>A constant that identifies a relative position in the receiving collection view (top, middle, bottom) for row when scrolling concludes. </p></dd>
+<dt>animated</dt>
+<dd><p><code>YES</code> if you want to animate the change in position, <code>NO</code> if it should be immediate. </p></dd>
+</dl>
+<h5>Declared In</h5>
 <code><code>SSCollectionView</code>.h</code></section><section class="definition" id="reloadItemsAtIndexPaths:"><h3>reloadItemsAtIndexPaths:</h3>
 <p>Reloads the specified item. </p>
 <code class="methodDeclaration">- (void)reloadItemsAtIndexPaths:(<a href="http://developer.apple.com/iphone/library/documentation/Cocoa/Reference/Foundation/Classes/NSArray_Class/index.html">NSArray</a> *)<span class="parameter">indexPaths</span> </code><h5>Parameters</h5>
@@ -220,8 +306,48 @@
 <dd><p>An index path that identifies an item in the collection view by its row index and its section index. </p></dd>
 </dl>
 <h5>Declared In</h5>
+<code><code>SSCollectionView</code>.h</code></section><section class="definition" id="numberOfItemsInSection:"><h3>numberOfItemsInSection:</h3>
+<p>Returns the number of item (collection view items) in a specified section. </p>
+<code class="methodDeclaration">- (NSInteger)numberOfItemsInSection:(NSInteger)<span class="parameter">section</span> </code><h5>Parameters</h5>
+<dl class="parameterList">
+<dt>section</dt>
+<dd><p>An index number that identifies a section of the collection.</p></dd>
+</dl>
+<h5>Return Value</h5>
+<p>The number of items in the section. </p>
+<h5>Declared In</h5>
+<code><code>SSCollectionView</code>.h</code></section><section class="definition" id="rectForSection:"><h3>rectForSection:</h3>
+<p>Returns the drawing area for a specified section of the receiver. </p>
+<code class="methodDeclaration">- (CGRect)rectForSection:(NSInteger)<span class="parameter">section</span> </code><h5>Parameters</h5>
+<dl class="parameterList">
+<dt>section</dt>
+<dd><p>An index number identifying a section of the collection view.</p></dd>
+</dl>
+<h5>Return Value</h5>
+<p>A rectangle defining the area in which the collection view draws the section. </p>
+<h5>Declared In</h5>
+<code><code>SSCollectionView</code>.h</code></section><section class="definition" id="rectForHeaderInSection:"><h3>rectForHeaderInSection:</h3>
+<p>Returns the drawing area for the header of the specified section. </p>
+<code class="methodDeclaration">- (CGRect)rectForHeaderInSection:(NSInteger)<span class="parameter">section</span> </code><h5>Parameters</h5>
+<dl class="parameterList">
+<dt>section</dt>
+<dd><p>An index number identifying a section of the collection view.</p></dd>
+</dl>
+<h5>Return Value</h5>
+<p>A rectangle defining the area in which the collection view draws the section header. </p>
+<h5>Declared In</h5>
+<code><code>SSCollectionView</code>.h</code></section><section class="definition" id="rectForFooterInSection:"><h3>rectForFooterInSection:</h3>
+<p>Returns the drawing area for the footer of the specified section. </p>
+<code class="methodDeclaration">- (CGRect)rectForFooterInSection:(NSInteger)<span class="parameter">section</span> </code><h5>Parameters</h5>
+<dl class="parameterList">
+<dt>section</dt>
+<dd><p>An index number identifying a section of the collection view.</p></dd>
+</dl>
+<h5>Return Value</h5>
+<p>A rectangle defining the area in which the collection view draws the section footer. </p>
+<h5>Declared In</h5>
 <code><code>SSCollectionView</code>.h</code></section></section><hr>
-<p id="lastUpdated">Last updated: 2011-3-26</p>
+<p id="lastUpdated">Last updated: 2011-3-27</p>
 </div>
 <footer id="breadcrumbs"><ul>
 <li><a href="../index.html">SSToolkit</a></li>
