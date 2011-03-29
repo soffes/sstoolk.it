@@ -10,57 +10,6 @@
   font-style: normal;
 }
 
-@media screen and (-webkit-min-device-pixel-ratio:0) {  
-  ::-webkit-scrollbar {
-    width: 8px;
-    height: 8px;
-  }
-
-  ::-webkit-scrollbar-button:start:decrement {
-    display: block;
-    width: 5px;
-    height: 5px;
-    background-color: transparent;
-  }
-
-  ::-webkit-scrollbar-button:end:increment {
-    display: block;
-    width: 5px;
-    height: 5px;
-    background-color: transparent;
-  }
-
-  ::-webkit-scrollbar-track:enabled {
-    background-color: transparent;
-  }
-
-  ::-webkit-scrollbar-track-piece:vertical {
-    background-color: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    -webkit-border-radius: 5px;
-    margin: 10px 0;
-  }
-
-  ::-webkit-scrollbar-thumb:vertical {
-    height: 50px;
-    background-color: rgba(226, 219, 254, 0.5);
-    -webkit-border-radius: 5px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-
-  }
-
-  ::-webkit-scrollbar-track:vertical {
-  }
-
-  ::-webkit-scrollbar-thumb:horizontal {
-    width: 50px;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    background-color: rgba(0, 0, 0, 0.05);
-    padding-bottom: 5px;
-    -webkit-border-radius: 5px;
-  }
-}
-
 body, input, button, pre, code {
   -webkit-font-smoothing: antialiased;
 }
