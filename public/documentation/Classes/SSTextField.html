@@ -49,14 +49,18 @@
 <option value="overview">Overview</option>
 <option value="tasks">Tasks</option>
 <option value="properties">Properties</option>
-<option value="textEdgeInsets">    textEdgeInsets</option></select></li>
+<option value="textEdgeInsets">    textEdgeInsets</option>
+<option value="clearButtonEdgeInsets">    clearButtonEdgeInsets</option></select></li>
 </ul></nav><nav id="tableOfContents" style="display: none;"><ul>
 <li><a href="#overview">Overview</a></li>
 <li class="expandable" id="tocTasks" onclick="toggleTOCItem()">
 <a href="#tasks">Tasks</a><ul style="display: none;"><li><a href="#Other">Other</a></li></ul>
 </li>
 <li class="expandable" id="tocProperties" onclick="toggleTOCItem()">
-<a href="#properties">Properties</a><ul style="display: none;"><li><a href="#textEdgeInsets">textEdgeInsets</a></li></ul>
+<a href="#properties">Properties</a><ul style="display: none;">
+<li><a href="#textEdgeInsets">textEdgeInsets</a></li>
+<li><a href="#clearButtonEdgeInsets">clearButtonEdgeInsets</a></li>
+</ul>
 </li>
 </ul></nav><div id="contents">
 <h1 id="classTitle">SSTextField Class Reference</h1>
@@ -69,9 +73,14 @@
 <h2 id="tasks">Tasks</h2>
 <ul id="tasksList"><li id="Other">
 <h3>Other</h3>
-<ul class="methods"><li>
+<ul class="methods">
+<li>
 <span class="tooltipRegion"><code><a href="#textEdgeInsets">textEdgeInsets</a></code> <span class="specialType">property</span></span><span class="tooltip">The inset or outset margins for the edges of the text content drawing rectangle. </span>
-</li></ul>
+</li>
+<li>
+<span class="tooltipRegion"><code><a href="#clearButtonEdgeInsets">clearButtonEdgeInsets</a></code> <span class="specialType">property</span></span><span class="tooltip">The inset or outset margins for the edges of the clear button drawing rectangle. </span>
+</li>
+</ul>
 </li></ul>
 <section id="properties"><h2>Properties</h2>
 <section class="definition" id="textEdgeInsets"><h3>textEdgeInsets</h3>
@@ -79,8 +88,13 @@
 <code class="methodDeclaration">@property UIEdgeInsets textEdgeInsets</code><h5>Discussion</h5>
 <p>Use this property to resize and reposition the effective drawing rectangle for the text content. You can specify a different value for each of the four insets (top, left, bottom, right). A positive value shrinks, or insets, that edge—moving it closer to the center of the button. A negative value expands, or outsets, that edge. Use the UIEdgeInsetsMake function to construct a value for this property. The default value is UIEdgeInsetsZero. </p>
 <h5>Declared In</h5>
+<code><code>SSTextField</code>.h</code></section><section class="definition" id="clearButtonEdgeInsets"><h3>clearButtonEdgeInsets</h3>
+<p>The inset or outset margins for the edges of the clear button drawing rectangle. </p>
+<code class="methodDeclaration">@property UIEdgeInsets clearButtonEdgeInsets</code><h5>Discussion</h5>
+<p>Use this property to resize and reposition the effective drawing rectangle for the clear button content. You can specify a different value for each of the four insets (top, left, bottom, right), but only the top and right insets are respected. A positive value will move the clear button farther away from the top right corner. Use the UIEdgeInsetsMake function to construct a value for this property. The default value is UIEdgeInsetsZero. </p>
+<h5>Declared In</h5>
 <code><code>SSTextField</code>.h</code></section></section><hr>
-<p id="lastUpdated">Last updated: 2011-3-27</p>
+<p id="lastUpdated">Last updated: 2011-4-3</p>
 </div>
 <footer id="breadcrumbs"><ul>
 <li><a href="../index.html">SSToolkit</a></li>
