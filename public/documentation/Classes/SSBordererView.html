@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>SSTextView Class Reference</title>
+		<title>SSBordererView Class Reference</title>
 		<meta http-equiv="Content-Type" content="application/xhtml+xml;charset=utf-8" />
 		<meta id="xcode-display" name="xcode-display" content="render"/>
 		<meta name="viewport" content="width=550" />
@@ -11,7 +11,7 @@
 	<body>
 		<header id="top_header">
 			<div id="title" role="banner">
-				<h1 class="hideInXcode">SSTextView Class Reference</h1>
+				<h1 class="hideInXcode">SSBordererView Class Reference</h1>
 			</div>
 			<ul id="headerButtons" role="toolbar">
 				<li id="toc_button">
@@ -34,9 +34,13 @@
 	
 	<option value="properties">Properties</option>
 	
-	<option value="//api/name/placeholder">&nbsp;&nbsp;&nbsp;&nbsp;placeholder</option>
+	<option value="//api/name/bottomBorderColor">&nbsp;&nbsp;&nbsp;&nbsp;bottomBorderColor</option>
 	
-	<option value="//api/name/placeholderColor">&nbsp;&nbsp;&nbsp;&nbsp;placeholderColor</option>
+	<option value="//api/name/bottomInsetColor">&nbsp;&nbsp;&nbsp;&nbsp;bottomInsetColor</option>
+	
+	<option value="//api/name/topBorderColor">&nbsp;&nbsp;&nbsp;&nbsp;topBorderColor</option>
+	
+	<option value="//api/name/topInsetColor">&nbsp;&nbsp;&nbsp;&nbsp;topInsetColor</option>
 	
 	
 	
@@ -58,6 +62,10 @@
 
 <li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Drawing the Top Border">Drawing the Top Border</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Drawing the Bottom Border">Drawing the Bottom Border</a></span></li>
+	
 </ul></li>
 
 
@@ -66,9 +74,13 @@
 
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#properties">Properties</a></span><ul>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/placeholder">placeholder</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/bottomBorderColor">bottomBorderColor</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/placeholderColor">placeholderColor</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/bottomInsetColor">bottomInsetColor</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/topBorderColor">topBorderColor</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/topInsetColor">topInsetColor</a></span></li>
 	
 </ul></li>
 
@@ -81,7 +93,7 @@
 		</nav>
 		<article>
 			<div id="contents" class="isShowingTOC" role="main">
-				<a title="SSTextView Class Reference" name="top"></a>
+				<a title="SSBordererView Class Reference" name="top"></a>
 				<div class="main-navigation navigation-top">
 					<ul>
 	<li><a href="../index.html">Index</a></li>
@@ -90,7 +102,7 @@
 				</div>
 				<div id="header">
 					<div class="section-header">
-						<h1 class="title title-header">SSTextView Class Reference</h1>
+						<h1 class="title title-header">SSBordererView Class Reference</h1>
 					</div>		
 				</div>
 				<div id="container">	
@@ -98,10 +110,10 @@
 					<div class="section section-specification"><table cellspacing="0"><tbody>
 						<tr>
 	<td class="specification-title">Inherits from</td>
-	<td class="specification-value">UITextView</td>
+	<td class="specification-value">UIView</td>
 </tr><tr>
 	<td class="specification-title">Declared in</td>
-	<td class="specification-value">SSTextView.h</td>
+	<td class="specification-value">SSBordererView.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -111,7 +123,7 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>UITextView subclass that adds <a href="#//api/name/placeholder">placeholder</a> support like UITextField has.</p>
+						<p>Simple UIView for drawing top and bottom borders with optional insets in a view.</p>
 					</div>
 					
 					
@@ -123,21 +135,43 @@
 						<h2 class="subtitle subtitle-tasks">Tasks</h2>
 						
 						
-						
-						
+						<a title="Drawing the Top Border" name="task_Drawing the Top Border"></a>
+						<h3 class="subsubtitle task-title">Drawing the Top Border</h3>
 
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
-		<code><a href="#//api/name/placeholder">&nbsp;&nbsp;placeholder</a></code>
-		<span class="tooltip"><p>The string that is displayed when there is no other text in the text view.</p></span>
+		<code><a href="#//api/name/topBorderColor">&nbsp;&nbsp;topBorderColor</a></code>
+		<span class="tooltip"><p>The top border color. The default is <code>nil</code>.</p></span>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/placeholderColor">&nbsp;&nbsp;placeholderColor</a></code>
-		<span class="tooltip"><p>The color of the <a href="#//api/name/placeholder">placeholder</a>.</p></span>
+		<code><a href="#//api/name/topInsetColor">&nbsp;&nbsp;topInsetColor</a></code>
+		<span class="tooltip"><p>The top inset color. The default is <code>nil</code>.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li>
+						</ul>
+						
+						
+						<a title="Drawing the Bottom Border" name="task_Drawing the Bottom Border"></a>
+						<h3 class="subsubtitle task-title">Drawing the Bottom Border</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/bottomInsetColor">&nbsp;&nbsp;bottomInsetColor</a></code>
+		<span class="tooltip"><p>The bottom inset color. The default is <code>nil</code>.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/bottomBorderColor">&nbsp;&nbsp;bottomBorderColor</a></code>
+		<span class="tooltip"><p>The bottom border color. The default is <code>nil</code>.</p></span>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
@@ -155,17 +189,17 @@
 						<h2 class="subtitle subtitle-methods">Properties</h2>
 						
 						<div class="section-method">
-	<a name="//api/name/placeholder" title="placeholder"></a>
-	<h3 class="subsubtitle method-title">placeholder</h3>
+	<a name="//api/name/bottomBorderColor" title="bottomBorderColor"></a>
+	<h3 class="subsubtitle method-title">bottomBorderColor</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>The string that is displayed when there is no other text in the text view.</p>
+		<p>The bottom border color. The default is <code>nil</code>.</p>
 	</div>		
 	
 	
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, retain) NSString *placeholder</code></div>
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, retain) UIColor *bottomBorderColor</code></div>
 	
 	
 	
@@ -174,37 +208,44 @@
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>The string that is displayed when there is no other text in the text view.</p>
-
-<p>The default value is <code>nil</code>.</p>
+		<p>The bottom border color. The default is <code>nil</code>.</p>
 	</div>
 	
 	
 	
 	
 	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="#//api/name/topBorderColor">@property topBorderColor</a></p></code></li>
+			
+		</ul>
+	</div>
+	
 	
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">SSTextView.h</code><br />
+		<code class="declared-in-ref">SSBordererView.h</code><br />
 	</div>				
 	
 	
 </div>
 						
 						<div class="section-method">
-	<a name="//api/name/placeholderColor" title="placeholderColor"></a>
-	<h3 class="subsubtitle method-title">placeholderColor</h3>
+	<a name="//api/name/bottomInsetColor" title="bottomInsetColor"></a>
+	<h3 class="subsubtitle method-title">bottomInsetColor</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>The color of the <a href="#//api/name/placeholder">placeholder</a>.</p>
+		<p>The bottom inset color. The default is <code>nil</code>.</p>
 	</div>		
 	
 	
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, retain) UIColor *placeholderColor</code></div>
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, retain) UIColor *bottomInsetColor</code></div>
 	
 	
 	
@@ -213,20 +254,119 @@
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>The color of the <a href="#//api/name/placeholder">placeholder</a>.</p>
-
-<p>The default is <code>[UIColor lightGrayColor]</code>.</p>
+		<p>The bottom inset color. The default is <code>nil</code>.</p>
 	</div>
 	
 	
 	
 	
 	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="#//api/name/topInsetColor">@property topInsetColor</a></p></code></li>
+			
+		</ul>
+	</div>
+	
 	
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">SSTextView.h</code><br />
+		<code class="declared-in-ref">SSBordererView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/topBorderColor" title="topBorderColor"></a>
+	<h3 class="subsubtitle method-title">topBorderColor</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The top border color. The default is <code>nil</code>.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, retain) UIColor *topBorderColor</code></div>
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The top border color. The default is <code>nil</code>.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="#//api/name/bottomBorderColor">@property bottomBorderColor</a></p></code></li>
+			
+		</ul>
+	</div>
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SSBordererView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/topInsetColor" title="topInsetColor"></a>
+	<h3 class="subsubtitle method-title">topInsetColor</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The top inset color. The default is <code>nil</code>.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, retain) UIColor *topInsetColor</code></div>
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The top inset color. The default is <code>nil</code>.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="#//api/name/bottomInsetColor">@property bottomInsetColor</a></p></code></li>
+			
+		</ul>
+	</div>
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SSBordererView.h</code><br />
 	</div>				
 	
 	

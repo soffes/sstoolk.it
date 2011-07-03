@@ -1,451 +1,1949 @@
-<!DOCTYPE html><html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta charset="UTF-8">
-<title>SSWebView Class Reference</title>
-<meta id="Generator" name="Generator" content="Doxyclean">
-<meta id="GeneratorVersion" name="GeneratorVersion" content="2.2">
-<link rel="stylesheet" type="text/css" href="../css/common.css">
-<link rel="stylesheet" type="text/css" media="screen" href="../css/screen.css">
-<link rel="stylesheet" type="text/css" media="print" href="../css/print.css">
-<script type="text/javascript">
-				function toggleTOC() {
-					var toc = document.getElementById('tableOfContents');
-					var tocButton = document.getElementById('toc_button');
-					var contents = document.getElementById('contents');
-					if (toc.style.display == 'block') {
-						toc.style.display = 'none';
-						contents.className = '';
-						tocButton.className = '';
-					} else {
-						toc.style.display = 'block';
-						contents.className = 'tableOfContentsOpen';
-						tocButton.className = 'open';
-					}
-				}
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>SSWebView Class Reference</title>
+		<meta http-equiv="Content-Type" content="application/xhtml+xml;charset=utf-8" />
+		<meta id="xcode-display" name="xcode-display" content="render"/>
+		<meta name="viewport" content="width=550" />
+		<link rel="stylesheet" type="text/css" href="../css/styles.css" />
+		<meta name="generator" content="appledoc 2.0.4 (build 703)" />
+	</head>
+	<body>
+		<header id="top_header">
+			<div id="title" role="banner">
+				<h1 class="hideInXcode">SSWebView Class Reference</h1>
+			</div>
+			<ul id="headerButtons" role="toolbar">
+				<li id="toc_button">
+					<button aria-label="Show Table of Contents" role="checkbox" class="open" id="table_of_contents"><span class="disclosure"></span>Table of Contents</button>
+				</li>
+				<li id="jumpto_button" role="navigation">
+					<select id="jumpTo">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+	
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+	
+	
+	
+	<option value="properties">Properties</option>
+	
+	<option value="//api/name/allowsInlineMediaPlayback">&nbsp;&nbsp;&nbsp;&nbsp;allowsInlineMediaPlayback</option>
+	
+	<option value="//api/name/canGoBack">&nbsp;&nbsp;&nbsp;&nbsp;canGoBack</option>
+	
+	<option value="//api/name/canGoForward">&nbsp;&nbsp;&nbsp;&nbsp;canGoForward</option>
+	
+	<option value="//api/name/consoleEnabled">&nbsp;&nbsp;&nbsp;&nbsp;consoleEnabled</option>
+	
+	<option value="//api/name/dataDetectorTypes">&nbsp;&nbsp;&nbsp;&nbsp;dataDetectorTypes</option>
+	
+	<option value="//api/name/delegate">&nbsp;&nbsp;&nbsp;&nbsp;delegate</option>
+	
+	<option value="//api/name/lastRequest">&nbsp;&nbsp;&nbsp;&nbsp;lastRequest</option>
+	
+	<option value="//api/name/loading">&nbsp;&nbsp;&nbsp;&nbsp;loading</option>
+	
+	<option value="//api/name/loadingPage">&nbsp;&nbsp;&nbsp;&nbsp;loadingPage</option>
+	
+	<option value="//api/name/mediaPlaybackRequiresUserAction">&nbsp;&nbsp;&nbsp;&nbsp;mediaPlaybackRequiresUserAction</option>
+	
+	<option value="//api/name/request">&nbsp;&nbsp;&nbsp;&nbsp;request</option>
+	
+	<option value="//api/name/scalesPageToFit">&nbsp;&nbsp;&nbsp;&nbsp;scalesPageToFit</option>
+	
+	<option value="//api/name/scrollView">&nbsp;&nbsp;&nbsp;&nbsp;scrollView</option>
+	
+	<option value="//api/name/shadowsHidden">&nbsp;&nbsp;&nbsp;&nbsp;shadowsHidden</option>
+	
+	
+	
+	
+	
+	
+	<option value="instance_methods">Instance Methods</option>
+	
+	<option value="//api/name/dismissKeyboard">&nbsp;&nbsp;&nbsp;&nbsp;- dismissKeyboard</option>
+	
+	<option value="//api/name/goBack">&nbsp;&nbsp;&nbsp;&nbsp;- goBack</option>
+	
+	<option value="//api/name/goForward">&nbsp;&nbsp;&nbsp;&nbsp;- goForward</option>
+	
+	<option value="//api/name/loadData:MIMEType:textEncodingName:baseURL:">&nbsp;&nbsp;&nbsp;&nbsp;- loadData:MIMEType:textEncodingName:baseURL:</option>
+	
+	<option value="//api/name/loadHTMLString:">&nbsp;&nbsp;&nbsp;&nbsp;- loadHTMLString:</option>
+	
+	<option value="//api/name/loadHTMLString:baseURL:">&nbsp;&nbsp;&nbsp;&nbsp;- loadHTMLString:baseURL:</option>
+	
+	<option value="//api/name/loadRequest:">&nbsp;&nbsp;&nbsp;&nbsp;- loadRequest:</option>
+	
+	<option value="//api/name/loadURL:">&nbsp;&nbsp;&nbsp;&nbsp;- loadURL:</option>
+	
+	<option value="//api/name/loadURLString:">&nbsp;&nbsp;&nbsp;&nbsp;- loadURLString:</option>
+	
+	<option value="//api/name/reload">&nbsp;&nbsp;&nbsp;&nbsp;- reload</option>
+	
+	<option value="//api/name/removeTextSelection">&nbsp;&nbsp;&nbsp;&nbsp;- removeTextSelection</option>
+	
+	<option value="//api/name/reset">&nbsp;&nbsp;&nbsp;&nbsp;- reset</option>
+	
+	<option value="//api/name/stopLoading">&nbsp;&nbsp;&nbsp;&nbsp;- stopLoading</option>
+	
+	<option value="//api/name/stringByEvaluatingJavaScriptFromString:">&nbsp;&nbsp;&nbsp;&nbsp;- stringByEvaluatingJavaScriptFromString:</option>
+	
+	
+	
+</select>
+				</li>
+			</ul>
+		</header>
+		<nav id="tocContainer" class="isShowingTOC">
+			<ul id="toc" role="tree">
 				
-				function toggleTOCItem() {
-					var listItem = event.srcElement;
-					var sublist = listItem.getElementsByTagName('ul')[0];
-					if (sublist.style.display == 'block') {
-						sublist.style.display = 'none';
-						listItem.className = 'expandable';
-					} else {
-						sublist.style.display = 'block';
-						listItem.className = 'expandable expanded';
-					}
-				}
-				
-				function jumpTo() {
-					selectedItem = event.srcElement.options[event.srcElement.selectedIndex].value;
-					window.location = "#" + selectedItem;
-				}
-			</script>
-</head>
-<body>
-<header id="projectHeader"><h1><a href="../index.html">SSToolkit Reference Library</a></h1></header><header id="fileHeader"><h1><a href="#classTitle">SSWebView Class Reference</a></h1></header><nav id="buttons"><ul>
-<li id="toc_button"><button id="table_of_contents" onclick="toggleTOC()">Table of Contents</button></li>
-<li id="jumpto_button"><select id="jumpto" onchange="jumpTo()"><option value="classTitle">Jump To...</option>
-<option value="overview">Overview</option>
-<option value="tasks">Tasks</option>
-<option value="properties">Properties</option>
-<option value="loadingPage">    loadingPage</option>
-<option value="scrollEnabled">    scrollEnabled</option>
-<option value="bounces">    bounces</option>
-<option value="shadowsHidden">    shadowsHidden</option>
-<option value="consoleEnabled">    consoleEnabled</option>
-<option value="lastRequest">    lastRequest</option>
-<option value="delegate">    delegate</option>
-<option value="loading">    loading</option>
-<option value="canGoBack">    canGoBack</option>
-<option value="canGoForward">    canGoForward</option>
-<option value="request">    request</option>
-<option value="scalesPageToFit">    scalesPageToFit</option>
-<option value="dataDetectorTypes">    dataDetectorTypes</option>
-<option value="instanceMethods">Instance Methods</option>
-<option value="dismissKeyboard">    - dismissKeyboard</option>
-<option value="removeTextSelection">    - removeTextSelection</option>
-<option value="reset">    - reset</option>
-<option value="loadHTMLString:">    - loadHTMLString:</option>
-<option value="loadURL:">    - loadURL:</option>
-<option value="loadURLString:">    - loadURLString:</option>
-<option value="goBack">    - goBack</option>
-<option value="goForward">    - goForward</option>
-<option value="loadData:MIMEType:textEncodingName:baseURL:">    - loadData:MIMEType:textEncodingName:baseURL:</option>
-<option value="loadHTMLString:baseURL:">    - loadHTMLString:baseURL:</option>
-<option value="loadRequest:">    - loadRequest:</option>
-<option value="reload">    - reload</option>
-<option value="stopLoading">    - stopLoading</option>
-<option value="stringByEvaluatingJavaScriptFromString:">    - stringByEvaluatingJavaScriptFromString:</option></select></li>
-</ul></nav><nav id="tableOfContents" style="display: none;"><ul>
-<li><a href="#overview">Overview</a></li>
-<li class="expandable" id="tocTasks" onclick="toggleTOCItem()">
-<a href="#tasks">Tasks</a><ul style="display: none;">
-<li><a href="#Other">Other</a></li>
-<li><a href="#Other">Other</a></li>
+<li role="treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#overview">Overview</a></span></li>
+
+
+
+
+<li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Controlling the Appearance">Controlling the Appearance</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Setting the Delegate">Setting the Delegate</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Loading Content">Loading Content</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Moving Back and Forward">Moving Back and Forward</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Setting Web Content Properties">Setting Web Content Properties</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Running JavaScript">Running JavaScript</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Using the JavaScript Console">Using the JavaScript Console</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Detecting Types of Data">Detecting Types of Data</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Managing Media Playback">Managing Media Playback</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Interacting with Controls">Interacting with Controls</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Resetting State">Resetting State</a></span></li>
+	
+</ul></li>
+
+
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#properties">Properties</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/allowsInlineMediaPlayback">allowsInlineMediaPlayback</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/canGoBack">canGoBack</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/canGoForward">canGoForward</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/consoleEnabled">consoleEnabled</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/dataDetectorTypes">dataDetectorTypes</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/delegate">delegate</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/lastRequest">lastRequest</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/loading">loading</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/loadingPage">loadingPage</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/mediaPlaybackRequiresUserAction">mediaPlaybackRequiresUserAction</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/request">request</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/scalesPageToFit">scalesPageToFit</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/scrollView">scrollView</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/shadowsHidden">shadowsHidden</a></span></li>
+	
+</ul></li>
+
+
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/dismissKeyboard">dismissKeyboard</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/goBack">goBack</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/goForward">goForward</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/loadData:MIMEType:textEncodingName:baseURL:">loadData:MIMEType:textEncodingName:baseURL:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/loadHTMLString:">loadHTMLString:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/loadHTMLString:baseURL:">loadHTMLString:baseURL:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/loadRequest:">loadRequest:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/loadURL:">loadURL:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/loadURLString:">loadURLString:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/reload">reload</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/removeTextSelection">removeTextSelection</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/reset">reset</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/stopLoading">stopLoading</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/stringByEvaluatingJavaScriptFromString:">stringByEvaluatingJavaScriptFromString:</a></span></li>
+	
+</ul></li>
+
+
+			</ul>
+		</nav>
+		<article>
+			<div id="contents" class="isShowingTOC" role="main">
+				<a title="SSWebView Class Reference" name="top"></a>
+				<div class="main-navigation navigation-top">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
 </ul>
+				</div>
+				<div id="header">
+					<div class="section-header">
+						<h1 class="title title-header">SSWebView Class Reference</h1>
+					</div>		
+				</div>
+				<div id="container">	
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<td class="specification-title">Inherits from</td>
+	<td class="specification-value">UIView</td>
+</tr><tr>
+	<td class="specification-title">Conforms to</td>
+	<td class="specification-value">UIWebViewDelegate</td>
+</tr><tr>
+	<td class="specification-title">Declared in</td>
+	<td class="specification-value">SSWebView.h</td>
+</tr>
+						</tbody></table></div>
+					
+					
+					
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>This class pushes UIWebView to its limits and many common and usually difficult tasks very simple.</p>
+
+<p>Note that this class doesn&rsquo;t actually inherit from UIWebView, but instead forwards all of UIWebView&rsquo;s public methods to
+an internal instance. It has been designed to be a drop in replacement for UIWebView.</p>
+
+<p>Things of interest are the <a href="SSWebView.html">SSWebView</a> properties and the extra <a href="#//api/name/delegate"><code>delegate</code></a> methods.</p>
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						<h2 class="subtitle subtitle-tasks">Tasks</h2>
+						
+						
+						<a title="Controlling the Appearance" name="task_Controlling the Appearance"></a>
+						<h3 class="subsubtitle task-title">Controlling the Appearance</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/shadowsHidden">&nbsp;&nbsp;shadowsHidden</a></code>
+		<span class="tooltip"><p>A Boolean value that controls whether the web view draws shadows around the outside of its content.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
 </li>
-<li class="expandable" id="tocProperties" onclick="toggleTOCItem()">
-<a href="#properties">Properties</a><ul style="display: none;">
-<li><a href="#loadingPage">loadingPage</a></li>
-<li><a href="#scrollEnabled">scrollEnabled</a></li>
-<li><a href="#bounces">bounces</a></li>
-<li><a href="#shadowsHidden">shadowsHidden</a></li>
-<li><a href="#consoleEnabled">consoleEnabled</a></li>
-<li><a href="#lastRequest">lastRequest</a></li>
-<li><a href="#delegate">delegate</a></li>
-<li><a href="#loading">loading</a></li>
-<li><a href="#canGoBack">canGoBack</a></li>
-<li><a href="#canGoForward">canGoForward</a></li>
-<li><a href="#request">request</a></li>
-<li><a href="#scalesPageToFit">scalesPageToFit</a></li>
-<li><a href="#dataDetectorTypes">dataDetectorTypes</a></li>
-</ul>
+						</ul>
+						
+						
+						<a title="Setting the Delegate" name="task_Setting the Delegate"></a>
+						<h3 class="subsubtitle task-title">Setting the Delegate</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/delegate">&nbsp;&nbsp;delegate</a></code>
+		<span class="tooltip"><p>The receiver&rsquo;s <a href="#//api/name/delegate"><code>delegate</code></a>.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
 </li>
-<li class="expandable" id="tocInstanceMethods" onclick="toggleTOCItem()">
-<a href="#instanceMethods">Instance Methods</a><ul style="display: none;">
-<li><a href="#dismissKeyboard">dismissKeyboard</a></li>
-<li><a href="#removeTextSelection">removeTextSelection</a></li>
-<li><a href="#reset">reset</a></li>
-<li><a href="#loadHTMLString:">loadHTMLString:</a></li>
-<li><a href="#loadURL:">loadURL:</a></li>
-<li><a href="#loadURLString:">loadURLString:</a></li>
-<li><a href="#goBack">goBack</a></li>
-<li><a href="#goForward">goForward</a></li>
-<li><a href="#loadData:MIMEType:textEncodingName:baseURL:">loadData:MIMEType:textEncodingName:baseURL:</a></li>
-<li><a href="#loadHTMLString:baseURL:">loadHTMLString:baseURL:</a></li>
-<li><a href="#loadRequest:">loadRequest:</a></li>
-<li><a href="#reload">reload</a></li>
-<li><a href="#stopLoading">stopLoading</a></li>
-<li><a href="#stringByEvaluatingJavaScriptFromString:">stringByEvaluatingJavaScriptFromString:</a></li>
-</ul>
+						</ul>
+						
+						
+						<a title="Loading Content" name="task_Loading Content"></a>
+						<h3 class="subsubtitle task-title">Loading Content</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/loadData:MIMEType:textEncodingName:baseURL:">&ndash;&nbsp;loadData:MIMEType:textEncodingName:baseURL:</a></code>
+		<span class="tooltip"><p>Sets the main page contents, MIME type, content encoding, and base URL.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/loadHTMLString:baseURL:">&ndash;&nbsp;loadHTMLString:baseURL:</a></code>
+		<span class="tooltip"><p>Sets the main page content and base URL.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/loadRequest:">&ndash;&nbsp;loadRequest:</a></code>
+		<span class="tooltip"><p>Connects to a given URL by initiating an asynchronous client <a href="#//api/name/request">request</a>.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/loadHTMLString:">&ndash;&nbsp;loadHTMLString:</a></code>
+		<span class="tooltip"><p>Sets the main page content.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/loadURL:">&ndash;&nbsp;loadURL:</a></code>
+		<span class="tooltip"><p>Connects to a given URL by initiating an asynchronous client <a href="#//api/name/request">request</a>.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/loadURLString:">&ndash;&nbsp;loadURLString:</a></code>
+		<span class="tooltip"><p>Connects to a given URL by initiating an asynchronous client <a href="#//api/name/request">request</a>.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/request">&nbsp;&nbsp;request</a></code>
+		<span class="tooltip"><p>The URL <a href="#//api/name/request">request</a> identifying the location of the content to load. (read-only)</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/lastRequest">&nbsp;&nbsp;lastRequest</a></code>
+		<span class="tooltip"><p>The last NSURLRequest that the web view loaded. (read-only)</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/loading">&nbsp;&nbsp;loading</a></code>
+		<span class="tooltip"><p>A Boolean value indicating whether the receiver is done <a href="#//api/name/loading">loading</a> content. (read-only)</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/loadingPage">&nbsp;&nbsp;loadingPage</a></code>
+		<span class="tooltip"><p>Returns whether the web view is <a href="#//api/name/loading">loading</a> a page. (read-only)</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/stopLoading">&ndash;&nbsp;stopLoading</a></code>
+		<span class="tooltip"><p>Stops the <a href="#//api/name/loading">loading</a> of any web content managed by the receiver.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/reload">&ndash;&nbsp;reload</a></code>
+		<span class="tooltip"><p>Reloads the current page.</p></span>
+	</span>
+	
+	
 </li>
-</ul></nav><div id="contents">
-<h1 id="classTitle">SSWebView Class Reference</h1>
-<table id="metadata"><tr class="alt">
-<th>Declared in</th>
-<td>SSWebView.h</td>
-</tr></table>
-<h2 id="overview">Overview</h2>
-<p>This class pushes <code><a href="http://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIWebView_Class/index.html">UIWebView</a></code> to its limits and many common and usually difficult tasks very simple. </p>
-<p>Note that this class doesn't actually inherit from UIWebView, but instead forwards all of UIWebView's public methods to an internal instance. It has been designed to be a drop in replacement for <code><a href="http://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIWebView_Class/index.html">UIWebView</a></code>.</p>
-<p>Things of interest are the <code>SSWebView</code> properties and the extra delegate methods. </p>
-<h2 id="tasks">Tasks</h2>
-<ul id="tasksList">
-<li id="Other">
-<h3>Other</h3>
-<ul class="methods">
-<li>
-<span class="tooltipRegion"><code><a href="#loadingPage">loadingPage</a></code> <span class="specialType">property</span></span><span class="tooltip">Returns whether the web view is loading a page. (read-only) </span>
+						</ul>
+						
+						
+						<a title="Moving Back and Forward" name="task_Moving Back and Forward"></a>
+						<h3 class="subsubtitle task-title">Moving Back and Forward</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/canGoBack">&nbsp;&nbsp;canGoBack</a></code>
+		<span class="tooltip"><p>A Boolean value indicating whether the receiver can move backward. (read-only)</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/canGoForward">&nbsp;&nbsp;canGoForward</a></code>
+		<span class="tooltip"><p>A Boolean value indicating whether the receiver can move forward. (read-only)</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/goBack">&ndash;&nbsp;goBack</a></code>
+		<span class="tooltip"><p>Loads the previous location in the back-forward list.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/goForward">&ndash;&nbsp;goForward</a></code>
+		<span class="tooltip"><p>Loads the next location in the back-forward list.</p></span>
+	</span>
+	
+	
 </li>
-<li>
-<span class="tooltipRegion"><code><a href="#scrollEnabled">scrollEnabled</a></code> <span class="specialType">property</span></span><span class="tooltip">A Boolean value that determines whether scrolling is enabled. </span>
+						</ul>
+						
+						
+						<a title="Setting Web Content Properties" name="task_Setting Web Content Properties"></a>
+						<h3 class="subsubtitle task-title">Setting Web Content Properties</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/scalesPageToFit">&nbsp;&nbsp;scalesPageToFit</a></code>
+		<span class="tooltip"><p>A Boolean value determining whether the webpage scales to fit the view and the user can change the scale.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/scrollView">&nbsp;&nbsp;scrollView</a></code>
+		<span class="tooltip"><p>The scroll view associated with the web view. (read-only)</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
 </li>
-<li>
-<span class="tooltipRegion"><code><a href="#bounces">bounces</a></code> <span class="specialType">property</span></span><span class="tooltip">A Boolean value that controls whether the web view bounces past the edge of content and back again. </span>
+						</ul>
+						
+						
+						<a title="Running JavaScript" name="task_Running JavaScript"></a>
+						<h3 class="subsubtitle task-title">Running JavaScript</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/stringByEvaluatingJavaScriptFromString:">&ndash;&nbsp;stringByEvaluatingJavaScriptFromString:</a></code>
+		<span class="tooltip"><p>Returns the result of running a script.</p></span>
+	</span>
+	
+	
 </li>
-<li>
-<span class="tooltipRegion"><code><a href="#shadowsHidden">shadowsHidden</a></code> <span class="specialType">property</span></span><span class="tooltip">A Boolean value that controls whether the web view draws shadows around the outside of its content. </span>
+						</ul>
+						
+						
+						<a title="Using the JavaScript Console" name="task_Using the JavaScript Console"></a>
+						<h3 class="subsubtitle task-title">Using the JavaScript Console</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/consoleEnabled">&nbsp;&nbsp;consoleEnabled</a></code>
+		<span class="tooltip"><p>A Boolean value that controls whether <code>console.log</code> messages are intercepted.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
 </li>
-<li>
-<span class="tooltipRegion"><code><a href="#consoleEnabled">consoleEnabled</a></code> <span class="specialType">property</span></span><span class="tooltip">A Boolean value that controls whether console.log messages are intercepted. </span>
+						</ul>
+						
+						
+						<a title="Detecting Types of Data" name="task_Detecting Types of Data"></a>
+						<h3 class="subsubtitle task-title">Detecting Types of Data</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/dataDetectorTypes">&nbsp;&nbsp;dataDetectorTypes</a></code>
+		<span class="tooltip"><p>The types of data converted to clickable URLs in the web view&rsquo;s content.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
 </li>
-<li>
-<span class="tooltipRegion"><code><a href="#lastRequest">lastRequest</a></code> <span class="specialType">property</span></span><span class="tooltip">The last NSURLRequest that the web view loaded. </span>
+						</ul>
+						
+						
+						<a title="Managing Media Playback" name="task_Managing Media Playback"></a>
+						<h3 class="subsubtitle task-title">Managing Media Playback</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/allowsInlineMediaPlayback">&nbsp;&nbsp;allowsInlineMediaPlayback</a></code>
+		<span class="tooltip"><p>A Boolean value that determines whether HTML5 videos play inline or use the native full-screen controller.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/mediaPlaybackRequiresUserAction">&nbsp;&nbsp;mediaPlaybackRequiresUserAction</a></code>
+		<span class="tooltip"><p>A Boolean value that determines whether HTML5 videos can play automatically or require the user to start playing them.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
 </li>
-<li>
-<span class="tooltipRegion"><code><a href="#delegate">delegate</a></code> <span class="specialType">property</span></span><span class="tooltip">The receiver's delegate. </span>
+						</ul>
+						
+						
+						<a title="Interacting with Controls" name="task_Interacting with Controls"></a>
+						<h3 class="subsubtitle task-title">Interacting with Controls</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/dismissKeyboard">&ndash;&nbsp;dismissKeyboard</a></code>
+		<span class="tooltip"><p>Uses JavaScript to remove focus from the active element.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/removeTextSelection">&ndash;&nbsp;removeTextSelection</a></code>
+		<span class="tooltip"><p>Removes the text selection in the web view.</p></span>
+	</span>
+	
+	
 </li>
-<li>
-<span class="tooltipRegion"><code><a href="#loading">loading</a></code> <span class="specialType">property</span></span><span class="tooltip">A Boolean value indicating whether the receiver is done loading content. (read-only) </span>
+						</ul>
+						
+						
+						<a title="Resetting State" name="task_Resetting State"></a>
+						<h3 class="subsubtitle task-title">Resetting State</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/reset">&ndash;&nbsp;reset</a></code>
+		<span class="tooltip"><p>Destroys the internal <code>UIWebView</code> and recreates.</p></span>
+	</span>
+	
+	
 </li>
-<li>
-<span class="tooltipRegion"><code><a href="#canGoBack">canGoBack</a></code> <span class="specialType">property</span></span><span class="tooltip">A Boolean value indicating whether the receiver can move backward. (read-only) </span>
-</li>
-<li>
-<span class="tooltipRegion"><code><a href="#canGoForward">canGoForward</a></code> <span class="specialType">property</span></span><span class="tooltip">A Boolean value indicating whether the receiver can move forward. (read-only) </span>
-</li>
-<li>
-<span class="tooltipRegion"><code><a href="#request">request</a></code> <span class="specialType">property</span></span><span class="tooltip">The URL request identifying the location of the content to load. (read-only) </span>
-</li>
-<li>
-<span class="tooltipRegion"><code><a href="#scalesPageToFit">scalesPageToFit</a></code> <span class="specialType">property</span></span><span class="tooltip">A Boolean value determining whether the webpage scales to fit the view and the user can change the scale. </span>
-</li>
-<li>
-<span class="tooltipRegion"><code><a href="#dataDetectorTypes">dataDetectorTypes</a></code> <span class="specialType">property</span></span><span class="tooltip">The types of data converted to clickable URLs in the web view’s content. </span>
-</li>
-</ul>
-</li>
-<li id="Other">
-<h3>Other</h3>
-<ul class="methods">
-<li>
-<span class="tooltipRegion"><code><a href="#dismissKeyboard">- dismissKeyboard</a></code></span><span class="tooltip">Uses JavaScript to remove focus from the active element. </span>
-</li>
-<li>
-<span class="tooltipRegion"><code><a href="#removeTextSelection">- removeTextSelection</a></code></span><span class="tooltip">Removes the text selection in the web view. </span>
-</li>
-<li>
-<span class="tooltipRegion"><code><a href="#reset">- reset</a></code></span><span class="tooltip">Destroys the internal UIWebView and recreates. </span>
-</li>
-<li>
-<span class="tooltipRegion"><code><a href="#loadHTMLString:">- loadHTMLString:</a></code></span><span class="tooltip">Sets the main page content. </span>
-</li>
-<li>
-<span class="tooltipRegion"><code><a href="#loadURL:">- loadURL:</a></code></span><span class="tooltip">Connects to a given URL by initiating an asynchronous client request. </span>
-</li>
-<li>
-<span class="tooltipRegion"><code><a href="#loadURLString:">- loadURLString:</a></code></span><span class="tooltip">Connects to a given URL by initiating an asynchronous client request. </span>
-</li>
-<li>
-<span class="tooltipRegion"><code><a href="#goBack">- goBack</a></code></span><span class="tooltip">Loads the previous location in the back-forward list. </span>
-</li>
-<li>
-<span class="tooltipRegion"><code><a href="#goForward">- goForward</a></code></span><span class="tooltip">Loads the next location in the back-forward list. </span>
-</li>
-<li>
-<span class="tooltipRegion"><code><a href="#loadData:MIMEType:textEncodingName:baseURL:">- loadData:MIMEType:textEncodingName:baseURL:</a></code></span><span class="tooltip">Sets the main page contents, MIME type, content encoding, and base URL. </span>
-</li>
-<li>
-<span class="tooltipRegion"><code><a href="#loadHTMLString:baseURL:">- loadHTMLString:baseURL:</a></code></span><span class="tooltip">Sets the main page content and base URL. </span>
-</li>
-<li>
-<span class="tooltipRegion"><code><a href="#loadRequest:">- loadRequest:</a></code></span><span class="tooltip">Connects to a given URL by initiating an asynchronous client request. </span>
-</li>
-<li>
-<span class="tooltipRegion"><code><a href="#reload">- reload</a></code></span><span class="tooltip">Reloads the current page. </span>
-</li>
-<li>
-<span class="tooltipRegion"><code><a href="#stopLoading">- stopLoading</a></code></span><span class="tooltip">Stops the loading of any web content managed by the receiver. </span>
-</li>
-<li>
-<span class="tooltipRegion"><code><a href="#stringByEvaluatingJavaScriptFromString:">- stringByEvaluatingJavaScriptFromString:</a></code></span><span class="tooltip">Returns the result of running a script. </span>
-</li>
-</ul>
-</li>
-</ul>
-<section id="properties"><h2>Properties</h2>
-<section class="definition" id="loadingPage"><h3>loadingPage</h3>
-<p>Returns whether the web view is loading a page. (read-only) </p>
-<code class="methodDeclaration">@property BOOL loadingPage</code><h5>Discussion</h5>
-<p>This will return <code>YES</code> when the first <code><a href="http://developer.apple.com/iphone/library/documentation/Cocoa/Reference/Foundation/Classes/NSURLRequest_Class/index.html">NSURLRequest</a></code> starts and <code>NO</code> when there are no more requests loading.</p>
-<p>Note: Setting this isn't 100% reliable since it is very hacky underneath. </p>
-<h5>Declared In</h5>
-<code><code>SSWebView</code>.h</code></section><section class="definition" id="scrollEnabled"><h3>scrollEnabled</h3>
-<p>A Boolean value that determines whether scrolling is enabled. </p>
-<code class="methodDeclaration">@property BOOL scrollEnabled</code><h5>Discussion</h5>
-<p>If the value of this property is <code>YES</code>, scrolling is enabled, and if it is <code>NO</code>, scrolling is disabled. The default is <code>YES</code>.</p>
-<p>Note: Setting this isn't 100% reliable since it is very hacky underneath. </p>
-<h5>Declared In</h5>
-<code><code>SSWebView</code>.h</code></section><section class="definition" id="bounces"><h3>bounces</h3>
-<p>A Boolean value that controls whether the web view bounces past the edge of content and back again. </p>
-<code class="methodDeclaration">@property BOOL bounces</code><h5>Discussion</h5>
-<p>If the value of this property is <code>YES</code>, the web view bounces when it encounters a boundary of the content. Bouncing visually indicates that scrolling has reached an edge of the content. If the value is <code>NO</code>, scrolling stops immediately at the content boundary without bouncing. The default value is <code>YES</code>. </p>
-<h5>Declared In</h5>
-<code><code>SSWebView</code>.h</code></section><section class="definition" id="shadowsHidden"><h3>shadowsHidden</h3>
-<p>A Boolean value that controls whether the web view draws shadows around the outside of its content. </p>
-<code class="methodDeclaration">@property BOOL shadowsHidden</code><h5>Discussion</h5>
-<p>If the value of this property is <code>YES</code>, the web view will the shadows around the outside of its content. If the value is <code>NO</code>, shadows will be displayed like normal. The default value is <code>NO</code>.</p>
-<p>Note: This isn't 100% reliable since it is very hacky underneath. </p>
-<h5>Declared In</h5>
-<code><code>SSWebView</code>.h</code></section><section class="definition" id="consoleEnabled"><h3>consoleEnabled</h3>
-<p>A Boolean value that controls whether <code>console.log</code> messages are intercepted. </p>
-<code class="methodDeclaration">@property BOOL consoleEnabled</code><h5>Discussion</h5>
-<p>If the value of this property is <code>YES</code>, the web view will inject some JavaScript after the DOM has loaded that replaces <code>console.log</code> with a custom implementation that will NSLog the <code>console.log</code> messages.</p>
-<p>Note: This isn't 100% reliable since it is very hacky underneath. </p>
-<h5>Declared In</h5>
-<code><code>SSWebView</code>.h</code></section><section class="definition" id="lastRequest"><h3>lastRequest</h3>
-<p>The last <code><a href="http://developer.apple.com/iphone/library/documentation/Cocoa/Reference/Foundation/Classes/NSURLRequest_Class/index.html">NSURLRequest</a></code> that the web view loaded. </p>
-<code class="methodDeclaration">@property <a href="http://developer.apple.com/iphone/library/documentation/Cocoa/Reference/Foundation/Classes/NSURLRequest_Class/index.html">NSURLRequest</a> *lastRequest</code><h5>Declared In</h5>
-<code><code>SSWebView</code>.h</code></section><section class="definition" id="delegate"><h3>delegate</h3>
-<p>The receiver's delegate. </p>
-<code class="methodDeclaration">@property id&lt;SSWebViewDelegate&gt; delegate</code><h5>Discussion</h5>
-<p>The delegate is sent messages when content is loading. </p>
-<h5>Declared In</h5>
-<code><code>SSWebView</code>.h</code></section><section class="definition" id="loading"><h3>loading</h3>
-<p>A Boolean value indicating whether the receiver is done loading content. (read-only) </p>
-<code class="methodDeclaration">@property BOOL loading</code><h5>Discussion</h5>
-<p>If <code>YES</code>, the receiver is still loading content; otherwise, <code>NO</code>. </p>
-<h5>Declared In</h5>
-<code><code>SSWebView</code>.h</code></section><section class="definition" id="canGoBack"><h3>canGoBack</h3>
-<p>A Boolean value indicating whether the receiver can move backward. (read-only) </p>
-<code class="methodDeclaration">@property BOOL canGoBack</code><h5>Discussion</h5>
-<p>If <code>YES</code>, able to move backward; otherwise, <code>NO</code>. </p>
-<h5>Declared In</h5>
-<code><code>SSWebView</code>.h</code></section><section class="definition" id="canGoForward"><h3>canGoForward</h3>
-<p>A Boolean value indicating whether the receiver can move forward. (read-only) </p>
-<code class="methodDeclaration">@property BOOL canGoForward</code><h5>Discussion</h5>
-<p>If <code>YES</code>, able to move forward; otherwise, <code>NO</code>. </p>
-<h5>Declared In</h5>
-<code><code>SSWebView</code>.h</code></section><section class="definition" id="request"><h3>request</h3>
-<p>The URL request identifying the location of the content to load. (read-only) </p>
-<code class="methodDeclaration">@property <a href="http://developer.apple.com/iphone/library/documentation/Cocoa/Reference/Foundation/Classes/NSURLRequest_Class/index.html">NSURLRequest</a> *request</code><h5>Declared In</h5>
-<code><code>SSWebView</code>.h</code></section><section class="definition" id="scalesPageToFit"><h3>scalesPageToFit</h3>
-<p>A Boolean value determining whether the webpage scales to fit the view and the user can change the scale. </p>
-<code class="methodDeclaration">@property BOOL scalesPageToFit</code><h5>Discussion</h5>
-<p>If <code>YES</code>, the webpage is scaled to fit and the user can zoom in and zoom out. If <code>NO</code>, user zooming is disabled. The default value is <code>NO</code>. </p>
-<h5>Declared In</h5>
-<code><code>SSWebView</code>.h</code></section><section class="definition" id="dataDetectorTypes"><h3>dataDetectorTypes</h3>
-<p>The types of data converted to clickable URLs in the web view’s content. </p>
-<code class="methodDeclaration">@property UIDataDetectorTypes dataDetectorTypes</code><h5>Discussion</h5>
-<p>You can use this property to specify the types of data (phone numbers, http links, email address, and so on) that should be automatically converted to clickable URLs in the web view. When clicked, the web view opens the application responsible for handling the URL type and passes it the URL. </p>
-<h5>Declared In</h5>
-<code><code>SSWebView</code>.h</code></section></section><section id="instanceMethods"><h2>Instance Methods</h2>
-<section class="definition" id="dismissKeyboard"><h3>dismissKeyboard</h3>
-<p>Uses JavaScript to remove focus from the active element. </p>
-<code class="methodDeclaration">- (void)dismissKeyboard</code><h5>Discussion</h5>
-<p>If the receiver is in a modal <code><a href="http://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIViewController_Class/index.html">UIViewController</a></code> with the modalPresentationStyle UIModalPresentationFormSheet, it will not dismiss the keyboard due to how UIModalPresentationFormSheet works. </p>
-<h5>Declared In</h5>
-<code><code>SSWebView</code>.h</code></section><section class="definition" id="removeTextSelection"><h3>removeTextSelection</h3>
-<p>Removes the text selection in the web view. </p>
-<code class="methodDeclaration">- (void)removeTextSelection</code><h5>Discussion</h5>
-<p>Using Javascript to this doesn't always work as expected. This method will correctly remove the text selection. </p>
-<h5>Declared In</h5>
-<code><code>SSWebView</code>.h</code></section><section class="definition" id="reset"><h3>reset</h3>
-<p>Destroys the internal <code><a href="http://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIWebView_Class/index.html">UIWebView</a></code> and recreates. </p>
-<code class="methodDeclaration">- (void)reset</code><h5>Discussion</h5>
-<p>All of the properties are maintained across the reset. </p>
-<h5>Declared In</h5>
-<code><code>SSWebView</code>.h</code></section><section class="definition" id="loadHTMLString:"><h3>loadHTMLString:</h3>
-<p>Sets the main page content. </p>
-<code class="methodDeclaration">- (void)loadHTMLString:(<a href="http://developer.apple.com/iphone/library/documentation/Cocoa/Reference/Foundation/Classes/NSString_Class/index.html">NSString</a> *)<span class="parameter">string</span> </code><h5>Parameters</h5>
-<dl class="parameterList">
-<dt>string</dt>
-<dd><p>The content for the main page.</p></dd>
-</dl>
-<h5>Discussion</h5>
-<p>
-The baseURL is set to <code>http://localhost</code></p>
-<p></p>
-<h5>See Also</h5>
-<ul class="seeAlso"><li><code><a href="#loadHTMLString:baseURL:">- loadHTMLString:baseURL:</a></code></li></ul>
-<h5>Declared In</h5>
-<code><code>SSWebView</code>.h</code></section><section class="definition" id="loadURL:"><h3>loadURL:</h3>
-<p>Connects to a given URL by initiating an asynchronous client request. </p>
-<code class="methodDeclaration">- (void)loadURL:(<a href="http://developer.apple.com/iphone/library/documentation/Cocoa/Reference/Foundation/Classes/NSURL_Class/index.html">NSURL</a> *)<span class="parameter">aURL</span> </code><h5>Parameters</h5>
-<dl class="parameterList">
-<dt>aURL</dt>
-<dd><p>A URL identifying the location of the content to load.</p></dd>
-</dl>
-<h5>Discussion</h5>
-<p>
-To stop this load, use the stopLoading method. To see whether the receiver is done loading the content, use the loading property.</p>
-<p></p>
-<h5>See Also</h5>
-<ul class="seeAlso">
-<li><code><a href="#loadURLString:">- loadURLString:</a></code></li>
-<li><code><a href="#loadRequest:">- loadRequest:</a></code></li>
-<li><code><a href="#request">request</a></code></li>
-<li><code><a href="#stopLoading">- stopLoading</a></code></li>
-<li><code><a href="#loading">loading</a></code></li>
-<li><code><a href="#reload">- reload</a></code></li>
-</ul>
-<h5>Declared In</h5>
-<code><code>SSWebView</code>.h</code></section><section class="definition" id="loadURLString:"><h3>loadURLString:</h3>
-<p>Connects to a given URL by initiating an asynchronous client request. </p>
-<code class="methodDeclaration">- (void)loadURLString:(<a href="http://developer.apple.com/iphone/library/documentation/Cocoa/Reference/Foundation/Classes/NSString_Class/index.html">NSString</a> *)<span class="parameter">string</span> </code><h5>Parameters</h5>
-<dl class="parameterList">
-<dt>string</dt>
-<dd><p>A string containing a URL identifying the location of the content to load.</p></dd>
-</dl>
-<h5>Discussion</h5>
-<p>
-To stop this load, use the stopLoading method. To see whether the receiver is done loading the content, use the loading property.</p>
-<p></p>
-<h5>See Also</h5>
-<ul class="seeAlso">
-<li><code><a href="#loadURL:">- loadURL:</a></code></li>
-<li><code><a href="#loadRequest:">- loadRequest:</a></code></li>
-<li><code><a href="#request">request</a></code></li>
-<li><code><a href="#stopLoading">- stopLoading</a></code></li>
-<li><code><a href="#loading">loading</a></code></li>
-<li><code><a href="#reload">- reload</a></code></li>
-</ul>
-<h5>Declared In</h5>
-<code><code>SSWebView</code>.h</code></section><section class="definition" id="goBack"><h3>goBack</h3>
-<p>Loads the previous location in the back-forward list. </p>
-<code class="methodDeclaration">- (void)goBack</code><h5>Declared In</h5>
-<code><code>SSWebView</code>.h</code></section><section class="definition" id="goForward"><h3>goForward</h3>
-<p>Loads the next location in the back-forward list. </p>
-<code class="methodDeclaration">- (void)goForward</code><h5>Declared In</h5>
-<code><code>SSWebView</code>.h</code></section><section class="definition" id="loadData:MIMEType:textEncodingName:baseURL:"><h3>loadData:MIMEType:textEncodingName:baseURL:</h3>
-<p>Sets the main page contents, MIME type, content encoding, and base URL. </p>
-<code class="methodDeclaration">- (void)loadData:(<a href="http://developer.apple.com/iphone/library/documentation/Cocoa/Reference/Foundation/Classes/NSData_Class/index.html">NSData</a> *)<span class="parameter">data</span> MIMEType:(<a href="http://developer.apple.com/iphone/library/documentation/Cocoa/Reference/Foundation/Classes/NSString_Class/index.html">NSString</a> *)<span class="parameter">MIMEType</span> textEncodingName:(<a href="http://developer.apple.com/iphone/library/documentation/Cocoa/Reference/Foundation/Classes/NSString_Class/index.html">NSString</a> *)<span class="parameter">encodingName</span> baseURL:(<a href="http://developer.apple.com/iphone/library/documentation/Cocoa/Reference/Foundation/Classes/NSURL_Class/index.html">NSURL</a> *)<span class="parameter">baseURL</span> </code><h5>Parameters</h5>
-<dl class="parameterList">
-<dt>data</dt>
-<dd><p>The content for the main page.</p></dd>
-<dt>MIMEType</dt>
-<dd><p>The MIME type of the content.</p></dd>
-<dt>encodingName</dt>
-<dd><p>The IANA encoding name as in utf-8 or utf-16.</p></dd>
-<dt>baseURL</dt>
-<dd><p>The base URL for the content. </p></dd>
-</dl>
-<h5>Declared In</h5>
-<code><code>SSWebView</code>.h</code></section><section class="definition" id="loadHTMLString:baseURL:"><h3>loadHTMLString:baseURL:</h3>
-<p>Sets the main page content and base URL. </p>
-<code class="methodDeclaration">- (void)loadHTMLString:(<a href="http://developer.apple.com/iphone/library/documentation/Cocoa/Reference/Foundation/Classes/NSString_Class/index.html">NSString</a> *)<span class="parameter">string</span> baseURL:(<a href="http://developer.apple.com/iphone/library/documentation/Cocoa/Reference/Foundation/Classes/NSURL_Class/index.html">NSURL</a> *)<span class="parameter">baseURL</span> </code><h5>Parameters</h5>
-<dl class="parameterList">
-<dt>string</dt>
-<dd><p>The content for the main page.</p></dd>
-<dt>baseURL</dt>
-<dd><p>The base URL for the content. </p></dd>
-</dl>
-<h5>Declared In</h5>
-<code><code>SSWebView</code>.h</code></section><section class="definition" id="loadRequest:"><h3>loadRequest:</h3>
-<p>Connects to a given URL by initiating an asynchronous client request. </p>
-<code class="methodDeclaration">- (void)loadRequest:(<a href="http://developer.apple.com/iphone/library/documentation/Cocoa/Reference/Foundation/Classes/NSURLRequest_Class/index.html">NSURLRequest</a> *)<span class="parameter">aRequest</span> </code><h5>Parameters</h5>
-<dl class="parameterList">
-<dt>request</dt>
-<dd><p>A URL request identifying the location of the content to load.</p></dd>
-</dl>
-<h5>Discussion</h5>
-<p>
-To stop this load, use the stopLoading method. To see whether the receiver is done loading the content, use the loading property.</p>
-<p></p>
-<h5>See Also</h5>
-<ul class="seeAlso">
-<li><code><a href="#request">request</a></code></li>
-<li><code><a href="#stopLoading">- stopLoading</a></code></li>
-<li><code><a href="#loading">loading</a></code></li>
-<li><code><a href="#reload">- reload</a></code></li>
-</ul>
-<h5>Declared In</h5>
-<code><code>SSWebView</code>.h</code></section><section class="definition" id="reload"><h3>reload</h3>
-<p>Reloads the current page. </p>
-<code class="methodDeclaration">- (void)reload</code><h5>See Also</h5>
-<ul class="seeAlso">
-<li><code><a href="#request">request</a></code></li>
-<li><code><a href="#loading">loading</a></code></li>
-<li><code><a href="#loadRequest:">- loadRequest:</a></code></li>
-<li><code><a href="#stopLoading">- stopLoading</a></code></li>
-</ul>
-<h5>Declared In</h5>
-<code><code>SSWebView</code>.h</code></section><section class="definition" id="stopLoading"><h3>stopLoading</h3>
-<p>Stops the loading of any web content managed by the receiver. </p>
-<code class="methodDeclaration">- (void)stopLoading</code><h5>Discussion</h5>
-<p>Stops any content in the process of being loaded by the main frame or any of its children frames. Does nothing if no content is being loaded. </p>
-<h5>Declared In</h5>
-<code><code>SSWebView</code>.h</code></section><section class="definition" id="stringByEvaluatingJavaScriptFromString:"><h3>stringByEvaluatingJavaScriptFromString:</h3>
-<p>Returns the result of running a script. </p>
-<code class="methodDeclaration">- (NSString *)stringByEvaluatingJavaScriptFromString:(<a href="http://developer.apple.com/iphone/library/documentation/Cocoa/Reference/Foundation/Classes/NSString_Class/index.html">NSString</a> *)<span class="parameter">script</span> </code><h5>Parameters</h5>
-<dl class="parameterList">
-<dt>script</dt>
-<dd><p>The script to run.</p></dd>
-</dl>
-<h5>Return Value</h5>
-<p>The result of running script or nil if it fails.</p>
-<h5>Discussion</h5>
-<p>
-JavaScript execution time is limited to 10 seconds for each top-level entry point. If your script executes for more than 10 seconds, the web view stops executing the script. This is likely to occur at a random place in your code, so unintended consequences may result. This limit is imposed because JavaScript execution may cause the main thread to block, so when scripts are running, the user is not able to interact with the webpage.</p>
-<p>JavaScript allocations are also limited to 10 MB. The web view raises an exception if you exceed this limit on the total memory allocation for JavaScript. </p>
-<h5>Declared In</h5>
-<code><code>SSWebView</code>.h</code></section></section><hr>
-<p id="lastUpdated">Last updated: 2011-4-3</p>
+						</ul>
+						
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Properties" name="properties"></a>
+						<h2 class="subtitle subtitle-methods">Properties</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/allowsInlineMediaPlayback" title="allowsInlineMediaPlayback"></a>
+	<h3 class="subsubtitle method-title">allowsInlineMediaPlayback</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>A Boolean value that determines whether HTML5 videos play inline or use the native full-screen controller.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) BOOL allowsInlineMediaPlayback</code></div>
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>A Boolean value that determines whether HTML5 videos play inline or use the native full-screen controller.</p>
+
+<p>The default value on iPhone is <code>NO</code>.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SSWebView.h</code><br />
+	</div>				
+	
+	
 </div>
-<footer id="breadcrumbs"><ul>
-<li><a href="../index.html">SSToolkit</a></li>
-<li><a href="#classTitle">SSWebView Class Reference</a></li>
-</ul></footer>
-</body>
+						
+						<div class="section-method">
+	<a name="//api/name/canGoBack" title="canGoBack"></a>
+	<h3 class="subsubtitle method-title">canGoBack</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>A Boolean value indicating whether the receiver can move backward. (read-only)</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) BOOL canGoBack</code></div>
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>A Boolean value indicating whether the receiver can move backward. (read-only)</p>
+
+<p>If <code>YES</code>, able to move backward; otherwise, <code>NO</code>.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SSWebView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/canGoForward" title="canGoForward"></a>
+	<h3 class="subsubtitle method-title">canGoForward</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>A Boolean value indicating whether the receiver can move forward. (read-only)</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) BOOL canGoForward</code></div>
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>A Boolean value indicating whether the receiver can move forward. (read-only)</p>
+
+<p>If <code>YES</code>, able to move forward; otherwise, <code>NO</code>.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SSWebView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/consoleEnabled" title="consoleEnabled"></a>
+	<h3 class="subsubtitle method-title">consoleEnabled</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>A Boolean value that controls whether <code>console.log</code> messages are intercepted.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) BOOL consoleEnabled</code></div>
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>A Boolean value that controls whether <code>console.log</code> messages are intercepted.</p>
+
+<p>If the value of this property is <code>YES</code>, the web view will inject some JavaScript after the DOM has loaded
+that replaces <code>console.log</code> with a custom implementation that will NSLog the <code>console.log</code>
+messages.</p>
+
+<p>Note: This isn&rsquo;t 100% reliable since it is very hacky underneath.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SSWebView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/dataDetectorTypes" title="dataDetectorTypes"></a>
+	<h3 class="subsubtitle method-title">dataDetectorTypes</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The types of data converted to clickable URLs in the web view&rsquo;s content.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) UIDataDetectorTypes dataDetectorTypes</code></div>
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The types of data converted to clickable URLs in the web view&rsquo;s content.</p>
+
+<p>You can use this property to specify the types of data (phone numbers, http links, email address, and so on) that
+should be automatically converted to clickable URLs in the web view. When clicked, the web view opens the application
+responsible for handling the URL type and passes it the URL.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SSWebView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/delegate" title="delegate"></a>
+	<h3 class="subsubtitle method-title">delegate</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The receiver&rsquo;s <a href="#//api/name/delegate"><code>delegate</code></a>.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) id&lt;SSWebViewDelegate&gt; delegate</code></div>
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The receiver&rsquo;s <a href="#//api/name/delegate"><code>delegate</code></a>.</p>
+
+<p>The <a href="#//api/name/delegate"><code>delegate</code></a> is sent messages when content is <a href="#//api/name/loading">loading</a>.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SSWebView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/lastRequest" title="lastRequest"></a>
+	<h3 class="subsubtitle method-title">lastRequest</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The last NSURLRequest that the web view loaded. (read-only)</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, retain, readonly) NSURLRequest *lastRequest</code></div>
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The last NSURLRequest that the web view loaded. (read-only)</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SSWebView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/loading" title="loading"></a>
+	<h3 class="subsubtitle method-title">loading</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>A Boolean value indicating whether the receiver is done <a href="#//api/name/loading">loading</a> content. (read-only)</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly, getter=isLoading) BOOL loading</code></div>
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>A Boolean value indicating whether the receiver is done <a href="#//api/name/loading">loading</a> content. (read-only)</p>
+
+<p>If <code>YES</code>, the receiver is still <a href="#//api/name/loading">loading</a> content; otherwise, <code>NO</code>.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SSWebView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/loadingPage" title="loadingPage"></a>
+	<h3 class="subsubtitle method-title">loadingPage</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns whether the web view is <a href="#//api/name/loading">loading</a> a page. (read-only)</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly, getter=isLoadingPage) BOOL loadingPage</code></div>
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Returns whether the web view is <a href="#//api/name/loading">loading</a> a page. (read-only)</p>
+
+<p>This will return <code>YES</code> when the first NSURLRequest starts and <code>NO</code> when there are no more
+requests <a href="#//api/name/loading">loading</a>.</p>
+
+<p>Note: Setting this isn&rsquo;t 100% reliable since it is very hacky underneath.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SSWebView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/mediaPlaybackRequiresUserAction" title="mediaPlaybackRequiresUserAction"></a>
+	<h3 class="subsubtitle method-title">mediaPlaybackRequiresUserAction</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>A Boolean value that determines whether HTML5 videos can play automatically or require the user to start playing them.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) BOOL mediaPlaybackRequiresUserAction</code></div>
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>A Boolean value that determines whether HTML5 videos can play automatically or require the user to start playing them.</p>
+
+<p>The default value on both iPad and iPhone is <code>YES</code>.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SSWebView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/request" title="request"></a>
+	<h3 class="subsubtitle method-title">request</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The URL <a href="#//api/name/request">request</a> identifying the location of the content to load. (read-only)</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly, retain) NSURLRequest *request</code></div>
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The URL <a href="#//api/name/request">request</a> identifying the location of the content to load. (read-only)</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SSWebView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/scalesPageToFit" title="scalesPageToFit"></a>
+	<h3 class="subsubtitle method-title">scalesPageToFit</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>A Boolean value determining whether the webpage scales to fit the view and the user can change the scale.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) BOOL scalesPageToFit</code></div>
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>A Boolean value determining whether the webpage scales to fit the view and the user can change the scale.</p>
+
+<p>If <code>YES</code>, the webpage is scaled to fit and the user can zoom in and zoom out. If <code>NO</code>, user
+zooming is disabled. The default value is <code>NO</code>.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SSWebView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/scrollView" title="scrollView"></a>
+	<h3 class="subsubtitle method-title">scrollView</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The scroll view associated with the web view. (read-only)</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, retain, readonly) UIScrollView *scrollView</code></div>
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The scroll view associated with the web view. (read-only)</p>
+
+<p>Your application can access the scroll view if it wants to customize the scrolling behavior of the web view.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SSWebView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/shadowsHidden" title="shadowsHidden"></a>
+	<h3 class="subsubtitle method-title">shadowsHidden</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>A Boolean value that controls whether the web view draws shadows around the outside of its content.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) BOOL shadowsHidden</code></div>
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>A Boolean value that controls whether the web view draws shadows around the outside of its content.</p>
+
+<p>If the value of this property is <code>YES</code>, the web view will the shadows around the outside of its content. If
+the value is <code>NO</code>, shadows will be displayed like normal. The default value is <code>NO</code>.</p>
+
+<p>Note: This isn&rsquo;t 100% reliable since it is very hacky underneath.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SSWebView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Instance Methods" name="instance_methods"></a>
+						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/dismissKeyboard" title="dismissKeyboard"></a>
+	<h3 class="subsubtitle method-title">dismissKeyboard</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Uses JavaScript to remove focus from the active element.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)dismissKeyboard</code></div>
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Uses JavaScript to remove focus from the active element.</p>
+
+<p>If the receiver is in a modal <code>UIViewController</code> with the <code>modalPresentationStyle</code> <code>UIModalPresentationFormSheet</code>,
+it will not dismiss the keyboard due to how <code>UIModalPresentationFormSheet</code> works.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SSWebView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/goBack" title="goBack"></a>
+	<h3 class="subsubtitle method-title">goBack</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Loads the previous location in the back-forward list.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)goBack</code></div>
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Loads the previous location in the back-forward list.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SSWebView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/goForward" title="goForward"></a>
+	<h3 class="subsubtitle method-title">goForward</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Loads the next location in the back-forward list.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)goForward</code></div>
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Loads the next location in the back-forward list.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SSWebView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/loadData:MIMEType:textEncodingName:baseURL:" title="loadData:MIMEType:textEncodingName:baseURL:"></a>
+	<h3 class="subsubtitle method-title">loadData:MIMEType:textEncodingName:baseURL:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Sets the main page contents, MIME type, content encoding, and base URL.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)loadData:(NSData *)<em>data</em> MIMEType:(NSString *)<em>MIMEType</em> textEncodingName:(NSString *)<em>encodingName</em> baseURL:(NSURL *)<em>baseURL</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>data</em></dt>
+			<dd><p>The content for the main page.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>MIMEType</em></dt>
+			<dd><p>The MIME type of the content.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>encodingName</em></dt>
+			<dd><p>The IANA encoding name as in utf-8 or utf-16.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>baseURL</em></dt>
+			<dd><p>The base URL for the content.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Sets the main page contents, MIME type, content encoding, and base URL.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SSWebView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/loadHTMLString:" title="loadHTMLString:"></a>
+	<h3 class="subsubtitle method-title">loadHTMLString:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Sets the main page content.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)loadHTMLString:(NSString *)<em>string</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>string</em></dt>
+			<dd><p>The content for the main page.</p>
+
+<p>The baseURL is set to <a href="http://localhost"><code>http://localhost</code></a></p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Sets the main page content.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="#//api/name/loadHTMLString:baseURL:">&ndash; loadHTMLString:baseURL:</a></p></code></li>
+			
+		</ul>
+	</div>
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SSWebView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/loadHTMLString:baseURL:" title="loadHTMLString:baseURL:"></a>
+	<h3 class="subsubtitle method-title">loadHTMLString:baseURL:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Sets the main page content and base URL.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)loadHTMLString:(NSString *)<em>string</em> baseURL:(NSURL *)<em>baseURL</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>string</em></dt>
+			<dd><p>The content for the main page.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>baseURL</em></dt>
+			<dd><p>The base URL for the content.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Sets the main page content and base URL.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SSWebView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/loadRequest:" title="loadRequest:"></a>
+	<h3 class="subsubtitle method-title">loadRequest:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Connects to a given URL by initiating an asynchronous client <a href="#//api/name/request">request</a>.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)loadRequest:(NSURLRequest *)<em>aRequest</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>aRequest</em></dt>
+			<dd><p>A URL <a href="#//api/name/request">request</a> identifying the location of the content to load.</p>
+
+<p>To stop this load, use the <a href="#//api/name/stopLoading">stopLoading</a> method. To see whether the receiver is done <a href="#//api/name/loading">loading</a> the
+content, use the <a href="#//api/name/loading">loading</a> property.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Connects to a given URL by initiating an asynchronous client <a href="#//api/name/request">request</a>.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="#//api/name/request">@property request</a></p></code></li>
+			
+			<li><code><p><a href="#//api/name/stopLoading">&ndash; stopLoading</a></p></code></li>
+			
+			<li><code><p><a href="#//api/name/loading">@property loading</a></p></code></li>
+			
+			<li><code><p><a href="#//api/name/reload">&ndash; reload</a></p></code></li>
+			
+		</ul>
+	</div>
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SSWebView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/loadURL:" title="loadURL:"></a>
+	<h3 class="subsubtitle method-title">loadURL:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Connects to a given URL by initiating an asynchronous client <a href="#//api/name/request">request</a>.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)loadURL:(NSURL *)<em>aURL</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>aURL</em></dt>
+			<dd><p>A URL identifying the location of the content to load.</p>
+
+<p>To stop this load, use the <a href="#//api/name/stopLoading">stopLoading</a> method. To see whether the receiver is done <a href="#//api/name/loading">loading</a> the content, use the <a href="#//api/name/loading">loading</a>
+property.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Connects to a given URL by initiating an asynchronous client <a href="#//api/name/request">request</a>.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="#//api/name/loadURLString:">&ndash; loadURLString:</a></p></code></li>
+			
+			<li><code><p><a href="#//api/name/loadRequest:">&ndash; loadRequest:</a></p></code></li>
+			
+			<li><code><p><a href="#//api/name/request">@property request</a></p></code></li>
+			
+			<li><code><p><a href="#//api/name/stopLoading">&ndash; stopLoading</a></p></code></li>
+			
+			<li><code><p><a href="#//api/name/loading">@property loading</a></p></code></li>
+			
+			<li><code><p><a href="#//api/name/reload">&ndash; reload</a></p></code></li>
+			
+		</ul>
+	</div>
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SSWebView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/loadURLString:" title="loadURLString:"></a>
+	<h3 class="subsubtitle method-title">loadURLString:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Connects to a given URL by initiating an asynchronous client <a href="#//api/name/request">request</a>.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)loadURLString:(NSString *)<em>string</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>string</em></dt>
+			<dd><p>A string containing a URL identifying the location of the content to load.</p>
+
+<p>To stop this load, use the <a href="#//api/name/stopLoading">stopLoading</a> method. To see whether the receiver is done <a href="#//api/name/loading">loading</a> the content, use the <a href="#//api/name/loading">loading</a>
+property.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Connects to a given URL by initiating an asynchronous client <a href="#//api/name/request">request</a>.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="#//api/name/loadURL:">&ndash; loadURL:</a></p></code></li>
+			
+			<li><code><p><a href="#//api/name/loadRequest:">&ndash; loadRequest:</a></p></code></li>
+			
+			<li><code><p><a href="#//api/name/request">@property request</a></p></code></li>
+			
+			<li><code><p><a href="#//api/name/stopLoading">&ndash; stopLoading</a></p></code></li>
+			
+			<li><code><p><a href="#//api/name/loading">@property loading</a></p></code></li>
+			
+			<li><code><p><a href="#//api/name/reload">&ndash; reload</a></p></code></li>
+			
+		</ul>
+	</div>
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SSWebView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/reload" title="reload"></a>
+	<h3 class="subsubtitle method-title">reload</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Reloads the current page.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)reload</code></div>
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Reloads the current page.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="#//api/name/request">@property request</a></p></code></li>
+			
+			<li><code><p><a href="#//api/name/loading">@property loading</a></p></code></li>
+			
+			<li><code><p><a href="#//api/name/loadRequest:">&ndash; loadRequest:</a></p></code></li>
+			
+			<li><code><p><a href="#//api/name/stopLoading">&ndash; stopLoading</a></p></code></li>
+			
+		</ul>
+	</div>
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SSWebView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/removeTextSelection" title="removeTextSelection"></a>
+	<h3 class="subsubtitle method-title">removeTextSelection</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Removes the text selection in the web view.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)removeTextSelection</code></div>
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Removes the text selection in the web view.</p>
+
+<p>Using Javascript to this doesn&rsquo;t always work as expected. This method will correctly remove the text selection.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SSWebView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/reset" title="reset"></a>
+	<h3 class="subsubtitle method-title">reset</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Destroys the internal <code>UIWebView</code> and recreates.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)reset</code></div>
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Destroys the internal <code>UIWebView</code> and recreates.</p>
+
+<p>All of the properties are maintained across the <a href="#//api/name/reset">reset</a>.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SSWebView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/stopLoading" title="stopLoading"></a>
+	<h3 class="subsubtitle method-title">stopLoading</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Stops the <a href="#//api/name/loading">loading</a> of any web content managed by the receiver.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)stopLoading</code></div>
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Stops the <a href="#//api/name/loading">loading</a> of any web content managed by the receiver.</p>
+
+<p>Stops any content in the process of being loaded by the main frame or any of its children frames. Does nothing if no
+content is being loaded.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SSWebView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/stringByEvaluatingJavaScriptFromString:" title="stringByEvaluatingJavaScriptFromString:"></a>
+	<h3 class="subsubtitle method-title">stringByEvaluatingJavaScriptFromString:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the result of running a script.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (NSString *)stringByEvaluatingJavaScriptFromString:(NSString *)<em>script</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>script</em></dt>
+			<dd><p>The script to run.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>The result of running script or <code>nil</code> if it fails.</p>
+
+<p>JavaScript execution time is limited to 10 seconds for each top-level entry point. If your script executes for more
+than 10 seconds, the web view stops executing the script. This is likely to occur at a random place in your code, so
+unintended consequences may result. This limit is imposed because JavaScript execution may cause the main thread to
+block, so when scripts are running, the user is not able to interact with the webpage.</p>
+
+<p>JavaScript allocations are also limited to 10 MB. The web view raises an exception if you exceed this limit on the
+total memory allocation for JavaScript.</p>
+	</div>
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Returns the result of running a script.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SSWebView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+				</div>
+				<div class="main-navigation navigation-bottom">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="footer">
+					<hr />
+					<div class="footer-copyright">
+						<p><span class="copyright">&copy; 2011 Sam Soffes. All rights reserved. (Last updated: 2011-07-03)</span><br />
+						
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.4 (build 703)</a>.</span></p>
+						
+					</div>
+				</div>
+			</div>
+		</article>
+		<script type="text/javascript">
+			function jumpToChange()
+			{
+				window.location.hash = this.options[this.selectedIndex].value;
+			}
+			
+			function toggleTOC()
+			{
+				var contents = document.getElementById('contents');
+				var tocContainer = document.getElementById('tocContainer');
+				
+				if (this.getAttribute('class') == 'open')
+				{
+					this.setAttribute('class', '');
+					contents.setAttribute('class', '');
+					tocContainer.setAttribute('class', '');
+					
+					window.name = "hideTOC";
+				}
+				else
+				{
+					this.setAttribute('class', 'open');
+					contents.setAttribute('class', 'isShowingTOC');
+					tocContainer.setAttribute('class', 'isShowingTOC');
+					
+					window.name = "";
+				}
+				return false;
+			}
+			
+			function toggleTOCEntryChildren(e)
+			{
+				e.stopPropagation();
+				var currentClass = this.getAttribute('class');
+				if (currentClass == 'children') {
+					this.setAttribute('class', 'children open');
+				}
+				else if (currentClass == 'children open') {
+					this.setAttribute('class', 'children');
+				}
+				return false;
+			}
+			
+			function tocEntryClick(e)
+			{
+				e.stopPropagation();
+				return true;
+			}
+			
+			function init()
+			{
+				var selectElement = document.getElementById('jumpTo');
+				selectElement.addEventListener('change', jumpToChange, false);
+				
+				var tocButton = document.getElementById('table_of_contents');
+				tocButton.addEventListener('click', toggleTOC, false);
+				
+				var taskTreeItem = document.getElementById('task_treeitem');
+				if (taskTreeItem.getElementsByTagName('li').length > 0)
+				{
+					taskTreeItem.setAttribute('class', 'children');
+					taskTreeItem.firstChild.setAttribute('class', 'disclosure');
+				}
+				
+				var tocList = document.getElementById('toc');
+				
+				var tocEntries = tocList.getElementsByTagName('li');
+				for (var i = 0; i < tocEntries.length; i++) {
+					tocEntries[i].addEventListener('click', toggleTOCEntryChildren, false);
+				}
+				
+				var tocLinks = tocList.getElementsByTagName('a');
+				for (var i = 0; i < tocLinks.length; i++) {
+					tocLinks[i].addEventListener('click', tocEntryClick, false);
+				}
+				
+				if (window.name == "hideTOC") {
+					toggleTOC.call(tocButton);
+				}
+			}
+			
+			window.onload = init;
+		</script>
+	</body>
 </html>

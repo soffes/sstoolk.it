@@ -1,357 +1,1492 @@
-<!DOCTYPE html><html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta charset="UTF-8">
-<title>SSCollectionView Class Reference</title>
-<meta id="Generator" name="Generator" content="Doxyclean">
-<meta id="GeneratorVersion" name="GeneratorVersion" content="2.2">
-<link rel="stylesheet" type="text/css" href="../css/common.css">
-<link rel="stylesheet" type="text/css" media="screen" href="../css/screen.css">
-<link rel="stylesheet" type="text/css" media="print" href="../css/print.css">
-<script type="text/javascript">
-				function toggleTOC() {
-					var toc = document.getElementById('tableOfContents');
-					var tocButton = document.getElementById('toc_button');
-					var contents = document.getElementById('contents');
-					if (toc.style.display == 'block') {
-						toc.style.display = 'none';
-						contents.className = '';
-						tocButton.className = '';
-					} else {
-						toc.style.display = 'block';
-						contents.className = 'tableOfContentsOpen';
-						tocButton.className = 'open';
-					}
-				}
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>SSCollectionView Class Reference</title>
+		<meta http-equiv="Content-Type" content="application/xhtml+xml;charset=utf-8" />
+		<meta id="xcode-display" name="xcode-display" content="render"/>
+		<meta name="viewport" content="width=550" />
+		<link rel="stylesheet" type="text/css" href="../css/styles.css" />
+		<meta name="generator" content="appledoc 2.0.4 (build 703)" />
+	</head>
+	<body>
+		<header id="top_header">
+			<div id="title" role="banner">
+				<h1 class="hideInXcode">SSCollectionView Class Reference</h1>
+			</div>
+			<ul id="headerButtons" role="toolbar">
+				<li id="toc_button">
+					<button aria-label="Show Table of Contents" role="checkbox" class="open" id="table_of_contents"><span class="disclosure"></span>Table of Contents</button>
+				</li>
+				<li id="jumpto_button" role="navigation">
+					<select id="jumpTo">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+	
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+	
+	
+	
+	<option value="properties">Properties</option>
+	
+	<option value="//api/name/allowsSelection">&nbsp;&nbsp;&nbsp;&nbsp;allowsSelection</option>
+	
+	<option value="//api/name/backgroundView">&nbsp;&nbsp;&nbsp;&nbsp;backgroundView</option>
+	
+	<option value="//api/name/dataSource">&nbsp;&nbsp;&nbsp;&nbsp;dataSource</option>
+	
+	<option value="//api/name/delegate">&nbsp;&nbsp;&nbsp;&nbsp;delegate</option>
+	
+	<option value="//api/name/extremitiesStyle">&nbsp;&nbsp;&nbsp;&nbsp;extremitiesStyle</option>
+	
+	<option value="//api/name/minimumColumnSpacing">&nbsp;&nbsp;&nbsp;&nbsp;minimumColumnSpacing</option>
+	
+	<option value="//api/name/numberOfSections">&nbsp;&nbsp;&nbsp;&nbsp;numberOfSections</option>
+	
+	<option value="//api/name/rowSpacing">&nbsp;&nbsp;&nbsp;&nbsp;rowSpacing</option>
+	
+	<option value="//api/name/scrollView">&nbsp;&nbsp;&nbsp;&nbsp;scrollView</option>
+	
+	
+	
+	
+	
+	
+	<option value="instance_methods">Instance Methods</option>
+	
+	<option value="//api/name/dequeueReusableItemWithIdentifier:">&nbsp;&nbsp;&nbsp;&nbsp;- dequeueReusableItemWithIdentifier:</option>
+	
+	<option value="//api/name/deselectItemAtIndexPath:animated:">&nbsp;&nbsp;&nbsp;&nbsp;- deselectItemAtIndexPath:animated:</option>
+	
+	<option value="//api/name/indexPathForItem:">&nbsp;&nbsp;&nbsp;&nbsp;- indexPathForItem:</option>
+	
+	<option value="//api/name/itemPathForIndex:">&nbsp;&nbsp;&nbsp;&nbsp;- itemPathForIndex:</option>
+	
+	<option value="//api/name/numberOfItemsInSection:">&nbsp;&nbsp;&nbsp;&nbsp;- numberOfItemsInSection:</option>
+	
+	<option value="//api/name/rectForFooterInSection:">&nbsp;&nbsp;&nbsp;&nbsp;- rectForFooterInSection:</option>
+	
+	<option value="//api/name/rectForHeaderInSection:">&nbsp;&nbsp;&nbsp;&nbsp;- rectForHeaderInSection:</option>
+	
+	<option value="//api/name/rectForSection:">&nbsp;&nbsp;&nbsp;&nbsp;- rectForSection:</option>
+	
+	<option value="//api/name/reloadData">&nbsp;&nbsp;&nbsp;&nbsp;- reloadData</option>
+	
+	<option value="//api/name/reloadItemsAtIndexPaths:">&nbsp;&nbsp;&nbsp;&nbsp;- reloadItemsAtIndexPaths:</option>
+	
+	<option value="//api/name/scrollToItemAtIndexPath:atScrollPosition:animated:">&nbsp;&nbsp;&nbsp;&nbsp;- scrollToItemAtIndexPath:atScrollPosition:animated:</option>
+	
+	<option value="//api/name/selectItemAtIndexPath:animated:scrollPosition:">&nbsp;&nbsp;&nbsp;&nbsp;- selectItemAtIndexPath:animated:scrollPosition:</option>
+	
+	
+	
+</select>
+				</li>
+			</ul>
+		</header>
+		<nav id="tocContainer" class="isShowingTOC">
+			<ul id="toc" role="tree">
 				
-				function toggleTOCItem() {
-					var listItem = event.srcElement;
-					var sublist = listItem.getElementsByTagName('ul')[0];
-					if (sublist.style.display == 'block') {
-						sublist.style.display = 'none';
-						listItem.className = 'expandable';
-					} else {
-						sublist.style.display = 'block';
-						listItem.className = 'expandable expanded';
-					}
-				}
-				
-				function jumpTo() {
-					selectedItem = event.srcElement.options[event.srcElement.selectedIndex].value;
-					window.location = "#" + selectedItem;
-				}
-			</script>
-</head>
-<body>
-<header id="projectHeader"><h1><a href="../index.html">SSToolkit Reference Library</a></h1></header><header id="fileHeader"><h1><a href="#classTitle">SSCollectionView Class Reference</a></h1></header><nav id="buttons"><ul>
-<li id="toc_button"><button id="table_of_contents" onclick="toggleTOC()">Table of Contents</button></li>
-<li id="jumpto_button"><select id="jumpto" onchange="jumpTo()"><option value="classTitle">Jump To...</option>
-<option value="overview">Overview</option>
-<option value="tasks">Tasks</option>
-<option value="properties">Properties</option>
-<option value="dataSource">    dataSource</option>
-<option value="delegate">    delegate</option>
-<option value="minimumColumnSpacing">    minimumColumnSpacing</option>
-<option value="rowSpacing">    rowSpacing</option>
-<option value="backgroundView">    backgroundView</option>
-<option value="allowsSelection">    allowsSelection</option>
-<option value="scrollView">    scrollView</option>
-<option value="numberOfSections">    numberOfSections</option>
-<option value="instanceMethods">Instance Methods</option>
-<option value="reloadData">    - reloadData</option>
-<option value="dequeueReusableItemWithIdentifier:">    - dequeueReusableItemWithIdentifier:</option>
-<option value="itemPathForIndex:">    - itemPathForIndex:</option>
-<option value="indexPathForItem:">    - indexPathForItem:</option>
-<option value="selectItemAtIndexPath:animated:scrollPosition:">    - selectItemAtIndexPath:animated:scrollPosition:</option>
-<option value="deselectItemAtIndexPath:animated:">    - deselectItemAtIndexPath:animated:</option>
-<option value="scrollToItemAtIndexPath:atScrollPosition:animated:">    - scrollToItemAtIndexPath:atScrollPosition:animated:</option>
-<option value="reloadItemsAtIndexPaths:">    - reloadItemsAtIndexPaths:</option>
-<option value="numberOfItemsInSection:">    - numberOfItemsInSection:</option>
-<option value="rectForSection:">    - rectForSection:</option>
-<option value="rectForHeaderInSection:">    - rectForHeaderInSection:</option>
-<option value="rectForFooterInSection:">    - rectForFooterInSection:</option></select></li>
-</ul></nav><nav id="tableOfContents" style="display: none;"><ul>
-<li><a href="#overview">Overview</a></li>
-<li class="expandable" id="tocTasks" onclick="toggleTOCItem()">
-<a href="#tasks">Tasks</a><ul style="display: none;">
-<li><a href="#Other">Other</a></li>
-<li><a href="#Other">Other</a></li>
+<li role="treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#overview">Overview</a></span></li>
+
+
+
+
+<li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
+	
+</ul></li>
+
+
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#properties">Properties</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/allowsSelection">allowsSelection</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/backgroundView">backgroundView</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/dataSource">dataSource</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/delegate">delegate</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/extremitiesStyle">extremitiesStyle</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/minimumColumnSpacing">minimumColumnSpacing</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/numberOfSections">numberOfSections</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/rowSpacing">rowSpacing</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/scrollView">scrollView</a></span></li>
+	
+</ul></li>
+
+
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/dequeueReusableItemWithIdentifier:">dequeueReusableItemWithIdentifier:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/deselectItemAtIndexPath:animated:">deselectItemAtIndexPath:animated:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/indexPathForItem:">indexPathForItem:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/itemPathForIndex:">itemPathForIndex:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/numberOfItemsInSection:">numberOfItemsInSection:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/rectForFooterInSection:">rectForFooterInSection:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/rectForHeaderInSection:">rectForHeaderInSection:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/rectForSection:">rectForSection:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/reloadData">reloadData</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/reloadItemsAtIndexPaths:">reloadItemsAtIndexPaths:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/scrollToItemAtIndexPath:atScrollPosition:animated:">scrollToItemAtIndexPath:atScrollPosition:animated:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/selectItemAtIndexPath:animated:scrollPosition:">selectItemAtIndexPath:animated:scrollPosition:</a></span></li>
+	
+</ul></li>
+
+
+			</ul>
+		</nav>
+		<article>
+			<div id="contents" class="isShowingTOC" role="main">
+				<a title="SSCollectionView Class Reference" name="top"></a>
+				<div class="main-navigation navigation-top">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
 </ul>
-</li>
-<li class="expandable" id="tocProperties" onclick="toggleTOCItem()">
-<a href="#properties">Properties</a><ul style="display: none;">
-<li><a href="#dataSource">dataSource</a></li>
-<li><a href="#delegate">delegate</a></li>
-<li><a href="#minimumColumnSpacing">minimumColumnSpacing</a></li>
-<li><a href="#rowSpacing">rowSpacing</a></li>
-<li><a href="#backgroundView">backgroundView</a></li>
-<li><a href="#allowsSelection">allowsSelection</a></li>
-<li><a href="#scrollView">scrollView</a></li>
-<li><a href="#numberOfSections">numberOfSections</a></li>
-</ul>
-</li>
-<li class="expandable" id="tocInstanceMethods" onclick="toggleTOCItem()">
-<a href="#instanceMethods">Instance Methods</a><ul style="display: none;">
-<li><a href="#reloadData">reloadData</a></li>
-<li><a href="#dequeueReusableItemWithIdentifier:">dequeueReusableItemWithIdentifier:</a></li>
-<li><a href="#itemPathForIndex:">itemPathForIndex:</a></li>
-<li><a href="#indexPathForItem:">indexPathForItem:</a></li>
-<li><a href="#selectItemAtIndexPath:animated:scrollPosition:">selectItemAtIndexPath:animated:scrollPosition:</a></li>
-<li><a href="#deselectItemAtIndexPath:animated:">deselectItemAtIndexPath:animated:</a></li>
-<li><a href="#scrollToItemAtIndexPath:atScrollPosition:animated:">scrollToItemAtIndexPath:atScrollPosition:animated:</a></li>
-<li><a href="#reloadItemsAtIndexPaths:">reloadItemsAtIndexPaths:</a></li>
-<li><a href="#numberOfItemsInSection:">numberOfItemsInSection:</a></li>
-<li><a href="#rectForSection:">rectForSection:</a></li>
-<li><a href="#rectForHeaderInSection:">rectForHeaderInSection:</a></li>
-<li><a href="#rectForFooterInSection:">rectForFooterInSection:</a></li>
-</ul>
-</li>
-</ul></nav><div id="contents">
-<h1 id="classTitle">SSCollectionView Class Reference</h1>
-<table id="metadata"><tr class="alt">
-<th>Declared in</th>
-<td>SSCollectionView.h</td>
-</tr></table>
-<h2 id="overview">Overview</h2>
-<p>Simple collection view. </p>
-<p>My goals are to be similar to <code><a href="http://developer.apple.com/iphone/library/documentation/UIKit/Reference/UITableView_Class/index.html">UITableView</a></code> and NSCollectionView when possible. Only scrolling vertically is currently supported.</p>
+				</div>
+				<div id="header">
+					<div class="section-header">
+						<h1 class="title title-header">SSCollectionView Class Reference</h1>
+					</div>		
+				</div>
+				<div id="container">	
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<td class="specification-title">Inherits from</td>
+	<td class="specification-value">UIView</td>
+</tr><tr>
+	<td class="specification-title">Conforms to</td>
+	<td class="specification-value">UITableViewDataSource<br />UITableViewDelegate</td>
+</tr><tr>
+	<td class="specification-title">Declared in</td>
+	<td class="specification-value">SSCollectionView.h</td>
+</tr>
+						</tbody></table></div>
+					
+					
+					
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>Simple collection view.</p>
+
+<p>My goals are to be similar to UITableView and NSCollectionView when possible. Only scrolling vertically is currently
+supported.</p>
+
 <p>Editing will be my next focus. Then animating changes when data changes and an option to disable that.</p>
-<p>Note: NSIndexPath is uses the same way <code><a href="http://developer.apple.com/iphone/library/documentation/UIKit/Reference/UITableView_Class/index.html">UITableView</a></code> uses it. The <code>row</code> property is used to specify the item instead of row. This is done to make working with other classes that use NSIndexPath (like <code><a href="http://developer.apple.com/iphone/library/documentation/Cocoa/Reference/NSFetchedResultsController_Class/index.html">NSFetchedResultsController</a></code>) easier. </p>
-<h2 id="tasks">Tasks</h2>
-<ul id="tasksList">
-<li id="Other">
-<h3>Other</h3>
-<ul class="methods">
-<li>
-<span class="tooltipRegion"><code><a href="#dataSource">dataSource</a></code> <span class="specialType">property</span></span><span class="tooltip">The object that acts as the data source of the receiving collection view. </span>
+
+<p>Note: NSIndexPath is uses the same way UITableView uses it. The <code>row</code> property is used to specify the item
+instead of row. This is done to make working with other classes that use NSIndexPath (like NSFetchedResultsController)
+easier.</p>
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						<h2 class="subtitle subtitle-tasks">Tasks</h2>
+						
+						
+						
+						
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/dataSource">&nbsp;&nbsp;dataSource</a></code>
+		<span class="tooltip"><p>The object that acts as the data source of the receiving collection view.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/delegate">&nbsp;&nbsp;delegate</a></code>
+		<span class="tooltip"><p>The object that acts as the <a href="#//api/name/delegate">delegate</a> of the receiving collection view.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/extremitiesStyle">&nbsp;&nbsp;extremitiesStyle</a></code>
+		<span class="tooltip"><p>The style of the receiving collection view&rsquo;s headers and footers.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/minimumColumnSpacing">&nbsp;&nbsp;minimumColumnSpacing</a></code>
+		<span class="tooltip"><p>The minimum column spacing.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/rowSpacing">&nbsp;&nbsp;rowSpacing</a></code>
+		<span class="tooltip"><p>The spacing between each row in the receiver. This does not add space above the first row or below the last.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/backgroundView">&nbsp;&nbsp;backgroundView</a></code>
+		<span class="tooltip"><p>The background view of the collection view.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/allowsSelection">&nbsp;&nbsp;allowsSelection</a></code>
+		<span class="tooltip"><p>A Boolean value that determines whether selecting items is enabled.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/scrollView">&nbsp;&nbsp;scrollView</a></code>
+		<span class="tooltip"><p>The internal scroll view of the collection view. The <a href="#//api/name/delegate">delegate</a> must not be overridden.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/numberOfSections">&nbsp;&nbsp;numberOfSections</a></code>
+		<span class="tooltip"><p>The number of sections in the collection view.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/reloadData">&ndash;&nbsp;reloadData</a></code>
+		<span class="tooltip"><p>Reloads the items and sections of the receiver.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/dequeueReusableItemWithIdentifier:">&ndash;&nbsp;dequeueReusableItemWithIdentifier:</a></code>
+		<span class="tooltip"><p>Returns a reusable collection view item object located by its identifier.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/itemPathForIndex:">&ndash;&nbsp;itemPathForIndex:</a></code>
+		<span class="tooltip"><p>Returns the collection view item at the specified index path.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/indexPathForItem:">&ndash;&nbsp;indexPathForItem:</a></code>
+		<span class="tooltip"><p>Returns an index path representing the row (index) and section of a given collection view item.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/selectItemAtIndexPath:animated:scrollPosition:">&ndash;&nbsp;selectItemAtIndexPath:animated:scrollPosition:</a></code>
+		<span class="tooltip"><p>Selects an item in the receiver identified by index path, optionally scrolling the item to a location in the
+receiver.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/deselectItemAtIndexPath:animated:">&ndash;&nbsp;deselectItemAtIndexPath:animated:</a></code>
+		<span class="tooltip"><p>Deselects a given item identified by index path, with an option to animate the deselection.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/scrollToItemAtIndexPath:atScrollPosition:animated:">&ndash;&nbsp;scrollToItemAtIndexPath:atScrollPosition:animated:</a></code>
+		<span class="tooltip"><p>Scrolls the receiver until an item identified by index path is at a particular location on the screen.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/reloadItemsAtIndexPaths:">&ndash;&nbsp;reloadItemsAtIndexPaths:</a></code>
+		<span class="tooltip"><p>Reloads the specified item.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/numberOfItemsInSection:">&ndash;&nbsp;numberOfItemsInSection:</a></code>
+		<span class="tooltip"><p>Returns the number of item (collection view items) in a specified section.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/rectForSection:">&ndash;&nbsp;rectForSection:</a></code>
+		<span class="tooltip"><p>Returns the drawing area for a specified section of the receiver.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/rectForHeaderInSection:">&ndash;&nbsp;rectForHeaderInSection:</a></code>
+		<span class="tooltip"><p>Returns the drawing area for the header of the specified section.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/rectForFooterInSection:">&ndash;&nbsp;rectForFooterInSection:</a></code>
+		<span class="tooltip"><p>Returns the drawing area for the footer of the specified section.</p></span>
+	</span>
+	
+	
 </li>
-<li>
-<span class="tooltipRegion"><code><a href="#delegate">delegate</a></code> <span class="specialType">property</span></span><span class="tooltip">The object that acts as the delegate of the receiving collection view. </span>
-</li>
-<li>
-<span class="tooltipRegion"><code><a href="#minimumColumnSpacing">minimumColumnSpacing</a></code> <span class="specialType">property</span></span><span class="tooltip">The minimum column spacing. </span>
-</li>
-<li>
-<span class="tooltipRegion"><code><a href="#rowSpacing">rowSpacing</a></code> <span class="specialType">property</span></span><span class="tooltip">The spacing between each row in the receiver. This does not add space above the first row or below the last. </span>
-</li>
-<li>
-<span class="tooltipRegion"><code><a href="#backgroundView">backgroundView</a></code> <span class="specialType">property</span></span><span class="tooltip">The background view of the collection view. </span>
-</li>
-<li>
-<span class="tooltipRegion"><code><a href="#allowsSelection">allowsSelection</a></code> <span class="specialType">property</span></span><span class="tooltip">A Boolean value that determines whether selecting items is enabled. </span>
-</li>
-<li>
-<span class="tooltipRegion"><code><a href="#scrollView">scrollView</a></code> <span class="specialType">property</span></span><span class="tooltip">The internal scroll view of the collection view. The delegate must not be overridden. </span>
-</li>
-<li>
-<span class="tooltipRegion"><code><a href="#numberOfSections">numberOfSections</a></code> <span class="specialType">property</span></span><span class="tooltip">The number of sections in the collection view. </span>
-</li>
-</ul>
-</li>
-<li id="Other">
-<h3>Other</h3>
-<ul class="methods">
-<li>
-<span class="tooltipRegion"><code><a href="#reloadData">- reloadData</a></code></span><span class="tooltip">Reloads the items and sections of the receiver. </span>
-</li>
-<li>
-<span class="tooltipRegion"><code><a href="#dequeueReusableItemWithIdentifier:">- dequeueReusableItemWithIdentifier:</a></code></span><span class="tooltip">Returns a reusable collection view item object located by its identifier. </span>
-</li>
-<li>
-<span class="tooltipRegion"><code><a href="#itemPathForIndex:">- itemPathForIndex:</a></code></span><span class="tooltip">Returns the collection view item at the specified index path. </span>
-</li>
-<li>
-<span class="tooltipRegion"><code><a href="#indexPathForItem:">- indexPathForItem:</a></code></span><span class="tooltip">Returns an index path representing the row (index) and section of a given collection view item. </span>
-</li>
-<li>
-<span class="tooltipRegion"><code><a href="#selectItemAtIndexPath:animated:scrollPosition:">- selectItemAtIndexPath:animated:scrollPosition:</a></code></span><span class="tooltip">Selects an item in the receiver identified by index path, optionally scrolling the item to a location in the receiver. </span>
-</li>
-<li>
-<span class="tooltipRegion"><code><a href="#deselectItemAtIndexPath:animated:">- deselectItemAtIndexPath:animated:</a></code></span><span class="tooltip">Deselects a given item identified by index path, with an option to animate the deselection. </span>
-</li>
-<li>
-<span class="tooltipRegion"><code><a href="#scrollToItemAtIndexPath:atScrollPosition:animated:">- scrollToItemAtIndexPath:atScrollPosition:animated:</a></code></span><span class="tooltip">Scrolls the receiver until an item identified by index path is at a particular location on the screen. </span>
-</li>
-<li>
-<span class="tooltipRegion"><code><a href="#reloadItemsAtIndexPaths:">- reloadItemsAtIndexPaths:</a></code></span><span class="tooltip">Reloads the specified item. </span>
-</li>
-<li>
-<span class="tooltipRegion"><code><a href="#numberOfItemsInSection:">- numberOfItemsInSection:</a></code></span><span class="tooltip">Returns the number of item (collection view items) in a specified section. </span>
-</li>
-<li>
-<span class="tooltipRegion"><code><a href="#rectForSection:">- rectForSection:</a></code></span><span class="tooltip">Returns the drawing area for a specified section of the receiver. </span>
-</li>
-<li>
-<span class="tooltipRegion"><code><a href="#rectForHeaderInSection:">- rectForHeaderInSection:</a></code></span><span class="tooltip">Returns the drawing area for the header of the specified section. </span>
-</li>
-<li>
-<span class="tooltipRegion"><code><a href="#rectForFooterInSection:">- rectForFooterInSection:</a></code></span><span class="tooltip">Returns the drawing area for the footer of the specified section. </span>
-</li>
-</ul>
-</li>
-</ul>
-<section id="properties"><h2>Properties</h2>
-<section class="definition" id="dataSource"><h3>dataSource</h3>
-<p>The object that acts as the data source of the receiving collection view. </p>
-<code class="methodDeclaration">@property id&lt;SSCollectionViewDataSource&gt; dataSource</code><h5>Declared In</h5>
-<code><code>SSCollectionView</code>.h</code></section><section class="definition" id="delegate"><h3>delegate</h3>
-<p>The object that acts as the delegate of the receiving collection view. </p>
-<code class="methodDeclaration">@property id&lt;SSCollectionViewDelegate&gt; delegate</code><h5>Declared In</h5>
-<code><code>SSCollectionView</code>.h</code></section><section class="definition" id="minimumColumnSpacing"><h3>minimumColumnSpacing</h3>
-<p>The minimum column spacing. </p>
-<code class="methodDeclaration">@property CGFloat minimumColumnSpacing</code><h5>Discussion</h5>
-<p>The default is 0. </p>
-<h5>Declared In</h5>
-<code><code>SSCollectionView</code>.h</code></section><section class="definition" id="rowSpacing"><h3>rowSpacing</h3>
-<p>The spacing between each row in the receiver. This does not add space above the first row or below the last. </p>
-<code class="methodDeclaration">@property CGFloat rowSpacing</code><h5>Discussion</h5>
-<p>The row spacing is in points. The default is 20. </p>
-<h5>Declared In</h5>
-<code><code>SSCollectionView</code>.h</code></section><section class="definition" id="backgroundView"><h3>backgroundView</h3>
-<p>The background view of the collection view. </p>
-<code class="methodDeclaration">@property <a href="http://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIView_Class/index.html">UIView</a> *backgroundView</code><h5>Declared In</h5>
-<code><code>SSCollectionView</code>.h</code></section><section class="definition" id="allowsSelection"><h3>allowsSelection</h3>
-<p>A Boolean value that determines whether selecting items is enabled. </p>
-<code class="methodDeclaration">@property BOOL allowsSelection</code><h5>Discussion</h5>
-<p>If the value of this property is <code>YES</code>, selecting is enabled, and if it is <code>NO</code>, selecting is disabled. The default is <code>YES</code>. </p>
-<h5>Declared In</h5>
-<code><code>SSCollectionView</code>.h</code></section><section class="definition" id="scrollView"><h3>scrollView</h3>
-<p>The internal scroll view of the collection view. The delegate must not be overridden. </p>
-<code class="methodDeclaration">@property <a href="http://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIScrollView_Class/index.html">UIScrollView</a> *scrollView</code><h5>Declared In</h5>
-<code><code>SSCollectionView</code>.h</code></section><section class="definition" id="numberOfSections"><h3>numberOfSections</h3>
-<p>The number of sections in the collection view. </p>
-<code class="methodDeclaration">@property NSInteger numberOfSections</code><h5>Discussion</h5>
-<p><code><code>SSCollectionView</code></code> gets the value returned by this method from its data source and caches it. </p>
-<h5>Declared In</h5>
-<code><code>SSCollectionView</code>.h</code></section></section><section id="instanceMethods"><h2>Instance Methods</h2>
-<section class="definition" id="reloadData"><h3>reloadData</h3>
-<p>Reloads the items and sections of the receiver. </p>
-<code class="methodDeclaration">- (void)reloadData</code><h5>Declared In</h5>
-<code><code>SSCollectionView</code>.h</code></section><section class="definition" id="dequeueReusableItemWithIdentifier:"><h3>dequeueReusableItemWithIdentifier:</h3>
-<p>Returns a reusable collection view item object located by its identifier. </p>
-<code class="methodDeclaration">- (SSCollectionViewItem *)dequeueReusableItemWithIdentifier:(<a href="http://developer.apple.com/iphone/library/documentation/Cocoa/Reference/Foundation/Classes/NSString_Class/index.html">NSString</a> *)<span class="parameter">identifier</span> </code><h5>Parameters</h5>
-<dl class="parameterList">
-<dt>identifier</dt>
-<dd><p>A string identifying the cell object to be reused.</p></dd>
-</dl>
-<h5>Return Value</h5>
-<p>A <code><code><a href="../Classes/SSCollectionViewItem.html">SSCollectionViewItem</a></code>&lt;/code&lt; object with the associated identifier or nil if no such object exists in the reusable-item queue. </code></p>
-<h5>Declared In</h5>
-<code><code>SSCollectionView</code>.h</code></section><section class="definition" id="itemPathForIndex:"><h3>itemPathForIndex:</h3>
-<p>Returns the collection view item at the specified index path. </p>
-<code class="methodDeclaration">- (SSCollectionViewItem *)itemPathForIndex:(<a href="http://developer.apple.com/iphone/library/documentation/Cocoa/Reference/Foundation/Classes/NSIndexPath_Class/index.html">NSIndexPath</a> *)<span class="parameter">indexPath</span> </code><h5>Parameters</h5>
-<dl class="parameterList">
-<dt>indexPath</dt>
-<dd><p>The index path locating the item in the receiver.</p></dd>
-</dl>
-<h5>Return Value</h5>
-<p>An object representing a cell of the table or nil if the cell is not visible or indexPath is out of range.</p>
-<h5>See Also</h5>
-<ul class="seeAlso"><li><code><a href="#indexPathForItem:">- indexPathForItem:</a></code></li></ul>
-<h5>Declared In</h5>
-<code><code>SSCollectionView</code>.h</code></section><section class="definition" id="indexPathForItem:"><h3>indexPathForItem:</h3>
-<p>Returns an index path representing the row (index) and section of a given collection view item. </p>
-<code class="methodDeclaration">- (NSIndexPath *)indexPathForItem:(<a href="../Classes/SSCollectionViewItem.html">SSCollectionViewItem</a> *)<span class="parameter">item</span> </code><h5>Parameters</h5>
-<dl class="parameterList">
-<dt>item</dt>
-<dd><p>An item object of the collection view.</p></dd>
-</dl>
-<h5>Return Value</h5>
-<p>An index path representing the row and section of the cell or nil if the index path is invalid.</p>
-<h5>See Also</h5>
-<ul class="seeAlso"><li><code><a href="#itemPathForIndex:">- itemPathForIndex:</a></code></li></ul>
-<h5>Declared In</h5>
-<code><code>SSCollectionView</code>.h</code></section><section class="definition" id="selectItemAtIndexPath:animated:scrollPosition:"><h3>selectItemAtIndexPath:animated:scrollPosition:</h3>
-<p>Selects an item in the receiver identified by index path, optionally scrolling the item to a location in the receiver. </p>
-<code class="methodDeclaration">- (void)selectItemAtIndexPath:(<a href="http://developer.apple.com/iphone/library/documentation/Cocoa/Reference/Foundation/Classes/NSIndexPath_Class/index.html">NSIndexPath</a> *)<span class="parameter">indexPath</span> animated:(BOOL)<span class="parameter">animated</span> scrollPosition:(SSCollectionViewScrollPosition)<span class="parameter">scrollPosition</span> </code><h5>Parameters</h5>
-<dl class="parameterList">
-<dt>indexPath</dt>
-<dd><p>An index path identifying an item in the receiver. </p></dd>
-<dt>animated</dt>
-<dd><p><code>YES</code> if you want to animate the selection and any change in position, <code>NO</code> if the change should be immediate. </p></dd>
-<dt>scrollPosition</dt>
-<dd><p>A constant that identifies a relative position in the receiving collection view (top, middle, bottom) for the row when scrolling concludes.</p></dd>
-</dl>
-<h5>Discussion</h5>
-<p>
-Calling this method does cause the delegate to receive a <code>collectionView:willSelectRowAtIndexPath:</code> and <code>collectionView:didSelectRowAtIndexPath:</code> message, which differs from <code><code><a href="http://developer.apple.com/iphone/library/documentation/UIKit/Reference/UITableView_Class/index.html">UITableView</a></code></code>. </p>
-<h5>Declared In</h5>
-<code><code>SSCollectionView</code>.h</code></section><section class="definition" id="deselectItemAtIndexPath:animated:"><h3>deselectItemAtIndexPath:animated:</h3>
-<p>Deselects a given item identified by index path, with an option to animate the deselection. </p>
-<code class="methodDeclaration">- (void)deselectItemAtIndexPath:(<a href="http://developer.apple.com/iphone/library/documentation/Cocoa/Reference/Foundation/Classes/NSIndexPath_Class/index.html">NSIndexPath</a> *)<span class="parameter">indexPath</span> animated:(BOOL)<span class="parameter">animated</span> </code><h5>Parameters</h5>
-<dl class="parameterList">
-<dt>indexPath</dt>
-<dd><p>An index path identifying an item in the receiver. </p></dd>
-<dt>animated</dt>
-<dd><p><code>YES</code> if you want to animate the deselection and <code>NO</code> if the change should be immediate. </p></dd>
-</dl>
-<h5>Declared In</h5>
-<code><code>SSCollectionView</code>.h</code></section><section class="definition" id="scrollToItemAtIndexPath:atScrollPosition:animated:"><h3>scrollToItemAtIndexPath:atScrollPosition:animated:</h3>
-<p>Scrolls the receiver until an item identified by index path is at a particular location on the screen. </p>
-<code class="methodDeclaration">- (void)scrollToItemAtIndexPath:(<a href="http://developer.apple.com/iphone/library/documentation/Cocoa/Reference/Foundation/Classes/NSIndexPath_Class/index.html">NSIndexPath</a> *)<span class="parameter">indexPath</span> atScrollPosition:(SSCollectionViewScrollPosition)<span class="parameter">scrollPosition</span> animated:(BOOL)<span class="parameter">animated</span> </code><h5>Parameters</h5>
-<dl class="parameterList">
-<dt>indexPath</dt>
-<dd><p>An index path that identifies an item in the table view by its row index and its section index. </p></dd>
-<dt>scrollPosition</dt>
-<dd><p>A constant that identifies a relative position in the receiving collection view (top, middle, bottom) for row when scrolling concludes. </p></dd>
-<dt>animated</dt>
-<dd><p><code>YES</code> if you want to animate the change in position, <code>NO</code> if it should be immediate. </p></dd>
-</dl>
-<h5>Declared In</h5>
-<code><code>SSCollectionView</code>.h</code></section><section class="definition" id="reloadItemsAtIndexPaths:"><h3>reloadItemsAtIndexPaths:</h3>
-<p>Reloads the specified item. </p>
-<code class="methodDeclaration">- (void)reloadItemsAtIndexPaths:(<a href="http://developer.apple.com/iphone/library/documentation/Cocoa/Reference/Foundation/Classes/NSArray_Class/index.html">NSArray</a> *)<span class="parameter">indexPaths</span> </code><h5>Parameters</h5>
-<dl class="parameterList">
-<dt>indexPath</dt>
-<dd><p>An index path that identifies an item in the collection view by its row index and its section index. </p></dd>
-</dl>
-<h5>Declared In</h5>
-<code><code>SSCollectionView</code>.h</code></section><section class="definition" id="numberOfItemsInSection:"><h3>numberOfItemsInSection:</h3>
-<p>Returns the number of item (collection view items) in a specified section. </p>
-<code class="methodDeclaration">- (NSInteger)numberOfItemsInSection:(NSInteger)<span class="parameter">section</span> </code><h5>Parameters</h5>
-<dl class="parameterList">
-<dt>section</dt>
-<dd><p>An index number that identifies a section of the collection.</p></dd>
-</dl>
-<h5>Return Value</h5>
-<p>The number of items in the section. </p>
-<h5>Declared In</h5>
-<code><code>SSCollectionView</code>.h</code></section><section class="definition" id="rectForSection:"><h3>rectForSection:</h3>
-<p>Returns the drawing area for a specified section of the receiver. </p>
-<code class="methodDeclaration">- (CGRect)rectForSection:(NSInteger)<span class="parameter">section</span> </code><h5>Parameters</h5>
-<dl class="parameterList">
-<dt>section</dt>
-<dd><p>An index number identifying a section of the collection view.</p></dd>
-</dl>
-<h5>Return Value</h5>
-<p>A rectangle defining the area in which the collection view draws the section. </p>
-<h5>Declared In</h5>
-<code><code>SSCollectionView</code>.h</code></section><section class="definition" id="rectForHeaderInSection:"><h3>rectForHeaderInSection:</h3>
-<p>Returns the drawing area for the header of the specified section. </p>
-<code class="methodDeclaration">- (CGRect)rectForHeaderInSection:(NSInteger)<span class="parameter">section</span> </code><h5>Parameters</h5>
-<dl class="parameterList">
-<dt>section</dt>
-<dd><p>An index number identifying a section of the collection view.</p></dd>
-</dl>
-<h5>Return Value</h5>
-<p>A rectangle defining the area in which the collection view draws the section header. </p>
-<h5>Declared In</h5>
-<code><code>SSCollectionView</code>.h</code></section><section class="definition" id="rectForFooterInSection:"><h3>rectForFooterInSection:</h3>
-<p>Returns the drawing area for the footer of the specified section. </p>
-<code class="methodDeclaration">- (CGRect)rectForFooterInSection:(NSInteger)<span class="parameter">section</span> </code><h5>Parameters</h5>
-<dl class="parameterList">
-<dt>section</dt>
-<dd><p>An index number identifying a section of the collection view.</p></dd>
-</dl>
-<h5>Return Value</h5>
-<p>A rectangle defining the area in which the collection view draws the section footer. </p>
-<h5>Declared In</h5>
-<code><code>SSCollectionView</code>.h</code></section></section><hr>
-<p id="lastUpdated">Last updated: 2011-4-3</p>
+						</ul>
+						
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Properties" name="properties"></a>
+						<h2 class="subtitle subtitle-methods">Properties</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/allowsSelection" title="allowsSelection"></a>
+	<h3 class="subsubtitle method-title">allowsSelection</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>A Boolean value that determines whether selecting items is enabled.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) BOOL allowsSelection</code></div>
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>A Boolean value that determines whether selecting items is enabled.</p>
+
+<p>If the value of this property is <code>YES</code>, selecting is enabled, and if it is <code>NO</code>, selecting is
+disabled. The default is <code>YES</code>.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SSCollectionView.h</code><br />
+	</div>				
+	
+	
 </div>
-<footer id="breadcrumbs"><ul>
-<li><a href="../index.html">SSToolkit</a></li>
-<li><a href="#classTitle">SSCollectionView Class Reference</a></li>
-</ul></footer>
-</body>
+						
+						<div class="section-method">
+	<a name="//api/name/backgroundView" title="backgroundView"></a>
+	<h3 class="subsubtitle method-title">backgroundView</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The background view of the collection view.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, retain) UIView *backgroundView</code></div>
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The background view of the collection view.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SSCollectionView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/dataSource" title="dataSource"></a>
+	<h3 class="subsubtitle method-title">dataSource</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The object that acts as the data source of the receiving collection view.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) id&lt;SSCollectionViewDataSource&gt; dataSource</code></div>
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The object that acts as the data source of the receiving collection view.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SSCollectionView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/delegate" title="delegate"></a>
+	<h3 class="subsubtitle method-title">delegate</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The object that acts as the <a href="#//api/name/delegate">delegate</a> of the receiving collection view.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) id&lt;SSCollectionViewDelegate&gt; delegate</code></div>
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The object that acts as the <a href="#//api/name/delegate">delegate</a> of the receiving collection view.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SSCollectionView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/extremitiesStyle" title="extremitiesStyle"></a>
+	<h3 class="subsubtitle method-title">extremitiesStyle</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The style of the receiving collection view&rsquo;s headers and footers.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) SSCollectionViewExtremitiesStyle extremitiesStyle</code></div>
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The style of the receiving collection view&rsquo;s headers and footers.</p>
+
+<p>Setting to <code>SSCollectionViewExtremitiesStyleFixed</code> will cause the headers and footer to behave like a
+<code>UITableView</code> with its style set to <code>UITableViewStylePlain</code>. Setting to
+<code>SSCollectionViewExtremitiesStyleScrolling</code> will cause the headers and footer to behave like a
+<code>UITableView</code> with its style set to <code>UITableViewStyleGrouped</code>. The default is
+<code>SSCollectionViewExtremitiesStyleFixed</code>.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SSCollectionView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/minimumColumnSpacing" title="minimumColumnSpacing"></a>
+	<h3 class="subsubtitle method-title">minimumColumnSpacing</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The minimum column spacing.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) CGFloat minimumColumnSpacing</code></div>
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The minimum column spacing.</p>
+
+<p>The default is 0.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SSCollectionView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/numberOfSections" title="numberOfSections"></a>
+	<h3 class="subsubtitle method-title">numberOfSections</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The number of sections in the collection view.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign, readonly) NSUInteger numberOfSections</code></div>
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The number of sections in the collection view.</p>
+
+<p><a href="SSCollectionView.html"><code>SSCollectionView</code></a> gets the value returned by this method from its data source and caches it.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SSCollectionView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/rowSpacing" title="rowSpacing"></a>
+	<h3 class="subsubtitle method-title">rowSpacing</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The spacing between each row in the receiver. This does not add space above the first row or below the last.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) CGFloat rowSpacing</code></div>
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The spacing between each row in the receiver. This does not add space above the first row or below the last.</p>
+
+<p>The row spacing is in points. The default is 20.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SSCollectionView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/scrollView" title="scrollView"></a>
+	<h3 class="subsubtitle method-title">scrollView</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The internal scroll view of the collection view. The <a href="#//api/name/delegate">delegate</a> must not be overridden.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, retain, readonly) UIScrollView *scrollView</code></div>
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The internal scroll view of the collection view. The <a href="#//api/name/delegate">delegate</a> must not be overridden.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SSCollectionView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Instance Methods" name="instance_methods"></a>
+						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/dequeueReusableItemWithIdentifier:" title="dequeueReusableItemWithIdentifier:"></a>
+	<h3 class="subsubtitle method-title">dequeueReusableItemWithIdentifier:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns a reusable collection view item object located by its identifier.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (SSCollectionViewItem *)dequeueReusableItemWithIdentifier:(NSString *)<em>identifier</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>identifier</em></dt>
+			<dd><p>A string identifying the cell object to be reused.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>A `SSCollectionViewItem&lt;/code&lt; object with the associated identifier or nil if no such object exists in
+the reusable-item queue.</p>
+	</div>
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Returns a reusable collection view item object located by its identifier.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SSCollectionView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/deselectItemAtIndexPath:animated:" title="deselectItemAtIndexPath:animated:"></a>
+	<h3 class="subsubtitle method-title">deselectItemAtIndexPath:animated:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Deselects a given item identified by index path, with an option to animate the deselection.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)deselectItemAtIndexPath:(NSIndexPath *)<em>indexPath</em> animated:(BOOL)<em>animated</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>indexPath</em></dt>
+			<dd><p>An index path identifying an item in the receiver.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>animated</em></dt>
+			<dd><p><code>YES</code> if you want to animate the deselection and <code>NO</code> if the change should be
+immediate.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Deselects a given item identified by index path, with an option to animate the deselection.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SSCollectionView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/indexPathForItem:" title="indexPathForItem:"></a>
+	<h3 class="subsubtitle method-title">indexPathForItem:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns an index path representing the row (index) and section of a given collection view item.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (NSIndexPath *)indexPathForItem:(SSCollectionViewItem *)<em>item</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>item</em></dt>
+			<dd><p>An item object of the collection view.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>An index path representing the row and section of the cell or nil if the index path is invalid.</p>
+	</div>
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Returns an index path representing the row (index) and section of a given collection view item.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="#//api/name/itemPathForIndex:">&ndash; itemPathForIndex:</a></p></code></li>
+			
+		</ul>
+	</div>
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SSCollectionView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/itemPathForIndex:" title="itemPathForIndex:"></a>
+	<h3 class="subsubtitle method-title">itemPathForIndex:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the collection view item at the specified index path.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (SSCollectionViewItem *)itemPathForIndex:(NSIndexPath *)<em>indexPath</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>indexPath</em></dt>
+			<dd><p>The index path locating the item in the receiver.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>An object representing a cell of the table or nil if the cell is not visible or indexPath is out of range.</p>
+	</div>
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Returns the collection view item at the specified index path.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="#//api/name/indexPathForItem:">&ndash; indexPathForItem:</a></p></code></li>
+			
+		</ul>
+	</div>
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SSCollectionView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/numberOfItemsInSection:" title="numberOfItemsInSection:"></a>
+	<h3 class="subsubtitle method-title">numberOfItemsInSection:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the number of item (collection view items) in a specified section.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (NSUInteger)numberOfItemsInSection:(NSUInteger)<em>section</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>section</em></dt>
+			<dd><p>An index number that identifies a section of the collection.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>The number of items in the section.</p>
+	</div>
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Returns the number of item (collection view items) in a specified section.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SSCollectionView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/rectForFooterInSection:" title="rectForFooterInSection:"></a>
+	<h3 class="subsubtitle method-title">rectForFooterInSection:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the drawing area for the footer of the specified section.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (CGRect)rectForFooterInSection:(NSUInteger)<em>section</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>section</em></dt>
+			<dd><p>An index number identifying a section of the collection view.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>A rectangle defining the area in which the collection view draws the section footer.</p>
+	</div>
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Returns the drawing area for the footer of the specified section.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SSCollectionView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/rectForHeaderInSection:" title="rectForHeaderInSection:"></a>
+	<h3 class="subsubtitle method-title">rectForHeaderInSection:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the drawing area for the header of the specified section.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (CGRect)rectForHeaderInSection:(NSUInteger)<em>section</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>section</em></dt>
+			<dd><p>An index number identifying a section of the collection view.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>A rectangle defining the area in which the collection view draws the section header.</p>
+	</div>
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Returns the drawing area for the header of the specified section.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SSCollectionView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/rectForSection:" title="rectForSection:"></a>
+	<h3 class="subsubtitle method-title">rectForSection:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the drawing area for a specified section of the receiver.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (CGRect)rectForSection:(NSUInteger)<em>section</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>section</em></dt>
+			<dd><p>An index number identifying a section of the collection view.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>A rectangle defining the area in which the collection view draws the section.</p>
+	</div>
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Returns the drawing area for a specified section of the receiver.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SSCollectionView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/reloadData" title="reloadData"></a>
+	<h3 class="subsubtitle method-title">reloadData</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Reloads the items and sections of the receiver.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)reloadData</code></div>
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Reloads the items and sections of the receiver.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SSCollectionView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/reloadItemsAtIndexPaths:" title="reloadItemsAtIndexPaths:"></a>
+	<h3 class="subsubtitle method-title">reloadItemsAtIndexPaths:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Reloads the specified item.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)reloadItemsAtIndexPaths:(NSArray *)<em>indexPaths</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>indexPaths</em></dt>
+			<dd><p>An index path that identifies an item in the collection view by its row index and its section index.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Reloads the specified item.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SSCollectionView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/scrollToItemAtIndexPath:atScrollPosition:animated:" title="scrollToItemAtIndexPath:atScrollPosition:animated:"></a>
+	<h3 class="subsubtitle method-title">scrollToItemAtIndexPath:atScrollPosition:animated:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Scrolls the receiver until an item identified by index path is at a particular location on the screen.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)scrollToItemAtIndexPath:(NSIndexPath *)<em>indexPath</em> atScrollPosition:(SSCollectionViewScrollPosition)<em>scrollPosition</em> animated:(BOOL)<em>animated</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>indexPath</em></dt>
+			<dd><p>An index path that identifies an item in the table view by its row index and its section index.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>scrollPosition</em></dt>
+			<dd><p>A constant that identifies a relative position in the receiving collection view (top, middle,
+bottom) for row when scrolling concludes.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>animated</em></dt>
+			<dd><p><code>YES</code> if you want to animate the change in position, <code>NO</code> if it should be
+immediate.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Scrolls the receiver until an item identified by index path is at a particular location on the screen.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SSCollectionView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/selectItemAtIndexPath:animated:scrollPosition:" title="selectItemAtIndexPath:animated:scrollPosition:"></a>
+	<h3 class="subsubtitle method-title">selectItemAtIndexPath:animated:scrollPosition:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Selects an item in the receiver identified by index path, optionally scrolling the item to a location in the
+receiver.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)selectItemAtIndexPath:(NSIndexPath *)<em>indexPath</em> animated:(BOOL)<em>animated</em> scrollPosition:(SSCollectionViewScrollPosition)<em>scrollPosition</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>indexPath</em></dt>
+			<dd><p>An index path identifying an item in the receiver.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>animated</em></dt>
+			<dd><p><code>YES</code> if you want to animate the selection and any change in position, <code>NO</code> if
+the change should be immediate.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>scrollPosition</em></dt>
+			<dd><p>A constant that identifies a relative position in the receiving collection view (top, middle,
+bottom) for the row when scrolling concludes.</p>
+
+<p>Calling this method does cause the <a href="#//api/name/delegate">delegate</a> to receive a <code>collectionView:willSelectRowAtIndexPath:</code> and
+<code>collectionView:didSelectRowAtIndexPath:</code> message, which differs from <code>UITableView</code>.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Selects an item in the receiver identified by index path, optionally scrolling the item to a location in the
+receiver.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SSCollectionView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+				</div>
+				<div class="main-navigation navigation-bottom">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="footer">
+					<hr />
+					<div class="footer-copyright">
+						<p><span class="copyright">&copy; 2011 Sam Soffes. All rights reserved. (Last updated: 2011-07-03)</span><br />
+						
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.4 (build 703)</a>.</span></p>
+						
+					</div>
+				</div>
+			</div>
+		</article>
+		<script type="text/javascript">
+			function jumpToChange()
+			{
+				window.location.hash = this.options[this.selectedIndex].value;
+			}
+			
+			function toggleTOC()
+			{
+				var contents = document.getElementById('contents');
+				var tocContainer = document.getElementById('tocContainer');
+				
+				if (this.getAttribute('class') == 'open')
+				{
+					this.setAttribute('class', '');
+					contents.setAttribute('class', '');
+					tocContainer.setAttribute('class', '');
+					
+					window.name = "hideTOC";
+				}
+				else
+				{
+					this.setAttribute('class', 'open');
+					contents.setAttribute('class', 'isShowingTOC');
+					tocContainer.setAttribute('class', 'isShowingTOC');
+					
+					window.name = "";
+				}
+				return false;
+			}
+			
+			function toggleTOCEntryChildren(e)
+			{
+				e.stopPropagation();
+				var currentClass = this.getAttribute('class');
+				if (currentClass == 'children') {
+					this.setAttribute('class', 'children open');
+				}
+				else if (currentClass == 'children open') {
+					this.setAttribute('class', 'children');
+				}
+				return false;
+			}
+			
+			function tocEntryClick(e)
+			{
+				e.stopPropagation();
+				return true;
+			}
+			
+			function init()
+			{
+				var selectElement = document.getElementById('jumpTo');
+				selectElement.addEventListener('change', jumpToChange, false);
+				
+				var tocButton = document.getElementById('table_of_contents');
+				tocButton.addEventListener('click', toggleTOC, false);
+				
+				var taskTreeItem = document.getElementById('task_treeitem');
+				if (taskTreeItem.getElementsByTagName('li').length > 0)
+				{
+					taskTreeItem.setAttribute('class', 'children');
+					taskTreeItem.firstChild.setAttribute('class', 'disclosure');
+				}
+				
+				var tocList = document.getElementById('toc');
+				
+				var tocEntries = tocList.getElementsByTagName('li');
+				for (var i = 0; i < tocEntries.length; i++) {
+					tocEntries[i].addEventListener('click', toggleTOCEntryChildren, false);
+				}
+				
+				var tocLinks = tocList.getElementsByTagName('a');
+				for (var i = 0; i < tocLinks.length; i++) {
+					tocLinks[i].addEventListener('click', tocEntryClick, false);
+				}
+				
+				if (window.name == "hideTOC") {
+					toggleTOC.call(tocButton);
+				}
+			}
+			
+			window.onload = init;
+		</script>
+	</body>
 </html>

@@ -1,6 +1,6 @@
 desc 'Build Compass output'
 task :compass => [:'compass:clean'] do
-  system 'bundle exec compass compile -c config/compass.rb'
+  `bundle exec compass compile -c config/compass.rb`
 end
 
 desc 'Clean everything'
@@ -11,31 +11,39 @@ end
 namespace :compass do
   desc 'Clean Compass output'
   task :clean do
-    system 'rm -rf public/stylesheets/*'
+    `rm -rf public/stylesheets/*`
   end
   
   desc 'Start Compass watching the stylesheets directory'
   task :watch => [:'compass:clean'] do
-    system 'bundle exec compass watch -c config/compass.rb'
+    `bundle exec compass watch -c config/compass.rb`
   end
 end
 
 desc 'Start local server'
 task :server  => [:compass] do
-  system 'bundle exec shotgun config.ru'
+  `bundle exec shotgun config.ru`
+end
+
+desc 'Import docs. Requires SSToolkit repo at ../sstoolkit and appledoc in $PATH'
+task :docs => [:'docs:clean'] do
+  appledoc_options = [
+    '--output temp/documentation',
+    '--project-name SSToolkit',
+    '--project-company \'Sam Soffes\'',
+    '--company-id com.samsoffes',
+    '--keep-intermediate-files']
+  
+  `appledoc #{appledoc_options.join(' ')} ../sstoolkit/SSToolkit/*.h`
+  `mv temp/documentation/html public/documentation`
+  `rm -rf temp/documentation`
+  puts 'Imported.'
 end
 
 namespace :docs do
   desc 'Clean docs'
   task :clean do
-    system 'rm -rf public/documentation'
-  end
-
-  desc 'Import docs. Requires SSToolkit repo at ../sstoolkit'
-  task :import => [:'docs:clean'] do
-    system 'rake --rakefile ../sstoolkit/Documentation/Rakefile'
-    system 'cp -R ../sstoolkit/Documentation/Output public/documentation'
-    puts 'Imported.'
+    `rm -rf public/documentation`
   end
 end
 

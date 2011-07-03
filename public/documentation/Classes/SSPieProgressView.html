@@ -1,126 +1,594 @@
-<!DOCTYPE html><html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta charset="UTF-8">
-<title>SSPieProgressView Class Reference</title>
-<meta id="Generator" name="Generator" content="Doxyclean">
-<meta id="GeneratorVersion" name="GeneratorVersion" content="2.2">
-<link rel="stylesheet" type="text/css" href="../css/common.css">
-<link rel="stylesheet" type="text/css" media="screen" href="../css/screen.css">
-<link rel="stylesheet" type="text/css" media="print" href="../css/print.css">
-<script type="text/javascript">
-				function toggleTOC() {
-					var toc = document.getElementById('tableOfContents');
-					var tocButton = document.getElementById('toc_button');
-					var contents = document.getElementById('contents');
-					if (toc.style.display == 'block') {
-						toc.style.display = 'none';
-						contents.className = '';
-						tocButton.className = '';
-					} else {
-						toc.style.display = 'block';
-						contents.className = 'tableOfContentsOpen';
-						tocButton.className = 'open';
-					}
-				}
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>SSPieProgressView Class Reference</title>
+		<meta http-equiv="Content-Type" content="application/xhtml+xml;charset=utf-8" />
+		<meta id="xcode-display" name="xcode-display" content="render"/>
+		<meta name="viewport" content="width=550" />
+		<link rel="stylesheet" type="text/css" href="../css/styles.css" />
+		<meta name="generator" content="appledoc 2.0.4 (build 703)" />
+	</head>
+	<body>
+		<header id="top_header">
+			<div id="title" role="banner">
+				<h1 class="hideInXcode">SSPieProgressView Class Reference</h1>
+			</div>
+			<ul id="headerButtons" role="toolbar">
+				<li id="toc_button">
+					<button aria-label="Show Table of Contents" role="checkbox" class="open" id="table_of_contents"><span class="disclosure"></span>Table of Contents</button>
+				</li>
+				<li id="jumpto_button" role="navigation">
+					<select id="jumpTo">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+	
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+	
+	
+	
+	<option value="properties">Properties</option>
+	
+	<option value="//api/name/pieBackgroundColor">&nbsp;&nbsp;&nbsp;&nbsp;pieBackgroundColor</option>
+	
+	<option value="//api/name/pieBorderColor">&nbsp;&nbsp;&nbsp;&nbsp;pieBorderColor</option>
+	
+	<option value="//api/name/pieBorderWidth">&nbsp;&nbsp;&nbsp;&nbsp;pieBorderWidth</option>
+	
+	<option value="//api/name/pieFillColor">&nbsp;&nbsp;&nbsp;&nbsp;pieFillColor</option>
+	
+	<option value="//api/name/progress">&nbsp;&nbsp;&nbsp;&nbsp;progress</option>
+	
+	
+	
+	
+	<option value="class_methods">Class Methods</option>
+	
+	<option value="//api/name/defaultPieColor">&nbsp;&nbsp;&nbsp;&nbsp;+ defaultPieColor</option>
+	
+	
+	
+	
+	
+</select>
+				</li>
+			</ul>
+		</header>
+		<nav id="tocContainer" class="isShowingTOC">
+			<ul id="toc" role="tree">
 				
-				function toggleTOCItem() {
-					var listItem = event.srcElement;
-					var sublist = listItem.getElementsByTagName('ul')[0];
-					if (sublist.style.display == 'block') {
-						sublist.style.display = 'none';
-						listItem.className = 'expandable';
-					} else {
-						sublist.style.display = 'block';
-						listItem.className = 'expandable expanded';
-					}
-				}
-				
-				function jumpTo() {
-					selectedItem = event.srcElement.options[event.srcElement.selectedIndex].value;
-					window.location = "#" + selectedItem;
-				}
-			</script>
-</head>
-<body>
-<header id="projectHeader"><h1><a href="../index.html">SSToolkit Reference Library</a></h1></header><header id="fileHeader"><h1><a href="#classTitle">SSPieProgressView Class Reference</a></h1></header><nav id="buttons"><ul>
-<li id="toc_button"><button id="table_of_contents" onclick="toggleTOC()">Table of Contents</button></li>
-<li id="jumpto_button"><select id="jumpto" onchange="jumpTo()"><option value="classTitle">Jump To...</option>
-<option value="overview">Overview</option>
-<option value="tasks">Tasks</option>
-<option value="properties">Properties</option>
-<option value="progress">    progress</option>
-<option value="pieBorderWidth">    pieBorderWidth</option>
-<option value="pieBorderColor">    pieBorderColor</option>
-<option value="pieFillColor">    pieFillColor</option>
-<option value="pieBackgroundColor">    pieBackgroundColor</option></select></li>
-</ul></nav><nav id="tableOfContents" style="display: none;"><ul>
-<li><a href="#overview">Overview</a></li>
-<li class="expandable" id="tocTasks" onclick="toggleTOCItem()">
-<a href="#tasks">Tasks</a><ul style="display: none;"><li><a href="#Other">Other</a></li></ul>
-</li>
-<li class="expandable" id="tocProperties" onclick="toggleTOCItem()">
-<a href="#properties">Properties</a><ul style="display: none;">
-<li><a href="#progress">progress</a></li>
-<li><a href="#pieBorderWidth">pieBorderWidth</a></li>
-<li><a href="#pieBorderColor">pieBorderColor</a></li>
-<li><a href="#pieFillColor">pieFillColor</a></li>
-<li><a href="#pieBackgroundColor">pieBackgroundColor</a></li>
+<li role="treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#overview">Overview</a></span></li>
+
+
+
+
+<li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Managing the Progress">Managing the Progress</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Configuring the Pie Appearance">Configuring the Pie Appearance</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Defaults">Defaults</a></span></li>
+	
+</ul></li>
+
+
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#properties">Properties</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/pieBackgroundColor">pieBackgroundColor</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/pieBorderColor">pieBorderColor</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/pieBorderWidth">pieBorderWidth</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/pieFillColor">pieFillColor</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/progress">progress</a></span></li>
+	
+</ul></li>
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#class_methods">Class Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/defaultPieColor">defaultPieColor</a></span></li>
+	
+</ul></li>
+
+
+
+
+			</ul>
+		</nav>
+		<article>
+			<div id="contents" class="isShowingTOC" role="main">
+				<a title="SSPieProgressView Class Reference" name="top"></a>
+				<div class="main-navigation navigation-top">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
 </ul>
+				</div>
+				<div id="header">
+					<div class="section-header">
+						<h1 class="title title-header">SSPieProgressView Class Reference</h1>
+					</div>		
+				</div>
+				<div id="container">	
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<td class="specification-title">Inherits from</td>
+	<td class="specification-value">UIView</td>
+</tr><tr>
+	<td class="specification-title">Declared in</td>
+	<td class="specification-value">SSPieProgressView.h</td>
+</tr>
+						</tbody></table></div>
+					
+					
+					
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>Pie chart style <a href="#//api/name/progress">progress</a> pie chart similar to the one in Xcode 3&rsquo;s status bar.</p>
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						<h2 class="subtitle subtitle-tasks">Tasks</h2>
+						
+						
+						<a title="Managing the Progress" name="task_Managing the Progress"></a>
+						<h3 class="subsubtitle task-title">Managing the Progress</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/progress">&nbsp;&nbsp;progress</a></code>
+		<span class="tooltip"><p>The current <a href="#//api/name/progress">progress</a> shown by the receiver.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
 </li>
-</ul></nav><div id="contents">
-<h1 id="classTitle">SSPieProgressView Class Reference</h1>
-<table id="metadata"><tr class="alt">
-<th>Declared in</th>
-<td>SSPieProgressView.h</td>
-</tr></table>
-<h2 id="overview">Overview</h2>
-<p>Pie chart style progress bar similar to the one in Xcode 3's status bar. </p>
-<h2 id="tasks">Tasks</h2>
-<ul id="tasksList"><li id="Other">
-<h3>Other</h3>
-<ul class="methods">
-<li>
-<span class="tooltipRegion"><code><a href="#progress">progress</a></code> <span class="specialType">property</span></span><span class="tooltip">The current progress shown by the receiver. </span>
+						</ul>
+						
+						
+						<a title="Configuring the Pie Appearance" name="task_Configuring the Pie Appearance"></a>
+						<h3 class="subsubtitle task-title">Configuring the Pie Appearance</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/pieBorderWidth">&nbsp;&nbsp;pieBorderWidth</a></code>
+		<span class="tooltip"><p>The outer border width.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/pieBorderColor">&nbsp;&nbsp;pieBorderColor</a></code>
+		<span class="tooltip"><p>The border color.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/pieFillColor">&nbsp;&nbsp;pieFillColor</a></code>
+		<span class="tooltip"><p>The fill color.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/pieBackgroundColor">&nbsp;&nbsp;pieBackgroundColor</a></code>
+		<span class="tooltip"><p>The background color.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
 </li>
-<li>
-<span class="tooltipRegion"><code><a href="#pieBorderWidth">pieBorderWidth</a></code> <span class="specialType">property</span></span><span class="tooltip">The outer border width. </span>
+						</ul>
+						
+						
+						<a title="Defaults" name="task_Defaults"></a>
+						<h3 class="subsubtitle task-title">Defaults</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/defaultPieColor">+&nbsp;defaultPieColor</a></code>
+		<span class="tooltip"><p>The default value of <a href="#//api/name/pieBorderColor"><code>pieBorderColor</code></a> and <a href="#//api/name/pieFillColor"><code>pieFillColor</code></a>.</p></span>
+	</span>
+	
+	
 </li>
-<li>
-<span class="tooltipRegion"><code><a href="#pieBorderColor">pieBorderColor</a></code> <span class="specialType">property</span></span><span class="tooltip">The border color. </span>
-</li>
-<li>
-<span class="tooltipRegion"><code><a href="#pieFillColor">pieFillColor</a></code> <span class="specialType">property</span></span><span class="tooltip">The fill color. </span>
-</li>
-<li>
-<span class="tooltipRegion"><code><a href="#pieBackgroundColor">pieBackgroundColor</a></code> <span class="specialType">property</span></span><span class="tooltip">The background color. </span>
-</li>
-</ul>
-</li></ul>
-<section id="properties"><h2>Properties</h2>
-<section class="definition" id="progress"><h3>progress</h3>
-<p>The current progress shown by the receiver. </p>
-<code class="methodDeclaration">@property CGFloat progress</code><h5>Discussion</h5>
-<p>The current progress is represented by a floating-point value between 0.0 and 1.0f, inclusive, where 1.0 indicates the completion of the task. The default value is 0.0. Values less than 0.0 and greater than 1.0 are pinned to those limits. </p>
-<h5>Declared In</h5>
-<code><code>SSPieProgressView</code>.h</code></section><section class="definition" id="pieBorderWidth"><h3>pieBorderWidth</h3>
-<p>The outer border width. </p>
-<code class="methodDeclaration">@property CGFloat pieBorderWidth</code><h5>Declared In</h5>
-<code><code>SSPieProgressView</code>.h</code></section><section class="definition" id="pieBorderColor"><h3>pieBorderColor</h3>
-<p>The border color. </p>
-<code class="methodDeclaration">@property <a href="http://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIColor_Class/index.html">UIColor</a> *pieBorderColor</code><h5>Declared In</h5>
-<code><code>SSPieProgressView</code>.h</code></section><section class="definition" id="pieFillColor"><h3>pieFillColor</h3>
-<p>The fill color. </p>
-<code class="methodDeclaration">@property <a href="http://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIColor_Class/index.html">UIColor</a> *pieFillColor</code><h5>Declared In</h5>
-<code><code>SSPieProgressView</code>.h</code></section><section class="definition" id="pieBackgroundColor"><h3>pieBackgroundColor</h3>
-<p>The background color. </p>
-<code class="methodDeclaration">@property <a href="http://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIColor_Class/index.html">UIColor</a> *pieBackgroundColor</code><h5>Declared In</h5>
-<code><code>SSPieProgressView</code>.h</code></section></section><hr>
-<p id="lastUpdated">Last updated: 2011-4-3</p>
+						</ul>
+						
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Properties" name="properties"></a>
+						<h2 class="subtitle subtitle-methods">Properties</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/pieBackgroundColor" title="pieBackgroundColor"></a>
+	<h3 class="subsubtitle method-title">pieBackgroundColor</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The background color.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, retain) UIColor *pieBackgroundColor</code></div>
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The background color.</p>
+
+<p>The default is white.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SSPieProgressView.h</code><br />
+	</div>				
+	
+	
 </div>
-<footer id="breadcrumbs"><ul>
-<li><a href="../index.html">SSToolkit</a></li>
-<li><a href="#classTitle">SSPieProgressView Class Reference</a></li>
-</ul></footer>
-</body>
+						
+						<div class="section-method">
+	<a name="//api/name/pieBorderColor" title="pieBorderColor"></a>
+	<h3 class="subsubtitle method-title">pieBorderColor</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The border color.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, retain) UIColor *pieBorderColor</code></div>
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The border color.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="#//api/name/defaultPieColor">+ defaultPieColor</a></p></code></li>
+			
+		</ul>
+	</div>
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SSPieProgressView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/pieBorderWidth" title="pieBorderWidth"></a>
+	<h3 class="subsubtitle method-title">pieBorderWidth</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The outer border width.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) CGFloat pieBorderWidth</code></div>
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The outer border width.</p>
+
+<p>The default is <code>2.0</code>.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SSPieProgressView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/pieFillColor" title="pieFillColor"></a>
+	<h3 class="subsubtitle method-title">pieFillColor</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The fill color.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, retain) UIColor *pieFillColor</code></div>
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The fill color.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="#//api/name/defaultPieColor">+ defaultPieColor</a></p></code></li>
+			
+		</ul>
+	</div>
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SSPieProgressView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/progress" title="progress"></a>
+	<h3 class="subsubtitle method-title">progress</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The current <a href="#//api/name/progress">progress</a> shown by the receiver.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) CGFloat progress</code></div>
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The current <a href="#//api/name/progress">progress</a> shown by the receiver.</p>
+
+<p>The current <a href="#//api/name/progress">progress</a> is represented by a floating-point value between <code>0.0</code> and <code>1.0</code>, inclusive, where <code>1.0</code> indicates
+the completion of the task. Values less than <code>0.0</code> and greater than <code>1.0</code> are pinned to those limits.</p>
+
+<p>The default value is <code>0.0</code>.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SSPieProgressView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Class Methods" name="class_methods"></a>
+						<h2 class="subtitle subtitle-methods">Class Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/defaultPieColor" title="defaultPieColor"></a>
+	<h3 class="subsubtitle method-title">defaultPieColor</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The default value of <a href="#//api/name/pieBorderColor"><code>pieBorderColor</code></a> and <a href="#//api/name/pieFillColor"><code>pieFillColor</code></a>.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>+ (UIColor *)defaultPieColor</code></div>
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The default value of <a href="#//api/name/pieBorderColor"><code>pieBorderColor</code></a> and <a href="#//api/name/pieFillColor"><code>pieFillColor</code></a>.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SSPieProgressView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+					
+					
+				</div>
+				<div class="main-navigation navigation-bottom">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="footer">
+					<hr />
+					<div class="footer-copyright">
+						<p><span class="copyright">&copy; 2011 Sam Soffes. All rights reserved. (Last updated: 2011-07-03)</span><br />
+						
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.4 (build 703)</a>.</span></p>
+						
+					</div>
+				</div>
+			</div>
+		</article>
+		<script type="text/javascript">
+			function jumpToChange()
+			{
+				window.location.hash = this.options[this.selectedIndex].value;
+			}
+			
+			function toggleTOC()
+			{
+				var contents = document.getElementById('contents');
+				var tocContainer = document.getElementById('tocContainer');
+				
+				if (this.getAttribute('class') == 'open')
+				{
+					this.setAttribute('class', '');
+					contents.setAttribute('class', '');
+					tocContainer.setAttribute('class', '');
+					
+					window.name = "hideTOC";
+				}
+				else
+				{
+					this.setAttribute('class', 'open');
+					contents.setAttribute('class', 'isShowingTOC');
+					tocContainer.setAttribute('class', 'isShowingTOC');
+					
+					window.name = "";
+				}
+				return false;
+			}
+			
+			function toggleTOCEntryChildren(e)
+			{
+				e.stopPropagation();
+				var currentClass = this.getAttribute('class');
+				if (currentClass == 'children') {
+					this.setAttribute('class', 'children open');
+				}
+				else if (currentClass == 'children open') {
+					this.setAttribute('class', 'children');
+				}
+				return false;
+			}
+			
+			function tocEntryClick(e)
+			{
+				e.stopPropagation();
+				return true;
+			}
+			
+			function init()
+			{
+				var selectElement = document.getElementById('jumpTo');
+				selectElement.addEventListener('change', jumpToChange, false);
+				
+				var tocButton = document.getElementById('table_of_contents');
+				tocButton.addEventListener('click', toggleTOC, false);
+				
+				var taskTreeItem = document.getElementById('task_treeitem');
+				if (taskTreeItem.getElementsByTagName('li').length > 0)
+				{
+					taskTreeItem.setAttribute('class', 'children');
+					taskTreeItem.firstChild.setAttribute('class', 'disclosure');
+				}
+				
+				var tocList = document.getElementById('toc');
+				
+				var tocEntries = tocList.getElementsByTagName('li');
+				for (var i = 0; i < tocEntries.length; i++) {
+					tocEntries[i].addEventListener('click', toggleTOCEntryChildren, false);
+				}
+				
+				var tocLinks = tocList.getElementsByTagName('a');
+				for (var i = 0; i < tocLinks.length; i++) {
+					tocLinks[i].addEventListener('click', tocEntryClick, false);
+				}
+				
+				if (window.name == "hideTOC") {
+					toggleTOC.call(tocButton);
+				}
+			}
+			
+			window.onload = init;
+		</script>
+	</body>
 </html>

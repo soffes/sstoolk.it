@@ -29,9 +29,8 @@ class SSToolkit < Sinatra::Application
 
   get %r{/([a-zA-Z\-_\/]+)/?} do
     paths = [
-      ".html",
-      "/index.html",
-      ".css"
+      '.html',
+      'index.html'
     ]
     
     output = nil
