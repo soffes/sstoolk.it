@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>SSLabel Class Reference</title>
+		<title>UIScrollView(SSToolkitAdditions) Category Reference</title>
 		<meta http-equiv="Content-Type" content="application/xhtml+xml;charset=utf-8" />
 		<meta id="xcode-display" name="xcode-display" content="render"/>
 		<meta name="viewport" content="width=550" />
@@ -11,7 +11,7 @@
 	<body>
 		<header id="top_header">
 			<div id="title" role="banner">
-				<h1 class="hideInXcode">SSLabel Class Reference</h1>
+				<h1 class="hideInXcode">UIScrollView(SSToolkitAdditions) Category Reference</h1>
 			</div>
 			<ul id="headerButtons" role="toolbar">
 				<li id="toc_button">
@@ -32,15 +32,15 @@
 	
 	
 	
-	<option value="properties">Properties</option>
-	
-	<option value="//api/name/textEdgeInsets">&nbsp;&nbsp;&nbsp;&nbsp;textEdgeInsets</option>
-	
-	<option value="//api/name/verticalTextAlignment">&nbsp;&nbsp;&nbsp;&nbsp;verticalTextAlignment</option>
 	
 	
 	
 	
+	<option value="instance_methods">Instance Methods</option>
+	
+	<option value="//api/name/scrollToTop">&nbsp;&nbsp;&nbsp;&nbsp;- scrollToTop</option>
+	
+	<option value="//api/name/scrollToTopAnimated:">&nbsp;&nbsp;&nbsp;&nbsp;- scrollToTopAnimated:</option>
 	
 	
 	
@@ -58,30 +58,32 @@
 
 <li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
 	
-</ul></li>
-
-
-
-
-
-<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#properties">Properties</a></span><ul>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/textEdgeInsets">textEdgeInsets</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/verticalTextAlignment">verticalTextAlignment</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Scrolling">Scrolling</a></span></li>
 	
 </ul></li>
 
 
 
 
+
+
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/scrollToTop">scrollToTop</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/scrollToTopAnimated:">scrollToTopAnimated:</a></span></li>
+	
+</ul></li>
 
 
 			</ul>
 		</nav>
 		<article>
 			<div id="contents" class="isShowingTOC" role="main">
-				<a title="SSLabel Class Reference" name="top"></a>
+				<a title="UIScrollView(SSToolkitAdditions) Category Reference" name="top"></a>
 				<div class="main-navigation navigation-top">
 					<ul>
 	<li><a href="../index.html">Index</a></li>
@@ -90,18 +92,15 @@
 				</div>
 				<div id="header">
 					<div class="section-header">
-						<h1 class="title title-header">SSLabel Class Reference</h1>
+						<h1 class="title title-header">UIScrollView(SSToolkitAdditions) Category Reference</h1>
 					</div>		
 				</div>
 				<div id="container">	
 					
 					<div class="section section-specification"><table cellspacing="0"><tbody>
 						<tr>
-	<td class="specification-title">Inherits from</td>
-	<td class="specification-value">UILabel</td>
-</tr><tr>
 	<td class="specification-title">Declared in</td>
-	<td class="specification-value">SSLabel.h</td>
+	<td class="specification-value">UIScrollView+SSToolkitAdditions.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -111,7 +110,7 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>Simple label subclass that adds the ability to align your text to the top or bottom.</p>
+						<p>Provides extensions to <code>UIScrollView</code> for various common tasks.</p>
 					</div>
 					
 					
@@ -123,23 +122,23 @@
 						<h2 class="subtitle subtitle-tasks">Tasks</h2>
 						
 						
+						<a title="Scrolling" name="task_Scrolling"></a>
 						
-						
-
+<h3 class="subsubtitle task-title">Scrolling</h3>
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
-		<code><a href="#//api/name/verticalTextAlignment">&nbsp;&nbsp;verticalTextAlignment</a></code>
-		<span class="tooltip"><p>The vertical text alignment of the receiver.</p></span>
+		<code><a href="#//api/name/scrollToTop">&ndash;&nbsp;scrollToTop</a></code>
+		<span class="tooltip"><p>Scroll to the top of the receiver without animation.</p></span>
 	</span>
-	<span class="task-item-suffix">property</span>
+	
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/textEdgeInsets">&nbsp;&nbsp;textEdgeInsets</a></code>
-		<span class="tooltip"><p>The edge insets of the text.</p></span>
+		<code><a href="#//api/name/scrollToTopAnimated:">&ndash;&nbsp;scrollToTopAnimated:</a></code>
+		<span class="tooltip"><p>Scroll to the top of the receiver.</p></span>
 	</span>
-	<span class="task-item-suffix">property</span>
+	
 	
 </li>
 						</ul>
@@ -150,32 +149,31 @@
 					
 					
 					
+					
+					
+					
+					
 					<div class="section section-methods">
-						<a title="Properties" name="properties"></a>
-						<h2 class="subtitle subtitle-methods">Properties</h2>
+						<a title="Instance Methods" name="instance_methods"></a>
+						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
 						
 						<div class="section-method">
-	<a name="//api/name/textEdgeInsets" title="textEdgeInsets"></a>
-	<h3 class="subsubtitle method-title">textEdgeInsets</h3>
+	<a name="//api/name/scrollToTop" title="scrollToTop"></a>
+	<h3 class="subsubtitle method-title">scrollToTop</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>The edge insets of the text.</p>
+		<p>Scroll to the top of the receiver without animation.</p>
 	</div>		
 	
 	
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) UIEdgeInsets textEdgeInsets</code></div>
+	<div class="method-subsection method-declaration"><code>- (void)scrollToTop</code></div>
 	
 	
 	
 	
 	
-	
-	<div class="method-subsection discussion-section">
-		<h4 class="method-subtitle">Discussion</h4>
-		<p>The default is <code>UIEdgeInsetsZero</code> so it behaves like <code>UILabel</code> by default.</p>
-	</div>
 	
 	
 	
@@ -185,34 +183,39 @@
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">SSLabel.h</code><br />
+		<code class="declared-in-ref">UIScrollView+SSToolkitAdditions.h</code><br />
 	</div>				
 	
 	
 </div>
 						
 						<div class="section-method">
-	<a name="//api/name/verticalTextAlignment" title="verticalTextAlignment"></a>
-	<h3 class="subsubtitle method-title">verticalTextAlignment</h3>
+	<a name="//api/name/scrollToTopAnimated:" title="scrollToTopAnimated:"></a>
+	<h3 class="subsubtitle method-title">scrollToTopAnimated:</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>The vertical text alignment of the receiver.</p>
+		<p>Scroll to the top of the receiver.</p>
 	</div>		
 	
 	
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) SSLabelVerticalTextAlignment verticalTextAlignment</code></div>
+	<div class="method-subsection method-declaration"><code>- (void)scrollToTopAnimated:(BOOL)<em>animated</em></code></div>
 	
 	
-	
-	
-	
-	
-	<div class="method-subsection discussion-section">
-		<h4 class="method-subtitle">Discussion</h4>
-		<p>The default is <code>SSLabelVerticalTextAlignmentMiddle</code> to match <code>UILabel</code>.</p>
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>animated</em></dt>
+			<dd><p><code>YES</code> to animate the transition at a constant velocity to the new offset, <code>NO</code> to make the transition immediate.</p></dd>
+		</dl>
+		
 	</div>
+	
+	
+	
+	
 	
 	
 	
@@ -222,17 +225,13 @@
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">SSLabel.h</code><br />
+		<code class="declared-in-ref">UIScrollView+SSToolkitAdditions.h</code><br />
 	</div>				
 	
 	
 </div>
 						
 					</div>
-					
-					
-					
-					
 					
 					
 				</div>

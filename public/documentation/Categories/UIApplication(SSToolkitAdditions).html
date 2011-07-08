@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>SSLabel Class Reference</title>
+		<title>UIApplication(SSToolkitAdditions) Category Reference</title>
 		<meta http-equiv="Content-Type" content="application/xhtml+xml;charset=utf-8" />
 		<meta id="xcode-display" name="xcode-display" content="render"/>
 		<meta name="viewport" content="width=550" />
@@ -11,7 +11,7 @@
 	<body>
 		<header id="top_header">
 			<div id="title" role="banner">
-				<h1 class="hideInXcode">SSLabel Class Reference</h1>
+				<h1 class="hideInXcode">UIApplication(SSToolkitAdditions) Category Reference</h1>
 			</div>
 			<ul id="headerButtons" role="toolbar">
 				<li id="toc_button">
@@ -32,15 +32,15 @@
 	
 	
 	
-	<option value="properties">Properties</option>
-	
-	<option value="//api/name/textEdgeInsets">&nbsp;&nbsp;&nbsp;&nbsp;textEdgeInsets</option>
-	
-	<option value="//api/name/verticalTextAlignment">&nbsp;&nbsp;&nbsp;&nbsp;verticalTextAlignment</option>
 	
 	
 	
 	
+	<option value="instance_methods">Instance Methods</option>
+	
+	<option value="//api/name/isPirated">&nbsp;&nbsp;&nbsp;&nbsp;- isPirated</option>
+	
+	<option value="//api/name/setNetworkActivity:">&nbsp;&nbsp;&nbsp;&nbsp;- setNetworkActivity:</option>
 	
 	
 	
@@ -64,24 +64,24 @@
 
 
 
-<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#properties">Properties</a></span><ul>
+
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/textEdgeInsets">textEdgeInsets</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/isPirated">isPirated</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/verticalTextAlignment">verticalTextAlignment</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setNetworkActivity:">setNetworkActivity:</a></span></li>
 	
 </ul></li>
-
-
-
-
 
 
 			</ul>
 		</nav>
 		<article>
 			<div id="contents" class="isShowingTOC" role="main">
-				<a title="SSLabel Class Reference" name="top"></a>
+				<a title="UIApplication(SSToolkitAdditions) Category Reference" name="top"></a>
 				<div class="main-navigation navigation-top">
 					<ul>
 	<li><a href="../index.html">Index</a></li>
@@ -90,18 +90,15 @@
 				</div>
 				<div id="header">
 					<div class="section-header">
-						<h1 class="title title-header">SSLabel Class Reference</h1>
+						<h1 class="title title-header">UIApplication(SSToolkitAdditions) Category Reference</h1>
 					</div>		
 				</div>
 				<div id="container">	
 					
 					<div class="section section-specification"><table cellspacing="0"><tbody>
 						<tr>
-	<td class="specification-title">Inherits from</td>
-	<td class="specification-value">UILabel</td>
-</tr><tr>
 	<td class="specification-title">Declared in</td>
-	<td class="specification-value">SSLabel.h</td>
+	<td class="specification-value">UIApplication+SSToolkitAdditions.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -111,7 +108,7 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>Simple label subclass that adds the ability to align your text to the top or bottom.</p>
+						<p>Provides extensions to <code>UIApplication</code> for various common tasks.</p>
 					</div>
 					
 					
@@ -129,17 +126,18 @@
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
-		<code><a href="#//api/name/verticalTextAlignment">&nbsp;&nbsp;verticalTextAlignment</a></code>
-		<span class="tooltip"><p>The vertical text alignment of the receiver.</p></span>
+		<code><a href="#//api/name/isPirated">&ndash;&nbsp;isPirated</a></code>
+		<span class="tooltip"><p>Checks for pirated application indicators.</p></span>
 	</span>
-	<span class="task-item-suffix">property</span>
+	
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/textEdgeInsets">&nbsp;&nbsp;textEdgeInsets</a></code>
-		<span class="tooltip"><p>The edge insets of the text.</p></span>
+		<code><a href="#//api/name/setNetworkActivity:">&ndash;&nbsp;setNetworkActivity:</a></code>
+		<span class="tooltip"><p>Aggregates calls to settings <code>networkActivityIndicatorVisible</code> to avoid flashing of the indicator in the status bar.
+Simply use <a href="#//api/name/setNetworkActivity:"><code>setNetworkActivity:</code></a> instead of <code>setNetworkActivityIndicatorVisible:</code>.</p></span>
 	</span>
-	<span class="task-item-suffix">property</span>
+	
 	
 </li>
 						</ul>
@@ -150,31 +148,40 @@
 					
 					
 					
+					
+					
+					
+					
 					<div class="section section-methods">
-						<a title="Properties" name="properties"></a>
-						<h2 class="subtitle subtitle-methods">Properties</h2>
+						<a title="Instance Methods" name="instance_methods"></a>
+						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
 						
 						<div class="section-method">
-	<a name="//api/name/textEdgeInsets" title="textEdgeInsets"></a>
-	<h3 class="subsubtitle method-title">textEdgeInsets</h3>
+	<a name="//api/name/isPirated" title="isPirated"></a>
+	<h3 class="subsubtitle method-title">isPirated</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>The edge insets of the text.</p>
+		<p>Checks for pirated application indicators.</p>
 	</div>		
 	
 	
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) UIEdgeInsets textEdgeInsets</code></div>
+	<div class="method-subsection method-declaration"><code>- (BOOL)isPirated</code></div>
 	
 	
 	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p><code>YES</code> if the application may be pirated. <code>NO</code> if it is probably not pirated.</p>
+	</div>
 	
 	
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>The default is <code>UIEdgeInsetsZero</code> so it behaves like <code>UILabel</code> by default.</p>
+		<p>This isn&rsquo;t bulletproof, but should catch a lot of cases. Thanks @marcoarment: <a href="http://twitter.com/marcoarment/status/27965461020">http://twitter.com/marcoarment/status/27965461020</a></p>
 	</div>
 	
 	
@@ -185,25 +192,36 @@
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">SSLabel.h</code><br />
+		<code class="declared-in-ref">UIApplication+SSToolkitAdditions.h</code><br />
 	</div>				
 	
 	
 </div>
 						
 						<div class="section-method">
-	<a name="//api/name/verticalTextAlignment" title="verticalTextAlignment"></a>
-	<h3 class="subsubtitle method-title">verticalTextAlignment</h3>
+	<a name="//api/name/setNetworkActivity:" title="setNetworkActivity:"></a>
+	<h3 class="subsubtitle method-title">setNetworkActivity:</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>The vertical text alignment of the receiver.</p>
+		<p>Aggregates calls to settings <code>networkActivityIndicatorVisible</code> to avoid flashing of the indicator in the status bar.
+Simply use <a href="#//api/name/setNetworkActivity:"><code>setNetworkActivity:</code></a> instead of <code>setNetworkActivityIndicatorVisible:</code>.</p>
 	</div>		
 	
 	
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) SSLabelVerticalTextAlignment verticalTextAlignment</code></div>
+	<div class="method-subsection method-declaration"><code>- (void)setNetworkActivity:(BOOL)<em>inProgress</em></code></div>
 	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>inProgress</em></dt>
+			<dd><p>A Boolean value that turns an indicator of network activity on or off.</p></dd>
+		</dl>
+		
+	</div>
 	
 	
 	
@@ -211,7 +229,9 @@
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>The default is <code>SSLabelVerticalTextAlignmentMiddle</code> to match <code>UILabel</code>.</p>
+		<p>Specify <code>YES</code> if the application should show network activity and <code>NO</code> if it should not. The default value is <code>NO</code>.
+A spinning indicator in the status bar shows network activity. The application may explicitly hide or show this
+indicator.</p>
 	</div>
 	
 	
@@ -222,17 +242,13 @@
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">SSLabel.h</code><br />
+		<code class="declared-in-ref">UIApplication+SSToolkitAdditions.h</code><br />
 	</div>				
 	
 	
 </div>
 						
 					</div>
-					
-					
-					
-					
 					
 					
 				</div>

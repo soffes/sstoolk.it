@@ -316,8 +316,7 @@ easier.</p>
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/selectItemAtIndexPath:animated:scrollPosition:">&ndash;&nbsp;selectItemAtIndexPath:animated:scrollPosition:</a></code>
-		<span class="tooltip"><p>Selects an item in the receiver identified by index path, optionally scrolling the item to a location in the
-receiver.</p></span>
+		<span class="tooltip"><p>Selects an item in the receiver identified by index path, optionally scrolling the item to a location in the receiver.</p></span>
 	</span>
 	
 	
@@ -403,10 +402,8 @@ receiver.</p></span>
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>A Boolean value that determines whether selecting items is enabled.</p>
-
-<p>If the value of this property is <code>YES</code>, selecting is enabled, and if it is <code>NO</code>, selecting is
-disabled. The default is <code>YES</code>.</p>
+		<p>If the value of this property is <code>YES</code>, selecting is enabled, and if it is <code>NO</code>, selecting is disabled. The default is
+<code>YES</code>.</p>
 	</div>
 	
 	
@@ -441,11 +438,6 @@ disabled. The default is <code>YES</code>.</p>
 	
 	
 	
-	<div class="method-subsection discussion-section">
-		<h4 class="method-subtitle">Discussion</h4>
-		<p>The background view of the collection view.</p>
-	</div>
-	
 	
 	
 	
@@ -478,11 +470,6 @@ disabled. The default is <code>YES</code>.</p>
 	
 	
 	
-	<div class="method-subsection discussion-section">
-		<h4 class="method-subtitle">Discussion</h4>
-		<p>The object that acts as the data source of the receiving collection view.</p>
-	</div>
-	
 	
 	
 	
@@ -514,11 +501,6 @@ disabled. The default is <code>YES</code>.</p>
 	
 	
 	
-	
-	<div class="method-subsection discussion-section">
-		<h4 class="method-subtitle">Discussion</h4>
-		<p>The object that acts as the <a href="#//api/name/delegate">delegate</a> of the receiving collection view.</p>
-	</div>
 	
 	
 	
@@ -554,12 +536,9 @@ disabled. The default is <code>YES</code>.</p>
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>The style of the receiving collection view&rsquo;s headers and footers.</p>
-
-<p>Setting to <code>SSCollectionViewExtremitiesStyleFixed</code> will cause the headers and footer to behave like a
-<code>UITableView</code> with its style set to <code>UITableViewStylePlain</code>. Setting to
-<code>SSCollectionViewExtremitiesStyleScrolling</code> will cause the headers and footer to behave like a
-<code>UITableView</code> with its style set to <code>UITableViewStyleGrouped</code>. The default is
+		<p>Setting to <code>SSCollectionViewExtremitiesStyleFixed</code> will cause the headers and footer to behave like a <code>UITableView</code>
+with its style set to <code>UITableViewStylePlain</code>. Setting to <code>SSCollectionViewExtremitiesStyleScrolling</code> will cause the
+headers and footer to behave like a <code>UITableView</code> with its style set to <code>UITableViewStyleGrouped</code>. The default is
 <code>SSCollectionViewExtremitiesStyleFixed</code>.</p>
 	</div>
 	
@@ -597,9 +576,7 @@ disabled. The default is <code>YES</code>.</p>
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>The minimum column spacing.</p>
-
-<p>The default is 0.</p>
+		<p>The default is <code>0.0</code>.</p>
 	</div>
 	
 	
@@ -636,9 +613,7 @@ disabled. The default is <code>YES</code>.</p>
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>The number of sections in the collection view.</p>
-
-<p><a href="SSCollectionView.html"><code>SSCollectionView</code></a> gets the value returned by this method from its data source and caches it.</p>
+		<p><a href="SSCollectionView.html"><code>SSCollectionView</code></a> gets the value returned by this method from its data source and caches it.</p>
 	</div>
 	
 	
@@ -675,9 +650,7 @@ disabled. The default is <code>YES</code>.</p>
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>The spacing between each row in the receiver. This does not add space above the first row or below the last.</p>
-
-<p>The row spacing is in points. The default is 20.</p>
+		<p>The row spacing is in points. The default is <code>20.0</code>.</p>
 	</div>
 	
 	
@@ -711,11 +684,6 @@ disabled. The default is <code>YES</code>.</p>
 	
 	
 	
-	
-	<div class="method-subsection discussion-section">
-		<h4 class="method-subtitle">Discussion</h4>
-		<p>The internal scroll view of the collection view. The <a href="#//api/name/delegate">delegate</a> must not be overridden.</p>
-	</div>
 	
 	
 	
@@ -769,16 +737,11 @@ disabled. The default is <code>YES</code>.</p>
 	
 	<div class="method-subsection return">
 		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>A `SSCollectionViewItem&lt;/code&lt; object with the associated identifier or nil if no such object exists in
-the reusable-item queue.</p>
+		<p>A <a href="../Classes/SSCollectionViewItem.html"><code>SSCollectionViewItem</code></a> object with the associated identifier or nil if no such object exists in the
+reusable-item queue.</p>
 	</div>
 	
 	
-	
-	<div class="method-subsection discussion-section">
-		<h4 class="method-subtitle">Discussion</h4>
-		<p>Returns a reusable collection view item object located by its identifier.</p>
-	</div>
 	
 	
 	
@@ -828,11 +791,6 @@ immediate.</p></dd>
 	
 	
 	
-	<div class="method-subsection discussion-section">
-		<h4 class="method-subtitle">Discussion</h4>
-		<p>Deselects a given item identified by index path, with an option to animate the deselection.</p>
-	</div>
-	
 	
 	
 	
@@ -879,11 +837,6 @@ immediate.</p></dd>
 	</div>
 	
 	
-	
-	<div class="method-subsection discussion-section">
-		<h4 class="method-subtitle">Discussion</h4>
-		<p>Returns an index path representing the row (index) and section of a given collection view item.</p>
-	</div>
 	
 	
 	
@@ -941,11 +894,6 @@ immediate.</p></dd>
 	
 	
 	
-	<div class="method-subsection discussion-section">
-		<h4 class="method-subtitle">Discussion</h4>
-		<p>Returns the collection view item at the specified index path.</p>
-	</div>
-	
 	
 	
 	
@@ -1002,11 +950,6 @@ immediate.</p></dd>
 	
 	
 	
-	<div class="method-subsection discussion-section">
-		<h4 class="method-subtitle">Discussion</h4>
-		<p>Returns the number of item (collection view items) in a specified section.</p>
-	</div>
-	
 	
 	
 	
@@ -1053,11 +996,6 @@ immediate.</p></dd>
 	</div>
 	
 	
-	
-	<div class="method-subsection discussion-section">
-		<h4 class="method-subtitle">Discussion</h4>
-		<p>Returns the drawing area for the footer of the specified section.</p>
-	</div>
 	
 	
 	
@@ -1106,11 +1044,6 @@ immediate.</p></dd>
 	
 	
 	
-	<div class="method-subsection discussion-section">
-		<h4 class="method-subtitle">Discussion</h4>
-		<p>Returns the drawing area for the header of the specified section.</p>
-	</div>
-	
 	
 	
 	
@@ -1158,11 +1091,6 @@ immediate.</p></dd>
 	
 	
 	
-	<div class="method-subsection discussion-section">
-		<h4 class="method-subtitle">Discussion</h4>
-		<p>Returns the drawing area for a specified section of the receiver.</p>
-	</div>
-	
 	
 	
 	
@@ -1194,11 +1122,6 @@ immediate.</p></dd>
 	
 	
 	
-	
-	<div class="method-subsection discussion-section">
-		<h4 class="method-subtitle">Discussion</h4>
-		<p>Reloads the items and sections of the receiver.</p>
-	</div>
 	
 	
 	
@@ -1241,11 +1164,6 @@ immediate.</p></dd>
 	
 	
 	
-	
-	<div class="method-subsection discussion-section">
-		<h4 class="method-subtitle">Discussion</h4>
-		<p>Reloads the specified item.</p>
-	</div>
 	
 	
 	
@@ -1301,11 +1219,6 @@ immediate.</p></dd>
 	
 	
 	
-	<div class="method-subsection discussion-section">
-		<h4 class="method-subtitle">Discussion</h4>
-		<p>Scrolls the receiver until an item identified by index path is at a particular location on the screen.</p>
-	</div>
-	
 	
 	
 	
@@ -1327,8 +1240,7 @@ immediate.</p></dd>
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Selects an item in the receiver identified by index path, optionally scrolling the item to a location in the
-receiver.</p>
+		<p>Selects an item in the receiver identified by index path, optionally scrolling the item to a location in the receiver.</p>
 	</div>		
 	
 	
@@ -1364,12 +1276,6 @@ bottom) for the row when scrolling concludes.</p>
 	
 	
 	
-	<div class="method-subsection discussion-section">
-		<h4 class="method-subtitle">Discussion</h4>
-		<p>Selects an item in the receiver identified by index path, optionally scrolling the item to a location in the
-receiver.</p>
-	</div>
-	
 	
 	
 	
@@ -1397,7 +1303,7 @@ receiver.</p>
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2011 Sam Soffes. All rights reserved. (Last updated: 2011-07-03)</span><br />
+						<p><span class="copyright">&copy; 2011 Sam Soffes. All rights reserved. (Last updated: 2011-07-08)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.4 (build 703)</a>.</span></p>
 						

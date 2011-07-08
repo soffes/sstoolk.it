@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>SSLabel Class Reference</title>
+		<title>SSRatingPickerViewController Class Reference</title>
 		<meta http-equiv="Content-Type" content="application/xhtml+xml;charset=utf-8" />
 		<meta id="xcode-display" name="xcode-display" content="render"/>
 		<meta name="viewport" content="width=550" />
@@ -11,7 +11,7 @@
 	<body>
 		<header id="top_header">
 			<div id="title" role="banner">
-				<h1 class="hideInXcode">SSLabel Class Reference</h1>
+				<h1 class="hideInXcode">SSRatingPickerViewController Class Reference</h1>
 			</div>
 			<ul id="headerButtons" role="toolbar">
 				<li id="toc_button">
@@ -20,8 +20,6 @@
 				<li id="jumpto_button" role="navigation">
 					<select id="jumpTo">
 	<option value="top">Jump To&#133;</option>
-	
-	<option value="overview">Overview</option>
 	
 	
 	
@@ -34,9 +32,11 @@
 	
 	<option value="properties">Properties</option>
 	
-	<option value="//api/name/textEdgeInsets">&nbsp;&nbsp;&nbsp;&nbsp;textEdgeInsets</option>
+	<option value="//api/name/ratingPicker">&nbsp;&nbsp;&nbsp;&nbsp;ratingPicker</option>
 	
-	<option value="//api/name/verticalTextAlignment">&nbsp;&nbsp;&nbsp;&nbsp;verticalTextAlignment</option>
+	<option value="//api/name/reviewTextView">&nbsp;&nbsp;&nbsp;&nbsp;reviewTextView</option>
+	
+	<option value="//api/name/titleTextField">&nbsp;&nbsp;&nbsp;&nbsp;titleTextField</option>
 	
 	
 	
@@ -51,12 +51,14 @@
 		<nav id="tocContainer" class="isShowingTOC">
 			<ul id="toc" role="tree">
 				
-<li role="treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#overview">Overview</a></span></li>
-
 
 
 
 <li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Accessing the Rating Picker">Accessing the Rating Picker</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Accessing the Text Input">Accessing the Text Input</a></span></li>
 	
 </ul></li>
 
@@ -66,9 +68,11 @@
 
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#properties">Properties</a></span><ul>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/textEdgeInsets">textEdgeInsets</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/ratingPicker">ratingPicker</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/verticalTextAlignment">verticalTextAlignment</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/reviewTextView">reviewTextView</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/titleTextField">titleTextField</a></span></li>
 	
 </ul></li>
 
@@ -81,7 +85,7 @@
 		</nav>
 		<article>
 			<div id="contents" class="isShowingTOC" role="main">
-				<a title="SSLabel Class Reference" name="top"></a>
+				<a title="SSRatingPickerViewController Class Reference" name="top"></a>
 				<div class="main-navigation navigation-top">
 					<ul>
 	<li><a href="../index.html">Index</a></li>
@@ -90,7 +94,7 @@
 				</div>
 				<div id="header">
 					<div class="section-header">
-						<h1 class="title title-header">SSLabel Class Reference</h1>
+						<h1 class="title title-header">SSRatingPickerViewController Class Reference</h1>
 					</div>		
 				</div>
 				<div id="container">	
@@ -98,21 +102,13 @@
 					<div class="section section-specification"><table cellspacing="0"><tbody>
 						<tr>
 	<td class="specification-title">Inherits from</td>
-	<td class="specification-value">UILabel</td>
+	<td class="specification-value"><a href="../Classes/SSViewController.html">SSViewController</a> : UIViewController</td>
 </tr><tr>
 	<td class="specification-title">Declared in</td>
-	<td class="specification-value">SSLabel.h</td>
+	<td class="specification-value">SSRatingPickerViewController.h</td>
 </tr>
 						</tbody></table></div>
 					
-					
-					
-					
-					<div class="section section-overview">
-						<a title="Overview" name="overview"></a>
-						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>Simple label subclass that adds the ability to align your text to the top or bottom.</p>
-					</div>
 					
 					
 					
@@ -123,21 +119,36 @@
 						<h2 class="subtitle subtitle-tasks">Tasks</h2>
 						
 						
-						
-						
+						<a title="Accessing the Rating Picker" name="task_Accessing the Rating Picker"></a>
+						<h3 class="subsubtitle task-title">Accessing the Rating Picker</h3>
 
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
-		<code><a href="#//api/name/verticalTextAlignment">&nbsp;&nbsp;verticalTextAlignment</a></code>
-		<span class="tooltip"><p>The vertical text alignment of the receiver.</p></span>
+		<code><a href="#//api/name/ratingPicker">&nbsp;&nbsp;ratingPicker</a></code>
+		<span class="tooltip"><p>The rating picker. (read-only)</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li>
+						</ul>
+						
+						
+						<a title="Accessing the Text Input" name="task_Accessing the Text Input"></a>
+						<h3 class="subsubtitle task-title">Accessing the Text Input</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/titleTextField">&nbsp;&nbsp;titleTextField</a></code>
+		<span class="tooltip"><p>The text field for the title. (read-only)</p></span>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/textEdgeInsets">&nbsp;&nbsp;textEdgeInsets</a></code>
-		<span class="tooltip"><p>The edge insets of the text.</p></span>
+		<code><a href="#//api/name/reviewTextView">&nbsp;&nbsp;reviewTextView</a></code>
+		<span class="tooltip"><p>The text view for the review.  (read-only)</p></span>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
@@ -155,17 +166,17 @@
 						<h2 class="subtitle subtitle-methods">Properties</h2>
 						
 						<div class="section-method">
-	<a name="//api/name/textEdgeInsets" title="textEdgeInsets"></a>
-	<h3 class="subsubtitle method-title">textEdgeInsets</h3>
+	<a name="//api/name/ratingPicker" title="ratingPicker"></a>
+	<h3 class="subsubtitle method-title">ratingPicker</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>The edge insets of the text.</p>
+		<p>The rating picker. (read-only)</p>
 	</div>		
 	
 	
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) UIEdgeInsets textEdgeInsets</code></div>
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, retain, readonly) SSRatingPicker *ratingPicker</code></div>
 	
 	
 	
@@ -174,7 +185,7 @@
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>The default is <code>UIEdgeInsetsZero</code> so it behaves like <code>UILabel</code> by default.</p>
+		<p>All of the rating picker&rsquo;s values are the default values of <a href="../Classes/SSRatingPicker.html"><code>SSRatingPicker</code></a>.</p>
 	</div>
 	
 	
@@ -185,34 +196,29 @@
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">SSLabel.h</code><br />
+		<code class="declared-in-ref">SSRatingPickerViewController.h</code><br />
 	</div>				
 	
 	
 </div>
 						
 						<div class="section-method">
-	<a name="//api/name/verticalTextAlignment" title="verticalTextAlignment"></a>
-	<h3 class="subsubtitle method-title">verticalTextAlignment</h3>
+	<a name="//api/name/reviewTextView" title="reviewTextView"></a>
+	<h3 class="subsubtitle method-title">reviewTextView</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>The vertical text alignment of the receiver.</p>
+		<p>The text view for the review.  (read-only)</p>
 	</div>		
 	
 	
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) SSLabelVerticalTextAlignment verticalTextAlignment</code></div>
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, retain, readonly) SSTextView *reviewTextView</code></div>
 	
 	
 	
 	
 	
-	
-	<div class="method-subsection discussion-section">
-		<h4 class="method-subtitle">Discussion</h4>
-		<p>The default is <code>SSLabelVerticalTextAlignmentMiddle</code> to match <code>UILabel</code>.</p>
-	</div>
 	
 	
 	
@@ -222,7 +228,39 @@
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">SSLabel.h</code><br />
+		<code class="declared-in-ref">SSRatingPickerViewController.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/titleTextField" title="titleTextField"></a>
+	<h3 class="subsubtitle method-title">titleTextField</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The text field for the title. (read-only)</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, retain, readonly) SSTextField *titleTextField</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SSRatingPickerViewController.h</code><br />
 	</div>				
 	
 	

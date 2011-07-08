@@ -6,6 +6,7 @@ GEM
       chunky_png (~> 1.1.0)
       sass (>= 3.1.0.alpha.249)
     rack (1.2.2)
+    rake (0.9.0)
     sass (3.1.0.alpha.252)
     shotgun (0.9)
       rack (>= 1.0)
@@ -19,5 +20,6 @@ PLATFORMS
 
 DEPENDENCIES
   compass (= 0.11.beta.5)
+  rake
   shotgun (= 0.9)
   sinatra (= 1.3.0.a)

@@ -233,8 +233,7 @@
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/initWithStyle:reuseIdentifier:">&ndash;&nbsp;initWithStyle:reuseIdentifier:</a></code>
-		<span class="tooltip"><p>Initializes a collection view item with a style and a reuse identifier and returns it to
-the caller.</p></span>
+		<span class="tooltip"><p>Initializes a collection view item with a style and a reuse identifier and returns it to the caller.</p></span>
 	</span>
 	
 	
@@ -292,10 +291,8 @@ the caller.</p></span>
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>The view used as the background of the item.</p>
-
-<p>The default is nil. <a href="SSCollectionViewItem.html">SSCollectionViewItem</a> adds the background view as a subview behind all other views
-and uses its current frame location.</p>
+		<p>The default is <code>nil</code>. <a href="SSCollectionViewItem.html"><code>SSCollectionViewItem</code></a> adds the background view as a subview behind all other views and uses its
+current frame location.</p>
 	</div>
 	
 	
@@ -332,10 +329,8 @@ and uses its current frame location.</p>
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>Returns the secondary label of the collection view item. (read-only)</p>
-
-<p>Holds the secondary label of the item. <a href="SSCollectionViewItem.html">SSCollectionViewItem</a> adds an appropriate label when you
-create the cell in a given item style.</p>
+		<p>Holds the secondary label of the item. <a href="SSCollectionViewItem.html"><code>SSCollectionViewItem</code></a> adds an appropriate label when you create the cell in a
+given item style.</p>
 	</div>
 	
 	
@@ -372,18 +367,14 @@ create the cell in a given item style.</p>
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>A Boolean value that indicates whether the item is <a href="#//api/name/highlighted">highlighted</a>.</p>
+		<p>The highlighting affects the appearance of labels, image, and background. When the the <a href="#//api/name/highlighted">highlighted</a> state of an item is
+set to <code>YES</code>, labels are drawn in their <a href="#//api/name/highlighted">highlighted</a> text color. The default value is <code>NO</code>. If you set the <a href="#//api/name/highlighted">highlighted</a>
+state to <code>YES</code> through this property, the transition to the new state appearance is not animated. For animated
+highlighted-state transitions, see the <a href="#//api/name/setHighlighted:animated:"><code>setHighlighted:animated:</code></a> method.</p>
 
-<p>The highlighting affects the appearance of labels, image, and background. When the the <a href="#//api/name/highlighted">highlighted</a>
-state of an item is set to <code>YES</code>, labels are drawn in their <a href="#//api/name/highlighted">highlighted</a> text color. The
-default value is <code>NO</code>. If you set the <a href="#//api/name/highlighted">highlighted</a> state to <code>YES</code> through this
-property, the transition to the new state appearance is not animated. For animated highlighted-state
-transitions, see the <a href="#//api/name/setHighlighted:animated:">setHighlighted:animated:</a> method.</p>
-
-<p>Note that for highlighting to work properly, you must fetch the items&rsquo;s labels using the <a href="#//api/name/textLabel">textLabel</a>
-and <a href="#//api/name/detailTextLabel">detailTextLabel</a> properties and set each label&rsquo;s highlightedTextColor property; for images, get
-the item&rsquo;s image using the <a href="#//api/name/imageView">imageView</a> property and set the UIImageView object&rsquo;s highlightedImage
-property.</p>
+<p>Note that for highlighting to work properly, you must fetch the items&rsquo;s labels using the <a href="#//api/name/textLabel">textLabel</a> and
+<a href="#//api/name/detailTextLabel"><code>detailTextLabel</code></a> properties and set each label&rsquo;s <code>highlightedTextColor</code> property; for images, get the item&rsquo;s image
+using the <a href="#//api/name/imageView"><code>imageView</code></a> property and set the <code>UIImageView</code> object&rsquo;s <code>highlightedImage</code> property.</p>
 	</div>
 	
 	
@@ -429,10 +420,8 @@ property.</p>
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>Returns the image view of the collection view item. (read-only)</p>
-
-<p>Returns the image view (UIImageView object) of the collection view item, which initially has no
-image set. <a href="SSCollectionViewItem.html">SSCollectionViewItem</a> creates the image view object when you create the item.</p>
+		<p>Returns the image view (<code>UIImageView</code> object) of the collection view item, which initially has no image set.
+<a href="SSCollectionViewItem.html"><code>SSCollectionViewItem</code></a> creates the image view object when you create the item.</p>
 	</div>
 	
 	
@@ -469,14 +458,11 @@ image set. <a href="SSCollectionViewItem.html">SSCollectionViewItem</a> creates 
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>A string used to identify an item that is reusable. (read-only)</p>
-
-<p>The reuse identifier is associated with a <a href="SSCollectionViewItem.html">SSCollectionViewItem</a> object that the collection view&rsquo;s
-delegate creates with the intent to reuse it as the basis (for performance reasons) for multiple
-items of a collection view. It is assigned to the item object in initWithFrame:reuseIdentifier:
-and cannot be changed thereafter. A <a href="../Classes/SSCollectionView.html">SSCollectionView</a> object maintains a queue (or list) of the
-currently reusable items, each with its own reuse identifier, and makes them available to the
-delegate in the dequeueReusableCellWithIdentifier: method.</p>
+		<p>The reuse identifier is associated with a <a href="SSCollectionViewItem.html"><code>SSCollectionViewItem</code></a> object that the collection view&rsquo;s delegate creates
+with the intent to reuse it as the basis (for performance reasons) for multiple items of a collection view. It is
+assigned to the item object in <code>initWithFrame:reuseIdentifier:</code> and cannot be changed thereafter. A <a href="../Classes/SSCollectionView.html"><code>SSCollectionView</code></a>
+object maintains a queue (or list) of the currently reusable items, each with its own reuse identifier, and makes them
+available to the delegate in the <code>dequeueReusableCellWithIdentifier:</code> method.</p>
 	</div>
 	
 	
@@ -513,10 +499,7 @@ delegate in the dequeueReusableCellWithIdentifier: method.</p>
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>A Boolean value that indicates whether the cell is <a href="#//api/name/selected">selected</a>.</p>
-
-<p>The selection affects the appearance of labels, image, and background. The default value is
-<code>NO</code>.</p>
+		<p>The selection affects the appearance of labels, image, and background. The default value is <code>NO</code>.</p>
 	</div>
 	
 	
@@ -562,12 +545,10 @@ delegate in the dequeueReusableCellWithIdentifier: method.</p>
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>The view used as the background of the item when it is <a href="#//api/name/selected">selected</a>.</p>
-
-<p>The default is nil. <a href="SSCollectionViewItem.html">SSCollectionViewItem</a> adds the value of this property as a subview only when the
-cell is <a href="#//api/name/selected">selected</a>. It adds the <a href="#//api/name/selected">selected</a> background view as a subview directly above the background
-view (<a href="#//api/name/backgroundView">backgroundView</a>) if it is not nil, or behind all other views. Calling <a href="#//api/name/setSelected:animated:">setSelected:animated:</a>
-causes the <a href="#//api/name/selected">selected</a> background view to animate in and out with an alpha fade.</p>
+		<p>The default is <code>nil</code>. <a href="SSCollectionViewItem.html"><code>SSCollectionViewItem</code></a> adds the value of this property as a subview only when the cell is
+<a href="#//api/name/selected">selected</a>. It adds the <a href="#//api/name/selected">selected</a> background view as a subview directly above the background view (<a href="#//api/name/backgroundView"><code>backgroundView</code></a>) if it
+is not <code>nil</code>, or behind all other views. Calling <a href="#//api/name/setSelected:animated:"><code>setSelected:animated:</code></a> causes the <code>selectedBackground</code> view to
+animate in and out with an alpha fade.</p>
 	</div>
 	
 	
@@ -604,10 +585,8 @@ causes the <a href="#//api/name/selected">selected</a> background view to animat
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>Returns the label used for the main textual content of the table cell. (read-only)</p>
-
-<p>Holds the main label of the item. <a href="SSCollectionViewItem.html">SSCollectionViewItem</a> adds an appropriate label when you create
-the cell in a given item style.</p>
+		<p>Holds the main label of the item. <a href="SSCollectionViewItem.html"><code>SSCollectionViewItem</code></a> adds an appropriate label when you create the cell in a given
+item style.</p>
 	</div>
 	
 	
@@ -641,8 +620,7 @@ the cell in a given item style.</p>
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Initializes a collection view item with a style and a reuse identifier and returns it to
-the caller.</p>
+		<p>Initializes a collection view item with a style and a reuse identifier and returns it to the caller.</p>
 	</div>		
 	
 	
@@ -659,9 +637,9 @@ the caller.</p>
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>aReuseIdentifier</em></dt>
-			<dd><p>A string used to identify the item object if it is to be reused for drawing
-multiple items of a collection view. Pass nil if the cell object is not to be reused. You should
-use the same reuse identifier for all cells of the same form.</p></dd>
+			<dd><p>A string used to identify the item object if it is to be reused for drawing multiple items of a
+collection view. Pass <code>nil</code> if the cell object is not to be reused. You should use the same reuse identifier for all
+cells of the same form.</p></dd>
 		</dl>
 		
 	</div>
@@ -670,16 +648,10 @@ use the same reuse identifier for all cells of the same form.</p></dd>
 	
 	<div class="method-subsection return">
 		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>An initialized <a href="SSCollectionViewItem.html">SSCollectionViewItem</a> object or nil if the object could not be created.</p>
+		<p>An initialized <a href="SSCollectionViewItem.html"><code>SSCollectionViewItem</code></a> object or nil if the object could not be created.</p>
 	</div>
 	
 	
-	
-	<div class="method-subsection discussion-section">
-		<h4 class="method-subtitle">Discussion</h4>
-		<p>Initializes a collection view item with a style and a reuse identifier and returns it to
-the caller.</p>
-	</div>
 	
 	
 	
@@ -712,11 +684,6 @@ the caller.</p>
 	
 	
 	
-	
-	<div class="method-subsection discussion-section">
-		<h4 class="method-subtitle">Discussion</h4>
-		<p>Prepares a reusable item for reuse by the table view&rsquo;s delegate.</p>
-	</div>
 	
 	
 	
@@ -760,14 +727,12 @@ un<a href="#//api/name/highlighted">highlighted</a>. The default is <code>NO</co
 			<dd><p><code>YES</code> to animate the transition between <a href="#//api/name/highlighted">highlighted</a> states, <code>NO</code>
 to make the transition immediate.</p>
 
-<p>Highlights or unhighlights the item, animating the transition between regular and <a href="#//api/name/highlighted">highlighted</a> state if
-animated is <code>YES</code>. Highlighting affects the appearance of the items&rsquo;s labels, image, and
-background.</p>
+<p>Highlights or unhighlights the item, animating the transition between regular and <a href="#//api/name/highlighted">highlighted</a> state if animated is
+<code>YES</code>. Highlighting affects the appearance of the items&rsquo;s labels, image, and background.</p>
 
-<p>Note that for highlighting to work properly, you must fetch the item&rsquo;s label (or labels) using the
-<a href="#//api/name/textLabel">textLabel</a> (and <a href="#//api/name/detailTextLabel">detailTextLabel</a>) properties and set the label&rsquo;s highlightedTextColor property; for
-images, get the items&rsquo;s image using the <a href="#//api/name/imageView">imageView</a> property and set the UIImageView object&rsquo;s
-highlightedImage property.</p>
+<p>Note that for highlighting to work properly, you must fetch the item&rsquo;s label (or labels) using the <a href="#//api/name/textLabel"><code>textLabel</code></a>
+(and <a href="#//api/name/detailTextLabel"><code>detailTextLabel</code></a>) properties and set the label&rsquo;s <code>highlightedTextColor</code> property; for images, get the items&rsquo;s
+image using the <a href="#//api/name/imageView"><code>imageView</code></a> property and set the <code>UIImageView</code> object&rsquo;s <code>highlightedImage</code> property.</p>
 
 <p>A custom table item may override this method to make any transitory appearance changes.</p></dd>
 		</dl>
@@ -777,11 +742,6 @@ highlightedImage property.</p>
 	
 	
 	
-	
-	<div class="method-subsection discussion-section">
-		<h4 class="method-subtitle">Discussion</h4>
-		<p>Sets the <a href="#//api/name/highlighted">highlighted</a> state of the item, optionally animating the transition between states.</p>
-	</div>
 	
 	
 	
@@ -816,18 +776,15 @@ highlightedImage property.</p>
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>selected</em></dt>
-			<dd><p><code>YES</code> to set the item as <a href="#//api/name/selected">selected</a>, <code>NO</code> to set it as un<a href="#//api/name/selected">selected</a>.
-The default is <code>NO</code>.</p></dd>
+			<dd><p><code>YES</code> to set the item as <a href="#//api/name/selected">selected</a>, <code>NO</code> to set it as un<a href="#//api/name/selected">selected</a>. The default is <code>NO</code>.</p></dd>
 		</dl>
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>animated</em></dt>
-			<dd><p><code>YES</code> to animate the transition between <a href="#//api/name/selected">selected</a> states, <code>NO</code> to
-make the transition immediate.</p>
+			<dd><p><code>YES</code> to animate the transition between <a href="#//api/name/selected">selected</a> states, <code>NO</code> to make the transition immediate.</p>
 
-<p>The selection affects the appearance of labels, image, and background. When the the <a href="#//api/name/selected">selected</a> state
-of a cell to <code>YES</code>, it draws the background for <a href="#//api/name/selected">selected</a> items with its title in its
-highlightedTextColor.</p></dd>
+<p>The selection affects the appearance of labels, image, and background. When the the <a href="#//api/name/selected">selected</a> state of a cell to <code>YES</code>,
+it draws the background for <a href="#//api/name/selected">selected</a> items with its title in its <code>highlightedTextColor</code>.</p></dd>
 		</dl>
 		
 	</div>
@@ -835,11 +792,6 @@ highlightedTextColor.</p></dd>
 	
 	
 	
-	
-	<div class="method-subsection discussion-section">
-		<h4 class="method-subtitle">Discussion</h4>
-		<p>Sets the <a href="#//api/name/selected">selected</a> state of the item, optionally animating the transition between states.</p>
-	</div>
 	
 	
 	
@@ -868,7 +820,7 @@ highlightedTextColor.</p></dd>
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2011 Sam Soffes. All rights reserved. (Last updated: 2011-07-03)</span><br />
+						<p><span class="copyright">&copy; 2011 Sam Soffes. All rights reserved. (Last updated: 2011-07-08)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.4 (build 703)</a>.</span></p>
 						

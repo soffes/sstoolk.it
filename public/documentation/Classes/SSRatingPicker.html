@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>SSLoadingView Class Reference</title>
+		<title>SSRatingPicker Class Reference</title>
 		<meta http-equiv="Content-Type" content="application/xhtml+xml;charset=utf-8" />
 		<meta id="xcode-display" name="xcode-display" content="render"/>
 		<meta name="viewport" content="width=550" />
@@ -11,7 +11,7 @@
 	<body>
 		<header id="top_header">
 			<div id="title" role="banner">
-				<h1 class="hideInXcode">SSLoadingView Class Reference</h1>
+				<h1 class="hideInXcode">SSRatingPicker Class Reference</h1>
 			</div>
 			<ul id="headerButtons" role="toolbar">
 				<li id="toc_button">
@@ -34,17 +34,19 @@
 	
 	<option value="properties">Properties</option>
 	
-	<option value="//api/name/activityIndicatorView">&nbsp;&nbsp;&nbsp;&nbsp;activityIndicatorView</option>
+	<option value="//api/name/emptyStarImage">&nbsp;&nbsp;&nbsp;&nbsp;emptyStarImage</option>
 	
-	<option value="//api/name/font">&nbsp;&nbsp;&nbsp;&nbsp;font</option>
+	<option value="//api/name/filledStarImage">&nbsp;&nbsp;&nbsp;&nbsp;filledStarImage</option>
 	
-	<option value="//api/name/shadowColor">&nbsp;&nbsp;&nbsp;&nbsp;shadowColor</option>
+	<option value="//api/name/selectedNumberOfStars">&nbsp;&nbsp;&nbsp;&nbsp;selectedNumberOfStars</option>
 	
-	<option value="//api/name/shadowOffset">&nbsp;&nbsp;&nbsp;&nbsp;shadowOffset</option>
+	<option value="//api/name/starSize">&nbsp;&nbsp;&nbsp;&nbsp;starSize</option>
 	
-	<option value="//api/name/text">&nbsp;&nbsp;&nbsp;&nbsp;text</option>
+	<option value="//api/name/starSpacing">&nbsp;&nbsp;&nbsp;&nbsp;starSpacing</option>
 	
-	<option value="//api/name/textColor">&nbsp;&nbsp;&nbsp;&nbsp;textColor</option>
+	<option value="//api/name/textLabel">&nbsp;&nbsp;&nbsp;&nbsp;textLabel</option>
+	
+	<option value="//api/name/totalNumberOfStars">&nbsp;&nbsp;&nbsp;&nbsp;totalNumberOfStars</option>
 	
 	
 	
@@ -66,6 +68,10 @@
 
 <li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Accessing the Star Attributes">Accessing the Star Attributes</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Accessing the Text Label">Accessing the Text Label</a></span></li>
+	
 </ul></li>
 
 
@@ -74,17 +80,19 @@
 
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#properties">Properties</a></span><ul>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/activityIndicatorView">activityIndicatorView</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/emptyStarImage">emptyStarImage</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/font">font</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/filledStarImage">filledStarImage</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/shadowColor">shadowColor</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/selectedNumberOfStars">selectedNumberOfStars</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/shadowOffset">shadowOffset</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/starSize">starSize</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/text">text</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/starSpacing">starSpacing</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/textColor">textColor</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/textLabel">textLabel</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/totalNumberOfStars">totalNumberOfStars</a></span></li>
 	
 </ul></li>
 
@@ -97,7 +105,7 @@
 		</nav>
 		<article>
 			<div id="contents" class="isShowingTOC" role="main">
-				<a title="SSLoadingView Class Reference" name="top"></a>
+				<a title="SSRatingPicker Class Reference" name="top"></a>
 				<div class="main-navigation navigation-top">
 					<ul>
 	<li><a href="../index.html">Index</a></li>
@@ -106,7 +114,7 @@
 				</div>
 				<div id="header">
 					<div class="section-header">
-						<h1 class="title title-header">SSLoadingView Class Reference</h1>
+						<h1 class="title title-header">SSRatingPicker Class Reference</h1>
 					</div>		
 				</div>
 				<div id="container">	
@@ -114,10 +122,10 @@
 					<div class="section section-specification"><table cellspacing="0"><tbody>
 						<tr>
 	<td class="specification-title">Inherits from</td>
-	<td class="specification-value">UIView</td>
+	<td class="specification-value">UIControl</td>
 </tr><tr>
 	<td class="specification-title">Declared in</td>
-	<td class="specification-value">SSLoadingView.h</td>
+	<td class="specification-value">SSRatingPicker.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -127,10 +135,13 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>An easy view to show loading similar to the loading screens in the iTunes or App Store applications. The view is
-intended to cover another view while it is loading and the removed once loading is complete.</p>
+						<p>A simple control for picking a rating.</p>
 
-<p>This view will automatically center the <a href="#//api/name/text">text</a> and the activity indicator.</p>
+<p>The default configuration matches the rating picker in the App Store app (to the pixel). The <a href="#//api/name/textLabel"><code>textLabel</code></a> is
+automatically faded in if there is no rating and faded out when there is a rating.</p>
+
+<p>To receive changes when the <a href="#//api/name/selectedNumberOfStars"><code>selectedNumberOfStars</code></a> changes, add a target for the <code>UIControlEventValueChanged</code> control
+event (similar to <code>UISegmentedControl</code>).</p>
 					</div>
 					
 					
@@ -142,49 +153,65 @@ intended to cover another view while it is loading and the removed once loading 
 						<h2 class="subtitle subtitle-tasks">Tasks</h2>
 						
 						
-						
-						
+						<a title="Accessing the Star Attributes" name="task_Accessing the Star Attributes"></a>
+						<h3 class="subsubtitle task-title">Accessing the Star Attributes</h3>
 
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
-		<code><a href="#//api/name/activityIndicatorView">&nbsp;&nbsp;activityIndicatorView</a></code>
-		<span class="tooltip"><p>A view that indicates loading activity to the user. (read-only)</p></span>
+		<code><a href="#//api/name/selectedNumberOfStars">&nbsp;&nbsp;selectedNumberOfStars</a></code>
+		<span class="tooltip"><p>The float value of the selected number of stars. Setting this value will send <code>UIControlEventValueChanged</code> to the
+pickers targets.</p></span>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/text">&nbsp;&nbsp;text</a></code>
-		<span class="tooltip"><p>The <a href="#//api/name/text">text</a> that is displayed to the user.</p></span>
+		<code><a href="#//api/name/totalNumberOfStars">&nbsp;&nbsp;totalNumberOfStars</a></code>
+		<span class="tooltip"><p>The unsigned integer value of the total number of stars.</p></span>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/font">&nbsp;&nbsp;font</a></code>
-		<span class="tooltip"><p>The <a href="#//api/name/font">font</a> of the <a href="#//api/name/text"><code>text</code></a>.</p></span>
+		<code><a href="#//api/name/emptyStarImage">&nbsp;&nbsp;emptyStarImage</a></code>
+		<span class="tooltip"><p>The image draw for a star that is empty.</p></span>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/textColor">&nbsp;&nbsp;textColor</a></code>
-		<span class="tooltip"><p>The color of the <a href="#//api/name/text">text</a>.</p></span>
+		<code><a href="#//api/name/filledStarImage">&nbsp;&nbsp;filledStarImage</a></code>
+		<span class="tooltip"><p>The image draw for a star that is filled.</p></span>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/shadowColor">&nbsp;&nbsp;shadowColor</a></code>
-		<span class="tooltip"><p>The color of the <a href="#//api/name/text">text</a> shadow.</p></span>
+		<code><a href="#//api/name/starSize">&nbsp;&nbsp;starSize</a></code>
+		<span class="tooltip"><p>The spacing of stars.</p></span>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/shadowOffset">&nbsp;&nbsp;shadowOffset</a></code>
-		<span class="tooltip"><p>The shadow offset (measured in points) for the <a href="#//api/name/text"><code>text</code></a>.</p></span>
+		<code><a href="#//api/name/starSpacing">&nbsp;&nbsp;starSpacing</a></code>
+		<span class="tooltip"><p>The spacing of stars.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li>
+						</ul>
+						
+						
+						<a title="Accessing the Text Label" name="task_Accessing the Text Label"></a>
+						<h3 class="subsubtitle task-title">Accessing the Text Label</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/textLabel">&nbsp;&nbsp;textLabel</a></code>
+		<span class="tooltip"><p>The text label drawn under the stars when there is no rating selected. (read-only)</p></span>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
@@ -202,17 +229,17 @@ intended to cover another view while it is loading and the removed once loading 
 						<h2 class="subtitle subtitle-methods">Properties</h2>
 						
 						<div class="section-method">
-	<a name="//api/name/activityIndicatorView" title="activityIndicatorView"></a>
-	<h3 class="subsubtitle method-title">activityIndicatorView</h3>
+	<a name="//api/name/emptyStarImage" title="emptyStarImage"></a>
+	<h3 class="subsubtitle method-title">emptyStarImage</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>A view that indicates loading activity to the user. (read-only)</p>
+		<p>The image draw for a star that is empty.</p>
 	</div>		
 	
 	
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, retain, readonly) UIActivityIndicatorView *activityIndicatorView</code></div>
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, retain) UIImage *emptyStarImage</code></div>
 	
 	
 	
@@ -227,24 +254,24 @@ intended to cover another view while it is loading and the removed once loading 
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">SSLoadingView.h</code><br />
+		<code class="declared-in-ref">SSRatingPicker.h</code><br />
 	</div>				
 	
 	
 </div>
 						
 						<div class="section-method">
-	<a name="//api/name/font" title="font"></a>
-	<h3 class="subsubtitle method-title">font</h3>
+	<a name="//api/name/filledStarImage" title="filledStarImage"></a>
+	<h3 class="subsubtitle method-title">filledStarImage</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>The <a href="#//api/name/font">font</a> of the <a href="#//api/name/text"><code>text</code></a>.</p>
+		<p>The image draw for a star that is filled.</p>
 	</div>		
 	
 	
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, retain) UIFont *font</code></div>
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, retain) UIImage *filledStarImage</code></div>
 	
 	
 	
@@ -259,24 +286,25 @@ intended to cover another view while it is loading and the removed once loading 
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">SSLoadingView.h</code><br />
+		<code class="declared-in-ref">SSRatingPicker.h</code><br />
 	</div>				
 	
 	
 </div>
 						
 						<div class="section-method">
-	<a name="//api/name/shadowColor" title="shadowColor"></a>
-	<h3 class="subsubtitle method-title">shadowColor</h3>
+	<a name="//api/name/selectedNumberOfStars" title="selectedNumberOfStars"></a>
+	<h3 class="subsubtitle method-title">selectedNumberOfStars</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>The color of the <a href="#//api/name/text">text</a> shadow.</p>
+		<p>The float value of the selected number of stars. Setting this value will send <code>UIControlEventValueChanged</code> to the
+pickers targets.</p>
 	</div>		
 	
 	
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, retain) UIColor *shadowColor</code></div>
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) CGFloat selectedNumberOfStars</code></div>
 	
 	
 	
@@ -285,7 +313,7 @@ intended to cover another view while it is loading and the removed once loading 
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>Set to <code>nil</code> to disable drawing the shadow. The default value is <code>[UIColor whiteColor]</code>.</p>
+		<p>The default is <code>0.0</code>.</p>
 	</div>
 	
 	
@@ -296,24 +324,24 @@ intended to cover another view while it is loading and the removed once loading 
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">SSLoadingView.h</code><br />
+		<code class="declared-in-ref">SSRatingPicker.h</code><br />
 	</div>				
 	
 	
 </div>
 						
 						<div class="section-method">
-	<a name="//api/name/shadowOffset" title="shadowOffset"></a>
-	<h3 class="subsubtitle method-title">shadowOffset</h3>
+	<a name="//api/name/starSize" title="starSize"></a>
+	<h3 class="subsubtitle method-title">starSize</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>The shadow offset (measured in points) for the <a href="#//api/name/text"><code>text</code></a>.</p>
+		<p>The spacing of stars.</p>
 	</div>		
 	
 	
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) CGSize shadowOffset</code></div>
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) CGSize starSize</code></div>
 	
 	
 	
@@ -322,9 +350,7 @@ intended to cover another view while it is loading and the removed once loading 
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>The <a href="#//api/name/shadowColor"><code>shadowColor</code></a> must be non-nil for this property to have any effect. The default offset size is (0, 1), which
-indicates a shadow one point below the <a href="#//api/name/text">text</a>. Text shadows are drawn with the specified offset and color and no
-blurring.</p>
+		<p>The default is <code>{21.0, 36.0}</code>.</p>
 	</div>
 	
 	
@@ -335,24 +361,24 @@ blurring.</p>
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">SSLoadingView.h</code><br />
+		<code class="declared-in-ref">SSRatingPicker.h</code><br />
 	</div>				
 	
 	
 </div>
 						
 						<div class="section-method">
-	<a name="//api/name/text" title="text"></a>
-	<h3 class="subsubtitle method-title">text</h3>
+	<a name="//api/name/starSpacing" title="starSpacing"></a>
+	<h3 class="subsubtitle method-title">starSpacing</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>The <a href="#//api/name/text">text</a> that is displayed to the user.</p>
+		<p>The spacing of stars.</p>
 	</div>		
 	
 	
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, copy) NSString *text</code></div>
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) CGFloat starSpacing</code></div>
 	
 	
 	
@@ -361,7 +387,7 @@ blurring.</p>
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>The default is &ldquo;Loading&hellip;&rdquo;</p>
+		<p>The default is <code>19.0</code>.</p>
 	</div>
 	
 	
@@ -372,24 +398,56 @@ blurring.</p>
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">SSLoadingView.h</code><br />
+		<code class="declared-in-ref">SSRatingPicker.h</code><br />
 	</div>				
 	
 	
 </div>
 						
 						<div class="section-method">
-	<a name="//api/name/textColor" title="textColor"></a>
-	<h3 class="subsubtitle method-title">textColor</h3>
+	<a name="//api/name/textLabel" title="textLabel"></a>
+	<h3 class="subsubtitle method-title">textLabel</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>The color of the <a href="#//api/name/text">text</a>.</p>
+		<p>The text label drawn under the stars when there is no rating selected. (read-only)</p>
 	</div>		
 	
 	
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, retain) UIColor *textColor</code></div>
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, retain, readonly) UILabel *textLabel</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SSRatingPicker.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/totalNumberOfStars" title="totalNumberOfStars"></a>
+	<h3 class="subsubtitle method-title">totalNumberOfStars</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The unsigned integer value of the total number of stars.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) NSUInteger totalNumberOfStars</code></div>
 	
 	
 	
@@ -398,7 +456,7 @@ blurring.</p>
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>The default value is <code>[UIColor darkGrayColor]</code>.</p>
+		<p>The default is <code>5</code>.</p>
 	</div>
 	
 	
@@ -409,7 +467,7 @@ blurring.</p>
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">SSLoadingView.h</code><br />
+		<code class="declared-in-ref">SSRatingPicker.h</code><br />
 	</div>				
 	
 	

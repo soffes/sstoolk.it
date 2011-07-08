@@ -1,0 +1,739 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>SSWebViewDelegate Protocol Reference</title>
+		<meta http-equiv="Content-Type" content="application/xhtml+xml;charset=utf-8" />
+		<meta id="xcode-display" name="xcode-display" content="render"/>
+		<meta name="viewport" content="width=550" />
+		<link rel="stylesheet" type="text/css" href="../css/styles.css" />
+		<meta name="generator" content="appledoc 2.0.4 (build 703)" />
+	</head>
+	<body>
+		<header id="top_header">
+			<div id="title" role="banner">
+				<h1 class="hideInXcode">SSWebViewDelegate Protocol Reference</h1>
+			</div>
+			<ul id="headerButtons" role="toolbar">
+				<li id="toc_button">
+					<button aria-label="Show Table of Contents" role="checkbox" class="open" id="table_of_contents"><span class="disclosure"></span>Table of Contents</button>
+				</li>
+				<li id="jumpto_button" role="navigation">
+					<select id="jumpTo">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+	
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<option value="instance_methods">Instance Methods</option>
+	
+	<option value="//api/name/webView:didFailLoadWithError:">&nbsp;&nbsp;&nbsp;&nbsp;- webView:didFailLoadWithError:</option>
+	
+	<option value="//api/name/webView:shouldStartLoadWithRequest:navigationType:">&nbsp;&nbsp;&nbsp;&nbsp;- webView:shouldStartLoadWithRequest:navigationType:</option>
+	
+	<option value="//api/name/webViewDidFinishLoad:">&nbsp;&nbsp;&nbsp;&nbsp;- webViewDidFinishLoad:</option>
+	
+	<option value="//api/name/webViewDidFinishLoadingPage:">&nbsp;&nbsp;&nbsp;&nbsp;- webViewDidFinishLoadingPage:</option>
+	
+	<option value="//api/name/webViewDidLoadDOM:">&nbsp;&nbsp;&nbsp;&nbsp;- webViewDidLoadDOM:</option>
+	
+	<option value="//api/name/webViewDidStartLoad:">&nbsp;&nbsp;&nbsp;&nbsp;- webViewDidStartLoad:</option>
+	
+	<option value="//api/name/webViewDidStartLoadingPage:">&nbsp;&nbsp;&nbsp;&nbsp;- webViewDidStartLoadingPage:</option>
+	
+	
+	
+</select>
+				</li>
+			</ul>
+		</header>
+		<nav id="tocContainer" class="isShowingTOC">
+			<ul id="toc" role="tree">
+				
+<li role="treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#overview">Overview</a></span></li>
+
+
+
+
+<li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Loading Pages">Loading Pages</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Loading Content">Loading Content</a></span></li>
+	
+</ul></li>
+
+
+
+
+
+
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/webView:didFailLoadWithError:">webView:didFailLoadWithError:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/webView:shouldStartLoadWithRequest:navigationType:">webView:shouldStartLoadWithRequest:navigationType:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/webViewDidFinishLoad:">webViewDidFinishLoad:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/webViewDidFinishLoadingPage:">webViewDidFinishLoadingPage:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/webViewDidLoadDOM:">webViewDidLoadDOM:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/webViewDidStartLoad:">webViewDidStartLoad:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/webViewDidStartLoadingPage:">webViewDidStartLoadingPage:</a></span></li>
+	
+</ul></li>
+
+
+			</ul>
+		</nav>
+		<article>
+			<div id="contents" class="isShowingTOC" role="main">
+				<a title="SSWebViewDelegate Protocol Reference" name="top"></a>
+				<div class="main-navigation navigation-top">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="header">
+					<div class="section-header">
+						<h1 class="title title-header">SSWebViewDelegate Protocol Reference</h1>
+					</div>		
+				</div>
+				<div id="container">	
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<td class="specification-title">Conforms to</td>
+	<td class="specification-value">NSObject</td>
+</tr><tr>
+	<td class="specification-title">Declared in</td>
+	<td class="specification-value">SSWebView.h</td>
+</tr>
+						</tbody></table></div>
+					
+					
+					
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>The <a href="SSWebViewDelegate.html"><code>SSWebViewDelegate</code></a> protocol defines methods that a delegate of a <a href="../Classes/SSWebView.html"><code>SSWebView</code></a> object can optionally implement to
+intervene when web content is loaded.</p><div class="warning"><p><strong>Important:</strong> Before releasing an instance of <a href="../Classes/SSWebView.html"><code>SSWebView</code></a> for which you have set a delegate, you must first
+set the <a href="../Classes/SSWebView.html"><code>SSWebView</code></a> delegate property to <code>nil</code> before disposing of the <a href="../Classes/SSWebView.html"><code>SSWebView</code></a> instance. This can be done, for
+example, in the <code>dealloc</code> method where you dispose of the <a href="../Classes/SSWebView.html"><code>SSWebView</code></a>.</p></div>
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						<h2 class="subtitle subtitle-tasks">Tasks</h2>
+						
+						
+						<a title="Loading Pages" name="task_Loading Pages"></a>
+						<h3 class="subsubtitle task-title">Loading Pages</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/webViewDidStartLoadingPage:">&ndash;&nbsp;webViewDidStartLoadingPage:</a></code>
+		<span class="tooltip"><p>Sent before a web view begins loading a page.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/webViewDidLoadDOM:">&ndash;&nbsp;webViewDidLoadDOM:</a></code>
+		<span class="tooltip"><p>Sent after a web view finishes loading its DOM.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/webViewDidFinishLoadingPage:">&ndash;&nbsp;webViewDidFinishLoadingPage:</a></code>
+		<span class="tooltip"><p>Sent after a web view finishes loading a page.</p></span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="Loading Content" name="task_Loading Content"></a>
+						<h3 class="subsubtitle task-title">Loading Content</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/webView:didFailLoadWithError:">&ndash;&nbsp;webView:didFailLoadWithError:</a></code>
+		<span class="tooltip"><p>Sent if a web view failed to load a frame.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/webView:shouldStartLoadWithRequest:navigationType:">&ndash;&nbsp;webView:shouldStartLoadWithRequest:navigationType:</a></code>
+		<span class="tooltip"><p>Sent before a web view begins loading a frame.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/webViewDidFinishLoad:">&ndash;&nbsp;webViewDidFinishLoad:</a></code>
+		<span class="tooltip"><p>Sent after a web view finishes loading a frame.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/webViewDidStartLoad:">&ndash;&nbsp;webViewDidStartLoad:</a></code>
+		<span class="tooltip"><p>Sent after a web view starts loading a frame.</p></span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+					</div>
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Instance Methods" name="instance_methods"></a>
+						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/webView:didFailLoadWithError:" title="webView:didFailLoadWithError:"></a>
+	<h3 class="subsubtitle method-title">webView:didFailLoadWithError:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Sent if a web view failed to load a frame.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)webView:(SSWebView *)<em>aWebView</em> didFailLoadWithError:(NSError *)<em>error</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>aWebView</em></dt>
+			<dd><p>The web view that failed to load a frame.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>error</em></dt>
+			<dd><p>The error that occurred during loading.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="#//api/name/webView:shouldStartLoadWithRequest:navigationType:">&ndash; webView:shouldStartLoadWithRequest:navigationType:</a></p></code></li>
+			
+			<li><code><p><a href="#//api/name/webViewDidStartLoad:">&ndash; webViewDidStartLoad:</a></p></code></li>
+			
+			<li><code><p><a href="#//api/name/webViewDidFinishLoad:">&ndash; webViewDidFinishLoad:</a></p></code></li>
+			
+		</ul>
+	</div>
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SSWebView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/webView:shouldStartLoadWithRequest:navigationType:" title="webView:shouldStartLoadWithRequest:navigationType:"></a>
+	<h3 class="subsubtitle method-title">webView:shouldStartLoadWithRequest:navigationType:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Sent before a web view begins loading a frame.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (BOOL)webView:(SSWebView *)<em>aWebView</em> shouldStartLoadWithRequest:(NSURLRequest *)<em>aRequest</em> navigationType:(UIWebViewNavigationType)<em>navigationType</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>aWebView</em></dt>
+			<dd><p>The web view that is about to load a new frame.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>aRequest</em></dt>
+			<dd><p>The content location.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>navigationType</em></dt>
+			<dd><p>The type of user action that started the load request.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="#//api/name/webViewDidStartLoad:">&ndash; webViewDidStartLoad:</a></p></code></li>
+			
+			<li><code><p><a href="#//api/name/webViewDidFinishLoad:">&ndash; webViewDidFinishLoad:</a></p></code></li>
+			
+			<li><code><p><a href="#//api/name/webView:didFailLoadWithError:">&ndash; webView:didFailLoadWithError:</a></p></code></li>
+			
+		</ul>
+	</div>
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SSWebView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/webViewDidFinishLoad:" title="webViewDidFinishLoad:"></a>
+	<h3 class="subsubtitle method-title">webViewDidFinishLoad:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Sent after a web view finishes loading a frame.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)webViewDidFinishLoad:(SSWebView *)<em>aWebView</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>aWebView</em></dt>
+			<dd><p>The web view has finished loading.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="#//api/name/webView:shouldStartLoadWithRequest:navigationType:">&ndash; webView:shouldStartLoadWithRequest:navigationType:</a></p></code></li>
+			
+			<li><code><p><a href="#//api/name/webViewDidStartLoad:">&ndash; webViewDidStartLoad:</a></p></code></li>
+			
+			<li><code><p><a href="#//api/name/webView:didFailLoadWithError:">&ndash; webView:didFailLoadWithError:</a></p></code></li>
+			
+		</ul>
+	</div>
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SSWebView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/webViewDidFinishLoadingPage:" title="webViewDidFinishLoadingPage:"></a>
+	<h3 class="subsubtitle method-title">webViewDidFinishLoadingPage:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Sent after a web view finishes loading a page.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)webViewDidFinishLoadingPage:(SSWebView *)<em>aWebView</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>aWebView</em></dt>
+			<dd><p>The web view that finished loading its page.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="#//api/name/webViewDidStartLoadingPage:">&ndash; webViewDidStartLoadingPage:</a></p></code></li>
+			
+			<li><code><p><a href="#//api/name/webViewDidLoadDOM:">&ndash; webViewDidLoadDOM:</a></p></code></li>
+			
+			<li><code><p><a href="#//api/name/webViewDidFinishLoad:">&ndash; webViewDidFinishLoad:</a></p></code></li>
+			
+		</ul>
+	</div>
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SSWebView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/webViewDidLoadDOM:" title="webViewDidLoadDOM:"></a>
+	<h3 class="subsubtitle method-title">webViewDidLoadDOM:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Sent after a web view finishes loading its DOM.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)webViewDidLoadDOM:(SSWebView *)<em>aWebView</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>aWebView</em></dt>
+			<dd><p>The web view that finished loading its DOM.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Note: This isn&rsquo;t 100% reliable.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="#//api/name/webViewDidStartLoadingPage:">&ndash; webViewDidStartLoadingPage:</a></p></code></li>
+			
+			<li><code><p><a href="#//api/name/webViewDidFinishLoadingPage:">&ndash; webViewDidFinishLoadingPage:</a></p></code></li>
+			
+		</ul>
+	</div>
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SSWebView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/webViewDidStartLoad:" title="webViewDidStartLoad:"></a>
+	<h3 class="subsubtitle method-title">webViewDidStartLoad:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Sent after a web view starts loading a frame.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)webViewDidStartLoad:(SSWebView *)<em>aWebView</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>aWebView</em></dt>
+			<dd><p>The web view that has begun loading a new frame.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="#//api/name/webView:shouldStartLoadWithRequest:navigationType:">&ndash; webView:shouldStartLoadWithRequest:navigationType:</a></p></code></li>
+			
+			<li><code><p><a href="#//api/name/webViewDidFinishLoad:">&ndash; webViewDidFinishLoad:</a></p></code></li>
+			
+			<li><code><p><a href="#//api/name/webView:didFailLoadWithError:">&ndash; webView:didFailLoadWithError:</a></p></code></li>
+			
+		</ul>
+	</div>
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SSWebView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/webViewDidStartLoadingPage:" title="webViewDidStartLoadingPage:"></a>
+	<h3 class="subsubtitle method-title">webViewDidStartLoadingPage:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Sent before a web view begins loading a page.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)webViewDidStartLoadingPage:(SSWebView *)<em>aWebView</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>aWebView</em></dt>
+			<dd><p>The web view that started loading its page.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="#//api/name/webViewDidFinishLoadingPage:">&ndash; webViewDidFinishLoadingPage:</a></p></code></li>
+			
+			<li><code><p><a href="#//api/name/webViewDidLoadDOM:">&ndash; webViewDidLoadDOM:</a></p></code></li>
+			
+			<li><code><p><a href="#//api/name/webViewDidStartLoad:">&ndash; webViewDidStartLoad:</a></p></code></li>
+			
+		</ul>
+	</div>
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SSWebView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+				</div>
+				<div class="main-navigation navigation-bottom">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="footer">
+					<hr />
+					<div class="footer-copyright">
+						<p><span class="copyright">&copy; 2011 Sam Soffes. All rights reserved. (Last updated: 2011-07-08)</span><br />
+						
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.4 (build 703)</a>.</span></p>
+						
+					</div>
+				</div>
+			</div>
+		</article>
+		<script type="text/javascript">
+			function jumpToChange()
+			{
+				window.location.hash = this.options[this.selectedIndex].value;
+			}
+			
+			function toggleTOC()
+			{
+				var contents = document.getElementById('contents');
+				var tocContainer = document.getElementById('tocContainer');
+				
+				if (this.getAttribute('class') == 'open')
+				{
+					this.setAttribute('class', '');
+					contents.setAttribute('class', '');
+					tocContainer.setAttribute('class', '');
+					
+					window.name = "hideTOC";
+				}
+				else
+				{
+					this.setAttribute('class', 'open');
+					contents.setAttribute('class', 'isShowingTOC');
+					tocContainer.setAttribute('class', 'isShowingTOC');
+					
+					window.name = "";
+				}
+				return false;
+			}
+			
+			function toggleTOCEntryChildren(e)
+			{
+				e.stopPropagation();
+				var currentClass = this.getAttribute('class');
+				if (currentClass == 'children') {
+					this.setAttribute('class', 'children open');
+				}
+				else if (currentClass == 'children open') {
+					this.setAttribute('class', 'children');
+				}
+				return false;
+			}
+			
+			function tocEntryClick(e)
+			{
+				e.stopPropagation();
+				return true;
+			}
+			
+			function init()
+			{
+				var selectElement = document.getElementById('jumpTo');
+				selectElement.addEventListener('change', jumpToChange, false);
+				
+				var tocButton = document.getElementById('table_of_contents');
+				tocButton.addEventListener('click', toggleTOC, false);
+				
+				var taskTreeItem = document.getElementById('task_treeitem');
+				if (taskTreeItem.getElementsByTagName('li').length > 0)
+				{
+					taskTreeItem.setAttribute('class', 'children');
+					taskTreeItem.firstChild.setAttribute('class', 'disclosure');
+				}
+				
+				var tocList = document.getElementById('toc');
+				
+				var tocEntries = tocList.getElementsByTagName('li');
+				for (var i = 0; i < tocEntries.length; i++) {
+					tocEntries[i].addEventListener('click', toggleTOCEntryChildren, false);
+				}
+				
+				var tocLinks = tocList.getElementsByTagName('a');
+				for (var i = 0; i < tocLinks.length; i++) {
+					tocLinks[i].addEventListener('click', tocEntryClick, false);
+				}
+				
+				if (window.name == "hideTOC") {
+					toggleTOC.call(tocButton);
+				}
+			}
+			
+			window.onload = init;
+		</script>
+	</body>
+</html>

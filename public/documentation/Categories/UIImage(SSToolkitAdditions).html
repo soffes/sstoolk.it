@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>SSIndicatorLabel Class Reference</title>
+		<title>UIImage(SSToolkitAdditions) Category Reference</title>
 		<meta http-equiv="Content-Type" content="application/xhtml+xml;charset=utf-8" />
 		<meta id="xcode-display" name="xcode-display" content="render"/>
 		<meta name="viewport" content="width=550" />
@@ -11,7 +11,7 @@
 	<body>
 		<header id="top_header">
 			<div id="title" role="banner">
-				<h1 class="hideInXcode">SSIndicatorLabel Class Reference</h1>
+				<h1 class="hideInXcode">UIImage(SSToolkitAdditions) Category Reference</h1>
 			</div>
 			<ul id="headerButtons" role="toolbar">
 				<li id="toc_button">
@@ -34,22 +34,18 @@
 	
 	<option value="properties">Properties</option>
 	
-	<option value="//api/name/activityIndicatorView">&nbsp;&nbsp;&nbsp;&nbsp;activityIndicatorView</option>
+	<option value="//api/name/bottomCapHeight">&nbsp;&nbsp;&nbsp;&nbsp;bottomCapHeight</option>
 	
-	<option value="//api/name/loading">&nbsp;&nbsp;&nbsp;&nbsp;loading</option>
-	
-	<option value="//api/name/textLabel">&nbsp;&nbsp;&nbsp;&nbsp;textLabel</option>
+	<option value="//api/name/rightCapWidth">&nbsp;&nbsp;&nbsp;&nbsp;rightCapWidth</option>
 	
 	
 	
 	
+	<option value="class_methods">Class Methods</option>
+	
+	<option value="//api/name/imageNamed:bundleName:">&nbsp;&nbsp;&nbsp;&nbsp;+ imageNamed:bundleName:</option>
 	
 	
-	<option value="instance_methods">Instance Methods</option>
-	
-	<option value="//api/name/completeWithText:">&nbsp;&nbsp;&nbsp;&nbsp;- completeWithText:</option>
-	
-	<option value="//api/name/startWithText:">&nbsp;&nbsp;&nbsp;&nbsp;- startWithText:</option>
 	
 	
 	
@@ -67,6 +63,10 @@
 
 <li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Initializing">Initializing</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Stretching">Stretching</a></span></li>
+	
 </ul></li>
 
 
@@ -75,32 +75,28 @@
 
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#properties">Properties</a></span><ul>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/activityIndicatorView">activityIndicatorView</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/bottomCapHeight">bottomCapHeight</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/loading">loading</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/textLabel">textLabel</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/rightCapWidth">rightCapWidth</a></span></li>
 	
 </ul></li>
 
 
 
-
-
-<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#class_methods">Class Methods</a></span><ul>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/completeWithText:">completeWithText:</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/startWithText:">startWithText:</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/imageNamed:bundleName:">imageNamed:bundleName:</a></span></li>
 	
 </ul></li>
+
+
 
 
 			</ul>
 		</nav>
 		<article>
 			<div id="contents" class="isShowingTOC" role="main">
-				<a title="SSIndicatorLabel Class Reference" name="top"></a>
+				<a title="UIImage(SSToolkitAdditions) Category Reference" name="top"></a>
 				<div class="main-navigation navigation-top">
 					<ul>
 	<li><a href="../index.html">Index</a></li>
@@ -109,18 +105,15 @@
 				</div>
 				<div id="header">
 					<div class="section-header">
-						<h1 class="title title-header">SSIndicatorLabel Class Reference</h1>
+						<h1 class="title title-header">UIImage(SSToolkitAdditions) Category Reference</h1>
 					</div>		
 				</div>
 				<div id="container">	
 					
 					<div class="section section-specification"><table cellspacing="0"><tbody>
 						<tr>
-	<td class="specification-title">Inherits from</td>
-	<td class="specification-value">UIView</td>
-</tr><tr>
 	<td class="specification-title">Declared in</td>
-	<td class="specification-value">SSIndicatorLabel.h</td>
+	<td class="specification-value">UIImage+SSToolkitAdditions.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -130,10 +123,7 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>This class is a nice little view that makes showing an activity indicator next to a label when <a href="#//api/name/loading">loading</a> something easy.</p>
-
-<p>The indicator will slide in from the left when <a href="#//api/name/loading">loading</a> and then back out when it is complete. This is great for a view
-that shows some sort of status that can refresh.</p>
+						<p>Provides extensions to <code>UIImage</code> for various common tasks.</p>
 					</div>
 					
 					
@@ -145,44 +135,38 @@ that shows some sort of status that can refresh.</p>
 						<h2 class="subtitle subtitle-tasks">Tasks</h2>
 						
 						
-						
-						
+						<a title="Initializing" name="task_Initializing"></a>
+						<h3 class="subsubtitle task-title">Initializing</h3>
 
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
-		<code><a href="#//api/name/textLabel">&nbsp;&nbsp;textLabel</a></code>
-		<span class="tooltip"><p>Returns the label used for the main textual content of the view. (read-only)</p></span>
+		<code><a href="#//api/name/imageNamed:bundleName:">+&nbsp;imageNamed:bundleName:</a></code>
+		<span class="tooltip"><p>Returns the image object associated with the specified filename.</p></span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="Stretching" name="task_Stretching"></a>
+						<h3 class="subsubtitle task-title">Stretching</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/rightCapWidth">&nbsp;&nbsp;rightCapWidth</a></code>
+		<span class="tooltip"><p>The right horizontal end-cap size. (read-only)</p></span>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/activityIndicatorView">&nbsp;&nbsp;activityIndicatorView</a></code>
-		<span class="tooltip"><p>A view that indicates <a href="#//api/name/loading">loading</a> activity to the user. (read-only)</p></span>
+		<code><a href="#//api/name/bottomCapHeight">&nbsp;&nbsp;bottomCapHeight</a></code>
+		<span class="tooltip"><p>The bottom vertical end-cap size. (read-only)</p></span>
 	</span>
 	<span class="task-item-suffix">property</span>
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/loading">&nbsp;&nbsp;loading</a></code>
-		<span class="tooltip"><p>A Boolean value that determines whether the view is <a href="#//api/name/loading">loading</a>.</p></span>
-	</span>
-	<span class="task-item-suffix">property</span>
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/startWithText:">&ndash;&nbsp;startWithText:</a></code>
-		<span class="tooltip"><p>Starts <a href="#//api/name/loading">loading</a> and updates the text of the text label.</p></span>
-	</span>
-	
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/completeWithText:">&ndash;&nbsp;completeWithText:</a></code>
-		<span class="tooltip"><p>Completes <a href="#//api/name/loading">loading</a> and updates the text of the text label.</p></span>
-	</span>
-	
 	
 </li>
 						</ul>
@@ -198,49 +182,17 @@ that shows some sort of status that can refresh.</p>
 						<h2 class="subtitle subtitle-methods">Properties</h2>
 						
 						<div class="section-method">
-	<a name="//api/name/activityIndicatorView" title="activityIndicatorView"></a>
-	<h3 class="subsubtitle method-title">activityIndicatorView</h3>
+	<a name="//api/name/bottomCapHeight" title="bottomCapHeight"></a>
+	<h3 class="subsubtitle method-title">bottomCapHeight</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>A view that indicates <a href="#//api/name/loading">loading</a> activity to the user. (read-only)</p>
+		<p>The bottom vertical end-cap size. (read-only)</p>
 	</div>		
 	
 	
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, retain, readonly) UIActivityIndicatorView *activityIndicatorView</code></div>
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">SSIndicatorLabel.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-						<div class="section-method">
-	<a name="//api/name/loading" title="loading"></a>
-	<h3 class="subsubtitle method-title">loading</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>A Boolean value that determines whether the view is <a href="#//api/name/loading">loading</a>.</p>
-	</div>		
-	
-	
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign, getter=isLoading) BOOL loading</code></div>
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign, readonly) NSInteger bottomCapHeight</code></div>
 	
 	
 	
@@ -249,7 +201,16 @@ that shows some sort of status that can refresh.</p>
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>The default value is <code>NO</code>.</p>
+		<p>End caps specify the portion of an image that should not be resized when an image is stretched. This technique is used
+to implement buttons and other resizable image-based interface elements. When a button with end caps is resized, the
+resizing occurs only in the middle of the button, in the region between the end caps. The end caps themselves keep
+their original size and appearance.</p>
+
+<p>This property specifies the size of the top end cap. The middle (stretchable) portion is assumed to be <code>1</code> pixel wide.</p>
+
+<p>By default, this property is set to <code>0</code>, which indicates that the image does not use end caps and the entire image is
+subject to stretching. To create a new image with a nonzero value for this property, use the
+<code>stretchableImageWithLeftCapWidth:topCapHeight:</code> method.</p>
 	</div>
 	
 	
@@ -260,29 +221,43 @@ that shows some sort of status that can refresh.</p>
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">SSIndicatorLabel.h</code><br />
+		<code class="declared-in-ref">UIImage+SSToolkitAdditions.h</code><br />
 	</div>				
 	
 	
 </div>
 						
 						<div class="section-method">
-	<a name="//api/name/textLabel" title="textLabel"></a>
-	<h3 class="subsubtitle method-title">textLabel</h3>
+	<a name="//api/name/rightCapWidth" title="rightCapWidth"></a>
+	<h3 class="subsubtitle method-title">rightCapWidth</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Returns the label used for the main textual content of the view. (read-only)</p>
+		<p>The right horizontal end-cap size. (read-only)</p>
 	</div>		
 	
 	
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, retain, readonly) UILabel *textLabel</code></div>
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign, readonly) NSInteger rightCapWidth</code></div>
 	
 	
 	
 	
 	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>End caps specify the portion of an image that should not be resized when an image is stretched. This technique is used
+to implement buttons and other resizable image-based interface elements. When a button with end caps is resized, the
+resizing occurs only in the middle of the button, in the region between the end caps. The end caps themselves keep
+their original size and appearance.</p>
+
+<p>This property specifies the size of the left end cap. The middle (stretchable) portion is assumed to be <code>1</code> pixel wide.</p>
+
+<p>By default, this property is set to <code>0</code>, which indicates that the image does not use end caps and the entire image is
+subject to stretching. To create a new image with a nonzero value for this property, use the
+<code>stretchableImageWithLeftCapWidth:topCapHeight:</code> method.</p>
+	</div>
 	
 	
 	
@@ -292,49 +267,65 @@ that shows some sort of status that can refresh.</p>
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">SSIndicatorLabel.h</code><br />
+		<code class="declared-in-ref">UIImage+SSToolkitAdditions.h</code><br />
 	</div>				
 	
 	
 </div>
 						
 					</div>
-					
-					
 					
 					
 					
 					<div class="section section-methods">
-						<a title="Instance Methods" name="instance_methods"></a>
-						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+						<a title="Class Methods" name="class_methods"></a>
+						<h2 class="subtitle subtitle-methods">Class Methods</h2>
 						
 						<div class="section-method">
-	<a name="//api/name/completeWithText:" title="completeWithText:"></a>
-	<h3 class="subsubtitle method-title">completeWithText:</h3>
+	<a name="//api/name/imageNamed:bundleName:" title="imageNamed:bundleName:"></a>
+	<h3 class="subsubtitle method-title">imageNamed:bundleName:</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Completes <a href="#//api/name/loading">loading</a> and updates the text of the text label.</p>
+		<p>Returns the image object associated with the specified filename.</p>
 	</div>		
 	
 	
-	<div class="method-subsection method-declaration"><code>- (void)completeWithText:(NSString *)<em>text</em></code></div>
+	<div class="method-subsection method-declaration"><code>+ (UIImage *)imageNamed:(NSString *)<em>imageName</em> bundleName:(NSString *)<em>bundleName</em></code></div>
 	
 	
 	<div class="method-subsection arguments-section parameters">
 		<h4 class="method-subtitle parameter-title">Parameters</h4>
 		
 		<dl class="argument-def parameter-def">
-			<dt><em>text</em></dt>
-			<dd><p>String to update the <a href="#//api/name/textLabel"><code>textLabel</code></a>&rsquo;s <code>text</code> property to.</p></dd>
+			<dt><em>imageName</em></dt>
+			<dd><p>The name of the file. If this is the first time the image is being loaded, the method looks for an image
+with the specified name in the specified bundle.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>bundleName</em></dt>
+			<dd><p>The name of the bundle to search for the image. Specify <code>nil</code> to use the main bundle.</p></dd>
 		</dl>
 		
 	</div>
 	
 	
 	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>The image object for the specified file, or <code>nil</code> if the method could not find the specified image.</p>
+	</div>
 	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>This method looks in the system caches for an image object with the specified name and returns that object if it
+exists. If a matching image object is not already in the cache, this method loads the image data from the specified
+file, caches it, and then returns the resulting object.</p>
+	</div>
 	
 	
 	
@@ -344,55 +335,15 @@ that shows some sort of status that can refresh.</p>
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">SSIndicatorLabel.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-						<div class="section-method">
-	<a name="//api/name/startWithText:" title="startWithText:"></a>
-	<h3 class="subsubtitle method-title">startWithText:</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>Starts <a href="#//api/name/loading">loading</a> and updates the text of the text label.</p>
-	</div>		
-	
-	
-	<div class="method-subsection method-declaration"><code>- (void)startWithText:(NSString *)<em>text</em></code></div>
-	
-	
-	<div class="method-subsection arguments-section parameters">
-		<h4 class="method-subtitle parameter-title">Parameters</h4>
-		
-		<dl class="argument-def parameter-def">
-			<dt><em>text</em></dt>
-			<dd><p>String to update the <a href="#//api/name/textLabel"><code>textLabel</code></a>&rsquo;s <code>text</code> property to.</p></dd>
-		</dl>
-		
-	</div>
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">SSIndicatorLabel.h</code><br />
+		<code class="declared-in-ref">UIImage+SSToolkitAdditions.h</code><br />
 	</div>				
 	
 	
 </div>
 						
 					</div>
+					
+					
 					
 					
 				</div>

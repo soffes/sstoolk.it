@@ -32,7 +32,9 @@ task :docs => [:'docs:clean'] do
     '--project-name SSToolkit',
     '--project-company \'Sam Soffes\'',
     '--company-id com.samsoffes',
-    '--keep-intermediate-files']
+    '--keep-intermediate-files',
+    '--no-repeat-first-par',
+    '--no-create-docset']
   
   `appledoc #{appledoc_options.join(' ')} ../sstoolkit/SSToolkit/*.h`
   `mv temp/documentation/html public/documentation`
