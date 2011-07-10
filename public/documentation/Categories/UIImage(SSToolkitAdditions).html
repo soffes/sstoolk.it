@@ -48,6 +48,13 @@
 	
 	
 	
+	<option value="instance_methods">Instance Methods</option>
+	
+	<option value="//api/name/imageCroppedToRect:">&nbsp;&nbsp;&nbsp;&nbsp;- imageCroppedToRect:</option>
+	
+	<option value="//api/name/squareImage">&nbsp;&nbsp;&nbsp;&nbsp;- squareImage</option>
+	
+	
 	
 </select>
 				</li>
@@ -64,6 +71,8 @@
 <li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Initializing">Initializing</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Cropping">Cropping</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Stretching">Stretching</a></span></li>
 	
@@ -90,6 +99,14 @@
 </ul></li>
 
 
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/imageCroppedToRect:">imageCroppedToRect:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/squareImage">squareImage</a></span></li>
+	
+</ul></li>
 
 
 			</ul>
@@ -143,6 +160,28 @@
 	<span class="tooltip">
 		<code><a href="#//api/name/imageNamed:bundleName:">+&nbsp;imageNamed:bundleName:</a></code>
 		<span class="tooltip"><p>Returns the image object associated with the specified filename.</p></span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="Cropping" name="task_Cropping"></a>
+						<h3 class="subsubtitle task-title">Cropping</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/imageCroppedToRect:">&ndash;&nbsp;imageCroppedToRect:</a></code>
+		<span class="tooltip"><p>Creates and returns a new cropped image object.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/squareImage">&ndash;&nbsp;squareImage</a></code>
+		<span class="tooltip"><p>Creates and returns a new image object that is cropped to the center of the image.</p></span>
 	</span>
 	
 	
@@ -345,6 +384,101 @@ file, caches it, and then returns the resulting object.</p>
 					
 					
 					
+					<div class="section section-methods">
+						<a title="Instance Methods" name="instance_methods"></a>
+						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/imageCroppedToRect:" title="imageCroppedToRect:"></a>
+	<h3 class="subsubtitle method-title">imageCroppedToRect:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Creates and returns a new cropped image object.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (UIImage *)imageCroppedToRect:(CGRect)<em>rect</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>rect</em></dt>
+			<dd><p>A rectangle whose coordinates specify the area to create an image from in points.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>A new cropped image object.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">UIImage+SSToolkitAdditions.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/squareImage" title="squareImage"></a>
+	<h3 class="subsubtitle method-title">squareImage</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Creates and returns a new image object that is cropped to the center of the image.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (UIImage *)squareImage</code></div>
+	
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>A new square image object.</p>
+	</div>
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The length of the sides of square are the length of the shortest side of the image.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">UIImage+SSToolkitAdditions.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
 					
 				</div>
 				<div class="main-navigation navigation-bottom">
@@ -356,7 +490,7 @@ file, caches it, and then returns the resulting object.</p>
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2011 Sam Soffes. All rights reserved. (Last updated: 2011-07-08)</span><br />
+						<p><span class="copyright">&copy; 2011 Sam Soffes. All rights reserved. (Last updated: 2011-07-10)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.4 (build 703)</a>.</span></p>
 						

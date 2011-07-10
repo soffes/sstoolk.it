@@ -26,12 +26,24 @@
 	
 	
 	
+	<option value="tasks">Tasks</option>
 	
 	
 	
 	
 	
 	
+	
+	<option value="class_methods">Class Methods</option>
+	
+	<option value="//api/name/dictionaryWithFormEncodedString:">&nbsp;&nbsp;&nbsp;&nbsp;+ dictionaryWithFormEncodedString:</option>
+	
+	
+	
+	
+	<option value="instance_methods">Instance Methods</option>
+	
+	<option value="//api/name/stringWithFormEncodedComponents">&nbsp;&nbsp;&nbsp;&nbsp;- stringWithFormEncodedComponents</option>
 	
 	
 	
@@ -47,6 +59,13 @@
 
 
 
+<li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Creating Dictionaries">Creating Dictionaries</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Creating Form Components">Creating Form Components</a></span></li>
+	
+</ul></li>
 
 
 
@@ -54,6 +73,19 @@
 
 
 
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#class_methods">Class Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/dictionaryWithFormEncodedString:">dictionaryWithFormEncodedString:</a></span></li>
+	
+</ul></li>
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/stringWithFormEncodedComponents">stringWithFormEncodedComponents</a></span></li>
+	
+</ul></li>
 
 
 			</ul>
@@ -94,6 +126,41 @@
 					
 					
 					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						<h2 class="subtitle subtitle-tasks">Tasks</h2>
+						
+						
+						<a title="Creating Dictionaries" name="task_Creating Dictionaries"></a>
+						<h3 class="subsubtitle task-title">Creating Dictionaries</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/dictionaryWithFormEncodedString:">+&nbsp;dictionaryWithFormEncodedString:</a></code>
+		<span class="tooltip"><p>Returns a new dictionary that contains a dictionary for a form encoded string.</p></span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="Creating Form Components" name="task_Creating Form Components"></a>
+						<h3 class="subsubtitle task-title">Creating Form Components</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/stringWithFormEncodedComponents">&ndash;&nbsp;stringWithFormEncodedComponents</a></code>
+		<span class="tooltip"><p>Returns a string of form encoded components for using as the query string in a URL.</p></span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+					</div>
 					
 					
 					
@@ -101,6 +168,104 @@
 					
 					
 					
+					<div class="section section-methods">
+						<a title="Class Methods" name="class_methods"></a>
+						<h2 class="subtitle subtitle-methods">Class Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/dictionaryWithFormEncodedString:" title="dictionaryWithFormEncodedString:"></a>
+	<h3 class="subsubtitle method-title">dictionaryWithFormEncodedString:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns a new dictionary that contains a dictionary for a form encoded string.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>+ (NSDictionary *)dictionaryWithFormEncodedString:(NSString *)<em>encodedString</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>encodedString</em></dt>
+			<dd><p>A string of form encoded compontents.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>A new dictionary that contains a dictionary for the form encoded string, or <code>nil</code> if <code>encodedString</code> is an
+invalid representation of a dictionary.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">NSDictionary+SSToolkitAdditions.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Instance Methods" name="instance_methods"></a>
+						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/stringWithFormEncodedComponents" title="stringWithFormEncodedComponents"></a>
+	<h3 class="subsubtitle method-title">stringWithFormEncodedComponents</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns a string of form encoded components for using as the query string in a URL.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (NSString *)stringWithFormEncodedComponents</code></div>
+	
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>A string of form encoded compontents.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">NSDictionary+SSToolkitAdditions.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
 					
 					
 				</div>
@@ -113,7 +278,7 @@
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2011 Sam Soffes. All rights reserved. (Last updated: 2011-07-08)</span><br />
+						<p><span class="copyright">&copy; 2011 Sam Soffes. All rights reserved. (Last updated: 2011-07-10)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.4 (build 703)</a>.</span></p>
 						
