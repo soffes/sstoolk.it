@@ -45,6 +45,8 @@
 	
 	<option value="//api/name/MD5Sum">&nbsp;&nbsp;&nbsp;&nbsp;- MD5Sum</option>
 	
+	<option value="//api/name/SHA1Sum">&nbsp;&nbsp;&nbsp;&nbsp;- SHA1Sum</option>
+	
 	<option value="//api/name/base64EncodedString">&nbsp;&nbsp;&nbsp;&nbsp;- base64EncodedString</option>
 	
 	
@@ -62,6 +64,8 @@
 
 
 <li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Hashing">Hashing</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Base64 Encoding and Decoding">Base64 Encoding and Decoding</a></span></li>
 	
@@ -84,6 +88,8 @@
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/MD5Sum">MD5Sum</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/SHA1Sum">SHA1Sum</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/base64EncodedString">base64EncodedString</a></span></li>
 	
@@ -133,14 +139,21 @@
 						<h2 class="subtitle subtitle-tasks">Tasks</h2>
 						
 						
-						
-						<h3 class="subsubtitle task-title">Other Methods</h3>
+						<a title="Hashing" name="task_Hashing"></a>
+						<h3 class="subsubtitle task-title">Hashing</h3>
 
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
 		<code><a href="#//api/name/MD5Sum">&ndash;&nbsp;MD5Sum</a></code>
 		<span class="tooltip"><p>Returns a string of the MD5 sum of the receiver.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/SHA1Sum">&ndash;&nbsp;SHA1Sum</a></code>
+		<span class="tooltip"><p>Returns a string of the SHA1 sum of the receiver.</p></span>
 	</span>
 	
 	
@@ -255,6 +268,43 @@
 	<div class="method-subsection return">
 		<h4 class="method-subtitle parameter-title">Return Value</h4>
 		<p>The string of the MD5 sum of the receiver.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">NSData+SSToolkitAdditions.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/SHA1Sum" title="SHA1Sum"></a>
+	<h3 class="subsubtitle method-title">SHA1Sum</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns a string of the SHA1 sum of the receiver.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (NSString *)SHA1Sum</code></div>
+	
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>The string of the SHA1 sum of the receiver.</p>
 	</div>
 	
 	
