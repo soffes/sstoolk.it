@@ -34,11 +34,18 @@
 	
 	
 	
+	<option value="class_methods">Class Methods</option>
+	
+	<option value="//api/name/dataWithBase64String:">&nbsp;&nbsp;&nbsp;&nbsp;+ dataWithBase64String:</option>
+	
+	
 	
 	
 	<option value="instance_methods">Instance Methods</option>
 	
 	<option value="//api/name/MD5Sum">&nbsp;&nbsp;&nbsp;&nbsp;- MD5Sum</option>
+	
+	<option value="//api/name/base64EncodedString">&nbsp;&nbsp;&nbsp;&nbsp;- base64EncodedString</option>
 	
 	
 	
@@ -56,6 +63,8 @@
 
 <li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Base64 Encoding and Decoding">Base64 Encoding and Decoding</a></span></li>
+	
 </ul></li>
 
 
@@ -64,11 +73,19 @@
 
 
 
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#class_methods">Class Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/dataWithBase64String:">dataWithBase64String:</a></span></li>
+	
+</ul></li>
+
 
 
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/MD5Sum">MD5Sum</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/base64EncodedString">base64EncodedString</a></span></li>
 	
 </ul></li>
 
@@ -117,13 +134,35 @@
 						
 						
 						
-						
+						<h3 class="subsubtitle task-title">Other Methods</h3>
 
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
 		<code><a href="#//api/name/MD5Sum">&ndash;&nbsp;MD5Sum</a></code>
 		<span class="tooltip"><p>Returns a string of the MD5 sum of the receiver.</p></span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="Base64 Encoding and Decoding" name="task_Base64 Encoding and Decoding"></a>
+						<h3 class="subsubtitle task-title">Base64 Encoding and Decoding</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/base64EncodedString">&ndash;&nbsp;base64EncodedString</a></code>
+		<span class="tooltip"><p>Returns a string representation of the receiver Base64 encoded.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/dataWithBase64String:">+&nbsp;dataWithBase64String:</a></code>
+		<span class="tooltip"><p>Returns a new data contained in the Base64 encoded string.</p></span>
 	</span>
 	
 	
@@ -137,6 +176,59 @@
 					
 					
 					
+					
+					<div class="section section-methods">
+						<a title="Class Methods" name="class_methods"></a>
+						<h2 class="subtitle subtitle-methods">Class Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/dataWithBase64String:" title="dataWithBase64String:"></a>
+	<h3 class="subsubtitle method-title">dataWithBase64String:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns a new data contained in the Base64 encoded string.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>+ (NSData *)dataWithBase64String:(NSString *)<em>base64String</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>base64String</em></dt>
+			<dd><p>A Base64 encoded string</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>Data contained in <code>base64String</code></p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">NSData+SSToolkitAdditions.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
 					
 					
 					
@@ -163,6 +255,43 @@
 	<div class="method-subsection return">
 		<h4 class="method-subtitle parameter-title">Return Value</h4>
 		<p>The string of the MD5 sum of the receiver.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">NSData+SSToolkitAdditions.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/base64EncodedString" title="base64EncodedString"></a>
+	<h3 class="subsubtitle method-title">base64EncodedString</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns a string representation of the receiver Base64 encoded.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (NSString *)base64EncodedString</code></div>
+	
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>A Base64 encoded string</p>
 	</div>
 	
 	
