@@ -47,11 +47,33 @@
 	
 	<option value="//api/name/SHA1Sum">&nbsp;&nbsp;&nbsp;&nbsp;- SHA1Sum</option>
 	
+	<option value="//api/name/URLDecodedString">&nbsp;&nbsp;&nbsp;&nbsp;- URLDecodedString</option>
+	
+	<option value="//api/name/URLEncodedParameterString">&nbsp;&nbsp;&nbsp;&nbsp;- URLEncodedParameterString</option>
+	
+	<option value="//api/name/URLEncodedString">&nbsp;&nbsp;&nbsp;&nbsp;- URLEncodedString</option>
+	
 	<option value="//api/name/base64EncodedString">&nbsp;&nbsp;&nbsp;&nbsp;- base64EncodedString</option>
 	
 	<option value="//api/name/compareToVersionString:">&nbsp;&nbsp;&nbsp;&nbsp;- compareToVersionString:</option>
 	
 	<option value="//api/name/containsString:">&nbsp;&nbsp;&nbsp;&nbsp;- containsString:</option>
+	
+	<option value="//api/name/stringByEscapingForURLQuery">&nbsp;&nbsp;&nbsp;&nbsp;- stringByEscapingForURLQuery</option>
+	
+	<option value="//api/name/stringByTrimmingCharactersInSet:">&nbsp;&nbsp;&nbsp;&nbsp;- stringByTrimmingCharactersInSet:</option>
+	
+	<option value="//api/name/stringByTrimmingLeadingCharactersInSet:">&nbsp;&nbsp;&nbsp;&nbsp;- stringByTrimmingLeadingCharactersInSet:</option>
+	
+	<option value="//api/name/stringByTrimmingLeadingWhitespaceAndNewlineCharacters">&nbsp;&nbsp;&nbsp;&nbsp;- stringByTrimmingLeadingWhitespaceAndNewlineCharacters</option>
+	
+	<option value="//api/name/stringByTrimmingTrailingCharactersInSet:">&nbsp;&nbsp;&nbsp;&nbsp;- stringByTrimmingTrailingCharactersInSet:</option>
+	
+	<option value="//api/name/stringByTrimmingTrailingWhitespaceAndNewlineCharacters">&nbsp;&nbsp;&nbsp;&nbsp;- stringByTrimmingTrailingWhitespaceAndNewlineCharacters</option>
+	
+	<option value="//api/name/stringByTrimmingWhitespaceAndNewlineCharacters">&nbsp;&nbsp;&nbsp;&nbsp;- stringByTrimmingWhitespaceAndNewlineCharacters</option>
+	
+	<option value="//api/name/stringByUnescapingFromURLQuery">&nbsp;&nbsp;&nbsp;&nbsp;- stringByUnescapingFromURLQuery</option>
 	
 	
 	
@@ -75,7 +97,13 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Comparing Versions">Comparing Versions</a></span></li>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_URL Escaping and Unescaping">URL Escaping and Unescaping</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_URL Encoding and Unencoding (Deprecated)">URL Encoding and Unencoding (Deprecated)</a></span></li>
+	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Base64 Encoding">Base64 Encoding</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Trimming">Trimming</a></span></li>
 	
 </ul></li>
 
@@ -99,11 +127,33 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/SHA1Sum">SHA1Sum</a></span></li>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/URLDecodedString">URLDecodedString</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/URLEncodedParameterString">URLEncodedParameterString</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/URLEncodedString">URLEncodedString</a></span></li>
+	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/base64EncodedString">base64EncodedString</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/compareToVersionString:">compareToVersionString:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/containsString:">containsString:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/stringByEscapingForURLQuery">stringByEscapingForURLQuery</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/stringByTrimmingCharactersInSet:">stringByTrimmingCharactersInSet:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/stringByTrimmingLeadingCharactersInSet:">stringByTrimmingLeadingCharactersInSet:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/stringByTrimmingLeadingWhitespaceAndNewlineCharacters">stringByTrimmingLeadingWhitespaceAndNewlineCharacters</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/stringByTrimmingTrailingCharactersInSet:">stringByTrimmingTrailingCharactersInSet:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/stringByTrimmingTrailingWhitespaceAndNewlineCharacters">stringByTrimmingTrailingWhitespaceAndNewlineCharacters</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/stringByTrimmingWhitespaceAndNewlineCharacters">stringByTrimmingWhitespaceAndNewlineCharacters</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/stringByUnescapingFromURLQuery">stringByUnescapingFromURLQuery</a></span></li>
 	
 </ul></li>
 
@@ -203,6 +253,57 @@
 						</ul>
 						
 						
+						<a title="URL Escaping and Unescaping" name="task_URL Escaping and Unescaping"></a>
+						<h3 class="subsubtitle task-title">URL Escaping and Unescaping</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/stringByEscapingForURLQuery">&ndash;&nbsp;stringByEscapingForURLQuery</a></code>
+		<span class="tooltip"><p>Returns a new string escaped for a URL query parameter.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/stringByUnescapingFromURLQuery">&ndash;&nbsp;stringByUnescapingFromURLQuery</a></code>
+		<span class="tooltip"><p>Returns a new string unescaped from a URL query parameter.</p></span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="URL Encoding and Unencoding (Deprecated)" name="task_URL Encoding and Unencoding (Deprecated)"></a>
+						<h3 class="subsubtitle task-title">URL Encoding and Unencoding (Deprecated)</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/URLEncodedString">&ndash;&nbsp;URLEncodedString</a></code>
+		<span class="tooltip"><p>Returns a new string encoded for a URL. (Deprecated)</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/URLEncodedParameterString">&ndash;&nbsp;URLEncodedParameterString</a></code>
+		<span class="tooltip"><p>Returns a new string encoded for a URL parameter. (Deprecated)</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/URLDecodedString">&ndash;&nbsp;URLDecodedString</a></code>
+		<span class="tooltip"><p>Returns a new string decoded from a URL.</p></span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
 						<a title="Base64 Encoding" name="task_Base64 Encoding"></a>
 						<h3 class="subsubtitle task-title">Base64 Encoding</h3>
 
@@ -218,6 +319,56 @@
 	<span class="tooltip">
 		<code><a href="#//api/name/stringWithBase64String:">+&nbsp;stringWithBase64String:</a></code>
 		<span class="tooltip"><p>Returns a new string contained in the Base64 encoded string.</p></span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="Trimming" name="task_Trimming"></a>
+						<h3 class="subsubtitle task-title">Trimming</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/stringByTrimmingCharactersInSet:">&ndash;&nbsp;stringByTrimmingCharactersInSet:</a></code>
+		<span class="tooltip"><p>Returns a new string by trimming leading and trailing characters in a given <code>NSCharacterSet</code>.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/stringByTrimmingWhitespaceAndNewlineCharacters">&ndash;&nbsp;stringByTrimmingWhitespaceAndNewlineCharacters</a></code>
+		<span class="tooltip"><p>Returns a new string by trimming leading and trailing whitespace and newline characters.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/stringByTrimmingLeadingCharactersInSet:">&ndash;&nbsp;stringByTrimmingLeadingCharactersInSet:</a></code>
+		<span class="tooltip"><p>Returns a new string by trimming leading characters in a given <code>NSCharacterSet</code>.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/stringByTrimmingLeadingWhitespaceAndNewlineCharacters">&ndash;&nbsp;stringByTrimmingLeadingWhitespaceAndNewlineCharacters</a></code>
+		<span class="tooltip"><p>Returns a new string by trimming leading whitespace and newline characters.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/stringByTrimmingTrailingCharactersInSet:">&ndash;&nbsp;stringByTrimmingTrailingCharactersInSet:</a></code>
+		<span class="tooltip"><p>Returns a new string by trimming trailing characters in a given <code>NSCharacterSet</code>.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/stringByTrimmingTrailingWhitespaceAndNewlineCharacters">&ndash;&nbsp;stringByTrimmingTrailingWhitespaceAndNewlineCharacters</a></code>
+		<span class="tooltip"><p>Returns a new string by trimming trailing whitespace and newline characters.</p></span>
 	</span>
 	
 	
@@ -372,6 +523,127 @@
 </div>
 						
 						<div class="section-method">
+	<a name="//api/name/URLDecodedString" title="URLDecodedString"></a>
+	<h3 class="subsubtitle method-title">URLDecodedString</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns a new string decoded from a URL.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (NSString *)URLDecodedString</code></div>
+	
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>A new string decoded from a URL.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">NSString+SSToolkitAdditions.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/URLEncodedParameterString" title="URLEncodedParameterString"></a>
+	<h3 class="subsubtitle method-title">URLEncodedParameterString</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns a new string encoded for a URL parameter. (Deprecated)</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (NSString *)URLEncodedParameterString</code></div>
+	
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>A new string escaped for a URL parameter.</p>
+	</div>
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The following characters are encoded: <code>:/=,!$&amp;'()*+;[]@#?</code>.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">NSString+SSToolkitAdditions.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/URLEncodedString" title="URLEncodedString"></a>
+	<h3 class="subsubtitle method-title">URLEncodedString</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns a new string encoded for a URL. (Deprecated)</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (NSString *)URLEncodedString</code></div>
+	
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>A new string escaped for a URL.</p>
+	</div>
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The following characters are encoded: <code>:/=,!$&amp;'()*+;[]@#?%</code>.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">NSString+SSToolkitAdditions.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
 	<a name="//api/name/base64EncodedString" title="base64EncodedString"></a>
 	<h3 class="subsubtitle method-title">base64EncodedString</h3>
 	
@@ -497,6 +769,343 @@
 	</div>
 	
 	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">NSString+SSToolkitAdditions.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/stringByEscapingForURLQuery" title="stringByEscapingForURLQuery"></a>
+	<h3 class="subsubtitle method-title">stringByEscapingForURLQuery</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns a new string escaped for a URL query parameter.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (NSString *)stringByEscapingForURLQuery</code></div>
+	
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>A new string escaped for a URL query parameter.</p>
+	</div>
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The following characters are escaped: <code>\n\r:/=,!$&amp;'()*+;[]@#?%</code>. Spaces are escaped to the <code>+</code> character. (<code>+</code> is
+escaped to <code>%2B</code>).</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">NSString+SSToolkitAdditions.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/stringByTrimmingCharactersInSet:" title="stringByTrimmingCharactersInSet:"></a>
+	<h3 class="subsubtitle method-title">stringByTrimmingCharactersInSet:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns a new string by trimming leading and trailing characters in a given <code>NSCharacterSet</code>.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (NSString *)stringByTrimmingCharactersInSet:(NSCharacterSet *)<em>characterSet</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>characterSet</em></dt>
+			<dd><p>Character set to trim characters</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>A new string by trimming leading and trailing characters in <code>characterSet</code></p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">NSString+SSToolkitAdditions.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/stringByTrimmingLeadingCharactersInSet:" title="stringByTrimmingLeadingCharactersInSet:"></a>
+	<h3 class="subsubtitle method-title">stringByTrimmingLeadingCharactersInSet:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns a new string by trimming leading characters in a given <code>NSCharacterSet</code>.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (NSString *)stringByTrimmingLeadingCharactersInSet:(NSCharacterSet *)<em>characterSet</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>characterSet</em></dt>
+			<dd><p>Character set to trim characters</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>A new string by trimming leading characters in <code>characterSet</code></p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">NSString+SSToolkitAdditions.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/stringByTrimmingLeadingWhitespaceAndNewlineCharacters" title="stringByTrimmingLeadingWhitespaceAndNewlineCharacters"></a>
+	<h3 class="subsubtitle method-title">stringByTrimmingLeadingWhitespaceAndNewlineCharacters</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns a new string by trimming leading whitespace and newline characters.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (NSString *)stringByTrimmingLeadingWhitespaceAndNewlineCharacters</code></div>
+	
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>A new string by trimming leading whitespace and newline characters</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">NSString+SSToolkitAdditions.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/stringByTrimmingTrailingCharactersInSet:" title="stringByTrimmingTrailingCharactersInSet:"></a>
+	<h3 class="subsubtitle method-title">stringByTrimmingTrailingCharactersInSet:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns a new string by trimming trailing characters in a given <code>NSCharacterSet</code>.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (NSString *)stringByTrimmingTrailingCharactersInSet:(NSCharacterSet *)<em>characterSet</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>characterSet</em></dt>
+			<dd><p>Character set to trim characters</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>A new string by trimming trailing characters in <code>characterSet</code></p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">NSString+SSToolkitAdditions.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/stringByTrimmingTrailingWhitespaceAndNewlineCharacters" title="stringByTrimmingTrailingWhitespaceAndNewlineCharacters"></a>
+	<h3 class="subsubtitle method-title">stringByTrimmingTrailingWhitespaceAndNewlineCharacters</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns a new string by trimming trailing whitespace and newline characters.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (NSString *)stringByTrimmingTrailingWhitespaceAndNewlineCharacters</code></div>
+	
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>A new string by trimming trailing whitespace and newline characters</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">NSString+SSToolkitAdditions.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/stringByTrimmingWhitespaceAndNewlineCharacters" title="stringByTrimmingWhitespaceAndNewlineCharacters"></a>
+	<h3 class="subsubtitle method-title">stringByTrimmingWhitespaceAndNewlineCharacters</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns a new string by trimming leading and trailing whitespace and newline characters.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (NSString *)stringByTrimmingWhitespaceAndNewlineCharacters</code></div>
+	
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>A new string by trimming leading and trailing whitespace and newline characters</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">NSString+SSToolkitAdditions.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/stringByUnescapingFromURLQuery" title="stringByUnescapingFromURLQuery"></a>
+	<h3 class="subsubtitle method-title">stringByUnescapingFromURLQuery</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns a new string unescaped from a URL query parameter.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (NSString *)stringByUnescapingFromURLQuery</code></div>
+	
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>A new string escaped for a URL query parameter.</p>
+	</div>
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p><code>+</code> characters are unescaped to spaces.</p>
+	</div>
 	
 	
 	
