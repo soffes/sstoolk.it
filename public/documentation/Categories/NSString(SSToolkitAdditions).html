@@ -59,6 +59,8 @@
 	
 	<option value="//api/name/containsString:">&nbsp;&nbsp;&nbsp;&nbsp;- containsString:</option>
 	
+	<option value="//api/name/escapeHTML">&nbsp;&nbsp;&nbsp;&nbsp;- escapeHTML</option>
+	
 	<option value="//api/name/stringByEscapingForURLQuery">&nbsp;&nbsp;&nbsp;&nbsp;- stringByEscapingForURLQuery</option>
 	
 	<option value="//api/name/stringByTrimmingCharactersInSet:">&nbsp;&nbsp;&nbsp;&nbsp;- stringByTrimmingCharactersInSet:</option>
@@ -74,6 +76,8 @@
 	<option value="//api/name/stringByTrimmingWhitespaceAndNewlineCharacters">&nbsp;&nbsp;&nbsp;&nbsp;- stringByTrimmingWhitespaceAndNewlineCharacters</option>
 	
 	<option value="//api/name/stringByUnescapingFromURLQuery">&nbsp;&nbsp;&nbsp;&nbsp;- stringByUnescapingFromURLQuery</option>
+	
+	<option value="//api/name/unescapeHTML">&nbsp;&nbsp;&nbsp;&nbsp;- unescapeHTML</option>
 	
 	
 	
@@ -96,6 +100,8 @@
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Hashing">Hashing</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Comparing Versions">Comparing Versions</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_HTML Escaping and Unescaping">HTML Escaping and Unescaping</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_URL Escaping and Unescaping">URL Escaping and Unescaping</a></span></li>
 	
@@ -139,6 +145,8 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/containsString:">containsString:</a></span></li>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/escapeHTML">escapeHTML</a></span></li>
+	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/stringByEscapingForURLQuery">stringByEscapingForURLQuery</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/stringByTrimmingCharactersInSet:">stringByTrimmingCharactersInSet:</a></span></li>
@@ -154,6 +162,8 @@
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/stringByTrimmingWhitespaceAndNewlineCharacters">stringByTrimmingWhitespaceAndNewlineCharacters</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/stringByUnescapingFromURLQuery">stringByUnescapingFromURLQuery</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/unescapeHTML">unescapeHTML</a></span></li>
 	
 </ul></li>
 
@@ -246,6 +256,28 @@
 	<span class="tooltip">
 		<code><a href="#//api/name/compareToVersionString:">&ndash;&nbsp;compareToVersionString:</a></code>
 		<span class="tooltip"><p>Returns a comparison result for the reciever and a given <code>version</code>.</p></span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="HTML Escaping and Unescaping" name="task_HTML Escaping and Unescaping"></a>
+						<h3 class="subsubtitle task-title">HTML Escaping and Unescaping</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/escapeHTML">&ndash;&nbsp;escapeHTML</a></code>
+		<span class="tooltip"><p>Returns a new string with any HTML escaped.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/unescapeHTML">&ndash;&nbsp;unescapeHTML</a></code>
+		<span class="tooltip"><p>Returns a new string with any HTML unescaped.</p></span>
 	</span>
 	
 	
@@ -785,6 +817,52 @@
 </div>
 						
 						<div class="section-method">
+	<a name="//api/name/escapeHTML" title="escapeHTML"></a>
+	<h3 class="subsubtitle method-title">escapeHTML</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns a new string with any HTML escaped.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (NSString *)escapeHTML</code></div>
+	
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>A new string with any HTML escaped.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="#//api/name/unescapeHTML">&ndash; unescapeHTML</a></p></code></li>
+			
+		</ul>
+	</div>
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">NSString+SSToolkitAdditions.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
 	<a name="//api/name/stringByEscapingForURLQuery" title="stringByEscapingForURLQuery"></a>
 	<h3 class="subsubtitle method-title">stringByEscapingForURLQuery</h3>
 	
@@ -816,6 +894,15 @@ escaped to <code>%2B</code>).</p>
 	
 	
 	
+	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="#//api/name/stringByUnescapingFromURLQuery">&ndash; stringByUnescapingFromURLQuery</a></p></code></li>
+			
+		</ul>
+	</div>
 	
 	
 	
@@ -1111,6 +1198,61 @@ escaped to <code>%2B</code>).</p>
 	
 	
 	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="#//api/name/stringByEscapingForURLQuery">&ndash; stringByEscapingForURLQuery</a></p></code></li>
+			
+		</ul>
+	</div>
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">NSString+SSToolkitAdditions.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/unescapeHTML" title="unescapeHTML"></a>
+	<h3 class="subsubtitle method-title">unescapeHTML</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns a new string with any HTML unescaped.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (NSString *)unescapeHTML</code></div>
+	
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>A new string with any HTML unescaped.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="#//api/name/escapeHTML">&ndash; escapeHTML</a></p></code></li>
+			
+		</ul>
+	</div>
+	
 	
 	
 	<div class="method-subsection declared-in-section">
@@ -1134,7 +1276,7 @@ escaped to <code>%2B</code>).</p>
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2011 Sam Soffes. All rights reserved. (Last updated: 2011-07-10)</span><br />
+						<p><span class="copyright">&copy; 2011 Sam Soffes. All rights reserved. (Last updated: 2011-07-11)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.4 (build 703)</a>.</span></p>
 						
