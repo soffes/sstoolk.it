@@ -63,7 +63,9 @@
 	
 	<option value="//api/name/stringByEscapingForURLQuery">&nbsp;&nbsp;&nbsp;&nbsp;- stringByEscapingForURLQuery</option>
 	
-	<option value="//api/name/stringByTrimmingCharactersInSet:">&nbsp;&nbsp;&nbsp;&nbsp;- stringByTrimmingCharactersInSet:</option>
+	<option value="//api/name/stringByTrimmingLeadingAndTrailingCharactersInSet:">&nbsp;&nbsp;&nbsp;&nbsp;- stringByTrimmingLeadingAndTrailingCharactersInSet:</option>
+	
+	<option value="//api/name/stringByTrimmingLeadingAndTrailingWhitespaceAndNewlineCharacters">&nbsp;&nbsp;&nbsp;&nbsp;- stringByTrimmingLeadingAndTrailingWhitespaceAndNewlineCharacters</option>
 	
 	<option value="//api/name/stringByTrimmingLeadingCharactersInSet:">&nbsp;&nbsp;&nbsp;&nbsp;- stringByTrimmingLeadingCharactersInSet:</option>
 	
@@ -72,8 +74,6 @@
 	<option value="//api/name/stringByTrimmingTrailingCharactersInSet:">&nbsp;&nbsp;&nbsp;&nbsp;- stringByTrimmingTrailingCharactersInSet:</option>
 	
 	<option value="//api/name/stringByTrimmingTrailingWhitespaceAndNewlineCharacters">&nbsp;&nbsp;&nbsp;&nbsp;- stringByTrimmingTrailingWhitespaceAndNewlineCharacters</option>
-	
-	<option value="//api/name/stringByTrimmingWhitespaceAndNewlineCharacters">&nbsp;&nbsp;&nbsp;&nbsp;- stringByTrimmingWhitespaceAndNewlineCharacters</option>
 	
 	<option value="//api/name/stringByUnescapingFromURLQuery">&nbsp;&nbsp;&nbsp;&nbsp;- stringByUnescapingFromURLQuery</option>
 	
@@ -149,7 +149,9 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/stringByEscapingForURLQuery">stringByEscapingForURLQuery</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/stringByTrimmingCharactersInSet:">stringByTrimmingCharactersInSet:</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/stringByTrimmingLeadingAndTrailingCharactersInSet:">stringByTrimmingLeadingAndTrailingCharactersInSet:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/stringByTrimmingLeadingAndTrailingWhitespaceAndNewlineCharacters">stringByTrimmingLeadingAndTrailingWhitespaceAndNewlineCharacters</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/stringByTrimmingLeadingCharactersInSet:">stringByTrimmingLeadingCharactersInSet:</a></span></li>
 	
@@ -158,8 +160,6 @@
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/stringByTrimmingTrailingCharactersInSet:">stringByTrimmingTrailingCharactersInSet:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/stringByTrimmingTrailingWhitespaceAndNewlineCharacters">stringByTrimmingTrailingWhitespaceAndNewlineCharacters</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/stringByTrimmingWhitespaceAndNewlineCharacters">stringByTrimmingWhitespaceAndNewlineCharacters</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/stringByUnescapingFromURLQuery">stringByUnescapingFromURLQuery</a></span></li>
 	
@@ -364,14 +364,14 @@
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
-		<code><a href="#//api/name/stringByTrimmingCharactersInSet:">&ndash;&nbsp;stringByTrimmingCharactersInSet:</a></code>
+		<code><a href="#//api/name/stringByTrimmingLeadingAndTrailingCharactersInSet:">&ndash;&nbsp;stringByTrimmingLeadingAndTrailingCharactersInSet:</a></code>
 		<span class="tooltip"><p>Returns a new string by trimming leading and trailing characters in a given <code>NSCharacterSet</code>.</p></span>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/stringByTrimmingWhitespaceAndNewlineCharacters">&ndash;&nbsp;stringByTrimmingWhitespaceAndNewlineCharacters</a></code>
+		<code><a href="#//api/name/stringByTrimmingLeadingAndTrailingWhitespaceAndNewlineCharacters">&ndash;&nbsp;stringByTrimmingLeadingAndTrailingWhitespaceAndNewlineCharacters</a></code>
 		<span class="tooltip"><p>Returns a new string by trimming leading and trailing whitespace and newline characters.</p></span>
 	</span>
 	
@@ -915,8 +915,8 @@ escaped to <code>%2B</code>).</p>
 </div>
 						
 						<div class="section-method">
-	<a name="//api/name/stringByTrimmingCharactersInSet:" title="stringByTrimmingCharactersInSet:"></a>
-	<h3 class="subsubtitle method-title">stringByTrimmingCharactersInSet:</h3>
+	<a name="//api/name/stringByTrimmingLeadingAndTrailingCharactersInSet:" title="stringByTrimmingLeadingAndTrailingCharactersInSet:"></a>
+	<h3 class="subsubtitle method-title">stringByTrimmingLeadingAndTrailingCharactersInSet:</h3>
 	
 	
 	
@@ -925,7 +925,7 @@ escaped to <code>%2B</code>).</p>
 	</div>		
 	
 	
-	<div class="method-subsection method-declaration"><code>- (NSString *)stringByTrimmingCharactersInSet:(NSCharacterSet *)<em>characterSet</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (NSString *)stringByTrimmingLeadingAndTrailingCharactersInSet:(NSCharacterSet *)<em>characterSet</em></code></div>
 	
 	
 	<div class="method-subsection arguments-section parameters">
@@ -943,6 +943,43 @@ escaped to <code>%2B</code>).</p>
 	<div class="method-subsection return">
 		<h4 class="method-subtitle parameter-title">Return Value</h4>
 		<p>A new string by trimming leading and trailing characters in <code>characterSet</code></p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">NSString+SSToolkitAdditions.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/stringByTrimmingLeadingAndTrailingWhitespaceAndNewlineCharacters" title="stringByTrimmingLeadingAndTrailingWhitespaceAndNewlineCharacters"></a>
+	<h3 class="subsubtitle method-title">stringByTrimmingLeadingAndTrailingWhitespaceAndNewlineCharacters</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns a new string by trimming leading and trailing whitespace and newline characters.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (NSString *)stringByTrimmingLeadingAndTrailingWhitespaceAndNewlineCharacters</code></div>
+	
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>A new string by trimming leading and trailing whitespace and newline characters</p>
 	</div>
 	
 	
@@ -1130,43 +1167,6 @@ escaped to <code>%2B</code>).</p>
 </div>
 						
 						<div class="section-method">
-	<a name="//api/name/stringByTrimmingWhitespaceAndNewlineCharacters" title="stringByTrimmingWhitespaceAndNewlineCharacters"></a>
-	<h3 class="subsubtitle method-title">stringByTrimmingWhitespaceAndNewlineCharacters</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>Returns a new string by trimming leading and trailing whitespace and newline characters.</p>
-	</div>		
-	
-	
-	<div class="method-subsection method-declaration"><code>- (NSString *)stringByTrimmingWhitespaceAndNewlineCharacters</code></div>
-	
-	
-	
-	
-	<div class="method-subsection return">
-		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>A new string by trimming leading and trailing whitespace and newline characters</p>
-	</div>
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">NSString+SSToolkitAdditions.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-						<div class="section-method">
 	<a name="//api/name/stringByUnescapingFromURLQuery" title="stringByUnescapingFromURLQuery"></a>
 	<h3 class="subsubtitle method-title">stringByUnescapingFromURLQuery</h3>
 	
@@ -1276,7 +1276,7 @@ escaped to <code>%2B</code>).</p>
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2011 Sam Soffes. All rights reserved. (Last updated: 2011-07-11)</span><br />
+						<p><span class="copyright">&copy; 2011 Sam Soffes. All rights reserved. (Last updated: 2011-07-23)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.4 (build 703)</a>.</span></p>
 						

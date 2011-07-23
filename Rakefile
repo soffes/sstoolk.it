@@ -33,8 +33,11 @@ task :docs => [:'docs:clean'] do
     '--project-company \'Sam Soffes\'',
     '--company-id com.samsoffes',
     '--keep-intermediate-files',
+    '--create-html',
+    '--templates ~/Library/Application\ Support/appledoc/Templates/',
     '--no-repeat-first-par',
-    '--no-create-docset']
+    '--no-create-docset',
+    '--verbose']
   
   `appledoc #{appledoc_options.join(' ')} ../sstoolkit/SSToolkit/*.h`
   `mv temp/documentation/html public/documentation`
