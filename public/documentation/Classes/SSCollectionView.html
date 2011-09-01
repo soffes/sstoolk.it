@@ -1,15 +1,21 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
+		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
 		<title>SSCollectionView Class Reference</title>
-		<meta http-equiv="Content-Type" content="application/xhtml+xml;charset=utf-8" />
 		<meta id="xcode-display" name="xcode-display" content="render"/>
 		<meta name="viewport" content="width=550" />
-		<link rel="stylesheet" type="text/css" href="../css/styles.css" />
+		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
+		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
 		<meta name="generator" content="appledoc 2.0.4 (build 703)" />
 	</head>
 	<body>
 		<header id="top_header">
+			<div id="library" class="hideInXcode">
+				<h1><a id="libraryTitle" href="../index.html">SSToolkit </a></h1>
+				<a id="developerHome" href="../index.html">Sam Soffes</a>
+			</div>
+			
 			<div id="title" role="banner">
 				<h1 class="hideInXcode">SSCollectionView Class Reference</h1>
 			</div>
@@ -37,6 +43,10 @@
 	<option value="//api/name/allowsSelection">&nbsp;&nbsp;&nbsp;&nbsp;allowsSelection</option>
 	
 	<option value="//api/name/backgroundView">&nbsp;&nbsp;&nbsp;&nbsp;backgroundView</option>
+	
+	<option value="//api/name/collectionFooterView">&nbsp;&nbsp;&nbsp;&nbsp;collectionFooterView</option>
+	
+	<option value="//api/name/collectionHeaderView">&nbsp;&nbsp;&nbsp;&nbsp;collectionHeaderView</option>
 	
 	<option value="//api/name/dataSource">&nbsp;&nbsp;&nbsp;&nbsp;dataSource</option>
 	
@@ -110,6 +120,10 @@
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/allowsSelection">allowsSelection</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/backgroundView">backgroundView</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/collectionFooterView">collectionFooterView</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/collectionHeaderView">collectionHeaderView</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/dataSource">dataSource</a></span></li>
 	
@@ -266,6 +280,20 @@ easier.</p>
 	
 </li><li>
 	<span class="tooltip">
+		<code><a href="#//api/name/collectionHeaderView">&nbsp;&nbsp;collectionHeaderView</a></code>
+		<span class="tooltip"><p>Returns an accessory view that is displayed above the collection.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/collectionFooterView">&nbsp;&nbsp;collectionFooterView</a></code>
+		<span class="tooltip"><p>Returns an accessory view that is displayed below the collection.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
 		<code><a href="#//api/name/allowsSelection">&nbsp;&nbsp;allowsSelection</a></code>
 		<span class="tooltip"><p>A Boolean value that determines whether selecting items is enabled.</p></span>
 	</span>
@@ -400,6 +428,8 @@ easier.</p>
 	
 	
 	
+	
+	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
 		<p>If the value of this property is <code>YES</code>, selecting is enabled, and if it is <code>NO</code>, selecting is disabled. The default is
@@ -444,6 +474,86 @@ easier.</p>
 	
 	
 	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SSCollectionView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/collectionFooterView" title="collectionFooterView"></a>
+	<h3 class="subsubtitle method-title">collectionFooterView</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns an accessory view that is displayed below the collection.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, retain) UIView *collectionFooterView</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The default value is <code>nil</code>. The collection footer view is different from a section footer.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SSCollectionView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/collectionHeaderView" title="collectionHeaderView"></a>
+	<h3 class="subsubtitle method-title">collectionHeaderView</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns an accessory view that is displayed above the collection.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, retain) UIView *collectionHeaderView</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The default value is <code>nil</code>. The collection header view is different from a section header.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
 		<code class="declared-in-ref">SSCollectionView.h</code><br />
@@ -464,6 +574,8 @@ easier.</p>
 	
 	
 	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) id&lt;SSCollectionViewDataSource&gt; dataSource</code></div>
+	
+	
 	
 	
 	
@@ -508,6 +620,8 @@ easier.</p>
 	
 	
 	
+	
+	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
 		<code class="declared-in-ref">SSCollectionView.h</code><br />
@@ -528,6 +642,8 @@ easier.</p>
 	
 	
 	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) SSCollectionViewExtremitiesStyle extremitiesStyle</code></div>
+	
+	
 	
 	
 	
@@ -574,6 +690,8 @@ headers and footer to behave like a <code>UITableView</code> with its style set 
 	
 	
 	
+	
+	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
 		<p>The default is <code>0.0</code>.</p>
@@ -605,6 +723,8 @@ headers and footer to behave like a <code>UITableView</code> with its style set 
 	
 	
 	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign, readonly) NSUInteger numberOfSections</code></div>
+	
+	
 	
 	
 	
@@ -648,6 +768,8 @@ headers and footer to behave like a <code>UITableView</code> with its style set 
 	
 	
 	
+	
+	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
 		<p>The row spacing is in points. The default is <code>20.0</code>.</p>
@@ -679,6 +801,8 @@ headers and footer to behave like a <code>UITableView</code> with its style set 
 	
 	
 	<div class="method-subsection method-declaration"><code>@property (nonatomic, retain, readonly) UIScrollView *scrollView</code></div>
+	
+	
 	
 	
 	
@@ -749,6 +873,8 @@ reusable-item queue.</p>
 	
 	
 	
+	
+	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
 		<code class="declared-in-ref">SSCollectionView.h</code><br />
@@ -786,6 +912,8 @@ immediate.</p></dd>
 		</dl>
 		
 	</div>
+	
+	
 	
 	
 	
@@ -842,6 +970,8 @@ immediate.</p></dd>
 	
 	
 	
+	
+	
 	<div class="method-subsection see-also-section">
 		<h4 class="method-subtitle">See Also</h4>
 		<ul>
@@ -891,6 +1021,8 @@ immediate.</p></dd>
 		<h4 class="method-subtitle parameter-title">Return Value</h4>
 		<p>An object representing a cell of the table or nil if the cell is not visible or indexPath is out of range.</p>
 	</div>
+	
+	
 	
 	
 	
@@ -956,6 +1088,8 @@ immediate.</p></dd>
 	
 	
 	
+	
+	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
 		<code class="declared-in-ref">SSCollectionView.h</code><br />
@@ -994,6 +1128,8 @@ immediate.</p></dd>
 		<h4 class="method-subtitle parameter-title">Return Value</h4>
 		<p>A rectangle defining the area in which the collection view draws the section footer.</p>
 	</div>
+	
+	
 	
 	
 	
@@ -1050,6 +1186,8 @@ immediate.</p></dd>
 	
 	
 	
+	
+	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
 		<code class="declared-in-ref">SSCollectionView.h</code><br />
@@ -1097,6 +1235,8 @@ immediate.</p></dd>
 	
 	
 	
+	
+	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
 		<code class="declared-in-ref">SSCollectionView.h</code><br />
@@ -1117,6 +1257,8 @@ immediate.</p></dd>
 	
 	
 	<div class="method-subsection method-declaration"><code>- (void)reloadData</code></div>
+	
+	
 	
 	
 	
@@ -1171,6 +1313,8 @@ immediate.</p></dd>
 	
 	
 	
+	
+	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
 		<code class="declared-in-ref">SSCollectionView.h</code><br />
@@ -1214,6 +1358,8 @@ immediate.</p></dd>
 		</dl>
 		
 	</div>
+	
+	
 	
 	
 	
@@ -1282,6 +1428,8 @@ bottom) for the row when scrolling concludes.</p>
 	
 	
 	
+	
+	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
 		<code class="declared-in-ref">SSCollectionView.h</code><br />
@@ -1303,7 +1451,7 @@ bottom) for the row when scrolling concludes.</p>
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2011 Sam Soffes. All rights reserved. (Last updated: 2011-07-23)</span><br />
+						<p><span class="copyright">&copy; 2011 Sam Soffes. All rights reserved. (Last updated: 2011-09-01)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.4 (build 703)</a>.</span></p>
 						
