@@ -32,6 +32,19 @@
 	
 	
 	
+	<option value="properties">Properties</option>
+	
+	<option value="//api/name/applicationSupportDirectoryURL">&nbsp;&nbsp;&nbsp;&nbsp;applicationSupportDirectoryURL</option>
+	
+	<option value="//api/name/cachesDirectoryURL">&nbsp;&nbsp;&nbsp;&nbsp;cachesDirectoryURL</option>
+	
+	<option value="//api/name/documentsDirectoryURL">&nbsp;&nbsp;&nbsp;&nbsp;documentsDirectoryURL</option>
+	
+	<option value="//api/name/downloadsDirectoryURL">&nbsp;&nbsp;&nbsp;&nbsp;downloadsDirectoryURL</option>
+	
+	<option value="//api/name/libraryDirectoryURL">&nbsp;&nbsp;&nbsp;&nbsp;libraryDirectoryURL</option>
+	
+	
 	
 	
 	
@@ -58,11 +71,29 @@
 
 <li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Directories">Directories</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Utilities">Utilities</a></span></li>
+	
 </ul></li>
 
 
 
 
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#properties">Properties</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/applicationSupportDirectoryURL">applicationSupportDirectoryURL</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/cachesDirectoryURL">cachesDirectoryURL</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/documentsDirectoryURL">documentsDirectoryURL</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/downloadsDirectoryURL">downloadsDirectoryURL</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/libraryDirectoryURL">libraryDirectoryURL</a></span></li>
+	
+</ul></li>
 
 
 
@@ -120,22 +151,65 @@
 						<h2 class="subtitle subtitle-tasks">Tasks</h2>
 						
 						
-						
-						
+						<a title="Directories" name="task_Directories"></a>
+						<h3 class="subsubtitle task-title">Directories</h3>
 
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
-		<code><a href="#//api/name/isPirated">&ndash;&nbsp;isPirated</a></code>
-		<span class="tooltip"><p>Checks for pirated application indicators.</p></span>
+		<code><a href="#//api/name/documentsDirectoryURL">&nbsp;&nbsp;documentsDirectoryURL</a></code>
+		<span class="tooltip"><p>Returns the file URL of the documents directory.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/cachesDirectoryURL">&nbsp;&nbsp;cachesDirectoryURL</a></code>
+		<span class="tooltip"><p>Returns the file URL of the caches directory.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/downloadsDirectoryURL">&nbsp;&nbsp;downloadsDirectoryURL</a></code>
+		<span class="tooltip"><p>Returns the file URL of the downloads directory.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/libraryDirectoryURL">&nbsp;&nbsp;libraryDirectoryURL</a></code>
+		<span class="tooltip"><p>Returns the file URL of the library directory.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/applicationSupportDirectoryURL">&nbsp;&nbsp;applicationSupportDirectoryURL</a></code>
+		<span class="tooltip"><p>Returns the file URL of the application support directory.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li>
+						</ul>
+						
+						
+						<a title="Utilities" name="task_Utilities"></a>
+						<h3 class="subsubtitle task-title">Utilities</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setNetworkActivity:">&ndash;&nbsp;setNetworkActivity:</a></code>
+		<span class="tooltip"><p>Aggregates calls to settings <code>networkActivityIndicatorVisible</code> to avoid flashing of the indicator in the status bar.
+Simply use <a href="#//api/name/setNetworkActivity:"><code>setNetworkActivity:</code></a> instead of <code>setNetworkActivityIndicatorVisible:</code>.</p></span>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/setNetworkActivity:">&ndash;&nbsp;setNetworkActivity:</a></code>
-		<span class="tooltip"><p>Aggregates calls to settings <code>networkActivityIndicatorVisible</code> to avoid flashing of the indicator in the status bar.
-Simply use <a href="#//api/name/setNetworkActivity:"><code>setNetworkActivity:</code></a> instead of <code>setNetworkActivityIndicatorVisible:</code>.</p></span>
+		<code><a href="#//api/name/isPirated">&ndash;&nbsp;isPirated</a></code>
+		<span class="tooltip"><p>Checks for pirated application indicators.</p></span>
 	</span>
 	
 	
@@ -147,6 +221,172 @@ Simply use <a href="#//api/name/setNetworkActivity:"><code>setNetworkActivity:</
 					
 					
 					
+					
+					<div class="section section-methods">
+						<a title="Properties" name="properties"></a>
+						<h2 class="subtitle subtitle-methods">Properties</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/applicationSupportDirectoryURL" title="applicationSupportDirectoryURL"></a>
+	<h3 class="subsubtitle method-title">applicationSupportDirectoryURL</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the file URL of the application support directory.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, retain, readonly) NSURL *applicationSupportDirectoryURL</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">UIApplication+SSToolkitAdditions.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/cachesDirectoryURL" title="cachesDirectoryURL"></a>
+	<h3 class="subsubtitle method-title">cachesDirectoryURL</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the file URL of the caches directory.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, retain, readonly) NSURL *cachesDirectoryURL</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">UIApplication+SSToolkitAdditions.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/documentsDirectoryURL" title="documentsDirectoryURL"></a>
+	<h3 class="subsubtitle method-title">documentsDirectoryURL</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the file URL of the documents directory.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, retain, readonly) NSURL *documentsDirectoryURL</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">UIApplication+SSToolkitAdditions.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/downloadsDirectoryURL" title="downloadsDirectoryURL"></a>
+	<h3 class="subsubtitle method-title">downloadsDirectoryURL</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the file URL of the downloads directory.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, retain, readonly) NSURL *downloadsDirectoryURL</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">UIApplication+SSToolkitAdditions.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/libraryDirectoryURL" title="libraryDirectoryURL"></a>
+	<h3 class="subsubtitle method-title">libraryDirectoryURL</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the file URL of the library directory.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, retain, readonly) NSURL *libraryDirectoryURL</code></div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">UIApplication+SSToolkitAdditions.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
 					
 					
 					
@@ -181,7 +421,9 @@ Simply use <a href="#//api/name/setNetworkActivity:"><code>setNetworkActivity:</
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>This isn&rsquo;t bulletproof, but should catch a lot of cases. Thanks @marcoarment: <a href="http://twitter.com/marcoarment/status/27965461020">http://twitter.com/marcoarment/status/27965461020</a></p>
+		<p>This isn&rsquo;t bulletproof, but should catch a lot of cases.</p>
+
+<p>Thanks Marco Arment: <a href="http://twitter.com/marcoarment/status/27965461020">http://twitter.com/marcoarment/status/27965461020</a></p>
 	</div>
 	
 	
@@ -261,7 +503,7 @@ indicator.</p>
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2011 Sam Soffes. All rights reserved. (Last updated: 2011-07-23)</span><br />
+						<p><span class="copyright">&copy; 2011 Sam Soffes. All rights reserved. (Last updated: 2011-09-16)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.4 (build 703)</a>.</span></p>
 						

@@ -36,9 +36,25 @@
 	
 	<option value="//api/name/alpha">&nbsp;&nbsp;&nbsp;&nbsp;alpha</option>
 	
+	<option value="//api/name/blue">&nbsp;&nbsp;&nbsp;&nbsp;blue</option>
+	
+	<option value="//api/name/green">&nbsp;&nbsp;&nbsp;&nbsp;green</option>
+	
+	<option value="//api/name/red">&nbsp;&nbsp;&nbsp;&nbsp;red</option>
 	
 	
 	
+	
+	<option value="class_methods">Class Methods</option>
+	
+	<option value="//api/name/colorWithHex:">&nbsp;&nbsp;&nbsp;&nbsp;+ colorWithHex:</option>
+	
+	
+	
+	
+	<option value="instance_methods">Instance Methods</option>
+	
+	<option value="//api/name/hexValue">&nbsp;&nbsp;&nbsp;&nbsp;- hexValue</option>
 	
 	
 	
@@ -66,11 +82,29 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/alpha">alpha</a></span></li>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/blue">blue</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/green">green</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/red">red</a></span></li>
+	
 </ul></li>
 
 
 
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#class_methods">Class Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/colorWithHex:">colorWithHex:</a></span></li>
+	
+</ul></li>
 
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/hexValue">hexValue</a></span></li>
+	
+</ul></li>
 
 
 			</ul>
@@ -121,6 +155,41 @@
 
 						<ul class="task-list">
 							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/colorWithHex:">+&nbsp;colorWithHex:</a></code>
+		<span class="tooltip"><p>Creates and returns an UIColor object containing a given value.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/hexValue">&ndash;&nbsp;hexValue</a></code>
+		<span class="tooltip"><p>Returns the receiver&rsquo;s value as a hex string.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/red">&nbsp;&nbsp;red</a></code>
+		<span class="tooltip"><p>The receiver&rsquo;s <a href="#//api/name/red">red</a> component value. (read-only)</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/green">&nbsp;&nbsp;green</a></code>
+		<span class="tooltip"><p>The receiver&rsquo;s <a href="#//api/name/green">green</a> component value. (read-only)</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/blue">&nbsp;&nbsp;blue</a></code>
+		<span class="tooltip"><p>The receiver&rsquo;s <a href="#//api/name/blue">blue</a> component value. (read-only)</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/alpha">&nbsp;&nbsp;alpha</a></code>
 		<span class="tooltip"><p>The receiver&rsquo;s <a href="#//api/name/alpha">alpha</a> value. (read-only)</p></span>
@@ -178,11 +247,225 @@ transparent and <code>1.0</code> represents totally opaque.</p>
 	
 </div>
 						
+						<div class="section-method">
+	<a name="//api/name/blue" title="blue"></a>
+	<h3 class="subsubtitle method-title">blue</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The receiver&rsquo;s <a href="#//api/name/blue">blue</a> component value. (read-only)</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign, readonly) CGFloat blue</code></div>
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The value of this property is a floating-point number in the range <code>0.0</code> to <code>1.0</code>. <code>-1.0</code> is returned if the color is
+not in the RGB colorspace.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">UIColor+SSToolkitAdditions.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/green" title="green"></a>
+	<h3 class="subsubtitle method-title">green</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The receiver&rsquo;s <a href="#//api/name/green">green</a> component value. (read-only)</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign, readonly) CGFloat green</code></div>
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The value of this property is a floating-point number in the range <code>0.0</code> to <code>1.0</code>. <code>-1.0</code> is returned if the color is
+not in the RGB colorspace.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">UIColor+SSToolkitAdditions.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/red" title="red"></a>
+	<h3 class="subsubtitle method-title">red</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The receiver&rsquo;s <a href="#//api/name/red">red</a> component value. (read-only)</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign, readonly) CGFloat red</code></div>
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The value of this property is a floating-point number in the range <code>0.0</code> to <code>1.0</code>. <code>-1.0</code> is returned if the color is
+not in the RGB colorspace.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">UIColor+SSToolkitAdditions.h</code><br />
+	</div>				
+	
+	
+</div>
+						
 					</div>
 					
 					
 					
+					<div class="section section-methods">
+						<a title="Class Methods" name="class_methods"></a>
+						<h2 class="subtitle subtitle-methods">Class Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/colorWithHex:" title="colorWithHex:"></a>
+	<h3 class="subsubtitle method-title">colorWithHex:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Creates and returns an UIColor object containing a given value.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>+ (UIColor *)colorWithHex:(NSString *)<em>hex</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>hex</em></dt>
+			<dd><p>The value for the new color. The <code>#</code> sign is optional.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>An UIColor object containing a value.</p>
+
+<p>The <a href="#//api/name/alpha">alpha</a> value will be <code>1.0</code>.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">UIColor+SSToolkitAdditions.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
 					
+					
+					
+					<div class="section section-methods">
+						<a title="Instance Methods" name="instance_methods"></a>
+						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/hexValue" title="hexValue"></a>
+	<h3 class="subsubtitle method-title">hexValue</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the receiver&rsquo;s value as a hex string.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (NSString *)hexValue</code></div>
+	
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>The receiver&rsquo;s value as a hex string.</p>
+
+<p>The value will be <code>nil</code> if the color is in a color space other than Grayscale or RGB. The <code>#</code> sign is omitted.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">UIColor+SSToolkitAdditions.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
 					
 					
 				</div>
@@ -195,7 +478,7 @@ transparent and <code>1.0</code> represents totally opaque.</p>
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2011 Sam Soffes. All rights reserved. (Last updated: 2011-07-23)</span><br />
+						<p><span class="copyright">&copy; 2011 Sam Soffes. All rights reserved. (Last updated: 2011-09-16)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.4 (build 703)</a>.</span></p>
 						
