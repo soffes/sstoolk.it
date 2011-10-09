@@ -1,15 +1,21 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
+		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
 		<title>SSWebView Class Reference</title>
-		<meta http-equiv="Content-Type" content="application/xhtml+xml;charset=utf-8" />
 		<meta id="xcode-display" name="xcode-display" content="render"/>
 		<meta name="viewport" content="width=550" />
-		<link rel="stylesheet" type="text/css" href="../css/styles.css" />
+		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
+		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
 		<meta name="generator" content="appledoc 2.0.4 (build 703)" />
 	</head>
 	<body>
 		<header id="top_header">
+			<div id="library" class="hideInXcode">
+				<h1><a id="libraryTitle" href="../index.html">SSToolkit </a></h1>
+				<a id="developerHome" href="../index.html">Sam Soffes</a>
+			</div>
+			
 			<div id="title" role="banner">
 				<h1 class="hideInXcode">SSWebView Class Reference</h1>
 			</div>
@@ -575,6 +581,8 @@ an internal instance. It has been designed to be a drop in replacement for UIWeb
 	
 	
 	
+	
+	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
 		<p>The default value on iPhone is <code>NO</code>.</p>
@@ -606,6 +614,8 @@ an internal instance. It has been designed to be a drop in replacement for UIWeb
 	
 	
 	<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) BOOL canGoBack</code></div>
+	
+	
 	
 	
 	
@@ -649,6 +659,8 @@ an internal instance. It has been designed to be a drop in replacement for UIWeb
 	
 	
 	
+	
+	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
 		<p>If <code>YES</code>, able to move forward; otherwise, <code>NO</code>.</p>
@@ -680,6 +692,8 @@ an internal instance. It has been designed to be a drop in replacement for UIWeb
 	
 	
 	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) BOOL consoleEnabled</code></div>
+	
+	
 	
 	
 	
@@ -726,6 +740,8 @@ an internal instance. It has been designed to be a drop in replacement for UIWeb
 	
 	
 	
+	
+	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
 		<p>You can use this property to specify the types of data (phone numbers, http links, email address, and so on) that
@@ -759,6 +775,8 @@ responsible for handling the URL type and passes it the URL.</p>
 	
 	
 	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) id&lt;SSWebViewDelegate&gt; delegate</code></div>
+	
+	
 	
 	
 	
@@ -808,6 +826,8 @@ responsible for handling the URL type and passes it the URL.</p>
 	
 	
 	
+	
+	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
 		<code class="declared-in-ref">SSWebView.h</code><br />
@@ -828,6 +848,8 @@ responsible for handling the URL type and passes it the URL.</p>
 	
 	
 	<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly, getter=isLoading) BOOL loading</code></div>
+	
+	
 	
 	
 	
@@ -871,6 +893,8 @@ responsible for handling the URL type and passes it the URL.</p>
 	
 	
 	
+	
+	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
 		<p>This will return <code>YES</code> when the first NSURLRequest starts and <code>NO</code> when there are no more requests <a href="#//api/name/loading">loading</a>.</p>
@@ -904,6 +928,8 @@ responsible for handling the URL type and passes it the URL.</p>
 	
 	
 	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) BOOL mediaPlaybackRequiresUserAction</code></div>
+	
+	
 	
 	
 	
@@ -953,6 +979,8 @@ responsible for handling the URL type and passes it the URL.</p>
 	
 	
 	
+	
+	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
 		<code class="declared-in-ref">SSWebView.h</code><br />
@@ -973,6 +1001,8 @@ responsible for handling the URL type and passes it the URL.</p>
 	
 	
 	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) BOOL scalesPageToFit</code></div>
+	
+	
 	
 	
 	
@@ -1017,6 +1047,8 @@ zooming is disabled. The default value is <code>NO</code>.</p>
 	
 	
 	
+	
+	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
 		<p>Your application can access the scroll view if it wants to customize the scrolling behavior of the web view.</p>
@@ -1048,6 +1080,8 @@ zooming is disabled. The default value is <code>NO</code>.</p>
 	
 	
 	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) BOOL shadowsHidden</code></div>
+	
+	
 	
 	
 	
@@ -1104,6 +1138,8 @@ is <code>NO</code>, shadows will be displayed like normal. The default value is 
 	
 	
 	
+	
+	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
 		<p>If the receiver is in a modal <code>UIViewController</code> with the <code>modalPresentationStyle</code> <code>UIModalPresentationFormSheet</code>,
@@ -1148,6 +1184,8 @@ it will not dismiss the keyboard due to how <code>UIModalPresentationFormSheet</
 	
 	
 	
+	
+	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
 		<code class="declared-in-ref">SSWebView.h</code><br />
@@ -1168,6 +1206,8 @@ it will not dismiss the keyboard due to how <code>UIModalPresentationFormSheet</
 	
 	
 	<div class="method-subsection method-declaration"><code>- (void)goForward</code></div>
+	
+	
 	
 	
 	
@@ -1237,6 +1277,8 @@ it will not dismiss the keyboard due to how <code>UIModalPresentationFormSheet</
 	
 	
 	
+	
+	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
 		<code class="declared-in-ref">SSWebView.h</code><br />
@@ -1270,6 +1312,8 @@ it will not dismiss the keyboard due to how <code>UIModalPresentationFormSheet</
 		</dl>
 		
 	</div>
+	
+	
 	
 	
 	
@@ -1337,6 +1381,8 @@ it will not dismiss the keyboard due to how <code>UIModalPresentationFormSheet</
 	
 	
 	
+	
+	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
 		<code class="declared-in-ref">SSWebView.h</code><br />
@@ -1371,6 +1417,8 @@ property.</p></dd>
 		</dl>
 		
 	</div>
+	
+	
 	
 	
 	
@@ -1431,6 +1479,8 @@ property.</p></dd>
 		</dl>
 		
 	</div>
+	
+	
 	
 	
 	
@@ -1504,6 +1554,8 @@ property.</p></dd>
 	
 	
 	
+	
+	
 	<div class="method-subsection see-also-section">
 		<h4 class="method-subtitle">See Also</h4>
 		<ul>
@@ -1545,6 +1597,8 @@ property.</p></dd>
 	
 	
 	<div class="method-subsection method-declaration"><code>- (void)reload</code></div>
+	
+	
 	
 	
 	
@@ -1598,6 +1652,8 @@ property.</p></dd>
 	
 	
 	
+	
+	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
 		<p>Using Javascript to this doesn&rsquo;t always work as expected. This method will correctly remove the text selection.</p>
@@ -1635,6 +1691,8 @@ property.</p></dd>
 	
 	
 	
+	
+	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
 		<p>All of the properties are maintained across the <a href="#//api/name/reset">reset</a>.</p>
@@ -1666,6 +1724,8 @@ property.</p></dd>
 	
 	
 	<div class="method-subsection method-declaration"><code>- (void)stopLoading</code></div>
+	
+	
 	
 	
 	
@@ -1739,6 +1799,8 @@ total memory allocation for JavaScript.</p>
 	
 	
 	
+	
+	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
 		<code class="declared-in-ref">SSWebView.h</code><br />
@@ -1760,7 +1822,7 @@ total memory allocation for JavaScript.</p>
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2011 Sam Soffes. All rights reserved. (Last updated: 2011-09-16)</span><br />
+						<p><span class="copyright">&copy; 2011 Sam Soffes. All rights reserved. (Last updated: 2011-10-09)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.4 (build 703)</a>.</span></p>
 						
