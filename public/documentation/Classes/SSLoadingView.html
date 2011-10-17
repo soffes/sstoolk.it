@@ -42,15 +42,7 @@
 	
 	<option value="//api/name/activityIndicatorView">&nbsp;&nbsp;&nbsp;&nbsp;activityIndicatorView</option>
 	
-	<option value="//api/name/font">&nbsp;&nbsp;&nbsp;&nbsp;font</option>
-	
-	<option value="//api/name/shadowColor">&nbsp;&nbsp;&nbsp;&nbsp;shadowColor</option>
-	
-	<option value="//api/name/shadowOffset">&nbsp;&nbsp;&nbsp;&nbsp;shadowOffset</option>
-	
-	<option value="//api/name/text">&nbsp;&nbsp;&nbsp;&nbsp;text</option>
-	
-	<option value="//api/name/textColor">&nbsp;&nbsp;&nbsp;&nbsp;textColor</option>
+	<option value="//api/name/textLabel">&nbsp;&nbsp;&nbsp;&nbsp;textLabel</option>
 	
 	
 	
@@ -82,15 +74,7 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/activityIndicatorView">activityIndicatorView</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/font">font</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/shadowColor">shadowColor</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/shadowOffset">shadowOffset</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/text">text</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/textColor">textColor</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/textLabel">textLabel</a></span></li>
 	
 </ul></li>
 
@@ -136,7 +120,7 @@
 						<p>An easy view to show loading similar to the loading screens in the iTunes or App Store applications. The view is
 intended to cover another view while it is loading and the removed once loading is complete.</p>
 
-<p>This view will automatically center the <a href="#//api/name/text">text</a> and the activity indicator.</p>
+<p>This view will automatically center the text and the activity indicator.</p>
 					</div>
 					
 					
@@ -154,43 +138,15 @@ intended to cover another view while it is loading and the removed once loading 
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
+		<code><a href="#//api/name/textLabel">&nbsp;&nbsp;textLabel</a></code>
+		<span class="tooltip"><p>The text label that is displayed to the user.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
 		<code><a href="#//api/name/activityIndicatorView">&nbsp;&nbsp;activityIndicatorView</a></code>
 		<span class="tooltip"><p>A view that indicates loading activity to the user. (read-only)</p></span>
-	</span>
-	<span class="task-item-suffix">property</span>
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/text">&nbsp;&nbsp;text</a></code>
-		<span class="tooltip"><p>The <a href="#//api/name/text">text</a> that is displayed to the user.</p></span>
-	</span>
-	<span class="task-item-suffix">property</span>
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/font">&nbsp;&nbsp;font</a></code>
-		<span class="tooltip"><p>The <a href="#//api/name/font">font</a> of the <a href="#//api/name/text"><code>text</code></a>.</p></span>
-	</span>
-	<span class="task-item-suffix">property</span>
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/textColor">&nbsp;&nbsp;textColor</a></code>
-		<span class="tooltip"><p>The color of the <a href="#//api/name/text">text</a>.</p></span>
-	</span>
-	<span class="task-item-suffix">property</span>
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/shadowColor">&nbsp;&nbsp;shadowColor</a></code>
-		<span class="tooltip"><p>The color of the <a href="#//api/name/text">text</a> shadow.</p></span>
-	</span>
-	<span class="task-item-suffix">property</span>
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/shadowOffset">&nbsp;&nbsp;shadowOffset</a></code>
-		<span class="tooltip"><p>The shadow offset (measured in points) for the <a href="#//api/name/text"><code>text</code></a>.</p></span>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
@@ -242,17 +198,17 @@ intended to cover another view while it is loading and the removed once loading 
 </div>
 						
 						<div class="section-method">
-	<a name="//api/name/font" title="font"></a>
-	<h3 class="subsubtitle method-title">font</h3>
+	<a name="//api/name/textLabel" title="textLabel"></a>
+	<h3 class="subsubtitle method-title">textLabel</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>The <a href="#//api/name/font">font</a> of the <a href="#//api/name/text"><code>text</code></a>.</p>
+		<p>The text label that is displayed to the user.</p>
 	</div>		
 	
 	
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, retain) UIFont *font</code></div>
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, retain, readonly) UILabel *textLabel</code></div>
 	
 	
 	
@@ -260,164 +216,6 @@ intended to cover another view while it is loading and the removed once loading 
 	
 	
 	
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">SSLoadingView.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-						<div class="section-method">
-	<a name="//api/name/shadowColor" title="shadowColor"></a>
-	<h3 class="subsubtitle method-title">shadowColor</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>The color of the <a href="#//api/name/text">text</a> shadow.</p>
-	</div>		
-	
-	
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, retain) UIColor *shadowColor</code></div>
-	
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection discussion-section">
-		<h4 class="method-subtitle">Discussion</h4>
-		<p>Set to <code>nil</code> to disable drawing the shadow. The default value is <code>[UIColor whiteColor]</code>.</p>
-	</div>
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">SSLoadingView.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-						<div class="section-method">
-	<a name="//api/name/shadowOffset" title="shadowOffset"></a>
-	<h3 class="subsubtitle method-title">shadowOffset</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>The shadow offset (measured in points) for the <a href="#//api/name/text"><code>text</code></a>.</p>
-	</div>		
-	
-	
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) CGSize shadowOffset</code></div>
-	
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection discussion-section">
-		<h4 class="method-subtitle">Discussion</h4>
-		<p>The <a href="#//api/name/shadowColor"><code>shadowColor</code></a> must be non-nil for this property to have any effect. The default offset size is (0, 1), which
-indicates a shadow one point below the <a href="#//api/name/text">text</a>. Text shadows are drawn with the specified offset and color and no
-blurring.</p>
-	</div>
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">SSLoadingView.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-						<div class="section-method">
-	<a name="//api/name/text" title="text"></a>
-	<h3 class="subsubtitle method-title">text</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>The <a href="#//api/name/text">text</a> that is displayed to the user.</p>
-	</div>		
-	
-	
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, copy) NSString *text</code></div>
-	
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection discussion-section">
-		<h4 class="method-subtitle">Discussion</h4>
-		<p>The default is &ldquo;Loading&hellip;&rdquo;</p>
-	</div>
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">SSLoadingView.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-						<div class="section-method">
-	<a name="//api/name/textColor" title="textColor"></a>
-	<h3 class="subsubtitle method-title">textColor</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>The color of the <a href="#//api/name/text">text</a>.</p>
-	</div>		
-	
-	
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, retain) UIColor *textColor</code></div>
-	
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection discussion-section">
-		<h4 class="method-subtitle">Discussion</h4>
-		<p>The default value is <code>[UIColor darkGrayColor]</code>.</p>
-	</div>
 	
 	
 	
@@ -450,7 +248,7 @@ blurring.</p>
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2011 Sam Soffes. All rights reserved. (Last updated: 2011-10-09)</span><br />
+						<p><span class="copyright">&copy; 2011 Sam Soffes. All rights reserved. (Last updated: 2011-10-17)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.4 (build 703)</a>.</span></p>
 						

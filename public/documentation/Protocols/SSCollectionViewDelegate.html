@@ -1,0 +1,1017 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
+		<title>SSCollectionViewDelegate Protocol Reference</title>
+		<meta id="xcode-display" name="xcode-display" content="render"/>
+		<meta name="viewport" content="width=550" />
+		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
+		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
+		<meta name="generator" content="appledoc 2.0.4 (build 703)" />
+	</head>
+	<body>
+		<header id="top_header">
+			<div id="library" class="hideInXcode">
+				<h1><a id="libraryTitle" href="../index.html">SSToolkit </a></h1>
+				<a id="developerHome" href="../index.html">Sam Soffes</a>
+			</div>
+			
+			<div id="title" role="banner">
+				<h1 class="hideInXcode">SSCollectionViewDelegate Protocol Reference</h1>
+			</div>
+			<ul id="headerButtons" role="toolbar">
+				<li id="toc_button">
+					<button aria-label="Show Table of Contents" role="checkbox" class="open" id="table_of_contents"><span class="disclosure"></span>Table of Contents</button>
+				</li>
+				<li id="jumpto_button" role="navigation">
+					<select id="jumpTo">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+	
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<option value="instance_methods">Instance Methods</option>
+	
+	<option value="//api/name/collectionView:didDeselectItemAtIndexPath:">&nbsp;&nbsp;&nbsp;&nbsp;- collectionView:didDeselectItemAtIndexPath:</option>
+	
+	<option value="//api/name/collectionView:didSelectItemAtIndexPath:">&nbsp;&nbsp;&nbsp;&nbsp;- collectionView:didSelectItemAtIndexPath:</option>
+	
+	<option value="//api/name/collectionView:heightForFooterInSection:">&nbsp;&nbsp;&nbsp;&nbsp;- collectionView:heightForFooterInSection:</option>
+	
+	<option value="//api/name/collectionView:heightForHeaderInSection:">&nbsp;&nbsp;&nbsp;&nbsp;- collectionView:heightForHeaderInSection:</option>
+	
+	<option value="//api/name/collectionView:itemSizeForSection:">&nbsp;&nbsp;&nbsp;&nbsp;- collectionView:itemSizeForSection:</option>
+	
+	<option value="//api/name/collectionView:viewForFooterInSection:">&nbsp;&nbsp;&nbsp;&nbsp;- collectionView:viewForFooterInSection:</option>
+	
+	<option value="//api/name/collectionView:viewForHeaderInSection:">&nbsp;&nbsp;&nbsp;&nbsp;- collectionView:viewForHeaderInSection:</option>
+	
+	<option value="//api/name/collectionView:willDeselectItemAtIndexPath:">&nbsp;&nbsp;&nbsp;&nbsp;- collectionView:willDeselectItemAtIndexPath:</option>
+	
+	<option value="//api/name/collectionView:willDisplayItem:atIndexPath:">&nbsp;&nbsp;&nbsp;&nbsp;- collectionView:willDisplayItem:atIndexPath:</option>
+	
+	<option value="//api/name/collectionView:willSelectItemAtIndexPath:">&nbsp;&nbsp;&nbsp;&nbsp;- collectionView:willSelectItemAtIndexPath:</option>
+	
+	
+	
+</select>
+				</li>
+			</ul>
+		</header>
+		<nav id="tocContainer" class="isShowingTOC">
+			<ul id="toc" role="tree">
+				
+<li role="treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#overview">Overview</a></span></li>
+
+
+
+
+<li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
+	
+</ul></li>
+
+
+
+
+
+
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/collectionView:didDeselectItemAtIndexPath:">collectionView:didDeselectItemAtIndexPath:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/collectionView:didSelectItemAtIndexPath:">collectionView:didSelectItemAtIndexPath:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/collectionView:heightForFooterInSection:">collectionView:heightForFooterInSection:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/collectionView:heightForHeaderInSection:">collectionView:heightForHeaderInSection:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/collectionView:itemSizeForSection:">collectionView:itemSizeForSection:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/collectionView:viewForFooterInSection:">collectionView:viewForFooterInSection:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/collectionView:viewForHeaderInSection:">collectionView:viewForHeaderInSection:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/collectionView:willDeselectItemAtIndexPath:">collectionView:willDeselectItemAtIndexPath:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/collectionView:willDisplayItem:atIndexPath:">collectionView:willDisplayItem:atIndexPath:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/collectionView:willSelectItemAtIndexPath:">collectionView:willSelectItemAtIndexPath:</a></span></li>
+	
+</ul></li>
+
+
+			</ul>
+		</nav>
+		<article>
+			<div id="contents" class="isShowingTOC" role="main">
+				<a title="SSCollectionViewDelegate Protocol Reference" name="top"></a>
+				<div class="main-navigation navigation-top">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="header">
+					<div class="section-header">
+						<h1 class="title title-header">SSCollectionViewDelegate Protocol Reference</h1>
+					</div>		
+				</div>
+				<div id="container">	
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<td class="specification-title">Conforms to</td>
+	<td class="specification-value">NSObject<br />UIScrollViewDelegate</td>
+</tr><tr>
+	<td class="specification-title">Declared in</td>
+	<td class="specification-value">SSCollectionView.h</td>
+</tr>
+						</tbody></table></div>
+					
+					
+					
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>The delegate of a <a href="../Classes/SSCollectionView.html"><code>SSCollectionView</code></a> object must adopt the <a href="SSCollectionViewDelegate.html"><code>SSCollectionViewDelegate</code></a> protocol. Optional methods of the
+protocol allow the delegate to manage selections, configure section headings and footers, and perform other actions.</p>
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						<h2 class="subtitle subtitle-tasks">Tasks</h2>
+						
+						
+						
+						
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/collectionView:itemSizeForSection:">&ndash;&nbsp;collectionView:itemSizeForSection:</a></code>
+		<span class="tooltip"><p>Asks the delegate for the size to use for an item in a specified location.</p></span>
+	</span>
+	
+	<span class="task-item-suffix">required method</span>
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/collectionView:willDisplayItem:atIndexPath:">&ndash;&nbsp;collectionView:willDisplayItem:atIndexPath:</a></code>
+		<span class="tooltip"><p>Tells the delegate the collection view is about to draw an item for a particular index path.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/collectionView:willSelectItemAtIndexPath:">&ndash;&nbsp;collectionView:willSelectItemAtIndexPath:</a></code>
+		<span class="tooltip"><p>Tells the delegate that a specified item is about to be selected.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/collectionView:didSelectItemAtIndexPath:">&ndash;&nbsp;collectionView:didSelectItemAtIndexPath:</a></code>
+		<span class="tooltip"><p>Tells the delegate that the specified item is now selected.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/collectionView:willDeselectItemAtIndexPath:">&ndash;&nbsp;collectionView:willDeselectItemAtIndexPath:</a></code>
+		<span class="tooltip"><p>Tells the delegate that a specified item is about to be deselected.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/collectionView:didDeselectItemAtIndexPath:">&ndash;&nbsp;collectionView:didDeselectItemAtIndexPath:</a></code>
+		<span class="tooltip"><p>Tells the delegate that the specified item is now deselected.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/collectionView:viewForHeaderInSection:">&ndash;&nbsp;collectionView:viewForHeaderInSection:</a></code>
+		<span class="tooltip"><p>Asks the delegate for a view object to display in the header of the specified section of the collection view.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/collectionView:viewForFooterInSection:">&ndash;&nbsp;collectionView:viewForFooterInSection:</a></code>
+		<span class="tooltip"><p>Asks the delegate for a view object to display in the fotter of the specified section of the collection view.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/collectionView:heightForHeaderInSection:">&ndash;&nbsp;collectionView:heightForHeaderInSection:</a></code>
+		<span class="tooltip"><p>Asks the delegate for the height to use for the header of a particular section.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/collectionView:heightForFooterInSection:">&ndash;&nbsp;collectionView:heightForFooterInSection:</a></code>
+		<span class="tooltip"><p>Asks the delegate for the height to use for the footer of a particular section.</p></span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+					</div>
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Instance Methods" name="instance_methods"></a>
+						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/collectionView:didDeselectItemAtIndexPath:" title="collectionView:didDeselectItemAtIndexPath:"></a>
+	<h3 class="subsubtitle method-title">collectionView:didDeselectItemAtIndexPath:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Tells the delegate that the specified item is now deselected.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)collectionView:(SSCollectionView *)<em>aCollectionView</em> didDeselectItemAtIndexPath:(NSIndexPath *)<em>indexPath</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>aCollectionView</em></dt>
+			<dd><p>A collection view object informing the <code>delegate</code> about the item deselection.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>indexPath</em></dt>
+			<dd><p>An index path locating the deselected item in <code>aCollectionView</code>.</p>
+
+<p>The delegate handles item deselections in this method.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="#//api/name/collectionView:willDeselectItemAtIndexPath:">&ndash; collectionView:willDeselectItemAtIndexPath:</a></p></code></li>
+			
+			<li><code><p><a href="#//api/name/collectionView:didSelectItemAtIndexPath:">&ndash; collectionView:didSelectItemAtIndexPath:</a></p></code></li>
+			
+		</ul>
+	</div>
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SSCollectionView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/collectionView:didSelectItemAtIndexPath:" title="collectionView:didSelectItemAtIndexPath:"></a>
+	<h3 class="subsubtitle method-title">collectionView:didSelectItemAtIndexPath:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Tells the delegate that the specified item is now selected.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)collectionView:(SSCollectionView *)<em>aCollectionView</em> didSelectItemAtIndexPath:(NSIndexPath *)<em>indexPath</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>aCollectionView</em></dt>
+			<dd><p>A collection view object informing the <code>delegate</code> about the new item selection.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>indexPath</em></dt>
+			<dd><p>An index path locating the new selected item in <code>aCollectionView</code>.</p>
+
+<p>The delegate handles selections in this method.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="#//api/name/collectionView:willSelectItemAtIndexPath:">&ndash; collectionView:willSelectItemAtIndexPath:</a></p></code></li>
+			
+			<li><code><p><a href="#//api/name/collectionView:didDeselectItemAtIndexPath:">&ndash; collectionView:didDeselectItemAtIndexPath:</a></p></code></li>
+			
+		</ul>
+	</div>
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SSCollectionView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/collectionView:heightForFooterInSection:" title="collectionView:heightForFooterInSection:"></a>
+	<h3 class="subsubtitle method-title">collectionView:heightForFooterInSection:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Asks the delegate for the height to use for the footer of a particular section.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (CGFloat)collectionView:(SSCollectionView *)<em>aCollectionView</em> heightForFooterInSection:(NSUInteger)<em>section</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>aCollectionView</em></dt>
+			<dd><p>The collection view object requesting this information.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>section</em></dt>
+			<dd><p>An index number identifying a section of <code>aCollectionView</code>.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>A floating-point value that specifies the height (in points) of the footer for section.</p>
+
+<p>This method allows the delegate to specify section footers with varying heights.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="#//api/name/collectionView:viewForFooterInSection:">&ndash; collectionView:viewForFooterInSection:</a></p></code></li>
+			
+		</ul>
+	</div>
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SSCollectionView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/collectionView:heightForHeaderInSection:" title="collectionView:heightForHeaderInSection:"></a>
+	<h3 class="subsubtitle method-title">collectionView:heightForHeaderInSection:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Asks the delegate for the height to use for the header of a particular section.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (CGFloat)collectionView:(SSCollectionView *)<em>aCollectionView</em> heightForHeaderInSection:(NSUInteger)<em>section</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>aCollectionView</em></dt>
+			<dd><p>The collection view object requesting this information.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>section</em></dt>
+			<dd><p>An index number identifying a section of <code>aCollectionView</code>.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>A floating-point value that specifies the height (in points) of the header for section.</p>
+
+<p>This method allows the delegate to specify section header with varying heights.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="#//api/name/collectionView:viewForHeaderInSection:">&ndash; collectionView:viewForHeaderInSection:</a></p></code></li>
+			
+		</ul>
+	</div>
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SSCollectionView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/collectionView:itemSizeForSection:" title="collectionView:itemSizeForSection:"></a>
+	<h3 class="subsubtitle method-title">collectionView:itemSizeForSection:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Asks the delegate for the size to use for an item in a specified location.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (CGSize)collectionView:(SSCollectionView *)<em>aCollectionView</em> itemSizeForSection:(NSUInteger)<em>section</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>aCollectionView</em></dt>
+			<dd><p>The collection view object requesting this information.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>An</em></dt>
+			<dd><p>index path that locates a item in <code>aCollectionView</code>.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>A value that specifies the size (in points) that item should be.</p>
+
+<p>The method allows the <code>delegate</code> to specify items with varying sizes per section. This is a required method.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<div class="warning"><p><strong>Important:</strong> Due to an underlying implementation detail, you should not return sizes with their width or
+height greater than <code>2009</code>.</p></div>
+	</div>
+	
+	
+	
+	<div class="method-subsection arguments-section exceptions">
+		<h4 class="method-subtitle exception-title">Exceptions</h4>
+		
+		<dl class="argument-def exception-def">
+			<dt><em>NSException</em></dt>
+			<dd><p>Thrown if a zero size is returned.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SSCollectionView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/collectionView:viewForFooterInSection:" title="collectionView:viewForFooterInSection:"></a>
+	<h3 class="subsubtitle method-title">collectionView:viewForFooterInSection:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Asks the delegate for a view object to display in the fotter of the specified section of the collection view.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (UIView *)collectionView:(SSCollectionView *)<em>aCollectionView</em> viewForFooterInSection:(NSUInteger)<em>section</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>aCollectionView</em></dt>
+			<dd><p>The collection view object asking for the view object.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>section</em></dt>
+			<dd><p>An index number identifying a section of <code>aCollectionView</code>.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>A view object to be displayed in the footer of section.</p>
+
+<p>The returned object can be a <code>UILabel</code> or <code>UIImageView</code> object, as well as a custom view. This method only works
+correctly when <a href="#//api/name/collectionView:heightForFooterInSection:"><code>collectionView:heightForFooterInSection:</code></a> is also implemented.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="#//api/name/collectionView:heightForFooterInSection:">&ndash; collectionView:heightForFooterInSection:</a></p></code></li>
+			
+		</ul>
+	</div>
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SSCollectionView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/collectionView:viewForHeaderInSection:" title="collectionView:viewForHeaderInSection:"></a>
+	<h3 class="subsubtitle method-title">collectionView:viewForHeaderInSection:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Asks the delegate for a view object to display in the header of the specified section of the collection view.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (UIView *)collectionView:(SSCollectionView *)<em>aCollectionView</em> viewForHeaderInSection:(NSUInteger)<em>section</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>aCollectionView</em></dt>
+			<dd><p>The collection view object asking for the view object.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>section</em></dt>
+			<dd><p>An index number identifying a section of <code>aCollectionView</code>.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>A view object to be displayed in the header of section.</p>
+
+<p>The returned object can be a <code>UILabel</code> or <code>UIImageView</code> object, as well as a custom view. This method only works
+correctly when <a href="#//api/name/collectionView:heightForHeaderInSection:"><code>collectionView:heightForHeaderInSection:</code></a> is also implemented.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="#//api/name/collectionView:heightForHeaderInSection:">&ndash; collectionView:heightForHeaderInSection:</a></p></code></li>
+			
+		</ul>
+	</div>
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SSCollectionView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/collectionView:willDeselectItemAtIndexPath:" title="collectionView:willDeselectItemAtIndexPath:"></a>
+	<h3 class="subsubtitle method-title">collectionView:willDeselectItemAtIndexPath:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Tells the delegate that a specified item is about to be deselected.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)collectionView:(SSCollectionView *)<em>aCollectionView</em> willDeselectItemAtIndexPath:(NSIndexPath *)<em>indexPath</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>aCollectionView</em></dt>
+			<dd><p>A collection view object informing the delegate about the impending selection.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>indexPath</em></dt>
+			<dd><p>An index path locating the item in <code>aCollectionView</code> to be deselected.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>An index-path object that confirms or alters the deselected item. Return an <code>NSIndexPath</code> object other than
+<code>indexPath</code> if you want another item to be deselected. Return <code>nil</code> if you don&rsquo;t want the item deselected.</p>
+
+<p>This method is only called if there is an existing selection when the user tries to select a different item. The
+<code>delegate</code> is sent this method for the previously selected item.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="#//api/name/collectionView:didDeselectItemAtIndexPath:">&ndash; collectionView:didDeselectItemAtIndexPath:</a></p></code></li>
+			
+			<li><code><p><a href="#//api/name/collectionView:willSelectItemAtIndexPath:">&ndash; collectionView:willSelectItemAtIndexPath:</a></p></code></li>
+			
+		</ul>
+	</div>
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SSCollectionView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/collectionView:willDisplayItem:atIndexPath:" title="collectionView:willDisplayItem:atIndexPath:"></a>
+	<h3 class="subsubtitle method-title">collectionView:willDisplayItem:atIndexPath:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Tells the delegate the collection view is about to draw an item for a particular index path.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)collectionView:(SSCollectionView *)<em>aCollectionView</em> willDisplayItem:(SSCollectionViewItem *)<em>item</em> atIndexPath:(NSIndexPath *)<em>indexPath</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>aCollectionView</em></dt>
+			<dd><p>The collection view object informing the delegate of this impending event.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>item</em></dt>
+			<dd><p>A collection view item object that <code>aCollectionView</code> is going to use when drawing the item.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>indexPath</em></dt>
+			<dd><p>An index path locating the item in <code>aCollectionView</code>.</p>
+
+<p>A collection view sends this message to its <code>delegate</code> just before it uses item to draw a portion of a row, thereby
+permitting the <code>delegate</code> to customize the <code>item</code> object before it is displayed. This method gives the <code>delegate</code> a
+chance to override state-based properties set earlier by the collection view, such as selection and background color.
+After the <code>delegate</code> returns, the collection view sets only the alpha and frame properties, and then only when
+animating items as they slide in or out.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SSCollectionView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/collectionView:willSelectItemAtIndexPath:" title="collectionView:willSelectItemAtIndexPath:"></a>
+	<h3 class="subsubtitle method-title">collectionView:willSelectItemAtIndexPath:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Tells the delegate that a specified item is about to be selected.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (void)collectionView:(SSCollectionView *)<em>aCollectionView</em> willSelectItemAtIndexPath:(NSIndexPath *)<em>indexPath</em></code></div>
+	
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>aCollectionView</em></dt>
+			<dd><p>A collection view object informing the delegate about the impending selection.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>indexPath</em></dt>
+			<dd><p>An index path locating the row in <code>aCollectionView</code>.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>An index-path object that confirms or alters the selected item. Return an <code>NSIndexPath</code> object other than
+<code>indexPath</code> if you want another item to be selected. Return <code>nil</code> if you don&rsquo;t want the item selected.</p>
+
+<p>This method is not called until users touch an item and then lift their finger; the item isn&rsquo;t selected until then,
+although it is highlighted on touch-down.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="#//api/name/collectionView:didSelectItemAtIndexPath:">&ndash; collectionView:didSelectItemAtIndexPath:</a></p></code></li>
+			
+			<li><code><p><a href="#//api/name/collectionView:willDeselectItemAtIndexPath:">&ndash; collectionView:willDeselectItemAtIndexPath:</a></p></code></li>
+			
+		</ul>
+	</div>
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SSCollectionView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+				</div>
+				<div class="main-navigation navigation-bottom">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="footer">
+					<hr />
+					<div class="footer-copyright">
+						<p><span class="copyright">&copy; 2011 Sam Soffes. All rights reserved. (Last updated: 2011-10-17)</span><br />
+						
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.4 (build 703)</a>.</span></p>
+						
+					</div>
+				</div>
+			</div>
+		</article>
+		<script type="text/javascript">
+			function jumpToChange()
+			{
+				window.location.hash = this.options[this.selectedIndex].value;
+			}
+			
+			function toggleTOC()
+			{
+				var contents = document.getElementById('contents');
+				var tocContainer = document.getElementById('tocContainer');
+				
+				if (this.getAttribute('class') == 'open')
+				{
+					this.setAttribute('class', '');
+					contents.setAttribute('class', '');
+					tocContainer.setAttribute('class', '');
+					
+					window.name = "hideTOC";
+				}
+				else
+				{
+					this.setAttribute('class', 'open');
+					contents.setAttribute('class', 'isShowingTOC');
+					tocContainer.setAttribute('class', 'isShowingTOC');
+					
+					window.name = "";
+				}
+				return false;
+			}
+			
+			function toggleTOCEntryChildren(e)
+			{
+				e.stopPropagation();
+				var currentClass = this.getAttribute('class');
+				if (currentClass == 'children') {
+					this.setAttribute('class', 'children open');
+				}
+				else if (currentClass == 'children open') {
+					this.setAttribute('class', 'children');
+				}
+				return false;
+			}
+			
+			function tocEntryClick(e)
+			{
+				e.stopPropagation();
+				return true;
+			}
+			
+			function init()
+			{
+				var selectElement = document.getElementById('jumpTo');
+				selectElement.addEventListener('change', jumpToChange, false);
+				
+				var tocButton = document.getElementById('table_of_contents');
+				tocButton.addEventListener('click', toggleTOC, false);
+				
+				var taskTreeItem = document.getElementById('task_treeitem');
+				if (taskTreeItem.getElementsByTagName('li').length > 0)
+				{
+					taskTreeItem.setAttribute('class', 'children');
+					taskTreeItem.firstChild.setAttribute('class', 'disclosure');
+				}
+				
+				var tocList = document.getElementById('toc');
+				
+				var tocEntries = tocList.getElementsByTagName('li');
+				for (var i = 0; i < tocEntries.length; i++) {
+					tocEntries[i].addEventListener('click', toggleTOCEntryChildren, false);
+				}
+				
+				var tocLinks = tocList.getElementsByTagName('a');
+				for (var i = 0; i < tocLinks.length; i++) {
+					tocLinks[i].addEventListener('click', tocEntryClick, false);
+				}
+				
+				if (window.name == "hideTOC") {
+					toggleTOC.call(tocButton);
+				}
+			}
+			
+			window.onload = init;
+		</script>
+	</body>
+</html>

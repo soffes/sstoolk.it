@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
-		<title>SSAnimatedImageView Class Reference</title>
+		<title>SSCollectionViewDataSource Protocol Reference</title>
 		<meta id="xcode-display" name="xcode-display" content="render"/>
 		<meta name="viewport" content="width=550" />
 		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
@@ -17,7 +17,7 @@
 			</div>
 			
 			<div id="title" role="banner">
-				<h1 class="hideInXcode">SSAnimatedImageView Class Reference</h1>
+				<h1 class="hideInXcode">SSCollectionViewDataSource Protocol Reference</h1>
 			</div>
 			<ul id="headerButtons" role="toolbar">
 				<li id="toc_button">
@@ -44,11 +44,11 @@
 	
 	<option value="instance_methods">Instance Methods</option>
 	
-	<option value="//api/name/startImageAnimation:images:delegate:">&nbsp;&nbsp;&nbsp;&nbsp;- startImageAnimation:images:delegate:</option>
+	<option value="//api/name/collectionView:itemForIndexPath:">&nbsp;&nbsp;&nbsp;&nbsp;- collectionView:itemForIndexPath:</option>
 	
-	<option value="//api/name/startImageAnimation:images:duration:repeatCount:delegate:">&nbsp;&nbsp;&nbsp;&nbsp;- startImageAnimation:images:duration:repeatCount:delegate:</option>
+	<option value="//api/name/collectionView:numberOfItemsInSection:">&nbsp;&nbsp;&nbsp;&nbsp;- collectionView:numberOfItemsInSection:</option>
 	
-	<option value="//api/name/startTimedImageAnimation:images:keyTimes:repeatCount:delegate:">&nbsp;&nbsp;&nbsp;&nbsp;- startTimedImageAnimation:images:keyTimes:repeatCount:delegate:</option>
+	<option value="//api/name/numberOfSectionsInCollectionView:">&nbsp;&nbsp;&nbsp;&nbsp;- numberOfSectionsInCollectionView:</option>
 	
 	
 	
@@ -66,10 +66,6 @@
 
 <li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Starting Animations">Starting Animations</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Starting Timed Animations">Starting Timed Animations</a></span></li>
-	
 </ul></li>
 
 
@@ -82,11 +78,11 @@
 
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/startImageAnimation:images:delegate:">startImageAnimation:images:delegate:</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/collectionView:itemForIndexPath:">collectionView:itemForIndexPath:</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/startImageAnimation:images:duration:repeatCount:delegate:">startImageAnimation:images:duration:repeatCount:delegate:</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/collectionView:numberOfItemsInSection:">collectionView:numberOfItemsInSection:</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/startTimedImageAnimation:images:keyTimes:repeatCount:delegate:">startTimedImageAnimation:images:keyTimes:repeatCount:delegate:</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/numberOfSectionsInCollectionView:">numberOfSectionsInCollectionView:</a></span></li>
 	
 </ul></li>
 
@@ -95,7 +91,7 @@
 		</nav>
 		<article>
 			<div id="contents" class="isShowingTOC" role="main">
-				<a title="SSAnimatedImageView Class Reference" name="top"></a>
+				<a title="SSCollectionViewDataSource Protocol Reference" name="top"></a>
 				<div class="main-navigation navigation-top">
 					<ul>
 	<li><a href="../index.html">Index</a></li>
@@ -104,18 +100,18 @@
 				</div>
 				<div id="header">
 					<div class="section-header">
-						<h1 class="title title-header">SSAnimatedImageView Class Reference</h1>
+						<h1 class="title title-header">SSCollectionViewDataSource Protocol Reference</h1>
 					</div>		
 				</div>
 				<div id="container">	
 					
 					<div class="section section-specification"><table cellspacing="0"><tbody>
 						<tr>
-	<td class="specification-title">Inherits from</td>
-	<td class="specification-value">UIImageView</td>
+	<td class="specification-title">Conforms to</td>
+	<td class="specification-value">NSObject</td>
 </tr><tr>
 	<td class="specification-title">Declared in</td>
-	<td class="specification-value">SSAnimatedImageView.h</td>
+	<td class="specification-value">SSCollectionView.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -125,12 +121,13 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>Animated image view.</p>
+						<p>The <a href="SSCollectionViewDataSource.html"><code>SSCollectionViewDataSource</code></a> protocol is adopted by an object that mediates the application&rsquo;s data model for a
+<a href="../Classes/SSCollectionView.html"><code>SSCollectionView</code></a> object. The data source provides the collection view object with the information it needs to
+construct and modify a collection view.</p>
 
-<p><a href="SSAnimatedImageView.html"><code>SSAnimatedImageView</code></a> is a simple subclass of <code>UIImageView</code> that provides more advanced control of image animations.
-The animation is backed by a <code>CAKeyframeAnimation</code>.</p>
-
-<p>This class is a work in progress.</p>
+<p>As a representative of the data model, the data source supplies minimal information about the collection view&rsquo;s
+appearance. The collection view object&rsquo;s delegate—an object adopting the <a href="../Protocols/SSCollectionViewDelegate.html"><code>SSCollectionViewDelegate</code></a> protocol—provides
+that information.</p>
 					</div>
 					
 					
@@ -142,36 +139,28 @@ The animation is backed by a <code>CAKeyframeAnimation</code>.</p>
 						<h2 class="subtitle subtitle-tasks">Tasks</h2>
 						
 						
-						<a title="Starting Animations" name="task_Starting Animations"></a>
-						<h3 class="subsubtitle task-title">Starting Animations</h3>
+						
+						
 
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
-		<code><a href="#//api/name/startImageAnimation:images:delegate:">&ndash;&nbsp;startImageAnimation:images:delegate:</a></code>
-		<span class="tooltip"><p>Start an image animation.</p></span>
+		<code><a href="#//api/name/collectionView:numberOfItemsInSection:">&ndash;&nbsp;collectionView:numberOfItemsInSection:</a></code>
+		<span class="tooltip"><p>Tells the data source to return the number of items in a given section of a collection view. (required)</p></span>
 	</span>
 	
-	
+	<span class="task-item-suffix">required method</span>
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/startImageAnimation:images:duration:repeatCount:delegate:">&ndash;&nbsp;startImageAnimation:images:duration:repeatCount:delegate:</a></code>
-		<span class="tooltip"><p>Start an image animation with duration and repeat count.</p></span>
+		<code><a href="#//api/name/collectionView:itemForIndexPath:">&ndash;&nbsp;collectionView:itemForIndexPath:</a></code>
+		<span class="tooltip"><p>Asks the data source for an item to insert in a particular location of the collection view. (required)</p></span>
 	</span>
 	
-	
-</li>
-						</ul>
-						
-						
-						<a title="Starting Timed Animations" name="task_Starting Timed Animations"></a>
-						<h3 class="subsubtitle task-title">Starting Timed Animations</h3>
-
-						<ul class="task-list">
-							<li>
+	<span class="task-item-suffix">required method</span>
+</li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/startTimedImageAnimation:images:keyTimes:repeatCount:delegate:">&ndash;&nbsp;startTimedImageAnimation:images:keyTimes:repeatCount:delegate:</a></code>
-		<span class="tooltip"><p>Start a timed image animation with repeat count.</p></span>
+		<code><a href="#//api/name/numberOfSectionsInCollectionView:">&ndash;&nbsp;numberOfSectionsInCollectionView:</a></code>
+		<span class="tooltip"><p>Asks the data source to return the number of sections in the table view.</p></span>
 	</span>
 	
 	
@@ -193,42 +182,47 @@ The animation is backed by a <code>CAKeyframeAnimation</code>.</p>
 						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
 						
 						<div class="section-method">
-	<a name="//api/name/startImageAnimation:images:delegate:" title="startImageAnimation:images:delegate:"></a>
-	<h3 class="subsubtitle method-title">startImageAnimation:images:delegate:</h3>
+	<a name="//api/name/collectionView:itemForIndexPath:" title="collectionView:itemForIndexPath:"></a>
+	<h3 class="subsubtitle method-title">collectionView:itemForIndexPath:</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Start an image animation.</p>
+		<p>Asks the data source for an item to insert in a particular location of the collection view. (required)</p>
 	</div>		
 	
 	
-	<div class="method-subsection method-declaration"><code>- (void)startImageAnimation:(NSString *)<em>animationName</em> images:(NSArray *)<em>images</em> delegate:(id&lt;SSAnimatedImageViewDelegate&gt;)<em>delegate</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (SSCollectionViewItem *)collectionView:(SSCollectionView *)<em>aCollectionView</em> itemForIndexPath:(NSIndexPath *)<em>indexPath</em></code></div>
 	
 	
 	<div class="method-subsection arguments-section parameters">
 		<h4 class="method-subtitle parameter-title">Parameters</h4>
 		
 		<dl class="argument-def parameter-def">
-			<dt><em>animationName</em></dt>
-			<dd><p>The named of the animation.</p></dd>
+			<dt><em>aCollectionView</em></dt>
+			<dd><p>A collection view object requesting the item.</p></dd>
 		</dl>
 		
 		<dl class="argument-def parameter-def">
-			<dt><em>images</em></dt>
-			<dd><p>An array of <code>UIImage</code> objects that will be animated.</p></dd>
-		</dl>
-		
-		<dl class="argument-def parameter-def">
-			<dt><em>delegate</em></dt>
-			<dd><p>The delegate of the animation.</p>
-
-<p>The duration is set to the appropriate length for playing the images at 30fps.</p></dd>
+			<dt><em>indexPath</em></dt>
+			<dd><p>An index path locating an item in <code>aCollectionView</code>.</p></dd>
 		</dl>
 		
 	</div>
 	
 	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>An object inheriting from <a href="../Classes/SSCollectionViewItem.html"><code>SSCollectionViewItem</code></a> that the collection view can use for the specified row. An
+assertion is raised if you return <code>nil</code>.</p>
+
+<p>The returned <a href="../Classes/SSCollectionViewItem.html"><code>SSCollectionViewItem</code></a> object is frequently one that the application reuses for performance reasons. You
+should fetch a previously created item object that is marked for reuse by sending a
+<code>dequeueReusableItemWithIdentifier:</code> message to <code>aCollectionView</code>. The identifier for a reusable item object is
+assigned when the delegate initializes the item object by calling the <code>initWithStyle:reuseIdentifier:</code> method of
+<a href="../Classes/SSCollectionViewItem.html"><code>SSCollectionViewItem</code></a>.</p>
+	</div>
 	
 	
 	
@@ -242,54 +236,46 @@ The animation is backed by a <code>CAKeyframeAnimation</code>.</p>
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">SSAnimatedImageView.h</code><br />
+		<code class="declared-in-ref">SSCollectionView.h</code><br />
 	</div>				
 	
 	
 </div>
 						
 						<div class="section-method">
-	<a name="//api/name/startImageAnimation:images:duration:repeatCount:delegate:" title="startImageAnimation:images:duration:repeatCount:delegate:"></a>
-	<h3 class="subsubtitle method-title">startImageAnimation:images:duration:repeatCount:delegate:</h3>
+	<a name="//api/name/collectionView:numberOfItemsInSection:" title="collectionView:numberOfItemsInSection:"></a>
+	<h3 class="subsubtitle method-title">collectionView:numberOfItemsInSection:</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Start an image animation with duration and repeat count.</p>
+		<p>Tells the data source to return the number of items in a given section of a collection view. (required)</p>
 	</div>		
 	
 	
-	<div class="method-subsection method-declaration"><code>- (void)startImageAnimation:(NSString *)<em>animationName</em> images:(NSArray *)<em>images</em> duration:(NSTimeInterval)<em>duration</em> repeatCount:(NSUInteger)<em>repeatCount</em> delegate:(id&lt;SSAnimatedImageViewDelegate&gt;)<em>delegate</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (NSUInteger)collectionView:(SSCollectionView *)<em>aCollectionView</em> numberOfItemsInSection:(NSUInteger)<em>section</em></code></div>
 	
 	
 	<div class="method-subsection arguments-section parameters">
 		<h4 class="method-subtitle parameter-title">Parameters</h4>
 		
 		<dl class="argument-def parameter-def">
-			<dt><em>animationName</em></dt>
-			<dd><p>The named of the animation.</p></dd>
+			<dt><em>aCollectionView</em></dt>
+			<dd><p>The collection view object requesting this information.</p></dd>
 		</dl>
 		
 		<dl class="argument-def parameter-def">
-			<dt><em>images</em></dt>
-			<dd><p>An array of <code>UIImage</code> objects that will be animated.</p></dd>
+			<dt><em>section</em></dt>
+			<dd><p>An index number identifying a section in <code>aCollectionView</code>.</p></dd>
 		</dl>
 		
-		<dl class="argument-def parameter-def">
-			<dt><em>duration</em></dt>
-			<dd><p>The duration of the animation.</p></dd>
-		</dl>
-		
-		<dl class="argument-def parameter-def">
-			<dt><em>repeatCount</em></dt>
-			<dd><p>The number of times the animation repeats. Specify <code>0</code> to repeat indefinitely.</p></dd>
-		</dl>
-		
-		<dl class="argument-def parameter-def">
-			<dt><em>delegate</em></dt>
-			<dd><p>The delegate of the animation.</p></dd>
-		</dl>
-		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>The number of items in <code>section</code>.</p>
 	</div>
 	
 	
@@ -300,62 +286,54 @@ The animation is backed by a <code>CAKeyframeAnimation</code>.</p>
 	
 	
 	
-	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="#//api/name/numberOfSectionsInCollectionView:">&ndash; numberOfSectionsInCollectionView:</a></p></code></li>
+			
+		</ul>
+	</div>
 	
 	
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">SSAnimatedImageView.h</code><br />
+		<code class="declared-in-ref">SSCollectionView.h</code><br />
 	</div>				
 	
 	
 </div>
 						
 						<div class="section-method">
-	<a name="//api/name/startTimedImageAnimation:images:keyTimes:repeatCount:delegate:" title="startTimedImageAnimation:images:keyTimes:repeatCount:delegate:"></a>
-	<h3 class="subsubtitle method-title">startTimedImageAnimation:images:keyTimes:repeatCount:delegate:</h3>
+	<a name="//api/name/numberOfSectionsInCollectionView:" title="numberOfSectionsInCollectionView:"></a>
+	<h3 class="subsubtitle method-title">numberOfSectionsInCollectionView:</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Start a timed image animation with repeat count.</p>
+		<p>Asks the data source to return the number of sections in the table view.</p>
 	</div>		
 	
 	
-	<div class="method-subsection method-declaration"><code>- (void)startTimedImageAnimation:(NSString *)<em>animationName</em> images:(NSArray *)<em>images</em> keyTimes:(NSArray *)<em>keyTimes</em> repeatCount:(NSUInteger)<em>repeatCount</em> delegate:(id&lt;SSAnimatedImageViewDelegate&gt;)<em>delegate</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (NSUInteger)numberOfSectionsInCollectionView:(SSCollectionView *)<em>aCollectionView</em></code></div>
 	
 	
 	<div class="method-subsection arguments-section parameters">
 		<h4 class="method-subtitle parameter-title">Parameters</h4>
 		
 		<dl class="argument-def parameter-def">
-			<dt><em>animationName</em></dt>
-			<dd><p>The named of the animation.</p></dd>
+			<dt><em>aCollectionView</em></dt>
+			<dd><p>An object representing the collection view requesting this information.</p></dd>
 		</dl>
 		
-		<dl class="argument-def parameter-def">
-			<dt><em>images</em></dt>
-			<dd><p>An array of <code>UIImage</code> objects that will be animated.</p></dd>
-		</dl>
-		
-		<dl class="argument-def parameter-def">
-			<dt><em>keyTimes</em></dt>
-			<dd><p>An array of <code>NSNumber</code> objects that define the duration of each keyframe segment.</p></dd>
-		</dl>
-		
-		<dl class="argument-def parameter-def">
-			<dt><em>repeatCount</em></dt>
-			<dd><p>The number of times the animation repeats. Specify <code>0</code> to repeat indefinitely.</p></dd>
-		</dl>
-		
-		<dl class="argument-def parameter-def">
-			<dt><em>delegate</em></dt>
-			<dd><p>The delegate of the animation.</p>
-
-<p>See <code>CAKeyframeAnimation</code>&rsquo;s documentation for more information on how to specify <code>keyTimes</code>.</p></dd>
-		</dl>
-		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>The number of sections in <code>aCollectionView</code>. The default value is <code>1</code>.</p>
 	</div>
 	
 	
@@ -366,13 +344,20 @@ The animation is backed by a <code>CAKeyframeAnimation</code>.</p>
 	
 	
 	
-	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="#//api/name/collectionView:numberOfItemsInSection:">&ndash; collectionView:numberOfItemsInSection:</a></p></code></li>
+			
+		</ul>
+	</div>
 	
 	
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">SSAnimatedImageView.h</code><br />
+		<code class="declared-in-ref">SSCollectionView.h</code><br />
 	</div>				
 	
 	
