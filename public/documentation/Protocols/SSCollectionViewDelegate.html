@@ -277,9 +277,7 @@ protocol allow the delegate to manage selections, configure section headings and
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>indexPath</em></dt>
-			<dd><p>An index path locating the deselected item in <code>aCollectionView</code>.</p>
-
-<p>The delegate handles item deselections in this method.</p></dd>
+			<dd><p>An index path locating the deselected item in <code>aCollectionView</code>.</p></dd>
 		</dl>
 		
 	</div>
@@ -289,6 +287,11 @@ protocol allow the delegate to manage selections, configure section headings and
 	
 	
 	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The delegate handles item deselections in this method.</p>
+	</div>
 	
 	
 	
@@ -339,9 +342,7 @@ protocol allow the delegate to manage selections, configure section headings and
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>indexPath</em></dt>
-			<dd><p>An index path locating the new selected item in <code>aCollectionView</code>.</p>
-
-<p>The delegate handles selections in this method.</p></dd>
+			<dd><p>An index path locating the new selected item in <code>aCollectionView</code>.</p></dd>
 		</dl>
 		
 	</div>
@@ -351,6 +352,11 @@ protocol allow the delegate to manage selections, configure section headings and
 	
 	
 	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The delegate handles selections in this method.</p>
+	</div>
 	
 	
 	
@@ -411,13 +417,16 @@ protocol allow the delegate to manage selections, configure section headings and
 	<div class="method-subsection return">
 		<h4 class="method-subtitle parameter-title">Return Value</h4>
 		<p>A floating-point value that specifies the height (in points) of the footer for section.</p>
-
-<p>This method allows the delegate to specify section footers with varying heights.</p>
 	</div>
 	
 	
 	
 	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>This method allows the delegate to specify section footers with varying heights.</p>
+	</div>
 	
 	
 	
@@ -476,13 +485,16 @@ protocol allow the delegate to manage selections, configure section headings and
 	<div class="method-subsection return">
 		<h4 class="method-subtitle parameter-title">Return Value</h4>
 		<p>A floating-point value that specifies the height (in points) of the header for section.</p>
-
-<p>This method allows the delegate to specify section header with varying heights.</p>
 	</div>
 	
 	
 	
 	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>This method allows the delegate to specify section header with varying heights.</p>
+	</div>
 	
 	
 	
@@ -541,8 +553,6 @@ protocol allow the delegate to manage selections, configure section headings and
 	<div class="method-subsection return">
 		<h4 class="method-subtitle parameter-title">Return Value</h4>
 		<p>A value that specifies the size (in points) that item should be.</p>
-
-<p>The method allows the <code>delegate</code> to specify items with varying sizes per section. This is a required method.</p>
 	</div>
 	
 	
@@ -551,7 +561,7 @@ protocol allow the delegate to manage selections, configure section headings and
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<div class="warning"><p><strong>Important:</strong> Due to an underlying implementation detail, you should not return sizes with their width or
+		<p>The method allows the <code>delegate</code> to specify items with varying sizes per section. This is a required method.</p><div class="warning"><p><strong>Important:</strong> Due to an underlying implementation detail, you should not return sizes with their width or
 height greater than <code>2009</code>.</p></div>
 	</div>
 	
@@ -613,14 +623,17 @@ height greater than <code>2009</code>.</p></div>
 	<div class="method-subsection return">
 		<h4 class="method-subtitle parameter-title">Return Value</h4>
 		<p>A view object to be displayed in the footer of section.</p>
-
-<p>The returned object can be a <code>UILabel</code> or <code>UIImageView</code> object, as well as a custom view. This method only works
-correctly when <a href="#//api/name/collectionView:heightForFooterInSection:"><code>collectionView:heightForFooterInSection:</code></a> is also implemented.</p>
 	</div>
 	
 	
 	
 	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The returned object can be a <code>UILabel</code> or <code>UIImageView</code> object, as well as a custom view. This method only works
+correctly when <a href="#//api/name/collectionView:heightForFooterInSection:"><code>collectionView:heightForFooterInSection:</code></a> is also implemented.</p>
+	</div>
 	
 	
 	
@@ -679,14 +692,17 @@ correctly when <a href="#//api/name/collectionView:heightForFooterInSection:"><c
 	<div class="method-subsection return">
 		<h4 class="method-subtitle parameter-title">Return Value</h4>
 		<p>A view object to be displayed in the header of section.</p>
-
-<p>The returned object can be a <code>UILabel</code> or <code>UIImageView</code> object, as well as a custom view. This method only works
-correctly when <a href="#//api/name/collectionView:heightForHeaderInSection:"><code>collectionView:heightForHeaderInSection:</code></a> is also implemented.</p>
 	</div>
 	
 	
 	
 	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The returned object can be a <code>UILabel</code> or <code>UIImageView</code> object, as well as a custom view. This method only works
+correctly when <a href="#//api/name/collectionView:heightForHeaderInSection:"><code>collectionView:heightForHeaderInSection:</code></a> is also implemented.</p>
+	</div>
 	
 	
 	
@@ -746,14 +762,17 @@ correctly when <a href="#//api/name/collectionView:heightForHeaderInSection:"><c
 		<h4 class="method-subtitle parameter-title">Return Value</h4>
 		<p>An index-path object that confirms or alters the deselected item. Return an <code>NSIndexPath</code> object other than
 <code>indexPath</code> if you want another item to be deselected. Return <code>nil</code> if you don&rsquo;t want the item deselected.</p>
-
-<p>This method is only called if there is an existing selection when the user tries to select a different item. The
-<code>delegate</code> is sent this method for the previously selected item.</p>
 	</div>
 	
 	
 	
 	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>This method is only called if there is an existing selection when the user tries to select a different item. The
+<code>delegate</code> is sent this method for the previously selected item.</p>
+	</div>
 	
 	
 	
@@ -809,13 +828,7 @@ correctly when <a href="#//api/name/collectionView:heightForHeaderInSection:"><c
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>indexPath</em></dt>
-			<dd><p>An index path locating the item in <code>aCollectionView</code>.</p>
-
-<p>A collection view sends this message to its <code>delegate</code> just before it uses item to draw a portion of a row, thereby
-permitting the <code>delegate</code> to customize the <code>item</code> object before it is displayed. This method gives the <code>delegate</code> a
-chance to override state-based properties set earlier by the collection view, such as selection and background color.
-After the <code>delegate</code> returns, the collection view sets only the alpha and frame properties, and then only when
-animating items as they slide in or out.</p></dd>
+			<dd><p>An index path locating the item in <code>aCollectionView</code>.</p></dd>
 		</dl>
 		
 	</div>
@@ -825,6 +838,15 @@ animating items as they slide in or out.</p></dd>
 	
 	
 	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>A collection view sends this message to its <code>delegate</code> just before it uses item to draw a portion of a row, thereby
+permitting the <code>delegate</code> to customize the <code>item</code> object before it is displayed. This method gives the <code>delegate</code> a
+chance to override state-based properties set earlier by the collection view, such as selection and background color.
+After the <code>delegate</code> returns, the collection view sets only the alpha and frame properties, and then only when
+animating items as they slide in or out.</p>
+	</div>
 	
 	
 	
@@ -875,14 +897,17 @@ animating items as they slide in or out.</p></dd>
 		<h4 class="method-subtitle parameter-title">Return Value</h4>
 		<p>An index-path object that confirms or alters the selected item. Return an <code>NSIndexPath</code> object other than
 <code>indexPath</code> if you want another item to be selected. Return <code>nil</code> if you don&rsquo;t want the item selected.</p>
-
-<p>This method is not called until users touch an item and then lift their finger; the item isn&rsquo;t selected until then,
-although it is highlighted on touch-down.</p>
 	</div>
 	
 	
 	
 	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>This method is not called until users touch an item and then lift their finger; the item isn&rsquo;t selected until then,
+although it is highlighted on touch-down.</p>
+	</div>
 	
 	
 	

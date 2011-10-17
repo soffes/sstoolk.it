@@ -216,17 +216,20 @@ that information.</p>
 		<h4 class="method-subtitle parameter-title">Return Value</h4>
 		<p>An object inheriting from <a href="../Classes/SSCollectionViewItem.html"><code>SSCollectionViewItem</code></a> that the collection view can use for the specified row. An
 assertion is raised if you return <code>nil</code>.</p>
-
-<p>The returned <a href="../Classes/SSCollectionViewItem.html"><code>SSCollectionViewItem</code></a> object is frequently one that the application reuses for performance reasons. You
-should fetch a previously created item object that is marked for reuse by sending a
-<code>dequeueReusableItemWithIdentifier:</code> message to <code>aCollectionView</code>. The identifier for a reusable item object is
-assigned when the delegate initializes the item object by calling the <code>initWithStyle:reuseIdentifier:</code> method of
-<a href="../Classes/SSCollectionViewItem.html"><code>SSCollectionViewItem</code></a>.</p>
 	</div>
 	
 	
 	
 	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The returned <a href="../Classes/SSCollectionViewItem.html"><code>SSCollectionViewItem</code></a> object is frequently one that the application reuses for performance reasons. You
+should fetch a previously created item object that is marked for reuse by sending a
+<code>dequeueReusableItemWithIdentifier:</code> message to <code>aCollectionView</code>. The identifier for a reusable item object is
+assigned when the delegate initializes the item object by calling the <code>initWithStyle:reuseIdentifier:</code> method of
+<a href="../Classes/SSCollectionViewItem.html"><code>SSCollectionViewItem</code></a>.</p>
+	</div>
 	
 	
 	

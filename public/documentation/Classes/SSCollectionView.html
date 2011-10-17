@@ -1411,10 +1411,7 @@ the change should be immediate.</p></dd>
 		<dl class="argument-def parameter-def">
 			<dt><em>scrollPosition</em></dt>
 			<dd><p>A constant that identifies a relative position in the receiving collection view (top, middle,
-bottom) for the row when scrolling concludes.</p>
-
-<p>Calling this method does cause the <a href="#//api/name/delegate">delegate</a> to receive a <code>collectionView:willSelectRowAtIndexPath:</code> and
-<code>collectionView:didSelectRowAtIndexPath:</code> message, which differs from <code>UITableView</code>.</p></dd>
+bottom) for the row when scrolling concludes.</p></dd>
 		</dl>
 		
 	</div>
@@ -1424,6 +1421,12 @@ bottom) for the row when scrolling concludes.</p>
 	
 	
 	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Calling this method does cause the <a href="#//api/name/delegate">delegate</a> to receive a <code>collectionView:willSelectRowAtIndexPath:</code> and
+<code>collectionView:didSelectRowAtIndexPath:</code> message, which differs from <code>UITableView</code>.</p>
+	</div>
 	
 	
 	
