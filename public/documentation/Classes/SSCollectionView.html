@@ -75,7 +75,9 @@
 	
 	<option value="//api/name/indexPathForItem:">&nbsp;&nbsp;&nbsp;&nbsp;- indexPathForItem:</option>
 	
-	<option value="//api/name/itemPathForIndex:">&nbsp;&nbsp;&nbsp;&nbsp;- itemPathForIndex:</option>
+	<option value="//api/name/indexPathsForVisibleRows">&nbsp;&nbsp;&nbsp;&nbsp;- indexPathsForVisibleRows</option>
+	
+	<option value="//api/name/itemForIndexPath:">&nbsp;&nbsp;&nbsp;&nbsp;- itemForIndexPath:</option>
 	
 	<option value="//api/name/numberOfItemsInSection:">&nbsp;&nbsp;&nbsp;&nbsp;- numberOfItemsInSection:</option>
 	
@@ -93,6 +95,8 @@
 	
 	<option value="//api/name/selectItemAtIndexPath:animated:scrollPosition:">&nbsp;&nbsp;&nbsp;&nbsp;- selectItemAtIndexPath:animated:scrollPosition:</option>
 	
+	<option value="//api/name/visibleItems">&nbsp;&nbsp;&nbsp;&nbsp;- visibleItems</option>
+	
 	
 	
 </select>
@@ -108,6 +112,20 @@
 
 
 <li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Configuring a Collection View">Configuring a Collection View</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Accessing Items and Sections">Accessing Items and Sections</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Scrolling the Collection View">Scrolling the Collection View</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Managing Selections">Managing Selections</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Reloading the Collection View">Reloading the Collection View</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Accessing Drawing Areas of the Collection View">Accessing Drawing Areas of the Collection View</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Managing the Delegate and the Data Source">Managing the Delegate and the Data Source</a></span></li>
 	
 </ul></li>
 
@@ -153,7 +171,9 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/indexPathForItem:">indexPathForItem:</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/itemPathForIndex:">itemPathForIndex:</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/indexPathsForVisibleRows">indexPathsForVisibleRows</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/itemForIndexPath:">itemForIndexPath:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/numberOfItemsInSection:">numberOfItemsInSection:</a></span></li>
 	
@@ -170,6 +190,8 @@
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/scrollToItemAtIndexPath:atScrollPosition:animated:">scrollToItemAtIndexPath:atScrollPosition:animated:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/selectItemAtIndexPath:animated:scrollPosition:">selectItemAtIndexPath:animated:scrollPosition:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/visibleItems">visibleItems</a></span></li>
 	
 </ul></li>
 
@@ -197,9 +219,6 @@
 	<td class="specification-title">Inherits from</td>
 	<td class="specification-value">UIView</td>
 </tr><tr>
-	<td class="specification-title">Conforms to</td>
-	<td class="specification-value">UITableViewDataSource<br />UITableViewDelegate</td>
-</tr><tr>
 	<td class="specification-title">Declared in</td>
 	<td class="specification-value">SSCollectionView.h</td>
 </tr>
@@ -213,14 +232,14 @@
 						<h2 class="subtitle subtitle-overview">Overview</h2>
 						<p>Simple collection view.</p>
 
-<p>My goals are to be similar to UITableView and NSCollectionView when possible. Only scrolling vertically is currently
-supported.</p>
+<p>My goals are to be similar to <code>UITableView</code> and <code>NSCollectionView</code> when possible. Only scrolling vertically is
+currently supported.</p>
 
 <p>Editing will be my next focus. Then animating changes when data changes and an option to disable that.</p>
 
-<p>Note: NSIndexPath is uses the same way UITableView uses it. The <code>row</code> property is used to specify the item
-instead of row. This is done to make working with other classes that use NSIndexPath (like NSFetchedResultsController)
-easier.</p>
+<p>Note: <code>NSIndexPath</code> is uses the same way <code>UITableView</code> uses it. The <code>row</code> property is used to specify the item
+instead of row. This is done to make working with other classes that use <code>NSIndexPath</code> (like
+<code>NSFetchedResultsController</code>) easier.</p>
 					</div>
 					
 					
@@ -232,42 +251,28 @@ easier.</p>
 						<h2 class="subtitle subtitle-tasks">Tasks</h2>
 						
 						
-						
-						
+						<a title="Configuring a Collection View" name="task_Configuring a Collection View"></a>
+						<h3 class="subsubtitle task-title">Configuring a Collection View</h3>
 
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
-		<code><a href="#//api/name/dataSource">&nbsp;&nbsp;dataSource</a></code>
-		<span class="tooltip"><p>The object that acts as the data source of the receiving collection view.</p></span>
+		<code><a href="#//api/name/dequeueReusableItemWithIdentifier:">&ndash;&nbsp;dequeueReusableItemWithIdentifier:</a></code>
+		<span class="tooltip"><p>Returns a reusable collection view item object located by its identifier.</p></span>
 	</span>
-	<span class="task-item-suffix">property</span>
+	
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/delegate">&nbsp;&nbsp;delegate</a></code>
-		<span class="tooltip"><p>The object that acts as the <a href="#//api/name/delegate">delegate</a> of the receiving collection view.</p></span>
+		<code><a href="#//api/name/numberOfItemsInSection:">&ndash;&nbsp;numberOfItemsInSection:</a></code>
+		<span class="tooltip"><p>Returns the number of item (collection view items) in a specified section.</p></span>
 	</span>
-	<span class="task-item-suffix">property</span>
+	
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/extremitiesStyle">&nbsp;&nbsp;extremitiesStyle</a></code>
-		<span class="tooltip"><p>The style of the receiving collection view&rsquo;s headers and footers.</p></span>
-	</span>
-	<span class="task-item-suffix">property</span>
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/minimumColumnSpacing">&nbsp;&nbsp;minimumColumnSpacing</a></code>
-		<span class="tooltip"><p>The minimum column spacing.</p></span>
-	</span>
-	<span class="task-item-suffix">property</span>
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/rowSpacing">&nbsp;&nbsp;rowSpacing</a></code>
-		<span class="tooltip"><p>The spacing between each row in the receiver. This does not add space above the first row or below the last.</p></span>
+		<code><a href="#//api/name/numberOfSections">&nbsp;&nbsp;numberOfSections</a></code>
+		<span class="tooltip"><p>The number of sections in the collection view.</p></span>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
@@ -294,42 +299,36 @@ easier.</p>
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/allowsSelection">&nbsp;&nbsp;allowsSelection</a></code>
-		<span class="tooltip"><p>A Boolean value that determines whether selecting items is enabled.</p></span>
+		<code><a href="#//api/name/extremitiesStyle">&nbsp;&nbsp;extremitiesStyle</a></code>
+		<span class="tooltip"><p>The style of the receiving collection view&rsquo;s headers and footers.</p></span>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/scrollView">&nbsp;&nbsp;scrollView</a></code>
-		<span class="tooltip"><p>The internal scroll view of the collection view. The <a href="#//api/name/delegate">delegate</a> must not be overridden.</p></span>
+		<code><a href="#//api/name/minimumColumnSpacing">&nbsp;&nbsp;minimumColumnSpacing</a></code>
+		<span class="tooltip"><p>The minimum column spacing.</p></span>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/numberOfSections">&nbsp;&nbsp;numberOfSections</a></code>
-		<span class="tooltip"><p>The number of sections in the collection view.</p></span>
+		<code><a href="#//api/name/rowSpacing">&nbsp;&nbsp;rowSpacing</a></code>
+		<span class="tooltip"><p>The spacing between each row in the receiver. This does not add space above the first row or below the last.</p></span>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
-</li><li>
+</li>
+						</ul>
+						
+						
+						<a title="Accessing Items and Sections" name="task_Accessing Items and Sections"></a>
+						<h3 class="subsubtitle task-title">Accessing Items and Sections</h3>
+
+						<ul class="task-list">
+							<li>
 	<span class="tooltip">
-		<code><a href="#//api/name/reloadData">&ndash;&nbsp;reloadData</a></code>
-		<span class="tooltip"><p>Reloads the items and sections of the receiver.</p></span>
-	</span>
-	
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/dequeueReusableItemWithIdentifier:">&ndash;&nbsp;dequeueReusableItemWithIdentifier:</a></code>
-		<span class="tooltip"><p>Returns a reusable collection view item object located by its identifier.</p></span>
-	</span>
-	
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/itemPathForIndex:">&ndash;&nbsp;itemPathForIndex:</a></code>
+		<code><a href="#//api/name/itemForIndexPath:">&ndash;&nbsp;itemForIndexPath:</a></code>
 		<span class="tooltip"><p>Returns the collection view item at the specified index path.</p></span>
 	</span>
 	
@@ -342,6 +341,51 @@ easier.</p>
 	
 	
 </li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/visibleItems">&ndash;&nbsp;visibleItems</a></code>
+		<span class="tooltip"><p>Returns the collection view items that are visible in the receiver.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/indexPathsForVisibleRows">&ndash;&nbsp;indexPathsForVisibleRows</a></code>
+		<span class="tooltip"><p>Returns an array of index paths each identifying a visible item in the receiver.</p></span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="Scrolling the Collection View" name="task_Scrolling the Collection View"></a>
+						<h3 class="subsubtitle task-title">Scrolling the Collection View</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/scrollToItemAtIndexPath:atScrollPosition:animated:">&ndash;&nbsp;scrollToItemAtIndexPath:atScrollPosition:animated:</a></code>
+		<span class="tooltip"><p>Scrolls the receiver until an item identified by index path is at a particular location on the screen.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/scrollView">&nbsp;&nbsp;scrollView</a></code>
+		<span class="tooltip"><p>The internal scroll view of the collection view. This should only be used to inspect its state or scrolling. Changing
+the value of its attributes is undefined.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li>
+						</ul>
+						
+						
+						<a title="Managing Selections" name="task_Managing Selections"></a>
+						<h3 class="subsubtitle task-title">Managing Selections</h3>
+
+						<ul class="task-list">
+							<li>
 	<span class="tooltip">
 		<code><a href="#//api/name/selectItemAtIndexPath:animated:scrollPosition:">&ndash;&nbsp;selectItemAtIndexPath:animated:scrollPosition:</a></code>
 		<span class="tooltip"><p>Selects an item in the receiver identified by index path, optionally scrolling the item to a location in the receiver.</p></span>
@@ -357,8 +401,23 @@ easier.</p>
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/scrollToItemAtIndexPath:atScrollPosition:animated:">&ndash;&nbsp;scrollToItemAtIndexPath:atScrollPosition:animated:</a></code>
-		<span class="tooltip"><p>Scrolls the receiver until an item identified by index path is at a particular location on the screen.</p></span>
+		<code><a href="#//api/name/allowsSelection">&nbsp;&nbsp;allowsSelection</a></code>
+		<span class="tooltip"><p>A Boolean value that determines whether selecting items is enabled.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li>
+						</ul>
+						
+						
+						<a title="Reloading the Collection View" name="task_Reloading the Collection View"></a>
+						<h3 class="subsubtitle task-title">Reloading the Collection View</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/reloadData">&ndash;&nbsp;reloadData</a></code>
+		<span class="tooltip"><p>Reloads the items and sections of the receiver.</p></span>
 	</span>
 	
 	
@@ -369,17 +428,25 @@ easier.</p>
 	</span>
 	
 	
-</li><li>
+</li>
+						</ul>
+						
+						
+						<a title="Accessing Drawing Areas of the Collection View" name="task_Accessing Drawing Areas of the Collection View"></a>
+						<h3 class="subsubtitle task-title">Accessing Drawing Areas of the Collection View</h3>
+
+						<ul class="task-list">
+							<li>
 	<span class="tooltip">
-		<code><a href="#//api/name/numberOfItemsInSection:">&ndash;&nbsp;numberOfItemsInSection:</a></code>
-		<span class="tooltip"><p>Returns the number of item (collection view items) in a specified section.</p></span>
+		<code><a href="#//api/name/rectForSection:">&ndash;&nbsp;rectForSection:</a></code>
+		<span class="tooltip"><p>Returns the drawing area for a specified section of the receiver.</p></span>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/rectForSection:">&ndash;&nbsp;rectForSection:</a></code>
-		<span class="tooltip"><p>Returns the drawing area for a specified section of the receiver.</p></span>
+		<code><a href="#//api/name/rectForFooterInSection:">&ndash;&nbsp;rectForFooterInSection:</a></code>
+		<span class="tooltip"><p>Returns the drawing area for the footer of the specified section.</p></span>
 	</span>
 	
 	
@@ -390,12 +457,27 @@ easier.</p>
 	</span>
 	
 	
+</li>
+						</ul>
+						
+						
+						<a title="Managing the Delegate and the Data Source" name="task_Managing the Delegate and the Data Source"></a>
+						<h3 class="subsubtitle task-title">Managing the Delegate and the Data Source</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/dataSource">&nbsp;&nbsp;dataSource</a></code>
+		<span class="tooltip"><p>The object that acts as the data source of the receiving collection view.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/rectForFooterInSection:">&ndash;&nbsp;rectForFooterInSection:</a></code>
-		<span class="tooltip"><p>Returns the drawing area for the footer of the specified section.</p></span>
+		<code><a href="#//api/name/delegate">&nbsp;&nbsp;delegate</a></code>
+		<span class="tooltip"><p>The object that acts as the <a href="#//api/name/delegate">delegate</a> of the receiving collection view.</p></span>
 	</span>
-	
+	<span class="task-item-suffix">property</span>
 	
 </li>
 						</ul>
@@ -796,7 +878,8 @@ headers and footer to behave like a <code>UITableView</code> with its style set 
 	
 	
 	<div class="method-subsection brief-description">
-		<p>The internal scroll view of the collection view. The <a href="#//api/name/delegate">delegate</a> must not be overridden.</p>
+		<p>The internal scroll view of the collection view. This should only be used to inspect its state or scrolling. Changing
+the value of its attributes is undefined.</p>
 	</div>		
 	
 	
@@ -972,14 +1055,45 @@ immediate.</p></dd>
 	
 	
 	
-	<div class="method-subsection see-also-section">
-		<h4 class="method-subtitle">See Also</h4>
-		<ul>
-			
-			<li><code><p><a href="#//api/name/itemPathForIndex:">&ndash; itemPathForIndex:</a></p></code></li>
-			
-		</ul>
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SSCollectionView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/indexPathsForVisibleRows" title="indexPathsForVisibleRows"></a>
+	<h3 class="subsubtitle method-title">indexPathsForVisibleRows</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns an array of index paths each identifying a visible item in the receiver.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (NSArray *)indexPathsForVisibleRows</code></div>
+	
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>An array of <code>NSIndexPath</code> objects each representing a row index and section index that together identify a
+visible item in the collection view. Returns <code>nil</code> if no items are visible. The array&rsquo;s order is undefined.</p>
 	</div>
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	
@@ -992,8 +1106,8 @@ immediate.</p></dd>
 </div>
 						
 						<div class="section-method">
-	<a name="//api/name/itemPathForIndex:" title="itemPathForIndex:"></a>
-	<h3 class="subsubtitle method-title">itemPathForIndex:</h3>
+	<a name="//api/name/itemForIndexPath:" title="itemForIndexPath:"></a>
+	<h3 class="subsubtitle method-title">itemForIndexPath:</h3>
 	
 	
 	
@@ -1002,7 +1116,7 @@ immediate.</p></dd>
 	</div>		
 	
 	
-	<div class="method-subsection method-declaration"><code>- (SSCollectionViewItem *)itemPathForIndex:(NSIndexPath *)<em>indexPath</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (SSCollectionViewItem *)itemForIndexPath:(NSIndexPath *)<em>indexPath</em></code></div>
 	
 	
 	<div class="method-subsection arguments-section parameters">
@@ -1442,6 +1556,46 @@ bottom) for the row when scrolling concludes.</p></dd>
 	
 </div>
 						
+						<div class="section-method">
+	<a name="//api/name/visibleItems" title="visibleItems"></a>
+	<h3 class="subsubtitle method-title">visibleItems</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the collection view items that are visible in the receiver.</p>
+	</div>		
+	
+	
+	<div class="method-subsection method-declaration"><code>- (NSArray *)visibleItems</code></div>
+	
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>An array containing <a href="../Classes/SSCollectionViewItem.html"><code>SSCollectionViewItem</code></a> objects, each representing a visible item in the receiving
+collection view. The array&rsquo;s order is undefined.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">SSCollectionView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
 					</div>
 					
 					
@@ -1455,7 +1609,7 @@ bottom) for the row when scrolling concludes.</p></dd>
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2011 Sam Soffes. All rights reserved. (Last updated: 2011-10-17)</span><br />
+						<p><span class="copyright">&copy; 2011 Sam Soffes. All rights reserved. (Last updated: 2011-10-18)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.4 (build 703)</a>.</span></p>
 						

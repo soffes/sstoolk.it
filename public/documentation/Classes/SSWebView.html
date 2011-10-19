@@ -1306,9 +1306,7 @@ it will not dismiss the keyboard due to how <code>UIModalPresentationFormSheet</
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>string</em></dt>
-			<dd><p>The content for the main page.</p>
-
-<p>The baseURL is set to <a href="http://localhost"><code>http://localhost</code></a></p></dd>
+			<dd><p>The content for the main page.</p></dd>
 		</dl>
 		
 	</div>
@@ -1318,6 +1316,11 @@ it will not dismiss the keyboard due to how <code>UIModalPresentationFormSheet</
 	
 	
 	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The baseURL is set to <a href="http://localhost"><code>http://localhost</code></a>.</p>
+	</div>
 	
 	
 	
@@ -1410,10 +1413,7 @@ it will not dismiss the keyboard due to how <code>UIModalPresentationFormSheet</
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>aRequest</em></dt>
-			<dd><p>A URL <a href="#//api/name/request">request</a> identifying the location of the content to load.</p>
-
-<p>To stop this load, use the <a href="#//api/name/stopLoading">stopLoading</a> method. To see whether the receiver is done <a href="#//api/name/loading">loading</a> the content, use the <a href="#//api/name/loading">loading</a>
-property.</p></dd>
+			<dd><p>A URL <a href="#//api/name/request">request</a> identifying the location of the content to load.</p></dd>
 		</dl>
 		
 	</div>
@@ -1423,6 +1423,12 @@ property.</p></dd>
 	
 	
 	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>To stop this load, use the <a href="#//api/name/stopLoading">stopLoading</a> method. To see whether the receiver is done <a href="#//api/name/loading">loading</a> the content, use the <a href="#//api/name/loading">loading</a>
+property.</p>
+	</div>
 	
 	
 	
@@ -1472,10 +1478,7 @@ property.</p></dd>
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>aURL</em></dt>
-			<dd><p>A URL identifying the location of the content to load.</p>
-
-<p>To stop this load, use the <a href="#//api/name/stopLoading">stopLoading</a> method. To see whether the receiver is done <a href="#//api/name/loading">loading</a> the content, use the <a href="#//api/name/loading">loading</a>
-property.</p></dd>
+			<dd><p>A URL identifying the location of the content to load.</p></dd>
 		</dl>
 		
 	</div>
@@ -1485,6 +1488,12 @@ property.</p></dd>
 	
 	
 	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>To stop this load, use the <a href="#//api/name/stopLoading">stopLoading</a> method. To see whether the receiver is done <a href="#//api/name/loading">loading</a> the content, use the <a href="#//api/name/loading">loading</a>
+property.</p>
+	</div>
 	
 	
 	
@@ -1538,10 +1547,7 @@ property.</p></dd>
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>string</em></dt>
-			<dd><p>A string containing a URL identifying the location of the content to load.</p>
-
-<p>To stop this load, use the <a href="#//api/name/stopLoading">stopLoading</a> method. To see whether the receiver is done <a href="#//api/name/loading">loading</a> the content, use the <a href="#//api/name/loading">loading</a>
-property.</p></dd>
+			<dd><p>A string containing a URL identifying the location of the content to load.</p></dd>
 		</dl>
 		
 	</div>
@@ -1551,6 +1557,12 @@ property.</p></dd>
 	
 	
 	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>To stop this load, use the <a href="#//api/name/stopLoading">stopLoading</a> method. To see whether the receiver is done <a href="#//api/name/loading">loading</a> the content, use the <a href="#//api/name/loading">loading</a>
+property.</p>
+	</div>
 	
 	
 	
@@ -1781,8 +1793,15 @@ content is being loaded.</p>
 	<div class="method-subsection return">
 		<h4 class="method-subtitle parameter-title">Return Value</h4>
 		<p>The result of running script or <code>nil</code> if it fails.</p>
-
-<p>JavaScript execution time is limited to 10 seconds for each top-level entry point. If your script executes for more
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>JavaScript execution time is limited to 10 seconds for each top-level entry point. If your script executes for more
 than 10 seconds, the web view stops executing the script. This is likely to occur at a random place in your code, so
 unintended consequences may result. This limit is imposed because JavaScript execution may cause the main thread to
 block, so when scripts are running, the user is not able to interact with the webpage.</p>
@@ -1790,10 +1809,6 @@ block, so when scripts are running, the user is not able to interact with the we
 <p>JavaScript allocations are also limited to 10 MB. The web view raises an exception if you exceed this limit on the
 total memory allocation for JavaScript.</p>
 	</div>
-	
-	
-	
-	
 	
 	
 	
@@ -1822,7 +1837,7 @@ total memory allocation for JavaScript.</p>
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2011 Sam Soffes. All rights reserved. (Last updated: 2011-10-17)</span><br />
+						<p><span class="copyright">&copy; 2011 Sam Soffes. All rights reserved. (Last updated: 2011-10-18)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.4 (build 703)</a>.</span></p>
 						
