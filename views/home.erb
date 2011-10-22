@@ -25,7 +25,8 @@
         <h3>Get the Source Code</h3>
         <ul class="segmented">
           <li><button class="active">Download</button></li>
-          <li><button>Git Submodule</button></li>
+          <li><button data-section="#code-instruction-submodule">Git Submodule</button></li>
+          <li><button data-section="#code-instruction-cocoapods">CocoaPods</button></li>
         </ul>
       </header>
       <p>Run the following commands to download the source code:</p>
@@ -37,12 +38,24 @@ $ curl -L http://github.com/samsoffes/sstoolkit/tarball/master | tar xz --strip 
       <header>
         <h3>Get the Source Code</h3>
         <ul class="segmented">
-          <li><button>Download</button></li>
+          <li><button data-section="#code-instruction-download">Download</button></li>
           <li><button class="active">Git Submodule</button></li>
+          <li><button data-section="#code-instruction-cocoapods">CocoaPods</button></li>
         </ul>
       </header>
       <p>Run the following command to add the submodule. Be sure you have are you in the root of your git repository.</p>
       <pre class="console"><code>$ git submodule add git://github.com/samsoffes/sstoolkit.git Vendor/SSToolkit</code></pre>
+    </section>
+    <section id="code-instruction-cocoapods">
+      <header>
+        <h3>Get the Source Code</h3>
+        <ul class="segmented">
+          <li><button data-section="#code-instruction-download">Download</button></li>
+          <li><button data-section="#code-instruction-submodule">Git Submodule</button></li>
+          <li><button class="active">CocoaPods</button></li>
+        </ul>
+      </header>
+      <p>You can skip this step if you have already setup your project to use <a href="https://github.com/alloy/cocoapods">CocoaPods</a>, otherwise follow <a href="https://github.com/alloy/cocoapods/wiki/Creating-a-project-that-uses-CocoaPods">the instructions</a> to do so.</p>
     </section>
   </div>
 </div>
@@ -54,7 +67,8 @@ $ curl -L http://github.com/samsoffes/sstoolkit/tarball/master | tar xz --strip 
         <h3>Adding to Your Project</h3>
         <ul class="segmented">
           <li><button class="active">Xcode 4</button></li>
-          <li><button>Xcode 3</button></li>
+          <li><button data-section="#install-instruction-xcode3">Xcode 3</button></li>
+          <li><button data-section="#install-instruction-cocoapods">CocoaPods</button></li>
         </ul>
       </header>
       <ol>
@@ -74,8 +88,9 @@ $ curl -L http://github.com/samsoffes/sstoolkit/tarball/master | tar xz --strip 
       <header>
         <h3>Adding to Your Project</h3>
         <ul class="segmented">
-          <li><button>Xcode 4</button></li>
+          <li><button data-section="#install-instruction-xcode4">Xcode 4</button></li>
           <li><button class="active">Xcode 3</button></li>
+          <li><button data-section="#install-instruction-cocoapods">CocoaPods</button></li>
         </ul>
       </header>
       <ol>
@@ -91,7 +106,23 @@ $ curl -L http://github.com/samsoffes/sstoolkit/tarball/master | tar xz --strip 
       </ol>
       <p>That's it. The annoying part is over. Now to the fun part.</p>
     </section>
-  </div>
+    <section id="install-instruction-cocoapods">
+      <header>
+        <h3>Adding to Your Project</h3>
+        <ul class="segmented">
+          <li><button data-section="#install-instruction-xcode4">Xcode 4</button></li>
+          <li><button data-section="#install-instruction-xcode3">Xcode 3</button></li>
+          <li><button class="active">CocoaPods</button></li>
+        </ul>
+      </header>
+      <p>From the terminal run the following commands:
+      <ol>
+        <li>Add the dependency to your Podfile: <code>dependency 'SSToolkit'</code></li>
+        <li>From the terminal run: <code>$ pod install</code>
+      </ol>
+      <p>That's it. That wasn’t so bad. Now to the fun part.</p>
+    </section>
+ </div>
 </div>
 
 <h2 id="usage">Usage</h2>
