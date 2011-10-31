@@ -24,7 +24,7 @@ class SSToolkit < Sinatra::Application
   end
   
   get '/sample-?code' do
-    redirect 'http://github.com/samsoffes/sstoolkit/'
+    redirect 'http://github.com/samsoffes/sscatalog/'
   end
 
   get %r{/([a-zA-Z\-_\/]+)/?} do
