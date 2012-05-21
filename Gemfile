@@ -4,11 +4,11 @@ gem 'sinatra'
 gem 'thin'
 gem 'rake'
 
-group :development do
+# group :development do
   gem 'shotgun'
   gem 'sass'
   gem 'bourbon'
   gem 'heroku'
-end
+# end
 
 gem 'addressable'
