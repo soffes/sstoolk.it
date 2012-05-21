@@ -7,7 +7,7 @@
 		<meta name="viewport" content="width=550" />
 		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
 		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
-		<meta name="generator" content="appledoc 2.0.4 (build 703)" />
+		<meta name="generator" content="appledoc 2.0.5 (build 737)" />
 	</head>
 	<body>
 		<header id="top_header">
@@ -43,6 +43,8 @@
 	<option value="class_methods">Class Methods</option>
 	
 	<option value="//api/name/stringWithBase64String:">&nbsp;&nbsp;&nbsp;&nbsp;+ stringWithBase64String:</option>
+	
+	<option value="//api/name/stringWithUUID">&nbsp;&nbsp;&nbsp;&nbsp;+ stringWithUUID</option>
 	
 	
 	
@@ -115,6 +117,8 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Base64 Encoding">Base64 Encoding</a></span></li>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Generating a UUID">Generating a UUID</a></span></li>
+	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Trimming">Trimming</a></span></li>
 	
 </ul></li>
@@ -128,6 +132,8 @@
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#class_methods">Class Methods</a></span><ul>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/stringWithBase64String:">stringWithBase64String:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/stringWithUUID">stringWithUUID</a></span></li>
 	
 </ul></li>
 
@@ -261,7 +267,7 @@
 							<li>
 	<span class="tooltip">
 		<code><a href="#//api/name/compareToVersionString:">&ndash;&nbsp;compareToVersionString:</a></code>
-		<span class="tooltip"><p>Returns a comparison result for the reciever and a given <code>version</code>.</p></span>
+		<span class="tooltip"><p>Returns a comparison result for the receiver and a given <code>version</code>.</p></span>
 	</span>
 	
 	
@@ -364,6 +370,21 @@
 						</ul>
 						
 						
+						<a title="Generating a UUID" name="task_Generating a UUID"></a>
+						<h3 class="subsubtitle task-title">Generating a UUID</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/stringWithUUID">+&nbsp;stringWithUUID</a></code>
+		<span class="tooltip"><p>Returns a new string containing a Universally Unique Identifier.</p></span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
 						<a title="Trimming" name="task_Trimming"></a>
 						<h3 class="subsubtitle task-title">Trimming</h3>
 
@@ -435,9 +456,11 @@
 		<p>Returns a new string contained in the Base64 encoded string.</p>
 	</div>		
 	
-	
+    
+
 	<div class="method-subsection method-declaration"><code>+ (NSString *)stringWithBase64String:(NSString *)<em>base64String</em></code></div>
-	
+
+    
 	
 	<div class="method-subsection arguments-section parameters">
 		<h4 class="method-subtitle parameter-title">Parameters</h4>
@@ -480,6 +503,42 @@
 	
 </div>
 						
+						<div class="section-method">
+	<a name="//api/name/stringWithUUID" title="stringWithUUID"></a>
+	<h3 class="subsubtitle method-title">stringWithUUID</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns a new string containing a Universally Unique Identifier.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (NSString *)stringWithUUID</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">NSString+SSToolkitAdditions.h</code><br />
+	</div>				
+	
+	
+</div>
+						
 					</div>
 					
 					
@@ -498,9 +557,11 @@
 		<p>Returns a string of the MD5 sum of the receiver.</p>
 	</div>		
 	
-	
+    
+
 	<div class="method-subsection method-declaration"><code>- (NSString *)MD5Sum</code></div>
-	
+
+    
 	
 	
 	
@@ -537,9 +598,11 @@
 		<p>Returns a string of the SHA1 sum of the receiver.</p>
 	</div>		
 	
-	
+    
+
 	<div class="method-subsection method-declaration"><code>- (NSString *)SHA1Sum</code></div>
-	
+
+    
 	
 	
 	
@@ -576,9 +639,11 @@
 		<p>Returns a new string decoded from a URL.</p>
 	</div>		
 	
-	
+    
+
 	<div class="method-subsection method-declaration"><code>- (NSString *)URLDecodedString</code></div>
-	
+
+    
 	
 	
 	
@@ -615,9 +680,11 @@
 		<p>Returns a new string encoded for a URL parameter. (Deprecated)</p>
 	</div>		
 	
-	
+    
+
 	<div class="method-subsection method-declaration"><code>- (NSString *)URLEncodedParameterString</code></div>
-	
+
+    
 	
 	
 	
@@ -659,9 +726,11 @@
 		<p>Returns a new string encoded for a URL. (Deprecated)</p>
 	</div>		
 	
-	
+    
+
 	<div class="method-subsection method-declaration"><code>- (NSString *)URLEncodedString</code></div>
-	
+
+    
 	
 	
 	
@@ -703,9 +772,11 @@
 		<p>Returns a string representation of the receiver Base64 encoded.</p>
 	</div>		
 	
-	
+    
+
 	<div class="method-subsection method-declaration"><code>- (NSString *)base64EncodedString</code></div>
-	
+
+    
 	
 	
 	
@@ -739,12 +810,14 @@
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Returns a comparison result for the reciever and a given <code>version</code>.</p>
+		<p>Returns a comparison result for the receiver and a given <code>version</code>.</p>
 	</div>		
 	
-	
+    
+
 	<div class="method-subsection method-declaration"><code>- (NSComparisonResult)compareToVersionString:(NSString *)<em>version</em></code></div>
-	
+
+    
 	
 	<div class="method-subsection arguments-section parameters">
 		<h4 class="method-subtitle parameter-title">Parameters</h4>
@@ -760,7 +833,7 @@
 	
 	<div class="method-subsection return">
 		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>A comparison result for the reciever and a given <code>version</code></p>
+		<p>A comparison result for the receiver and a given <code>version</code></p>
 	</div>
 	
 	
@@ -801,9 +874,11 @@
 		<p>Returns a Boolean if the receiver contains the given <code>string</code>.</p>
 	</div>		
 	
-	
+    
+
 	<div class="method-subsection method-declaration"><code>- (BOOL)containsString:(NSString *)<em>string</em></code></div>
-	
+
+    
 	
 	<div class="method-subsection arguments-section parameters">
 		<h4 class="method-subtitle parameter-title">Parameters</h4>
@@ -850,9 +925,11 @@
 		<p>Returns a new string with any HTML escaped.</p>
 	</div>		
 	
-	
+    
+
 	<div class="method-subsection method-declaration"><code>- (NSString *)escapeHTML</code></div>
-	
+
+    
 	
 	
 	
@@ -898,9 +975,11 @@
 		<p>Returns a new string escaped for a URL query parameter.</p>
 	</div>		
 	
-	
+    
+
 	<div class="method-subsection method-declaration"><code>- (NSString *)stringByEscapingForURLQuery</code></div>
-	
+
+    
 	
 	
 	
@@ -952,9 +1031,11 @@ escaped to <code>%2B</code>).</p>
 		<p>Returns a new string by trimming leading and trailing characters in a given <code>NSCharacterSet</code>.</p>
 	</div>		
 	
-	
+    
+
 	<div class="method-subsection method-declaration"><code>- (NSString *)stringByTrimmingLeadingAndTrailingCharactersInSet:(NSCharacterSet *)<em>characterSet</em></code></div>
-	
+
+    
 	
 	<div class="method-subsection arguments-section parameters">
 		<h4 class="method-subtitle parameter-title">Parameters</h4>
@@ -1001,9 +1082,11 @@ escaped to <code>%2B</code>).</p>
 		<p>Returns a new string by trimming leading and trailing whitespace and newline characters.</p>
 	</div>		
 	
-	
+    
+
 	<div class="method-subsection method-declaration"><code>- (NSString *)stringByTrimmingLeadingAndTrailingWhitespaceAndNewlineCharacters</code></div>
-	
+
+    
 	
 	
 	
@@ -1040,9 +1123,11 @@ escaped to <code>%2B</code>).</p>
 		<p>Returns a new string by trimming leading characters in a given <code>NSCharacterSet</code>.</p>
 	</div>		
 	
-	
+    
+
 	<div class="method-subsection method-declaration"><code>- (NSString *)stringByTrimmingLeadingCharactersInSet:(NSCharacterSet *)<em>characterSet</em></code></div>
-	
+
+    
 	
 	<div class="method-subsection arguments-section parameters">
 		<h4 class="method-subtitle parameter-title">Parameters</h4>
@@ -1089,9 +1174,11 @@ escaped to <code>%2B</code>).</p>
 		<p>Returns a new string by trimming leading whitespace and newline characters.</p>
 	</div>		
 	
-	
+    
+
 	<div class="method-subsection method-declaration"><code>- (NSString *)stringByTrimmingLeadingWhitespaceAndNewlineCharacters</code></div>
-	
+
+    
 	
 	
 	
@@ -1128,9 +1215,11 @@ escaped to <code>%2B</code>).</p>
 		<p>Returns a new string by trimming trailing characters in a given <code>NSCharacterSet</code>.</p>
 	</div>		
 	
-	
+    
+
 	<div class="method-subsection method-declaration"><code>- (NSString *)stringByTrimmingTrailingCharactersInSet:(NSCharacterSet *)<em>characterSet</em></code></div>
-	
+
+    
 	
 	<div class="method-subsection arguments-section parameters">
 		<h4 class="method-subtitle parameter-title">Parameters</h4>
@@ -1177,9 +1266,11 @@ escaped to <code>%2B</code>).</p>
 		<p>Returns a new string by trimming trailing whitespace and newline characters.</p>
 	</div>		
 	
-	
+    
+
 	<div class="method-subsection method-declaration"><code>- (NSString *)stringByTrimmingTrailingWhitespaceAndNewlineCharacters</code></div>
-	
+
+    
 	
 	
 	
@@ -1216,9 +1307,11 @@ escaped to <code>%2B</code>).</p>
 		<p>Returns a new string unescaped from a URL query parameter.</p>
 	</div>		
 	
-	
+    
+
 	<div class="method-subsection method-declaration"><code>- (NSString *)stringByUnescapingFromURLQuery</code></div>
-	
+
+    
 	
 	
 	
@@ -1269,9 +1362,11 @@ escaped to <code>%2B</code>).</p>
 		<p>Returns a new string with any HTML unescaped.</p>
 	</div>		
 	
-	
+    
+
 	<div class="method-subsection method-declaration"><code>- (NSString *)unescapeHTML</code></div>
-	
+
+    
 	
 	
 	
@@ -1320,9 +1415,9 @@ escaped to <code>%2B</code>).</p>
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2011 Sam Soffes. All rights reserved. (Last updated: 2011-10-18)</span><br />
+						<p><span class="copyright">&copy; 2012 Sam Soffes. All rights reserved. (Last updated: 2012-05-21)</span><br />
 						
-						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.4 (build 703)</a>.</span></p>
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.5 (build 737)</a>.</span></p>
 						
 					</div>
 				</div>
@@ -1410,6 +1505,14 @@ escaped to <code>%2B</code>).</p>
 			}
 			
 			window.onload = init;
+			
+			// If showing in Xcode, hide the TOC and Header
+			if (navigator.userAgent.match(/xcode/i)) {
+				document.getElementById("contents").className = "hideInXcode"
+				document.getElementById("tocContainer").className = "hideInXcode"
+				document.getElementById("top_header").className = "hideInXcode"
+			}
+			
 		</script>
 	</body>
 </html>

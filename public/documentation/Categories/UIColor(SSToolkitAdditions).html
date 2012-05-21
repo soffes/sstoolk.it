@@ -7,7 +7,7 @@
 		<meta name="viewport" content="width=550" />
 		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
 		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
-		<meta name="generator" content="appledoc 2.0.4 (build 703)" />
+		<meta name="generator" content="appledoc 2.0.5 (build 737)" />
 	</head>
 	<body>
 		<header id="top_header">
@@ -62,6 +62,8 @@
 	
 	<option value="//api/name/hexValue">&nbsp;&nbsp;&nbsp;&nbsp;- hexValue</option>
 	
+	<option value="//api/name/hexValueWithAlpha:">&nbsp;&nbsp;&nbsp;&nbsp;- hexValueWithAlpha:</option>
+	
 	
 	
 </select>
@@ -109,6 +111,8 @@
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/hexValue">hexValue</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/hexValueWithAlpha:">hexValueWithAlpha:</a></span></li>
 	
 </ul></li>
 
@@ -176,6 +180,13 @@
 	
 </li><li>
 	<span class="tooltip">
+		<code><a href="#//api/name/hexValueWithAlpha:">&ndash;&nbsp;hexValueWithAlpha:</a></code>
+		<span class="tooltip"><p>Returns the receiver&rsquo;s value as a hex string.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
 		<code><a href="#//api/name/red">&nbsp;&nbsp;red</a></code>
 		<span class="tooltip"><p>The receiver&rsquo;s <a href="#//api/name/red">red</a> component value. (read-only)</p></span>
 	</span>
@@ -225,9 +236,11 @@
 		<p>The receiver&rsquo;s <a href="#//api/name/alpha">alpha</a> value. (read-only)</p>
 	</div>		
 	
-	
+    
+
 	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign, readonly) CGFloat alpha</code></div>
-	
+
+    
 	
 	
 	
@@ -265,9 +278,11 @@ transparent and <code>1.0</code> represents totally opaque.</p>
 		<p>The receiver&rsquo;s <a href="#//api/name/blue">blue</a> component value. (read-only)</p>
 	</div>		
 	
-	
+    
+
 	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign, readonly) CGFloat blue</code></div>
-	
+
+    
 	
 	
 	
@@ -305,9 +320,11 @@ not in the RGB colorspace.</p>
 		<p>The receiver&rsquo;s <a href="#//api/name/green">green</a> component value. (read-only)</p>
 	</div>		
 	
-	
+    
+
 	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign, readonly) CGFloat green</code></div>
-	
+
+    
 	
 	
 	
@@ -345,9 +362,11 @@ not in the RGB colorspace.</p>
 		<p>The receiver&rsquo;s <a href="#//api/name/red">red</a> component value. (read-only)</p>
 	</div>		
 	
-	
+    
+
 	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign, readonly) CGFloat red</code></div>
-	
+
+    
 	
 	
 	
@@ -393,16 +412,18 @@ not in the RGB colorspace.</p>
 		<p>Creates and returns an UIColor object containing a given value.</p>
 	</div>		
 	
-	
+    
+
 	<div class="method-subsection method-declaration"><code>+ (UIColor *)colorWithHex:(NSString *)<em>hex</em></code></div>
-	
+
+    
 	
 	<div class="method-subsection arguments-section parameters">
 		<h4 class="method-subtitle parameter-title">Parameters</h4>
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>hex</em></dt>
-			<dd><p>The value for the new color. The <code>#</code> sign is optional.</p></dd>
+			<dd><p>The value for the new color. The <code>#</code> sign is not requi<a href="#//api/name/red">red</a>.</p></dd>
 		</dl>
 		
 	</div>
@@ -413,7 +434,9 @@ not in the RGB colorspace.</p>
 		<h4 class="method-subtitle parameter-title">Return Value</h4>
 		<p>An UIColor object containing a value.</p>
 
-<p>The <a href="#//api/name/alpha">alpha</a> value will be <code>1.0</code>.</p>
+<p>You can specify hex values in the following formats: <code>rgb</code>, <code>rrggbb</code>, or <code>rrggbbaa</code>.</p>
+
+<p>The default <a href="#//api/name/alpha">alpha</a> value is <code>1.0</code>.</p>
 	</div>
 	
 	
@@ -452,9 +475,11 @@ not in the RGB colorspace.</p>
 		<p>Returns the receiver&rsquo;s value as a hex string.</p>
 	</div>		
 	
-	
+    
+
 	<div class="method-subsection method-declaration"><code>- (NSString *)hexValue</code></div>
-	
+
+    
 	
 	
 	
@@ -462,7 +487,62 @@ not in the RGB colorspace.</p>
 		<h4 class="method-subtitle parameter-title">Return Value</h4>
 		<p>The receiver&rsquo;s value as a hex string.</p>
 
-<p>The value will be <code>nil</code> if the color is in a color space other than Grayscale or RGB. The <code>#</code> sign is omitted.</p>
+<p>The value will be <code>nil</code> if the color is in a color space other than Grayscale or RGB. The <code>#</code> sign is omitted. Alpha
+will be omitted.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">UIColor+SSToolkitAdditions.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/hexValueWithAlpha:" title="hexValueWithAlpha:"></a>
+	<h3 class="subsubtitle method-title">hexValueWithAlpha:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the receiver&rsquo;s value as a hex string.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (NSString *)hexValueWithAlpha:(BOOL)<em>includeAlpha</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>includeAlpha</em></dt>
+			<dd><p><code>YES</code> if <a href="#//api/name/alpha">alpha</a> should be included. <code>NO</code> if it should not.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>The receiver&rsquo;s value as a hex string.</p>
+
+<p>The value will be <code>nil</code> if the color is in a color space other than Grayscale or RGB. The <code>#</code> sign is omitted. Alpha is
+included if <code>includeAlpha</code> is <code>YES</code>.</p>
 	</div>
 	
 	
@@ -496,9 +576,9 @@ not in the RGB colorspace.</p>
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2011 Sam Soffes. All rights reserved. (Last updated: 2011-10-18)</span><br />
+						<p><span class="copyright">&copy; 2012 Sam Soffes. All rights reserved. (Last updated: 2012-05-21)</span><br />
 						
-						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.4 (build 703)</a>.</span></p>
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.5 (build 737)</a>.</span></p>
 						
 					</div>
 				</div>
@@ -586,6 +666,14 @@ not in the RGB colorspace.</p>
 			}
 			
 			window.onload = init;
+			
+			// If showing in Xcode, hide the TOC and Header
+			if (navigator.userAgent.match(/xcode/i)) {
+				document.getElementById("contents").className = "hideInXcode"
+				document.getElementById("tocContainer").className = "hideInXcode"
+				document.getElementById("top_header").className = "hideInXcode"
+			}
+			
 		</script>
 	</body>
 </html>

@@ -26,7 +26,7 @@ task :server  => [:sass] do
   `bundle exec shotgun config.ru`
 end
 
-desc 'Import docs. Requires SSToolkit repo at ../sstoolkit and appledoc in $PATH'
+desc 'Import docs - Requires SSToolkit repo at ../sstoolkit and appledoc in $PATH'
 task :docs => [:'docs:clean'] do
   appledoc_options = [
     '--output temp/documentation',
@@ -43,7 +43,7 @@ task :docs => [:'docs:clean'] do
   `appledoc #{appledoc_options.join(' ')} ../sstoolkit/SSToolkit/*.h`
   `mv temp/documentation/html public/documentation`
   `rm -rf temp/documentation`
-  puts 'Imported.'
+  puts 'Imported documentation'
 end
 
 namespace :docs do

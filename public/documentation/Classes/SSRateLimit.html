@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
-		<title>UIScrollView(SSToolkitAdditions) Category Reference</title>
+		<title>SSRateLimit Class Reference</title>
 		<meta id="xcode-display" name="xcode-display" content="render"/>
 		<meta name="viewport" content="width=550" />
 		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
@@ -17,7 +17,7 @@
 			</div>
 			
 			<div id="title" role="banner">
-				<h1 class="hideInXcode">UIScrollView(SSToolkitAdditions) Category Reference</h1>
+				<h1 class="hideInXcode">SSRateLimit Class Reference</h1>
 			</div>
 			<ul id="headerButtons" role="toolbar">
 				<li id="toc_button">
@@ -26,8 +26,6 @@
 				<li id="jumpto_button" role="navigation">
 					<select id="jumpTo">
 	<option value="top">Jump To&#133;</option>
-	
-	<option value="overview">Overview</option>
 	
 	
 	
@@ -40,13 +38,13 @@
 	
 	
 	
+	<option value="class_methods">Class Methods</option>
+	
+	<option value="//api/name/executeBlock:name:limit:">&nbsp;&nbsp;&nbsp;&nbsp;+ executeBlock:name:limit:</option>
+	
+	<option value="//api/name/resetLimitForName:">&nbsp;&nbsp;&nbsp;&nbsp;+ resetLimitForName:</option>
 	
 	
-	<option value="instance_methods">Instance Methods</option>
-	
-	<option value="//api/name/scrollToTop">&nbsp;&nbsp;&nbsp;&nbsp;- scrollToTop</option>
-	
-	<option value="//api/name/scrollToTopAnimated:">&nbsp;&nbsp;&nbsp;&nbsp;- scrollToTopAnimated:</option>
 	
 	
 	
@@ -57,15 +55,11 @@
 		<nav id="tocContainer" class="isShowingTOC">
 			<ul id="toc" role="tree">
 				
-<li role="treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#overview">Overview</a></span></li>
-
 
 
 
 <li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Scrolling">Scrolling</a></span></li>
-	
 </ul></li>
 
 
@@ -74,22 +68,22 @@
 
 
 
-
-
-<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#class_methods">Class Methods</a></span><ul>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/scrollToTop">scrollToTop</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/executeBlock:name:limit:">executeBlock:name:limit:</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/scrollToTopAnimated:">scrollToTopAnimated:</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/resetLimitForName:">resetLimitForName:</a></span></li>
 	
 </ul></li>
+
+
 
 
 			</ul>
 		</nav>
 		<article>
 			<div id="contents" class="isShowingTOC" role="main">
-				<a title="UIScrollView(SSToolkitAdditions) Category Reference" name="top"></a>
+				<a title="SSRateLimit Class Reference" name="top"></a>
 				<div class="main-navigation navigation-top">
 					<ul>
 	<li><a href="../index.html">Index</a></li>
@@ -98,26 +92,21 @@
 				</div>
 				<div id="header">
 					<div class="section-header">
-						<h1 class="title title-header">UIScrollView(SSToolkitAdditions) Category Reference</h1>
+						<h1 class="title title-header">SSRateLimit Class Reference</h1>
 					</div>		
 				</div>
 				<div id="container">	
 					
 					<div class="section section-specification"><table cellspacing="0"><tbody>
 						<tr>
+	<td class="specification-title">Inherits from</td>
+	<td class="specification-value">NSObject</td>
+</tr><tr>
 	<td class="specification-title">Declared in</td>
-	<td class="specification-value">UIScrollView+SSToolkitAdditions.h</td>
+	<td class="specification-value">SSRateLimit.h</td>
 </tr>
 						</tbody></table></div>
 					
-					
-					
-					
-					<div class="section section-overview">
-						<a title="Overview" name="overview"></a>
-						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>Provides extensions to <code>UIScrollView</code> for various common tasks.</p>
-					</div>
 					
 					
 					
@@ -128,21 +117,21 @@
 						<h2 class="subtitle subtitle-tasks">Tasks</h2>
 						
 						
-						<a title="Scrolling" name="task_Scrolling"></a>
 						
-<h3 class="subsubtitle task-title">Scrolling</h3>
+						
+
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
-		<code><a href="#//api/name/scrollToTop">&ndash;&nbsp;scrollToTop</a></code>
-		<span class="tooltip"><p>Scroll to the top of the receiver without animation.</p></span>
+		<code><a href="#//api/name/executeBlock:name:limit:">+&nbsp;executeBlock:name:limit:</a></code>
+		<span class="tooltip"><p>Executes the given block. If the block has been executed in less time than the limit, it will not be executed.</p></span>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/scrollToTopAnimated:">&ndash;&nbsp;scrollToTopAnimated:</a></code>
-		<span class="tooltip"><p>Scroll to the top of the receiver.</p></span>
+		<code><a href="#//api/name/resetLimitForName:">+&nbsp;resetLimitForName:</a></code>
+		<span class="tooltip"><p>Resets the time for a given name.</p></span>
 	</span>
 	
 	
@@ -157,29 +146,57 @@
 					
 					
 					
-					
-					
 					<div class="section section-methods">
-						<a title="Instance Methods" name="instance_methods"></a>
-						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+						<a title="Class Methods" name="class_methods"></a>
+						<h2 class="subtitle subtitle-methods">Class Methods</h2>
 						
 						<div class="section-method">
-	<a name="//api/name/scrollToTop" title="scrollToTop"></a>
-	<h3 class="subsubtitle method-title">scrollToTop</h3>
+	<a name="//api/name/executeBlock:name:limit:" title="executeBlock:name:limit:"></a>
+	<h3 class="subsubtitle method-title">executeBlock:name:limit:</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Scroll to the top of the receiver without animation.</p>
+		<p>Executes the given block. If the block has been executed in less time than the limit, it will not be executed.</p>
 	</div>		
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (void)scrollToTop</code></div>
+	<div class="method-subsection method-declaration"><code>+ (BOOL)executeBlock:(void ( ^ ) ( void ))<em>block</em> name:(NSString *)<em>name</em> limit:(NSTimeInterval)<em>limit</em></code></div>
 
     
 	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>block</em></dt>
+			<dd><p>The block to be executed. This should not be <code>nil</code>.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>name</em></dt>
+			<dd><p>A string identifying the block. If more than one block have the same name, their last executed time will be
+stored together.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>limit</em></dt>
+			<dd><p>The time interval (in seconds). This should be a positive, non-zero value.</p></dd>
+		</dl>
+		
+	</div>
 	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p><code>YES</code> if the block was executed. <code>NO</code> if it was not.</p>
+
+<p>The time will not be persisted across application launches (for now). The block is synchronously executed on the same
+thread that called this method and not in a GCD queue. If you need to dispatch, simply do that in the block you
+provide.</p>
+	</div>
 	
 	
 	
@@ -193,25 +210,25 @@
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">UIScrollView+SSToolkitAdditions.h</code><br />
+		<code class="declared-in-ref">SSRateLimit.h</code><br />
 	</div>				
 	
 	
 </div>
 						
 						<div class="section-method">
-	<a name="//api/name/scrollToTopAnimated:" title="scrollToTopAnimated:"></a>
-	<h3 class="subsubtitle method-title">scrollToTopAnimated:</h3>
+	<a name="//api/name/resetLimitForName:" title="resetLimitForName:"></a>
+	<h3 class="subsubtitle method-title">resetLimitForName:</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Scroll to the top of the receiver.</p>
+		<p>Resets the time for a given name.</p>
 	</div>		
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (void)scrollToTopAnimated:(BOOL)<em>animated</em></code></div>
+	<div class="method-subsection method-declaration"><code>+ (void)resetLimitForName:(NSString *)<em>name</em></code></div>
 
     
 	
@@ -219,8 +236,10 @@
 		<h4 class="method-subtitle parameter-title">Parameters</h4>
 		
 		<dl class="argument-def parameter-def">
-			<dt><em>animated</em></dt>
-			<dd><p><code>YES</code> to animate the transition at a constant velocity to the new offset, <code>NO</code> to make the transition immediate.</p></dd>
+			<dt><em>name</em></dt>
+			<dd><p>A string identifying a block&rsquo;s stored time.</p>
+
+<p>The next time a block with the same name is passed to <a href="#//api/name/executeBlock:name:limit:"><code>executeBlock:name:limit:</code></a> it will be executed.</p></dd>
 		</dl>
 		
 	</div>
@@ -239,13 +258,15 @@
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">UIScrollView+SSToolkitAdditions.h</code><br />
+		<code class="declared-in-ref">SSRateLimit.h</code><br />
 	</div>				
 	
 	
 </div>
 						
 					</div>
+					
+					
 					
 					
 				</div>

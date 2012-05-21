@@ -7,7 +7,7 @@
 		<meta name="viewport" content="width=550" />
 		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
 		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
-		<meta name="generator" content="appledoc 2.0.4 (build 703)" />
+		<meta name="generator" content="appledoc 2.0.5 (build 737)" />
 	</head>
 	<body>
 		<header id="top_header">
@@ -53,6 +53,8 @@
 	
 	<option value="//api/name/SHA1Sum">&nbsp;&nbsp;&nbsp;&nbsp;- SHA1Sum</option>
 	
+	<option value="//api/name/deepMutableCopy">&nbsp;&nbsp;&nbsp;&nbsp;- deepMutableCopy</option>
+	
 	<option value="//api/name/stringWithFormEncodedComponents">&nbsp;&nbsp;&nbsp;&nbsp;- stringWithFormEncodedComponents</option>
 	
 	
@@ -74,6 +76,8 @@
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Creating Dictionaries">Creating Dictionaries</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Creating Form Components">Creating Form Components</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Deriving New Arrays">Deriving New Arrays</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Hashing">Hashing</a></span></li>
 	
@@ -98,6 +102,8 @@
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/MD5Sum">MD5Sum</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/SHA1Sum">SHA1Sum</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/deepMutableCopy">deepMutableCopy</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/stringWithFormEncodedComponents">stringWithFormEncodedComponents</a></span></li>
 	
@@ -177,6 +183,21 @@
 						</ul>
 						
 						
+						<a title="Deriving New Arrays" name="task_Deriving New Arrays"></a>
+						<h3 class="subsubtitle task-title">Deriving New Arrays</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/deepMutableCopy">&ndash;&nbsp;deepMutableCopy</a></code>
+		<span class="tooltip"><p>Returns the object returned by <code>mutableCopyWithZone:</code> where the zone is <code>nil</code>.</p></span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
 						<a title="Hashing" name="task_Hashing"></a>
 						<h3 class="subsubtitle task-title">Hashing</h3>
 
@@ -220,9 +241,11 @@
 		<p>Returns a new dictionary that contains a dictionary for a form encoded string.</p>
 	</div>		
 	
-	
+    
+
 	<div class="method-subsection method-declaration"><code>+ (NSDictionary *)dictionaryWithFormEncodedString:(NSString *)<em>encodedString</em></code></div>
-	
+
+    
 	
 	<div class="method-subsection arguments-section parameters">
 		<h4 class="method-subtitle parameter-title">Parameters</h4>
@@ -278,9 +301,11 @@ invalid representation of a dictionary.</p>
 		<p>Returns a string of the MD5 sum of the receiver.</p>
 	</div>		
 	
-	
+    
+
 	<div class="method-subsection method-declaration"><code>- (NSString *)MD5Sum</code></div>
-	
+
+    
 	
 	
 	
@@ -323,9 +348,11 @@ contained in the receiver when calling this method.</p>
 		<p>Returns a string of the SHA1 sum of the receiver.</p>
 	</div>		
 	
-	
+    
+
 	<div class="method-subsection method-declaration"><code>- (NSString *)SHA1Sum</code></div>
-	
+
+    
 	
 	
 	
@@ -359,6 +386,54 @@ contained in the receiver when calling this method.</p>
 </div>
 						
 						<div class="section-method">
+	<a name="//api/name/deepMutableCopy" title="deepMutableCopy"></a>
+	<h3 class="subsubtitle method-title">deepMutableCopy</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the object returned by <code>mutableCopyWithZone:</code> where the zone is <code>nil</code>.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (NSMutableDictionary *)deepMutableCopy</code></div>
+
+    
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>The object returned by the <code>NSMutableCopying</code> protocol method <code>mutableCopyWithZone:</code>, where the zone is <code>nil</code>.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>This differs from <code>mutableCopy</code> in that it makes any contained <code>NSArray</code> objects or <code>NSDictionary</code> objects mutable as
+well. The returned dictionary follows standard memory management conventions for copied objects. You are responsible
+for releasing it.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">NSDictionary+SSToolkitAdditions.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
 	<a name="//api/name/stringWithFormEncodedComponents" title="stringWithFormEncodedComponents"></a>
 	<h3 class="subsubtitle method-title">stringWithFormEncodedComponents</h3>
 	
@@ -368,9 +443,11 @@ contained in the receiver when calling this method.</p>
 		<p>Returns a string of form encoded components for using as the query string in a URL.</p>
 	</div>		
 	
-	
+    
+
 	<div class="method-subsection method-declaration"><code>- (NSString *)stringWithFormEncodedComponents</code></div>
-	
+
+    
 	
 	
 	
@@ -410,9 +487,9 @@ contained in the receiver when calling this method.</p>
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2011 Sam Soffes. All rights reserved. (Last updated: 2011-10-18)</span><br />
+						<p><span class="copyright">&copy; 2012 Sam Soffes. All rights reserved. (Last updated: 2012-05-21)</span><br />
 						
-						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.4 (build 703)</a>.</span></p>
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.0.5 (build 737)</a>.</span></p>
 						
 					</div>
 				</div>
@@ -500,6 +577,14 @@ contained in the receiver when calling this method.</p>
 			}
 			
 			window.onload = init;
+			
+			// If showing in Xcode, hide the TOC and Header
+			if (navigator.userAgent.match(/xcode/i)) {
+				document.getElementById("contents").className = "hideInXcode"
+				document.getElementById("tocContainer").className = "hideInXcode"
+				document.getElementById("top_header").className = "hideInXcode"
+			}
+			
 		</script>
 	</body>
 </html>
