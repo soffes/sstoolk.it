@@ -1,9 +1,12 @@
-section#code-instruction-submodule, section#install-instruction-xcode3 {
+section#code-instruction-submodule {
   display: none;
 }
 
 div.instructions {
   section > header {
+    @include clearfix;
+    height: 37px;
+    
     h3 {
       float: left;
       padding-top: 4px;
@@ -18,10 +21,6 @@ div.instructions {
       }
     }
   }
-  
-  section > header:after {
-    @include clearfix;
-  }
 }
 
 a#sample-code-sim {
@@ -30,6 +29,7 @@ a#sample-code-sim {
 }
 
 section#social {
+  @include clearfix;
   margin: 1em auto 2em;
   width: 640px;
   
@@ -37,7 +37,7 @@ section#social {
     float: left;
     background: #fff;
     position: relative;
-    @include single-box-shadow(rgba(0, 0, 0, 0.5), 0, 1px, 2px);
+    @include box-shadow(rgba(0, 0, 0, 0.5) 0 1px 2px);
     @include border-radius(5px);
     height: 35px;
     padding: 10px 0 0 10px;
@@ -61,8 +61,4 @@ section#social {
     height: 20px;
     padding: 13px 10px 12px;
   }
-}
-
-section#social:after {
-  @include clearfix;
 }

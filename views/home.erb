@@ -52,40 +52,15 @@ $ curl -L http://github.com/samsoffes/sstoolkit/tarball/master | tar xz --strip 
     <section id="install-instruction-xcode4">
       <header>
         <h3>Adding to Your Project</h3>
-        <ul class="segmented">
-          <li><button class="active">Xcode 4</button></li>
-          <li><button>Xcode 3</button></li>
-        </ul>
       </header>
       <ol>
         <li><p>In Finder, navigate to the <code>Vendor/SSToolkit</code> folder and drag the <code>xcodeproj</code> file into your Xcode project.</p></li>
-        <li><p>In Finder, drag <code>SSToolkit.bundle</code> located in <code>Vendor/SSToolkit/Resources</code> into the <code>Resources</code> folder in your Xcode project.</p></li>
         <li><p>Select your main Xcode project from the sidebar in Xcode and then select the target you want to add SSToolkit to.</p></li>
         <li><p>Select the <em>Build Phases</em> tab.</p></li>
-        <li><p>Under the <em>Target Dependencies</em> group, click the plus button, select <em>SSToolkit</em> from the menu, and choose <em>Add</em>.</p></li>
+        <li><p>Under the <em>Target Dependencies</em> group, click the plus button, select <em>SSToolkit</em> and <em>SSToolkitResources</em> from the menu, and choose <em>Add</em>.</p></li>
         <li><p>Under the <em>Link Binary With Libraries</em> group, click the plus button, select <code>libSSToolkit.a</code> from the menu, and choose <em>Add</em>. Be sure you have <code>QuartzCore.framework</code> and <code>CoreGraphics.framework</code> added to your project as well.</p></li>
+        <li><p>Expand the <em>Copy Bundle Resources</em> group. Expand the SSToolkit project in the sidebar so you can see the <em>Products</em> folder in the SSToolkit project. Click and drag <em>SSToolkitResources.bundle</em> into the <em>Copy Bundle Resources</em> build phase.</li>
         <li><p>Choose the <em>Build Settings</em> tab. Make sure <em>All</em> in the top left of the bar under the tabs.</p></li>
-        <li><p>Add <code>Vendor/SSToolkit</code> to <em>Header Search Path</em> (do not click the <em>Recursive</em> checkbox).</p></li>
-        <li><p>Add <code>-all_load -ObjC</code> to <em>Other Linker Flags</em>.</p></li>
-      </ol>
-      <p>That's it. The annoying part is over. Now to the fun part.</p>
-    </section>
-    <section id="install-instruction-xcode3">
-      <header>
-        <h3>Adding to Your Project</h3>
-        <ul class="segmented">
-          <li><button>Xcode 4</button></li>
-          <li><button class="active">Xcode 3</button></li>
-        </ul>
-      </header>
-      <ol>
-        <li><p>In Finder, navigate to the <code>Vendor/SSToolkit</code> folder and drag the <code>xcodeproj</code> file into your Xcode project.</p></li>
-        <li><p>In Finder, drag <code>SSToolkit.bundle</code> located in <code>Vendor/SSToolkit/Resources</code> into the <code>Resources</code> folder in your Xcode project.</p></li>
-        <li><p>Select the SSToolkit Xcode project from the sidebar in Xcode. In the file browser on the right in Xcode, click the checkbox next to <code>libSSToolkit.a</code>. (If you don't see the file browser, hit Command-Shift-E to toggle it on.)</p></li>
-        <li><p>Select your target from the sidebar and open Get Info (Command-I).</p></li>
-        <li><p>Choose the <em>General</em> tab from the top.</p></li>
-        <li><p>Under the <em>Direct Dependencies</em> area, click the plus button, select <em>SSToolkit</em> from the menu, and choose <em>Add Target</em>. Be sure you have <code>QuartzCore.framework</code> and <code>CoreGraphics.framework</code> added to your project as well.</p></li>
-        <li><p>Choose the build tab from the top of the window. Make sure the configuration dropdown at the top is set to <em>All Configurations</em>.</p></li>
         <li><p>Add <code>Vendor/SSToolkit</code> to <em>Header Search Path</em> (do not click the <em>Recursive</em> checkbox).</p></li>
         <li><p>Add <code>-all_load -ObjC</code> to <em>Other Linker Flags</em>.</p></li>
       </ol>
@@ -126,11 +101,16 @@ $ curl -L http://github.com/samsoffes/sstoolkit/tarball/master | tar xz --strip 
 
 <p style="margin-bottom:0.5em">Here are some of my other libraries. Some of these used to be part of SSToolkit.</p>
 <ul>
-  <li><a href="https://github.com/samsoffes/ssziparchive">SSZipArchive</a> - Cocoa library for easily unzipping files.</li>
-  <li><a href="https://github.com/samsoffes/sskeychain">SSKeychain</a> - Cocoa library for making working with the keychain less sucky.</li>
-  <li><a href="https://github.com/samsoffes/ssoauthkit">SSOAuthKit</a> - iOS library for working with OAuth 1.0 provider with easy view controllers for getting a Twitter access token.</li>
-  <li><a href="https://github.com/samsoffes/sstableviewcell">SSTableViewCell</a> - iOS UITableViewCell based on ABTableViewCell.</li>
-  <li><a href="https://github.com/samsoffes/ssmessagesviewcontroller">SSMessagesViewController</a> - iOS Messages.app style table view controller.</li>
-  <li><a href="https://github.com/samsoffes/sspersonviewcontroller">SSPersonViewController</a> - clone of Apple's ABPerson view controller in AddressBookUI.framework to allow for better customization.</li>
-  <li><a href="https://github.com/samsoffes/ssindicatorlabel">SSIndicatorLabel</a> - label + progress indicator</li>
+  <li><a href="https://github.com/samsoffes/ssdatakit" rel="external nofollow">SSDataKit</a> &mdash; Eliminate your Core Data bolierplate code</li>
+  <li><a href="https://github.com/samsoffes/sspulltorefresh" rel="external nofollow">SSPullToRefresh</a> &mdash; Simple and highly customizable pull to refresh view</li>
+  <li><a href="https://github.com/samsoffes/sskeychain" rel="external nofollow">SSKeychain</a> &mdash; Simple Objective-C wrapper for the keychain that works on Mac and iOS</li>
+  <li><a href="https://github.com/samsoffes/ssziparchive" rel="external nofollow">SSZipArchive</a> &mdash; Utility class for zipping and unzipping files on iOS and Mac</li>
+  <li><a href="https://github.com/samsoffes/SYPaginator" rel="external nofollow">SYPaginator</a> &mdash; Powerful paging scroll views, table view style</li>
+  <li><a href="https://github.com/samsoffes/SYCache" rel="external nofollow">SYCache</a> &mdash; Fancy caching with on-disk persistence</li>
+  <li><a href="https://github.com/samsoffes/json-benchmarks" rel="external nofollow">JSON Benchmarks</a> &mdash; Benchmarks of various JSON frameworks on iOS</li>
+  <li><a href="https://github.com/samsoffes/ssoauthkit" rel="external nofollow">SSOAuthKit</a> &mdash; Handy iOS library for connecting to OAuth 1.0 providers and working with Twitter authentication</li>
+  <li><a href="https://github.com/samsoffes/ssmessagesviewcontroller" rel="external nofollow">SSMessagesViewController</a> &mdash; iOS Messages.app style table view controller</li>
+  <li><a href="https://github.com/samsoffes/sspersonviewcontroller" rel="external nofollow">SSPersonViewController</a> &mdash; Clone of Apple's ABPerson view controller allowing for better customization</li>
+  <li><a href="https://github.com/samsoffes/sstableviewcell" rel="external nofollow">SSTableViewCell</a> &mdash; iOS UITableViewCell based on ABTableViewCell.</li>
+  <li><a href="https://github.com/samsoffes/ssindicatorlabel" rel="external nofollow">SSIndicatorLabel</a> &mdash; label + progress indicator</li>
 </ul>

@@ -1,27 +1,28 @@
-desc 'Build Compass output'
-task :compass => [:'compass:clean'] do
-  `bundle exec compass compile -c config/compass.rb`
+desc 'Build sass output'
+task :sass => [:'sass:clean'] do
+  `cd sass; bundle exec bourbon install`
+  `bundle exec sass sass/application.scss public/stylesheets/application.css -r ./sass/bourbon/lib/bourbon.rb`
 end
 
 desc 'Clean everything'
-task :clean => [:'compass:clean', :'docs:clean'] do
+task :clean => [:'sass:clean', :'docs:clean'] do
   puts 'Cleaned.'
 end
 
-namespace :compass do
-  desc 'Clean Compass output'
+namespace :sass do
+  desc 'Clean sass output'
   task :clean do
     `rm -rf public/stylesheets/*`
   end
   
-  desc 'Start Compass watching the stylesheets directory'
-  task :watch => [:'compass:clean'] do
-    `bundle exec compass watch -c config/compass.rb`
+  desc 'Start sass watching the stylesheets directory'
+  task :watch => [:'sass:clean'] do
+    `bundle exec sass --watch sass:public/stylesheets`
   end
 end
 
 desc 'Start local server'
-task :server  => [:compass] do
+task :server  => [:sass] do
   `bundle exec shotgun config.ru`
 end
 
@@ -55,8 +56,8 @@ end
 desc 'Deploy to Heroku'
 task :deploy do
   unless `git status -s`.length == 0
-    puts "WARNING: There are uncommitted changes"
-    puts "Commit any changes before deploying."
+    puts 'WARNING: There are uncommitted changes'
+    puts 'Commit any changes before deploying.'
     exit
   end
   

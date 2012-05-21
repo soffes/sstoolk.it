@@ -1,6 +1,6 @@
+@import "reset";
 @import "base";
-@import "compass/reset";
-@import "compass/css3";
+@import "bourbon/bourbon";
 
 @font-face {
   font-family: 'ClumsyRegular';
@@ -19,7 +19,7 @@ body {
   color: #fff;
   font-family: HelveticaNeue, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 18px;
-  @include single-text-shadow($shadowColor, 0, 1px, 0);
+  text-shadow: $shadowColor 0 1px 0;
   line-height: 1.4em;
 }
 
@@ -29,14 +29,14 @@ div#top {
 }
 
 div#boat {
-  background: image-url('boat.png') no-repeat;
+  background: url(/images/boat.png) no-repeat;
   width: 526px;
   height: 398px;
   margin: 0 auto;
 }
 
 div#ocean {
-  background: $waterColor image-url('wave.gif') repeat-x top;
+  background: $waterColor url(/images/wave.gif) repeat-x top;
   padding-top: 40px;
 }
 
@@ -53,7 +53,6 @@ a {
 
 a:hover {
   color: $linkHoverColor;
-//  @include single-text-shadow(rgba(255, 255, 255, 0.5), 0, 1px, 0);
 }
 
 h1 {
@@ -65,7 +64,7 @@ h1 {
     font-family: 'ClumsyRegular';
     font-size: 55px;
     color: #fff;
-    @include single-text-shadow($shadowColor, 0, 3px, 0);
+    text-shadow: $shadowColor 0 3px 0;
     text-transform: uppercase;
     border: 0;
   }
@@ -95,7 +94,7 @@ h2 {
   font-family: 'ClumsyRegular';
   font-size: 24px;
   color: #fff;
-  @include single-text-shadow($shadowColor, 0, 2px, 0);
+  text-shadow: $shadowColor 0 2px 0;
 }
 
 h3 {
@@ -111,7 +110,7 @@ em, i {
 }
 
 code {
-  @include single-text-shadow(none);
+  text-shadow: none;
   padding: 0px 0.2em;
   font-family: monospace;
   
@@ -125,9 +124,9 @@ code {
 }
 
 pre, div.section {
-  @include single-box-shadow(rgba(0, 0, 0, 0.5), 0, 1px, 2px);
+  @include box-shadow(rgba(0, 0, 0, 0.5) 0 1px 2px);
   @include border-radius(5px);
-  @include single-text-shadow(none);
+  text-shadow: none;
   background-color: #f7f7f7;
   border: 1px solid #f7f7f7;
   color: #444;
@@ -155,7 +154,7 @@ pre {
   code {
     color: #444;
     padding: 0;
-    @include single-text-shadow(none);
+    text-shadow: none;
   }
 }
 

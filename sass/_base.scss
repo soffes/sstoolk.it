@@ -7,13 +7,3 @@ $buttonRadius: 3px;
 
 $codeBrownColor: #77492d;
 $codeRedColor: #ce2e24;
-
-// Mix-ins
-@mixin clearfix {
-  content: ".";
-  display: block;
-  clear: both;
-  visibility: hidden;
-  line-height: 0;
-  height: 0;
-}

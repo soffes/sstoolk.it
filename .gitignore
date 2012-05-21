@@ -2,3 +2,4 @@
 *.esproj
 .sass-cache
 .bundle
+sass/bourbon
