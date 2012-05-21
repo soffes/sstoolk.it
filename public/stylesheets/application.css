@@ -140,9 +140,9 @@ code {
     color: #77492d; }
 
 pre, div.section {
-  -webkit-box-shadow: compact(rgba(0, 0, 0, 0.5) 0 1px 2px, false, false, false, false, false, false, false, false);
-  -moz-box-shadow: compact(rgba(0, 0, 0, 0.5) 0 1px 2px, false, false, false, false, false, false, false, false);
-  box-shadow: compact(rgba(0, 0, 0, 0.5) 0 1px 2px, false, false, false, false, false, false, false, false);
+  -webkit-box-shadow: rgba(0, 0, 0, 0.5) 0 1px 2px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.5) 0 1px 2px;
+  box-shadow: rgba(0, 0, 0, 0.5) 0 1px 2px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
@@ -218,9 +218,9 @@ section#social {
     float: left;
     background: #fff;
     position: relative;
-    -webkit-box-shadow: compact(rgba(0, 0, 0, 0.5) 0 1px 2px, false, false, false, false, false, false, false, false);
-    -moz-box-shadow: compact(rgba(0, 0, 0, 0.5) 0 1px 2px, false, false, false, false, false, false, false, false);
-    box-shadow: compact(rgba(0, 0, 0, 0.5) 0 1px 2px, false, false, false, false, false, false, false, false);
+    -webkit-box-shadow: rgba(0, 0, 0, 0.5) 0 1px 2px;
+    -moz-box-shadow: rgba(0, 0, 0, 0.5) 0 1px 2px;
+    box-shadow: rgba(0, 0, 0, 0.5) 0 1px 2px;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
@@ -244,13 +244,13 @@ a.button:link, a.button:visited, button, input[type='submit'] {
   -moz-border-radius: 3px;
   border-radius: 3px;
   text-shadow: rgba(255, 255, 255, 0.5) 0 1px 1px;
-  -webkit-box-shadow: compact(0 1px 2px rgba(0, 0, 0, 0.1), 0 1px 1px rgba(255, 255, 255, 0.8) inset, false, false, false, false, false, false, false);
-  -moz-box-shadow: compact(0 1px 2px rgba(0, 0, 0, 0.1), 0 1px 1px rgba(255, 255, 255, 0.8) inset, false, false, false, false, false, false, false);
-  box-shadow: compact(0 1px 2px rgba(0, 0, 0, 0.1), 0 1px 1px rgba(255, 255, 255, 0.8) inset, false, false, false, false, false, false, false);
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1), 0 1px 1px rgba(255, 255, 255, 0.8) inset;
+  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1), 0 1px 1px rgba(255, 255, 255, 0.8) inset;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1), 0 1px 1px rgba(255, 255, 255, 0.8) inset;
   background: #eaeaea;
   background: -moz-linear-gradient(top, #efefef, #d8d8d8) #d8d8d8;
   background: -webkit-gradient(linear, left top, left bottom, from(#efefef), to(#d8d8d8)) #d8d8d8;
-  background: linear, compact(top, #efefef, #d8d8d8, false, false, false, false, false, false, false, false) #d8d8d8;
+  background: linear, top, #efefef, #d8d8d8 #d8d8d8;
   border: 1px solid #ababab;
   color: #707070;
   font-family: 'Helvetica Neue', Helvetica, Arial, Geneva, sans-serif;
@@ -265,31 +265,31 @@ a.button:hover, button:hover, input[type='submit']:hover {
   background: #f1f1f1;
   background: -moz-linear-gradient(top, #f6f6f6, #e3e3e3) #e3e3e3;
   background: -webkit-gradient(linear, left top, left bottom, from(#f6f6f6), to(#e3e3e3)) #e3e3e3;
-  background: linear, compact(top, #f6f6f6, #e3e3e3, false, false, false, false, false, false, false, false) #e3e3e3;
+  background: linear, top, #f6f6f6, #e3e3e3 #e3e3e3;
   cursor: pointer; }
 
 a.button:focus, button:focus, input[type='submit']:focus {
-  -webkit-box-shadow: compact(0 0 3px #80bfff, 0 1px 1px rgba(255, 255, 255, 0.8) inset, false, false, false, false, false, false, false);
-  -moz-box-shadow: compact(0 0 3px #80bfff, 0 1px 1px rgba(255, 255, 255, 0.8) inset, false, false, false, false, false, false, false);
-  box-shadow: compact(0 0 3px #80bfff, 0 1px 1px rgba(255, 255, 255, 0.8) inset, false, false, false, false, false, false, false);
+  -webkit-box-shadow: 0 0 3px #80bfff, 0 1px 1px rgba(255, 255, 255, 0.8) inset;
+  -moz-box-shadow: 0 0 3px #80bfff, 0 1px 1px rgba(255, 255, 255, 0.8) inset;
+  box-shadow: 0 0 3px #80bfff, 0 1px 1px rgba(255, 255, 255, 0.8) inset;
   background: -moz-linear-gradient(top, #f6f6f6, #e3e3e3) #e3e3e3;
   background: -webkit-gradient(linear, left top, left bottom, from(#f6f6f6), to(#e3e3e3)) #e3e3e3;
-  background: linear, compact(top, #f6f6f6, #e3e3e3, false, false, false, false, false, false, false, false) #e3e3e3;
+  background: linear, top, #f6f6f6, #e3e3e3 #e3e3e3;
   border: 1px solid #80bfff; }
 
 a.button:active, a.button.active, button:active, button.active, input[type='submit']:active, input[type='submit'].active {
-  -webkit-box-shadow: compact(none, false, false, false, false, false, false, false, false);
-  -moz-box-shadow: compact(none, false, false, false, false, false, false, false, false);
-  box-shadow: compact(none, false, false, false, false, false, false, false, false);
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
   background: #e3e3e3;
   background: -moz-linear-gradient(top, #e3e3e3, #f6f6f6) #1b468f;
   background: -webkit-gradient(linear, left top, left bottom, from(#e3e3e3), to(#f6f6f6)) #1b468f;
-  background: linear, compact(top, #e3e3e3, #f6f6f6, false, false, false, false, false, false, false, false) #1b468f; }
+  background: linear, top, #e3e3e3, #f6f6f6 #1b468f; }
 
 a.button.disabled, button:disabled, input[type='submit']:disabled {
-  -webkit-box-shadow: compact(none !important, false, false, false, false, false, false, false, false);
-  -moz-box-shadow: compact(none !important, false, false, false, false, false, false, false, false);
-  box-shadow: compact(none !important, false, false, false, false, false, false, false, false);
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
+  box-shadow: none !important;
   text-shadow: 0 1px 1px #fff !important;
   background: #efefef !important;
   border: 1px solid #d1d1d1 !important;
