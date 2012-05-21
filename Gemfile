@@ -10,3 +10,5 @@ group :development do
   gem 'bourbon'
   gem 'heroku'
 end
+
+gem 'addressable'
