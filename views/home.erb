@@ -1,16 +1,16 @@
 <h1><a href="http://sstoolk.it/" rel="home">S.S. Toolkit</a></h1>
 
 <h2 id="what-is-sstoolkit">What is S.S. Toolkit?</h2>
-<p>SSToolkit is a collection of <a href="/documentation">well-documented</a> iOS classes for making life easier by solving common problems all iOS developers face. Some really handy classes are <a href="/documentation/Classes/SSCollectionView">SSCollectionView</a>, <a href="/documentation/Classes/SSGradientView">SSGradientView</a>, <a href="/documentation/Classes/SSSwitch">SSSwitch</a>, and <a href="/documentation">many more</a>.</p>
+<p>SSToolkit is a collection of <a href="/documentation">well-documented</a> iOS classes for making life easier by solving common problems all iOS developers face. Some really handy classes are <a href="/documentation/Classes/SSCollectionView">SSCollectionView</a>, <a href="/documentation/Classes/SSGradientView">SSGradientView</a>, and <a href="/documentation">many more</a>.</p>
 
-<p><a href="http://github.com/samsoffes/sstoolkit">Download the source code</a>. <a href="/documentation">Read the documentations.</a> <a href="#sample-code">See sample code</a>.</p>
+<p><a href="http://github.com/soffes/sstoolkit">Download the source code</a>. <a href="/documentation">Read the documentations.</a> <a href="#sample-code">See sample code</a>.</p>
 
 <section id="social">
   <div id="social-facebook">
     <iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fsstoolk.it&amp;layout=standard&amp;show_faces=false&amp;width=450&amp;action=like&amp;font&amp;colorscheme=light&amp;height=35" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:450px; height:35px;" allowTransparency="true"></iframe>
   </div>
   <div id="social-twitter">
-    <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://sstoolk.it" data-text="SSToolkit just blew my mind. It's so full of iOS awesome." data-count="horizontal" data-related="samsoffes:Creator of SSToolkit">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+    <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://sstoolk.it" data-text="SSToolkit just blew my mind. It's so full of iOS awesome." data-count="horizontal" data-related="soffes:Creator of SSToolkit">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
   </div>
 </section>
 
@@ -30,8 +30,8 @@
       </header>
       <p>Run the following commands to download the source code:</p>
       <pre class="console"><code>$ mkdir -p Vendor/SSToolkit
-$ curl -L http://github.com/samsoffes/sstoolkit/tarball/master | tar xz --strip 1 -C Vendor/SSToolkit</code></pre>
-      <p>If you prefer, you can just download the code <a href="https://github.com/samsoffes/sstoolkit">from Github</a> and put in <code>Vendor/SSToolkit</code> (relative to your project root).</p>
+$ curl -L https://github.com/soffes/sstoolkit/tarball/master | tar xz --strip 1 -C Vendor/SSToolkit</code></pre>
+      <p>If you prefer, you can just download the code <a href="https://github.com/soffes/sstoolkit">from Github</a> and put in <code>Vendor/SSToolkit</code> (relative to your project root).</p>
     </section>
     <section id="code-instruction-submodule">
       <header>
@@ -42,7 +42,7 @@ $ curl -L http://github.com/samsoffes/sstoolkit/tarball/master | tar xz --strip 
         </ul>
       </header>
       <p>Run the following command to add the submodule. Be sure you have are you in the root of your git repository.</p>
-      <pre class="console"><code>$ git submodule add git://github.com/samsoffes/sstoolkit.git Vendor/SSToolkit</code></pre>
+      <pre class="console"><code>$ git submodule add https://github.com/soffes/sstoolkit.git Vendor/SSToolkit</code></pre>
     </section>
   </div>
 </div>
@@ -84,15 +84,15 @@ $ curl -L http://github.com/samsoffes/sstoolkit/tarball/master | tar xz --strip 
 
 <div class="clearfix">
   <a id="sample-code-sim" href="/sample-code"><img src="/images/catalog.png" alt="SSCatalog" /></a>
-  
+
   <h2 id="sample-code">Sample Code</h2>
-  <p><a href="http://github.com/samsoffes/sscatalog" rel="external nofollow">SSCatalog</a> is available on GitHub. It is a universal iPhone/iPad application to demonstrate the various features of SSToolkit.</p>
+  <p><a href="http://github.com/soffes/sscatalog" rel="external nofollow">SSCatalog</a> is available on GitHub. It is a universal iPhone/iPad application to demonstrate the various features of SSToolkit.</p>
 
   <p>Simply open the Xcode projectand build. There are demos for most of SSToolkit.</p>
 
   <h2 id="thanks">Thanks</h2>
 
-  <p>Huge thanks to <a href="http://github.com/samsoffes/sstoolkit/contributors">our contributors</a>, <a href="http://deallocatedobjects.com" rel="external nofollow">Jake Marsh</a>, and <a href="http://flyosity.com" rel="external nofollow">Mike Rundle</a>. Thanks to <a href="http://kylesteed">Kyle Steed</a> for the flying boat illustration.</p>
+  <p>Huge thanks to <a href="http://github.com/soffes/sstoolkit/contributors">our contributors</a>, <a href="http://deallocatedobjects.com" rel="external nofollow">Jake Marsh</a>, and <a href="http://flyosity.com" rel="external nofollow">Mike Rundle</a>. Thanks to <a href="http://kylesteed">Kyle Steed</a> for the flying boat illustration.</p>
 
   <p>If you're using this in your project, I'd love to hear about it! <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;%73%61%6d@%73%61%6d%73%6f%66%66.%65%73">Send me an email</a> and let me know which pieces you're using and such.</p>
 </div>
@@ -101,16 +101,17 @@ $ curl -L http://github.com/samsoffes/sstoolkit/tarball/master | tar xz --strip 
 
 <p style="margin-bottom:0.5em">Here are some of my other libraries. Some of these used to be part of SSToolkit.</p>
 <ul>
-  <li><a href="https://github.com/samsoffes/ssdatakit" rel="external nofollow">SSDataKit</a> &mdash; Eliminate your Core Data boilerplate code</li>
-  <li><a href="https://github.com/samsoffes/sspulltorefresh" rel="external nofollow">SSPullToRefresh</a> &mdash; Simple and highly customizable pull to refresh view</li>
-  <li><a href="https://github.com/samsoffes/sskeychain" rel="external nofollow">SSKeychain</a> &mdash; Simple Objective-C wrapper for the keychain that works on Mac and iOS</li>
-  <li><a href="https://github.com/samsoffes/ssziparchive" rel="external nofollow">SSZipArchive</a> &mdash; Utility class for zipping and unzipping files on iOS and Mac</li>
-  <li><a href="https://github.com/samsoffes/SYPaginator" rel="external nofollow">SYPaginator</a> &mdash; Powerful paging scroll views, table view style</li>
-  <li><a href="https://github.com/samsoffes/SYCache" rel="external nofollow">SYCache</a> &mdash; Fancy caching with on-disk persistence</li>
-  <li><a href="https://github.com/samsoffes/json-benchmarks" rel="external nofollow">JSON Benchmarks</a> &mdash; Benchmarks of various JSON frameworks on iOS</li>
-  <li><a href="https://github.com/samsoffes/ssoauthkit" rel="external nofollow">SSOAuthKit</a> &mdash; Handy iOS library for connecting to OAuth 1.0 providers and working with Twitter authentication</li>
-  <li><a href="https://github.com/samsoffes/ssmessagesviewcontroller" rel="external nofollow">SSMessagesViewController</a> &mdash; iOS Messages.app style table view controller</li>
-  <li><a href="https://github.com/samsoffes/sspersonviewcontroller" rel="external nofollow">SSPersonViewController</a> &mdash; Clone of Apple's ABPerson view controller allowing for better customization</li>
-  <li><a href="https://github.com/samsoffes/sstableviewcell" rel="external nofollow">SSTableViewCell</a> &mdash; iOS UITableViewCell based on ABTableViewCell.</li>
-  <li><a href="https://github.com/samsoffes/ssindicatorlabel" rel="external nofollow">SSIndicatorLabel</a> &mdash; label + progress indicator</li>
+  <li><a href="https://github.com/soffes/bully" rel="external nofollow">Bully</a> &mdash; A simple Objective-C client for Pusher</li>
+  <li><a href="https://github.com/soffes/ssdatakit" rel="external nofollow">SSDataKit</a> &mdash; Eliminate your Core Data boilerplate code</li>
+  <li><a href="https://github.com/soffes/sspulltorefresh" rel="external nofollow">SSPullToRefresh</a> &mdash; Simple and highly customizable pull to refresh view</li>
+  <li><a href="https://github.com/soffes/sskeychain" rel="external nofollow">SSKeychain</a> &mdash; Simple Objective-C wrapper for the keychain that works on Mac and iOS</li>
+  <li><a href="https://github.com/soffes/ssziparchive" rel="external nofollow">SSZipArchive</a> &mdash; Utility class for zipping and unzipping files on iOS and Mac</li>
+  <li><a href="https://github.com/soffes/SYPaginator" rel="external nofollow">SYPaginator</a> &mdash; Powerful paging scroll views, table view style</li>
+  <li><a href="https://github.com/soffes/SYCache" rel="external nofollow">SYCache</a> &mdash; Fancy caching with on-disk persistence</li>
+  <li><a href="https://github.com/soffes/json-benchmarks" rel="external nofollow">JSON Benchmarks</a> &mdash; Benchmarks of various JSON frameworks on iOS</li>
+  <li><a href="https://github.com/soffes/ssoauthkit" rel="external nofollow">SSOAuthKit</a> &mdash; Handy iOS library for connecting to OAuth 1.0 providers and working with Twitter authentication</li>
+  <li><a href="https://github.com/soffes/ssmessagesviewcontroller" rel="external nofollow">SSMessagesViewController</a> &mdash; iOS Messages.app style table view controller</li>
+  <li><a href="https://github.com/soffes/sspersonviewcontroller" rel="external nofollow">SSPersonViewController</a> &mdash; Clone of Apple's ABPerson view controller allowing for better customization</li>
+  <li><a href="https://github.com/soffes/sstableviewcell" rel="external nofollow">SSTableViewCell</a> &mdash; iOS UITableViewCell based on ABTableViewCell.</li>
+  <li><a href="https://github.com/soffes/ssindicatorlabel" rel="external nofollow">SSIndicatorLabel</a> &mdash; label + progress indicator</li>
 </ul>
